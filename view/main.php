@@ -438,8 +438,10 @@ if (isset($_SESSION['expire'])) {
                                                             <div class="tg-img-hover">
                                                                 <div class="tg-displaytable">
                                                                     <div class="tg-displaytablecell">
+                                                                        <!--<a href="#" data-toggle="modal" data-target=".mentor-modalbox">-->
                                                                         <i class="fa fa-book"></i>
                                                                         <h4>อ. วิภา เจริญกิจสุพัฒน์</h4>
+                                                                        <!--</a>-->
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -921,6 +923,36 @@ if (isset($_SESSION['expire'])) {
 
             </div>
         </div>
+        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
+            <div class="tg-signup-modalbox">
+                <h2>MENTOR DETAIl</h2>
+                <form style="padding:20px" >
+                    <div>
+                        <div class="row">
+                            <div class="col-sm-4">                                        
+                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
+                                <br/>
+                                <fieldset>
+                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-8">
+                                <fieldset>
+                                    <legend>ประวัติ และคุณวุฒิ​</legend>
+                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
+                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
+                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </li>
+                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
+                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li>
+                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
+                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</li>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </form>   
+            </div>
+        </div>
         <!--************************************
                         Popup End
         *************************************-->
@@ -995,7 +1027,6 @@ if (isset($_SESSION['expire'])) {
                         knowledgeFor += this.value + "||";
                     });
                     var inviteSuggest = $("#inviteSuggest").val();
-
                     var newsFrom = "";
                     $('input[name="newsFrom"]:checked').each(function () {
                         newsFrom += this.value + "||";
