@@ -203,7 +203,7 @@ if (isset($_SESSION['expire'])) {
                                             </div>
                                         </figure>
                                         <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">วิภา เจริญกิจสุพัฒน์</span>
+                                            <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-modalbox">อ. วิภา เจริญกิจสุพัฒน์</span>
                                             <span class="tg-member-postion">คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</span>
                                             <ul class="tg-social-icon">
                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -218,7 +218,7 @@ if (isset($_SESSION['expire'])) {
                                 <div class="col-md-3 col-sm-6 col-xs-6 width-480">
                                     <div class="tg-teammember tg-haslayout">
                                         <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/kamol_resized.jpg" alt="member name"></a>
+                                            <a href="#"><img src="assets/images/pop_our.png" alt="member name"></a>
                                             <div class="tg-member-hover">
                                                 <ul class="tg-member-hover-icons">
                                                     <li><a href="#"><i class="flaticon-plus79"></i></a></li>
@@ -227,8 +227,8 @@ if (isset($_SESSION['expire'])) {
                                             </div>
                                         </figure>
                                         <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. ตู่ กามล</span>
-                                            <span class="tg-member-postion">Designer at Example.com</span>
+                                            <span class="tg-member-name">อ. วิธิวัต โรจนตรีคูณ</span>
+                                            <span class="tg-member-postion">ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์</span>
                                             <ul class="tg-social-icon">
                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -239,7 +239,7 @@ if (isset($_SESSION['expire'])) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
+                                <!--div class="col-md-3 col-sm-6 col-xs-6 width-480">
                                     <div class="tg-teammember tg-haslayout">
                                         <figure class="tg-member-img">
                                             <a href="#"><img src="assets/images/pinhathai_resized.jpg" alt="member name"></a>
@@ -262,7 +262,7 @@ if (isset($_SESSION['expire'])) {
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div-->
                             </div>
                         </div>
                     </div>
@@ -357,7 +357,36 @@ if (isset($_SESSION['expire'])) {
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-
+        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
+            <div class="tg-signup-modalbox">
+                <h2>MENTOR DETAIl</h2>
+                <form style="padding:20px" >
+                    <div>
+                        <div class="row">
+                            <div class="col-sm-4">                                        
+                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
+                                <br/>
+                                <fieldset>
+                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-8">
+                                <fieldset>
+                                    <legend>ประวัติ และคุณวุฒิ​</legend>
+                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
+                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
+                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </li>
+                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
+                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li>
+                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
+                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</li>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </form>   
+            </div>
+        </div>
         <!--************************************
                         Popup End
         *************************************-->

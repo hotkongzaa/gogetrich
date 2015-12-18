@@ -202,7 +202,7 @@ if (isset($_SESSION['expire'])) {
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
-                                                        <figure><img src="assets/images/portfolio/img-11.jpg" alt="image description"></figure>
+                                                        <figure><img src="assets/images/speaker-ppo.png" alt="image description"></figure>
                                                         <div class="tg-img-hover">
                                                             <ul class="tg-member-hover-icons">
                                                                 <li><a href="#"><i class="flaticon-plus79"></i></a></li>
@@ -481,22 +481,25 @@ if (isset($_SESSION['expire'])) {
                 <h2>MENTOR DETAIl</h2>
                 <form style="padding:20px" >
                     <div>
-
                         <div class="row">
                             <div class="col-sm-4">                                        
                                 <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <h4>อ.วิภา เจริญกิจสุพัฒน์</h4>
+                                <br/>
+                                <fieldset>
+                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
+                                </fieldset>
                             </div>
                             <div class="col-sm-8">
-                                <span style="font-size: 18px;"><strong>ประวัติ และคุณวุฒิ​</strong></span>
-                                <p>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</p>
-                                <p>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</p>
-                                <p>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </p>
-                                <p>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</p>
-                                <p>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</p>
-                                <p>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
-                                <p>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</p>
-
+                                <fieldset>
+                                    <legend>ประวัติ และคุณวุฒิ​</legend>
+                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
+                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
+                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </li>
+                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
+                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li>
+                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
+                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</li>
+                                </fieldset>
                             </div>
                         </div>
                     </div>

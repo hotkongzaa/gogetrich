@@ -345,7 +345,7 @@ if (isset($_SESSION['expire'])) {
                 <!--************************************
                                 Virtually Build Start
                 *************************************-->
-                <section class="tg-main-section tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/testimonial_image.jpg">
+                <section class="tg-main-section tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/girl_images.png">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-7 tg-displayinlineblock">
