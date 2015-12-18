@@ -166,7 +166,7 @@ if (isset($_SESSION['expire'])) {
                             </div>
                             <div class="portfolio masnory tg-haslayout">
                                 <div class="portfolio-content tg-haslayout list" role="tablist" >
-                                    <div class="portfolio-item grid-item dentist">
+                                    <div class="portfolio-item grid-item construction">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
@@ -197,7 +197,7 @@ if (isset($_SESSION['expire'])) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="portfolio-item grid-item renovation">
+                                    <div class="portfolio-item grid-item construction">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">

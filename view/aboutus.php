@@ -227,7 +227,7 @@ if (isset($_SESSION['expire'])) {
                                             </div>
                                         </figure>
                                         <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. วิธิวัต โรจนตรีคูณ</span>
+                                            <span class="tg-member-name" style="cursor: pointer;" onclick="window.open('http://www.vihoon.com/?pg=about','_blank');">อ. วิธิวัต โรจนตรีคูณ</span>
                                             <span class="tg-member-postion">ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์</span>
                                             <ul class="tg-social-icon">
                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
