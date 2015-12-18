@@ -18,7 +18,6 @@ if (isset($_SESSION['expire'])) {
         <title>Go Get Rich.net</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv=Content-Type content="text/html; charset=utf-8">
         <?php include './assets/css_incl.php'; ?>
         <?php include './assets/javascript_incl.php'; ?>
     </head>
@@ -37,6 +36,7 @@ if (isset($_SESSION['expire'])) {
                     <div class="object" id="object_three"></div>
                     <div class="object" id="object_two"></div>
                     <div class="object" id="object_one"></div>
+
                 </div>
             </div>
         </div>
@@ -50,16 +50,16 @@ if (isset($_SESSION['expire'])) {
             <!--************************************
                             Banner Start
             *************************************-->
-            <div class="tg-banner tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/training_banner.jpg">
+            <div class="tg-banner tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/page-banner-img/img-01.jpg">
                 <div class="tg-banner-holder">
                     <div class="container">
                         <div class="tg-displaytable">
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
-                                    <h1>Training / SEMINAR</h1>
+                                    <h1>OUR MENTOR</h1>
                                     <ol class="tg-breadcrumb">
-                                        <li><a href="main">Home</a></li>
-                                        <li class="active">Training / Seminar</li>
+                                        <li><a href="#">Home</a></li>
+                                        <li class="active">OUR MENTOR</li>
                                     </ol>
                                 </div>
                             </div>
@@ -117,10 +117,10 @@ if (isset($_SESSION['expire'])) {
                                     <li class="current-menu-item">
                                         <a href="#">Training/Seminar</a>
                                         <ul>
-                                            <li class="current-menu-item">
+                                            <li>
                                                 <a href="trainingSchedule">Training schedule</a>
                                             </li>
-                                            <li>
+                                            <li class="current-menu-item">
                                                 <a href="speaker-list">Speaker</a>
                                             </li>
                                         </ul>
@@ -144,251 +144,224 @@ if (isset($_SESSION['expire'])) {
                             Main Start
             *************************************-->
             <main id="main" class="tg-haslayout">
-                <!--************************************
-                                About Section Start
-                *************************************-->
-                <section class="tg-main-section tg-haslayout">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="tg-theme-heading">
-                                    <span>WE ARE GO GET RICH</span>
-                                    <h2>Our Training / Schedule</h2>
+                <div class="container">
+                    <!--************************************
+                                    Portfolio Start
+                    *************************************-->
+                    <div class="tg-main-section tg-haslayout">
+                        <div class="tg-portfolio tg-portfolio-list tg-haslayout">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="tg-theme-heading" style="cursor: pointer;">
+                                        <span>Our Mentor</span>
+                                        <h2>พี่เลี้ยงพารวย</h2>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <ul id="gallery-cats" class="gallery-cats option-set haslayout">
+                                        <li class="select"><a href="#" data-filter="*">All</a></li>
+                                        <li><a href="#" data-filter=".construction">พี่เลี้ยงการเงิน</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="tg-aboutus-section">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="span7">   
-                                        <div class="widget stacked widget-table action-table">
-                                            <div class="widget-header">
-                                                <h3>FINANCIAL PROGRAM</h3>
-                                            </div> <!-- /widget-header -->
-                                            <div class="widget-content">   
-                                                <table class="table table-striped table-bordered">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>No.</th>
-                                                            <th>Course Name</th>
-                                                            <th>Days</th>
-                                                            <th>Fee (THB)</th>
-                                                            <th>Jan</th>
-                                                            <th>Feb</th>
-                                                            <th>Mar</th>
-                                                            <th>Apr</th>
-                                                            <th>May</th>
-                                                            <th>Jun</th>
-                                                            <th>Jul</th>
-                                                            <th>Aug</th>
-                                                            <th>Sep</th>
-                                                            <th>Oct</th>
-                                                            <th>Nov</th>
-                                                            <th>Dec</th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td style="text-align:left;">
-                                                                <span class="linkHover" style="cursor: pointer" onclick="showCourseDetali('Secret$ of Money Cat รุ่นที่ 2')">Secret$" of Money Cat รุ่นที่ 2</span>
-                                                            </td>
-                                                            <td>2</td>
-                                                            <td align="left" id="course_id" style="cursor: pointer">
-                                                                <script type="text/javascript">
-                                                                    $(document).ready(function () {
-                                                                        $('#course_id').tooltipster({
-                                                                            content: $('<ul><li>บุคคลทั่วไป 3,900 บาท</li><li>early bird ลงทะเบียนก่อนวันที่ 9 มกราคม 2559 - 3,500 บาท</li><li>มาเป็นคู่ หรือ ลงทะเบียนแบบกลุ่ม 5 ท่าน ท่านละ 3,500 บาท</li><li>ฟรี coffee break เช้า บ่าย, อาหารกลางวัน และเอกสารการเรียนการสอน</li><li>อัตรานี้ ยังไม่รวม VAT 7%</li></ul><br/>'),
-                                                                            touchDevices: false,
-                                                                            position: "right"
-                                                                        });
-                                                                    });
-                                                                </script>
-                                                                บุคคลทั่วไป 3,900 บาท...                                           
-                                                            </td>
-                                                            <td>
-                                                                <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('Secret$ of Money Cat รุ่นที่ 2')">23,24</span>
-                                                            </td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td>
-                                                                <?php
-                                                                if (empty($_SESSION['username'])) {
-                                                                    ?>
-                                                                    <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
-                                                                    <?php
-                                                                } else {
-                                                                    ?>
-                                                                    <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
-                                                                    <?php
-                                                                }
-                                                                ?>
-
-                                                            </td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-
-                                            </div> <!-- /widget-content -->
-
-                                        </div> <!-- /widget -->
+                            <div class="portfolio masnory tg-haslayout">
+                                <div class="portfolio-content tg-haslayout list" role="tablist" >
+                                    <div class="portfolio-item grid-item dentist">
+                                        <div class="product-box">
+                                            <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
+                                                <div class="row">
+                                                    <div class="tg-portfolio-img">
+                                                        <figure><img src="assets/images/portfolio/img-10.jpg" alt="image description"></figure>
+                                                        <div class="tg-img-hover">
+                                                            <ul class="tg-member-hover-icons">
+                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12" >
+                                                <div class="row">
+                                                    <div class="tg-border-topleft tg-portfolio-content">
+                                                        <div class="tg-theme-heading">
+                                                            <span>นักวางแผนการเงิน</span>
+                                                            <h2><a href="#" data-toggle="modal" data-target=".mentor-modalbox">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></h2>
+                                                        </div>
+                                                        <div class="tg-description" style="height: 150px!important;">
+                                                            <p>"สามสิ่งสำคัญ ในความรู้ของการจัดการการเงิน ที่พี่อยากจะแชร์และแบ่งปันคนไทยทุกคน ได้แก่ การวางแผนงบการเงิน การอยู่อย่างพอเพียง และการใช้ชีวิตอย่างมีความสุข ...ซึ่งทุกคนทำได้  ขอเพียงรู้จักจัดการเงินอย่างฉลาด อิสระภาพทางการเงินและการใช้ชีวิต มันเป็นไปได้....และนี่แหละ คือ โชค ที่ทุกคนต้องการมี"</p>
+                                                        </div>
+                                                        <a class="tg-viewmore-btn" href="#" data-toggle="modal" data-target=".mentor-modalbox">View More »</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="portfolio-item grid-item renovation">
+                                        <div class="product-box">
+                                            <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
+                                                <div class="row">
+                                                    <div class="tg-portfolio-img">
+                                                        <figure><img src="assets/images/portfolio/img-11.jpg" alt="image description"></figure>
+                                                        <div class="tg-img-hover">
+                                                            <ul class="tg-member-hover-icons">
+                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="tg-border-topleft tg-portfolio-content">
+                                                        <div class="tg-theme-heading">
+                                                            <span>ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์</span>
+                                                            <h2><a href="#" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">อ. วิธิวัต โรจนตรีคูณ (พี่ป๊อป)</a></h2>
+                                                        </div>
+                                                        <div class="tg-description" style="height: 150px!important;">
+                                                            <p>วิธิวัต โรจนตรีคุณ เทรนเนอร์ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์ที่น่าจับตามองมากที่สุดคนหนึ่งของไทยในยุคนี้ เติบโตในครอบครัวนักลงทุนทั้งหุ้นและอสังหาริมทรัพย์</p>
+                                                        </div>
+                                                        <a class="tg-viewmore-btn" href="#" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">View More »</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--div class="portfolio-item grid-item construction">
+                                        <div class="product-box">
+                                            <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
+                                                <div class="row">
+                                                    <div class="tg-portfolio-img">
+                                                        <figure><img src="assets/images/portfolio/img-09.jpg" alt="image description"></figure>
+                                                        <div class="tg-img-hover">
+                                                            <ul class="tg-member-hover-icons">
+                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="tg-border-topleft tg-portfolio-content">
+                                                        <div class="tg-theme-heading">
+                                                            <span>Graphic Design, Photoshop</span>
+                                                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetuer elit</a></h2>
+                                                        </div>
+                                                        <div class="tg-description">
+                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                        </div>
+                                                        <a class="tg-viewmore-btn" href="#">View More »</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-item grid-item digging">
+                                        <div class="product-box">
+                                            <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
+                                                <div class="row">
+                                                    <div class="tg-portfolio-img">
+                                                        <figure><img src="assets/images/portfolio/img-12.jpg" alt="image description"></figure>
+                                                        <div class="tg-img-hover">
+                                                            <ul class="tg-member-hover-icons">
+                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="tg-border-topleft tg-portfolio-content">
+                                                        <div class="tg-theme-heading">
+                                                            <span>Graphic Design, Photoshop</span>
+                                                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetuer elit</a></h2>
+                                                        </div>
+                                                        <div class="tg-description">
+                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                        </div>
+                                                        <a class="tg-viewmore-btn" href="#">View More »</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-item grid-item interior">
+                                        <div class="product-box">
+                                            <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
+                                                <div class="row">
+                                                    <div class="tg-portfolio-img">
+                                                        <figure><img src="assets/images/portfolio/img-13.jpg" alt="image description"></figure>
+                                                        <div class="tg-img-hover">
+                                                            <ul class="tg-member-hover-icons">
+                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="tg-border-topleft tg-portfolio-content">
+                                                        <div class="tg-theme-heading">
+                                                            <span>Graphic Design, Photoshop</span>
+                                                            <h2><a href="#">Lorem ipsum dolor sit amet, consectetuer elit</a></h2>
+                                                        </div>
+                                                        <div class="tg-description">
+                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                        </div>
+                                                        <a class="tg-viewmore-btn" href="#">View More »</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                    <!--************************************
+                                    Portfolio End
+                    *************************************-->
+                </div>
                 <!--************************************
-                                About Section End
+                                Brands Start
                 *************************************-->
-                <!--************************************
-                                Our Team Start
-                *************************************-->
-                <section class="tg-main-section tg-haslayout tg-skillreview-bg">
+                <!--div class="tg-main-section tg-haslayout">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-12">
-                                <div class="tg-theme-heading">
-                                    <span>We are Go Get Rich</span>
-                                    <h2>Our Coach</h2>
+                            <div class="tg-brands tg-haslayout">
+                                <div class="col-sm-3 col-xs-3 width-360">
+                                    <figure><a href="#"><img src="assets/images/brand-01.png" alt="brand name"></a></figure>
                                 </div>
-                            </div>
-                            <div class="tg-ourteam tg-haslayout">
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/wipa_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">วิภา เจริญกิจสุพัฒน์</span>
-                                            <span class="tg-member-postion">คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="col-sm-3 col-xs-3 width-360">
+                                    <figure><a href="#"><img src="assets/images/brand-02.png" alt="brand name"></a></figure>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/kamol_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. ตู่ กามล</span>
-                                            <span class="tg-member-postion">Designer at Example.com</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="col-sm-3 col-xs-3 width-360">
+                                    <figure><a href="#"><img src="assets/images/brand-03.png" alt="brand name"></a></figure>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pinhathai_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. ปิ่นหทัย เดชสิงหรัตน์</span>
-                                            <span class="tg-member-postion">Designer at Example.com</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="col-sm-3 col-xs-3 width-360">
+                                    <figure><a href="#"><img src="assets/images/brand-04.png" alt="brand name"></a></figure>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div-->
                 <!--************************************
-                                Our Team End
+                                Brands End
                 *************************************-->
-                <!--************************************
-                                Testimonials Start
-                *************************************-->
-                <section class="tg-main-section tg-haslayout testimonial-image">
-                    <div class="container">
-                        <div class="row">
-                            <div class="tg-testimonials tg-haslayout">
-                                <div class="col-lg-10 col-md-7 col-sm-7">
-                                    <div id="tg-testi-slider" class="tg-testi-slider">
-                                        <div class="item">
-                                            <div class="tg-theme-heading">
-                                                <span>our coach</span>
-                                                <h2>วิภา เจริญกิจสุพัฒน์ <span>(อ. พี่เกียก)</span></h2>
-                                            </div>
-                                            <div class="tg-description">
-                                                <blockquote>
-                                                    <q>สามสิ่งสำคัญ ในความรู้ของการจัดการการเงิน ที่พี่อยากจะแชร์และแบ่งปันคนไทยทุกคน ได้แก่ การวางแผนงบการเงิน การอยู่อย่างพอเพียง และการใช้ชีวิตอย่างมีความสุข ...ซึ่งทุกคนทำได้  ขอเพียงรู้จักจัดการเงินอย่างฉลาด อิสระภาพทางการเงินและการใช้ชีวิต มันเป็นไปได้....และนี่แหละ คือ โชค ที่ทุกคนต้องการมี</q>
-                                                </blockquote>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="tg-theme-heading">
-                                                <span>our coach</span>
-                                                <h2>อ. ตู่ กามล</h2>
-                                            </div>
-                                            <div class="tg-description">
-                                                <blockquote>
-                                                    <q>คนเราทำงาน ก็เพื่อหาเงิน เพื่อความสุข หากมีปัญหาในทางการทำงานและการเงิน มันก็แค่สิ่งหนึ่งที่เกิดขึ้นในกระบวนการ การเปลี่ยนแปลง... ค่อยๆคิด ค่อยๆแก้ สิ่งสำคัญ คือ หากเราเข้าใจตนเอง เราจะสามารถนำศักยภาพ และดึงความสามารถที่มีอยู่ สร้างรายได้อย่างไม่มีข้อจำกัด ....ศักยภาพจากการเข้าใจตนเอง และความรู้อย่างถ่องแท้ในงานที่ทำ จะสร้างโชค ที่ไม่รู้จบ</q>
-                                                </blockquote>
-                                            </div>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!--************************************
-                                Testimonials End
-                *************************************-->                
             </main>
             <!--************************************
                             Main End
             *************************************-->
             <!--************************************
-                            Footer Start
-            *************************************-->
+                           Footer Start
+           *************************************-->
             <?php include './footer.php'; ?>
             <!--************************************
                             Footer End
@@ -503,9 +476,33 @@ if (isset($_SESSION['expire'])) {
 
             </div>
         </div>
-        <!--************************************
-                        Popup End
-        *************************************-->
+        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
+            <div class="tg-signup-modalbox">
+                <h2>MENTOR DETAIl</h2>
+                <form style="padding:20px" >
+                    <div>
+
+                        <div class="row">
+                            <div class="col-sm-4">                                        
+                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
+                                <h4>อ.วิภา เจริญกิจสุพัฒน์</h4>
+                            </div>
+                            <div class="col-sm-8">
+                                <span style="font-size: 18px;"><strong>ประวัติ และคุณวุฒิ​</strong></span>
+                                <p>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</p>
+                                <p>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</p>
+                                <p>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </p>
+                                <p>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</p>
+                                <p>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</p>
+                                <p>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
+                                <p>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>   
+            </div>
+        </div>
     </body>
     <style type="text/css">
         .linkHover:hover{
@@ -534,6 +531,7 @@ if (isset($_SESSION['expire'])) {
                 minWidth: 150,
                 arrow: false
             });
+
             runSetDefaultValidation();
             var form = $('.login-form');
             var errorHandler = $('.errorHandler', form);
@@ -554,7 +552,6 @@ if (isset($_SESSION['expire'])) {
                     errorHandler.show();
                 }
             });
-
             var formRegisterSeminar = $('#registerSeminar');
             var errorHandlers = $('.errorHandler', formRegisterSeminar);
             formRegisterSeminar.validate({
@@ -589,13 +586,20 @@ if (isset($_SESSION['expire'])) {
                     $.ajax({
                         url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                         type: 'POST',
-                        data: {'custID': '<?php if(isset($_SESSION['userId'])){echo $_SESSION['userId'];}else{echo '';} ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
+                        data: {'custID': '<?php
+            if (isset($_SESSION['userId'])) {
+                echo $_SESSION['userId'];
+            } else {
+                echo '';
+            }
+            ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
                         success: function (data, textStatus, jqXHR) {
                             if (data == 200) {
                                 alert("ลงทะเบียนเรียบร้อยแล้ว");
-                                window.location.href = 'trainingSchedule';
+                                window.location.href = 'scheduleDetail?cname=Secret$%20of%20Money%20Cat%20รุ่นที่%202';
                             } else {
                                 alert(data);
+                                window.location.href = 'main';
                             }
                         }
                     });
@@ -631,9 +635,6 @@ if (isset($_SESSION['expire'])) {
                 }
             });
         }
-        function showCourseDetali(courseName) {
-            window.location = "scheduleDetail?cname=" + courseName;
-        }
         var runSetDefaultValidation = function () {
             $.validator.setDefaults({
                 errorElement: "span", // contain the error msg in a small tag
@@ -667,109 +668,4 @@ if (isset($_SESSION['expire'])) {
             });
         };
     </script>
-    <style type="text/css">
-        .linkHover:hover{
-            color:#ffcc33;
-        }
-        .table-bordered {
-            border: 1px solid #dddddd;
-            border-collapse: separate;
-            border-left: 0;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
-        }
-
-        .table {
-            width: 100%;
-            margin-bottom: 20px;
-            background-color: transparent;
-            border-collapse: collapse;
-            border-spacing: 0;
-            display: table;
-        }
-
-        .widget.widget-table .table {
-            margin-bottom: 0;
-            border: none;
-        }
-
-        .widget.widget-table .widget-content {
-            padding: 0;
-        }
-
-        .widget .widget-header + .widget-content {
-            border-top: none;
-            -webkit-border-top-left-radius: 0;
-            -webkit-border-top-right-radius: 0;
-            -moz-border-radius-topleft: 0;
-            -moz-border-radius-topright: 0;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-        .widget .widget-content {
-            padding: 20px 15px 15px;
-            background: #FFF;
-            border: 1px solid #D5D5D5;
-            -moz-border-radius: 5px;
-            -webkit-border-radius: 5px;
-            border-radius: 5px;
-        }
-
-        .widget .widget-header {
-            position: relative;
-            height: 40px;
-            line-height: 40px;
-            background: #E9E9E9;
-            background: -moz-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #e9e9e9));
-            background: -webkit-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
-            background: -o-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
-            background: -ms-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
-            background: linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
-            text-shadow: 0 1px 0 #fff;
-            border-radius: 5px 5px 0 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1),inset 0 1px 0 white,inset 0 -1px 0 rgba(255,255,255,0.7);
-            border-bottom: 1px solid #bababa;
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9');
-            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#E9E9E9')";
-            border: 1px solid #D5D5D5;
-            -webkit-border-top-left-radius: 4px;
-            -webkit-border-top-right-radius: 4px;
-            -moz-border-radius-topleft: 4px;
-            -moz-border-radius-topright: 4px;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            -webkit-background-clip: padding-box;
-        }
-
-        thead {
-            display: table-header-group;
-            vertical-align: middle;
-            border-color: inherit;
-        }
-
-        .widget .widget-header h3 {
-            top: 2px;
-            position: relative;
-            left: 10px;
-            display: inline-block;
-            margin-right: 3em;
-            font-size: 14px;
-            font-weight: 600;
-            color: #555;
-            line-height: 18px;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
-        }
-
-        .widget .widget-header [class^="icon-"], .widget .widget-header [class*=" icon-"] {
-            display: inline-block;
-            margin-left: 13px;
-            margin-right: -2px;
-            font-size: 16px;
-            color: #555;
-            vertical-align: middle;
-        }
-    </style>
 </html>

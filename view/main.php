@@ -99,7 +99,7 @@ if (isset($_SESSION['expire'])) {
                                                 <a href="trainingSchedule">Training schedule</a>
                                             </li>
                                             <li>
-                                                <a href="#">Speaker</a>
+                                                <a href="speaker-list">Speaker</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -383,19 +383,23 @@ if (isset($_SESSION['expire'])) {
                         <div class="row">
                             <div class="tg-portfolio">
                                 <div class="col-sm-4">
-                                    <div class="tg-theme-heading">
+                                    <div class="tg-theme-heading" style="cursor: pointer;" onclick="window.location.href = 'speaker-list'">
                                         <span>Our Mentor</span>
                                         <h2>พี่เลี้ยงพารวย</h2>
                                     </div>
                                     <div class="tg-service-img tg-haslayout">
                                         <div class="tab-content tg-img-border">
                                             <div role="tabpanel" class="tab-pane fade in active" id="portfolio-item-one">
-                                                <figure><img src="assets/images/portfolio/wipa_image.png" alt="image description"></figure>
+                                                <figure>
+                                                    <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
+                                                </figure>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="portfolio-item-two">
-                                                <figure><img src="assets/images//portfolio/img-02.jpg" alt="image description"></figure>
+                                                <figure>
+                                                    <img src="assets/images//portfolio/pop_image.png" alt="อ. วิธิวัต โรจนตรีคูณ">
+                                                </figure>
                                             </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="portfolio-item-three">
+                                            <!--div role="tabpanel" class="tab-pane fade" id="portfolio-item-three">
                                                 <figure><img src="assets/images//portfolio/img-03.jpg" alt="image description"></figure>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="portfolio-item-four">
@@ -412,7 +416,7 @@ if (isset($_SESSION['expire'])) {
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="portfolio-item-eight">
                                                 <figure><img src="assets/images//portfolio/img-08.jpg" alt="image description"></figure>
-                                            </div>
+                                            </div-->
                                         </div>
                                     </div>
                                 </div>
@@ -420,10 +424,10 @@ if (isset($_SESSION['expire'])) {
                                     <div class="portfolio masnory tg-haslayout">
                                         <ul id="gallery-cats" class="gallery-cats option-set haslayout">
                                             <li class="select"><a href="#" data-filter="*">All</a></li>
-                                            <li><a href="#" data-filter=".construction">Construction</a></li>
-                                            <li><a href="#" data-filter=".digging">Digging</a></li>
+                                            <li><a href="#" data-filter=".construction">พี่เลี้ยงการเงิน</a></li>
+                                            <!--li><a href="#" data-filter=".digging">Digging</a></li>
                                             <li><a href="#" data-filter=".renovation">Renovation</a></li>
-                                            <li><a href="#" data-filter=".interior">Interior</a></li>
+                                            <li><a href="#" data-filter=".interior">Interior</a></li-->
                                         </ul>
                                         <div class="row">
                                             <div class="portfolio-content tg-haslayout portfolio-image grid" role="tablist">
@@ -434,30 +438,30 @@ if (isset($_SESSION['expire'])) {
                                                             <div class="tg-img-hover">
                                                                 <div class="tg-displaytable">
                                                                     <div class="tg-displaytablecell">
-                                                                        <i class="fa fa-picture-o"></i>
-                                                                        <h4>Exterior Project</h4>
+                                                                        <i class="fa fa-book"></i>
+                                                                        <h4>อ. วิภา เจริญกิจสุพัฒน์</h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div role="presentation" class="portfolio-item grid-item digging">
+                                                <div role="presentation" class="portfolio-item grid-item construction">
                                                     <div class="product-box">
                                                         <a href="#portfolio-item-two" aria-controls="portfolio-item-two" role="tab" data-toggle="tab">
-                                                            <figure><img src="assets/images//thumbnail/img-02.jpg" alt="image description"></figure>
+                                                            <figure><img src="assets/images/portfolio/pop_thumbnail.png" alt="image description"></figure>
                                                             <div class="tg-img-hover">
                                                                 <div class="tg-displaytable">
-                                                                    <div class="tg-displaytablecell">
-                                                                        <i class="fa fa-picture-o"></i>
-                                                                        <h4>Exterior Project</h4>
+                                                                    <div class="tg-displaytablecell" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">
+                                                                        <i class="fa fa-book"></i>
+                                                                        <h4>อ. วิธิวัต โรจนตรีคูณ</h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div role="presentation" class="portfolio-item grid-item renovation">
+                                                <!--div role="presentation" class="portfolio-item grid-item renovation">
                                                     <div class="product-box">
                                                         <a href="#portfolio-item-three" aria-controls="portfolio-item-three" role="tab" data-toggle="tab">
                                                             <figure><img src="assets/images//thumbnail/img-03.jpg" alt="image description"></figure>
@@ -546,7 +550,7 @@ if (isset($_SESSION['expire'])) {
                                                             </div>
                                                         </a>
                                                     </div>
-                                                </div>
+                                                </div-->
                                             </div>
                                         </div>
                                     </div>

@@ -121,7 +121,7 @@ if (isset($_SESSION['expire'])) {
                                                 <a href="trainingSchedule">Training schedule</a>
                                             </li>
                                             <li>
-                                                <a href="#">Speaker</a>
+                                                <a href="speaker-list">Speaker</a>
                                             </li>
                                         </ul>
                                     </li>
