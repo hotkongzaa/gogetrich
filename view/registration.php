@@ -225,7 +225,7 @@ if (isset($_SESSION['expire'])) {
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 width-480">
                                     <br/>
-                                    <img src="assets/images/regisform.jpg"/>
+                                    <img src="assets/images/registerform_v2_370x247.jpg"/>
                                 </div>
                             </div>
                         </div>

@@ -50,7 +50,7 @@ if (isset($_SESSION['expire'])) {
             <!--************************************
                             Banner Start
             *************************************-->
-            <div class="tg-banner tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/about_header2.jpg">
+            <div class="tg-banner tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/about_banner_1920x250.jpg">
                 <div class="tg-banner-holder">
                     <div class="container">
                         <div class="tg-displaytable">

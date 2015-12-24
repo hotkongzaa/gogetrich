@@ -182,7 +182,7 @@ if (isset($_SESSION['expire'])) {
                                     <div class="row">
                                         <div class="tg-service-img">
                                             <figure class="tg-img-border">
-                                                <img src="assets/images/getrich_pyramid.png" alt="image description">
+                                                <img src="assets/images/financial_planning_revised.png" alt="image description">
                                             </figure>
                                         </div>
                                     </div>
@@ -351,7 +351,7 @@ if (isset($_SESSION['expire'])) {
                             <div class="col-sm-7 tg-displayinlineblock">
                                 <div class="tg-virtual-img tg-haslayout">
                                     <figure>
-                                        <img src="assets/images/parallax-ice.png" alt="image description">
+                                        <img src="assets/images/ice_berg_image_v6_653x310.png" alt="image description">
                                     </figure>
                                 </div>
                             </div>
