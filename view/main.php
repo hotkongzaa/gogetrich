@@ -437,11 +437,11 @@ if (isset($_SESSION['expire'])) {
                                                             <figure><img src="assets/images/portfolio/wipa_thumbnail.png" alt="image description"></figure>
                                                             <div class="tg-img-hover">
                                                                 <div class="tg-displaytable">
-                                                                    <div class="tg-displaytablecell">
-                                                                        <!--<a href="#" data-toggle="modal" data-target=".mentor-modalbox">-->
+                                                                    <div class="tg-displaytablecell" data-toggle="modal" data-target=".mentor-modalbox">
+
                                                                         <i class="fa fa-book"></i>
                                                                         <h4>อ. วิภา เจริญกิจสุพัฒน์</h4>
-                                                                        <!--</a>-->
+
                                                                     </div>
                                                                 </div>
                                                             </div>
