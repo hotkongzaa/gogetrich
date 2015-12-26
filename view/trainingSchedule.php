@@ -6,6 +6,7 @@ if (isset($_SESSION['expire'])) {
         session_destroy();
     }
 }
+require '../model-db-connection/config.php';
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -159,88 +160,200 @@ if (isset($_SESSION['expire'])) {
                             <div class="tg-aboutus-section">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="span7">   
-                                        <div class="widget stacked widget-table action-table">
-                                            <div class="widget-header">
-                                                <h3>FINANCIAL PROGRAM</h3>
-                                            </div> <!-- /widget-header -->
-                                            <div class="widget-content">   
-                                                <table class="table table-striped table-bordered">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>No.</th>
-                                                            <th>Course Name</th>
-                                                            <th>Days</th>
-                                                            <th>Fee (THB)</th>
-                                                            <th>Jan</th>
-                                                            <th>Feb</th>
-                                                            <th>Mar</th>
-                                                            <th>Apr</th>
-                                                            <th>May</th>
-                                                            <th>Jun</th>
-                                                            <th>Jul</th>
-                                                            <th>Aug</th>
-                                                            <th>Sep</th>
-                                                            <th>Oct</th>
-                                                            <th>Nov</th>
-                                                            <th>Dec</th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td style="text-align:left;">
-                                                                <span class="linkHover" style="cursor: pointer" onclick="showCourseDetali('Secret$ of Money Cat รุ่นที่ 2')">Secret$" of Money Cat รุ่นที่ 2</span>
-                                                            </td>
-                                                            <td>2</td>
-                                                            <td align="left" id="course_id" style="cursor: pointer">
-                                                                <script type="text/javascript">
-                                                                    $(document).ready(function () {
-                                                                        $('#course_id').tooltipster({
-                                                                            content: $('<ul><li>บุคคลทั่วไป 3,900 บาท</li><li>early bird ลงทะเบียนก่อนวันที่ 9 มกราคม 2559 - 3,500 บาท</li><li>มาเป็นคู่ หรือ ลงทะเบียนแบบกลุ่ม 5 ท่าน ท่านละ 3,500 บาท</li><li>ฟรี coffee break เช้า บ่าย, อาหารกลางวัน และเอกสารการเรียนการสอน</li><li>อัตรานี้ ยังไม่รวม VAT 7%</li></ul><br/>'),
-                                                                            touchDevices: false,
-                                                                            position: "right"
-                                                                        });
-                                                                    });
-                                                                </script>
-                                                                บุคคลทั่วไป 3,900 บาท...                                           
-                                                            </td>
-                                                            <td>
-                                                                <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('Secret$ of Money Cat รุ่นที่ 2')">23,24</span>
-                                                            </td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td></td>
-                                                            <td>
-                                                                <?php
-                                                                if (empty($_SESSION['username'])) {
+                                        <?php
+                                        $sqlGetCate = "SELECT * FROM GTRICH_COURSE_CATEGORY ORDER BY CATE_CREATE_DATE_TIME DESC";
+                                        $resGetCate = mysql_query($sqlGetCate);
+                                        while ($rowGetCate = mysql_fetch_array($resGetCate)) {
+                                            ?>
+                                            <div class="widget stacked widget-table action-table">
+                                                <div class="widget-header">
+                                                    <h3><?= $rowGetCate['CATE_NAME'] ?></h3>
+                                                </div> <!-- /widget-header -->
+                                                <div class="widget-content">   
+                                                    <table class="table table-striped table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No.</th>
+                                                                <th>Course Name</th>
+                                                                <th>Days</th>
+                                                                <th>Fee (THB)</th>
+                                                                <th>Jan</th>
+                                                                <th>Feb</th>
+                                                                <th>Mar</th>
+                                                                <th>Apr</th>
+                                                                <th>May</th>
+                                                                <th>Jun</th>
+                                                                <th>Jul</th>
+                                                                <th>Aug</th>
+                                                                <th>Sep</th>
+                                                                <th>Oct</th>
+                                                                <th>Nov</th>
+                                                                <th>Dec</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <?php
+                                                            $sqlCheckCateForCourse = "SELECT COUNT(*) AS haveCourse FROM GTRICH_COURSE_HEADER WHERE REF_CATE_ID='" . $rowGetCate['CATE_ID'] . "'";
+                                                            $resCheckCateForCourse = mysql_query($sqlCheckCateForCourse);
+                                                            $rowCheckCateForCourse = mysql_fetch_assoc($resCheckCateForCourse);
+                                                            if ($rowCheckCateForCourse['haveCourse'] > 0) {
+                                                                $sqlGetCourseHeader = "SELECT * FROM GTRICH_COURSE_HEADER WHERE REF_CATE_ID='" . $rowGetCate['CATE_ID'] . "' AND HEADER_COURSE_STATUS = '0'";
+                                                                $resGetCourseHeader = mysql_query($sqlGetCourseHeader);
+                                                                $no = 1;
+                                                                while ($rowGetCourseHeader = mysql_fetch_array($resGetCourseHeader)) {
                                                                     ?>
-                                                                    <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
+                                                                    <tr>
+                                                                        <td><?= $no ?></td>
+                                                                        <td style="text-align:left;">
+                                                                            <span class="linkHover" style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= $rowGetCourseHeader['HEADER_NAME'] ?></span>
+                                                                        </td>
+                                                                        <?php
+                                                                        $noDaysOfCourse = explode(",", $rowGetCourseHeader['HEADER_EVENT_DATE']);
+                                                                        ?>
+                                                                        <td><?= sizeof($noDaysOfCourse) ?></td>
+                                                                        <td align="left" id="<?= $rowGetCourseHeader['HEADER_ID'] ?>" style="cursor: pointer">
+                                                                            <script type="text/javascript">
+                                                                                $(document).ready(function () {
+                                                                                    $('#<?= $rowGetCourseHeader['HEADER_ID'] ?>').tooltipster({
+                                                                                        content: $('<ul><li>บุคคลทั่วไป 3,900 บาท</li><li>early bird ลงทะเบียนก่อนวันที่ 9 มกราคม 2559 - 3,500 บาท</li><li>มาเป็นคู่ หรือ ลงทะเบียนแบบกลุ่ม 5 ท่าน ท่านละ 3,500 บาท</li><li>ฟรี coffee break เช้า บ่าย, อาหารกลางวัน และเอกสารการเรียนการสอน</li><li>อัตรานี้ ยังไม่รวม VAT 7%</li></ul><br/>'),
+                                                                                        touchDevices: false,
+                                                                                        position: "right"
+                                                                                    });
+                                                                                });
+                                                                            </script>
+                                                                            บุคคลทั่วไป 3,900 บาท...                                           
+                                                                        </td>
+                                                                        <?php
+                                                                        $mJan = "";
+                                                                        $mFeb = "";
+                                                                        $mMarch = "";
+                                                                        $mApr = "";
+                                                                        $mMay = "";
+                                                                        $mJune = "";
+                                                                        $mJuly = "";
+                                                                        $mAug = "";
+                                                                        $mSep = "";
+                                                                        $mOct = "";
+                                                                        $mNov = "";
+                                                                        $mDec = "";
+                                                                        for ($i = 0; $i < sizeof($noDaysOfCourse); $i++) {
+                                                                            //Get month with format mm/dd/yyyy
+                                                                            $month = explode("/", $noDaysOfCourse[$i])[0];
+                                                                            $date = explode("/", $noDaysOfCourse[$i])[1];
+                                                                            switch ($month) {
+                                                                                case 01:
+                                                                                    $mJan.= $date . ",";
+                                                                                    break;
+                                                                                case 02:
+                                                                                    $mFeb.= $date . ",";
+                                                                                    break;
+                                                                                case 03:
+                                                                                    $mMarch.= $date . ",";
+                                                                                    break;
+                                                                                case 04:
+                                                                                    $mApr.= $date . ",";
+                                                                                    break;
+                                                                                case 05:
+                                                                                    $mMay.= $date . ",";
+                                                                                    break;
+                                                                                case 06:
+                                                                                    $mJune.= $date . ",";
+                                                                                    break;
+                                                                                case 07:
+                                                                                    $mJuly.= $date . ",";
+                                                                                    break;
+                                                                                case 08:
+                                                                                    $mAug.= $date . ",";
+                                                                                    break;
+                                                                                case 09:
+                                                                                    $mSep.= $date . ",";
+                                                                                    break;
+                                                                                case 10:
+                                                                                    $mOct.= $date . ",";
+                                                                                    break;
+                                                                                case 11:
+                                                                                    $mNov.= $date . ",";
+                                                                                    break;
+                                                                                case 12:
+                                                                                    $mDec.= $date . ",";
+                                                                                    break;
+                                                                            }
+                                                                        }
+                                                                        ?>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mJan, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mFeb, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mMarch, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mApr, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mMay, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mJune, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mJuly, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mAug, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mSep, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mOct, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mNov, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= rtrim($mDec, ",") ?></span>
+                                                                        </td>
+                                                                        <td>
+                                                                            <?php
+                                                                            if (empty($_SESSION['username'])) {
+                                                                                ?>
+                                                                                <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
+                                                                                <?php
+                                                                            } else {
+                                                                                ?>
+                                                                                <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
+                                                                                <?php
+                                                                            }
+                                                                            ?>
+
+                                                                        </td>
+                                                                    </tr>
                                                                     <?php
-                                                                } else {
-                                                                    ?>
-                                                                    <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
-                                                                    <?php
+                                                                    $no++;
                                                                 }
+                                                            } else {
                                                                 ?>
+                                                                <tr>
+                                                                    <td colspan="17"> No course are available for this section </td>
+                                                                </tr>
+                                                                <?php
+                                                            }
+                                                            ?>
+                                                        </tbody>
+                                                    </table>
 
-                                                            </td>
-                                                        </tr>
 
-                                                    </tbody>
-                                                </table>
+                                                </div> <!-- /widget-content -->
 
-                                            </div> <!-- /widget-content -->
+                                            </div><br/> <!-- /widget -->
+                                            <?php
+                                        }
+                                        ?>
 
-                                        </div> <!-- /widget -->
                                     </div>
                                 </div>
                             </div>
@@ -299,7 +412,7 @@ if (isset($_SESSION['expire'])) {
                                             </div>
                                         </figure>
                                         <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name" style="cursor: pointer;" onclick="window.open('http://www.vihoon.com/?pg=about','_blank');">อ. วิธิวัต โรจนตรีคูณ</span>
+                                            <span class="tg-member-name" style="cursor: pointer;" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">อ. วิธิวัต โรจนตรีคูณ</span>
                                             <span class="tg-member-postion">ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์</span>
                                             <ul class="tg-social-icon">
                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -402,7 +515,7 @@ if (isset($_SESSION['expire'])) {
         *************************************-->
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
-                <h2>LOGIN FORM</h2>
+                <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2>
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
@@ -431,8 +544,8 @@ if (isset($_SESSION['expire'])) {
         </div>
         <div class="modal fade register-modalbox" tabindex="-1" role="dialog">
             <div class="tg-signup-modalbox">
-                <h2>REGISTRATION FORM</h2>
-
+                <h2>REGISTRATION FORM <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
+                
                 <form style="padding:20px" id="registerSeminar">
                     <div style="overflow: auto;max-height: 450px;">
                         <fieldset>
@@ -619,7 +732,13 @@ if (isset($_SESSION['expire'])) {
                     $.ajax({
                         url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                         type: 'POST',
-                        data: {'custID': '<?php if(isset($_SESSION['userId'])){echo $_SESSION['userId'];}else{echo '';} ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
+                        data: {'custID': '<?php
+            if (isset($_SESSION['userId'])) {
+                echo $_SESSION['userId'];
+            } else {
+                echo '';
+            }
+            ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
                         success: function (data, textStatus, jqXHR) {
                             if (data == 200) {
                                 alert("ลงทะเบียนเรียบร้อยแล้ว");
