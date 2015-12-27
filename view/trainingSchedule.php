@@ -7,7 +7,6 @@ if (isset($_SESSION['expire'])) {
     }
 }
 require '../model-db-connection/config.php';
-
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -195,7 +194,7 @@ require '../model-db-connection/config.php';
                                                         </thead>
                                                         <tbody>
                                                             <?php
-                                                            $sqlCheckCateForCourse = "SELECT COUNT(*) AS haveCourse FROM GTRICH_COURSE_HEADER WHERE REF_CATE_ID='" . $rowGetCate['CATE_ID'] . "'";
+                                                            $sqlCheckCateForCourse = "SELECT COUNT(*) AS haveCourse FROM GTRICH_COURSE_HEADER WHERE REF_CATE_ID='" . $rowGetCate['CATE_ID'] . "' AND HEADER_COURSE_STATUS = '0'";
                                                             $resCheckCateForCourse = mysql_query($sqlCheckCateForCourse);
                                                             $rowCheckCateForCourse = mysql_fetch_assoc($resCheckCateForCourse);
                                                             if ($rowCheckCateForCourse['haveCourse'] > 0) {
@@ -213,17 +212,8 @@ require '../model-db-connection/config.php';
                                                                         $noDaysOfCourse = explode(",", $rowGetCourseHeader['HEADER_EVENT_DATE']);
                                                                         ?>
                                                                         <td><?= sizeof($noDaysOfCourse) ?></td>
-                                                                        <td align="left" id="<?= $rowGetCourseHeader['HEADER_ID'] ?>" style="cursor: pointer">
-                                                                            <script type="text/javascript">
-                                                                                $(document).ready(function () {
-                                                                                    $('#<?= $rowGetCourseHeader['HEADER_ID'] ?>').tooltipster({
-                                                                                        content: $('<ul><li>บุคคลทั่วไป 3,900 บาท</li><li>early bird ลงทะเบียนก่อนวันที่ 9 มกราคม 2559 - 3,500 บาท</li><li>มาเป็นคู่ หรือ ลงทะเบียนแบบกลุ่ม 5 ท่าน ท่านละ 3,500 บาท</li><li>ฟรี coffee break เช้า บ่าย, อาหารกลางวัน และเอกสารการเรียนการสอน</li><li>อัตรานี้ ยังไม่รวม VAT 7%</li></ul><br/>'),
-                                                                                        touchDevices: false,
-                                                                                        position: "right"
-                                                                                    });
-                                                                                });
-                                                                            </script>
-                                                                            บุคคลทั่วไป 3,900 บาท...                                           
+                                                                        <td id="<?= $rowGetCourseHeader['HEADER_ID'] ?>" style="text-align: left">                    
+                                                                            <?= $rowGetCourseHeader['HEADER_DETAIL'] ?>                                           
                                                                         </td>
                                                                         <?php
                                                                         $mJan = "";
@@ -546,7 +536,7 @@ require '../model-db-connection/config.php';
         <div class="modal fade register-modalbox" tabindex="-1" role="dialog">
             <div class="tg-signup-modalbox">
                 <h2>REGISTRATION FORM <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
-                
+
                 <form style="padding:20px" id="registerSeminar">
                     <div style="overflow: auto;max-height: 450px;">
                         <fieldset>
