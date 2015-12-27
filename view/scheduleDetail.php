@@ -7,6 +7,9 @@ if (isset($_SESSION['expire'])) {
     }
 }
 require '../model-db-connection/config.php';
+$sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $_GET['cname'] . "'";
+$res = mysql_query($sqlGetCourseHeaderID);
+$rowHeader = mysql_fetch_assoc($res);
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -152,195 +155,131 @@ require '../model-db-connection/config.php';
                 <section class="tg-main-section tg-haslayout">
                     <div class="container">
                         <div class="row">
+                            <div class="col-xs-12 pull-left">
+                                <a href="trainingSchedule" class="btn btn-default"><i class="fa fa-backward"></i> Back</a>
+                                <br/><br/>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-xs-12">
-                                <div class="tg-theme-heading">                                    
-                                    <h2><?= $_GET['cname'] ?></h2>
-                                    <span>"ความลับ" ของการจัดการเงิน อย่างฉลาด เพื่ออิสรภาพ ทางการเงิน</span>
+                                <div class="tg-theme-heading">     
+                                    <?php
+                                    if (!empty($rowHeader['HEADER_NAME'])) {
+                                        ?>
+                                        <h2><?= $rowHeader['HEADER_NAME'] ?></h2>
+                                        <span><?= $rowHeader['SUB_HEADER_NAME'] ?></span>
+                                        <?php
+                                    }
+                                    ?>
+
+
                                 </div>
                             </div>
-                            <div class="tg-aboutus-section">
-                                <div class="col-md-10 col-sm-10 col-xs-10">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="span12">
-                                                <table class="table table-condensed table-hover schedule_detail_table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="250px"><strong>Training Date: </strong></td>
-                                                            <td>
-                                                                <ul>
-                                                                    <li>23 January's 2016 - 24 January's 2016</li>
-                                                                    <li>
-                                                                        <?php
-                                                                        if (empty($_SESSION['username'])) {
-                                                                            ?>
-                                                                            <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
-                                                                            <?php
-                                                                        }
-                                                                        ?>
-
-                                                                    </li>
-                                                                </ul>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Time :</strong></td>
-                                                            <td>12 ชั่วโมง</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Days :</strong></td>
-                                                            <td>2 วัน</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Duration :</strong></td>
-                                                            <td>09:00 - 16:00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Fee :</strong></td>
-                                                            <td>
-                                                                <ul>
-                                                                    <li>บุคคลทั่วไป 3,900 บาท</li>
-                                                                    <li>early bird ลงทะเบียนก่อนวันที่ 9 มกราคม 2559 - 3,500 บาท</li>
-                                                                    <li>มาเป็นคู่ หรือ ลงทะเบียนแบบกลุ่ม 5 ท่าน ท่านละ 3,500 บาท</li>
-                                                                    <li>ฟรี coffee break เช้า บ่าย, อาหารกลางวัน และเอกสารการเรียนการสอน</li>
-                                                                    <li><span style="color:red;">อัตรานี้ ยังไม่รวม VAT 7%</span></li>
-                                                                </ul>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Language :</strong></td>
-                                                            <td>ไทย</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Instructor :</strong></td>
-                                                            <td>
-                                                                <ul>
-                                                                    <li>อ. วิภา เจริญกิจสุพัฒน์</li>
-                                                                </ul>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Objective :</strong></td>
-                                                            <td>
-                                                                <p>การที่จะมี ความสุขที่แท้จริงอันเกิดจากความมั่งคั่งที่มั่นคง ความร่ำรวยที่ยั่งยืน มั่นใจว่าชีวิตหลังเกษียณจะสามารถอยู่ได้อย่างมีความสุข โดยไม่ต้องเป็นห่วงกับการหาเงินอีกต่อไป อยู่ที่คนเรา สามารถเห็นเป้าหมายและความต้องการในชีวิต และความต้องการทางการเงินของตนเองอย่างชัดเจน
-                                                                    การมีความรู้ ความเข้าใจ ในหลักการ แนวทาง และวิธีการวางแผนการเงิน ที่จะนำไปสู่ การจัดการการเงินที่ได้ผล จึงเป็นสิ่งสำคัญอย่างยิ่ง</p>
-
-                                                                <p><strong>Secret$ of Money Cat คอร์สอบรม รูปแบบ เวิร์คช็อบสัมมนา</strong></p>
-
-                                                                <p>จึงกำเนิดขึ้นมา โดยมี เป้าประสงค์ เพื่อผู้เรียนสามารถกำหนดจัดตั้งเป้าหมายชีวิต ความต้องการชีวิต ความต้องการทางการเงิน และเป้าหมายการเงิน เช่น การจัดการรายจ่าย การวางแผนเกษียณ การจัดการหนี้สิน การจัดการเงินเพื่ออนาคต ที่ชัดเจนขึ้น โดยเนื้อหาหลักสูตรที่ให้ จะทำให้ผู้เรียน มีความเข้าใจและได้แนวทาง สำหรับการวางแผนการเงินที่สนับสนุนเป้าหมายการเกษียณและเป้าหมายชีวิตได้</p>
-
-                                                                <p><strong>อิสรภาพทางการเงิน = อิสรภาพชีวิต</strong></p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Who Should Attend :</strong></td>
-                                                            <td>
-                                                                <p>คอร์สนี้ เหมาะกับ ผู้ที่กำลังต้องการ วางรากฐานความมั่นคงทางการเงินให้ชีวิต หรือครอบครัว เริ่มต้นลงทุนอย่างเข้าใจ ต้องการจัดการหรือปรับเปลี่ยนพฤติกรรมการใช้เงินของตนเอง ต้องการหาทางลดภาระรายจ่ายและหนี้สิน ต้องการหาแนวทางในการเพิ่มรายได้ ต้องการหาแนวทาง และวิธีการ เพื่อการเกษียณ ให้ได้เร็วขึ้น และ ต้องการมี อิสรภาพ ทางการเงิน</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Benefits: </strong></td>
-                                                            <td>
-                                                                <p>เข้าใจเป้าหมาย และกระบวนการวางแผนการเงิน วางรากฐานการเงินให้มั่นคง สร้างความมั่งคั่งระยะยาว จัดการภาษีบุคคลให้อยู่หมัด! ศักยภาพสร้างเงิน</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><strong>Course Outline :</strong></td>
-                                                            <td>
-                                                                <strong>1. เข้าใจเป้าหมาย และกระบวนการวางแผนการเงิน</strong>
-                                                                <ul>
-                                                                    <li><p>แกะรอยปัญหาหรือพฤติกรรมการใช้เงินของตนเอง วิเคราะห์สุขภาพทางการเงิน เข้าใจภาพรวมของกระบวนการวางแผนการเงิน และความลับทางการเงิน ที่จะช่วยให้ตระหนักถึงความรวดเร็วของการเติบโตดอกเบี้ยทางการเงิน</p></li>
-                                                                </ul>
-                                                                <strong>2. ตอกเสาร์เข็ม! วางรากฐานการเงินให้มั่นคง</strong>
-                                                                <ul>
-                                                                    <li><p>การสร้างงบประมาณการเงิน การสร้างเงินสำรองฉุกเฉิน การวางแผนประกันทั้งระบบ การวางแผนก่อนการเป็นหนี้ และการวางแผนออกจากหนี้</p></li>
-                                                                </ul>
-                                                                <strong>3. สร้างความมั่งคั่งระยะยาว</strong>
-                                                                <ul>
-                                                                    <li><p>การออมและการลงทุนตามเป้าหมายการเงิน การวางแผนการเงินเป้าหมายระยะยาว การวางแผนเกษียณ</p></li>
-                                                                </ul>
-                                                                <strong>4. จัดการภาษีบุคคลให้อยู่หมัด!</strong>
-                                                                <ul>
-                                                                    <li><p>พบความแตกต่างระหว่างคนวางแผนและไม่วางแผนภาษี เข้าใจโครงสร้างการคำนวณภาษีเงินได้บุคคลธรรมดา การคำนวณภาษีแบบขั้นบันได สิทธิลดหย่อนภาษีของบุคคลธรรมดาที่ถูกต้อง ครบถ้วน เลือกใช้เป็น เทคนิคการวางแผนภาษีโดยการแยกหน่วยภาษี และตัวอย่างการเครดิตภาษีเงินปันผล</p></li>
-                                                                </ul>
-                                                                <strong>5. ศักยภาพสร้างเงิน!</strong>
-                                                                <ul>
-                                                                    <li><p>ค้นหาลักษณะของตนที่จะประสบความสำเร็จ และแนวทางในการสร้างรายได้เพิ่ม</p></li>
-                                                                </ul>
-                                                                <strong>6. สร้าง Passive income หลังเกษียณ!</strong>
-                                                                <ul>
-                                                                    <li><p>พบ เครื่องมือการออมและการลงทุน และเริ่มต้นลงทุนอย่างเข้าใจ</p></li>
-                                                                </ul>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <strong>Payment Condition :</strong>
-                                                            </td>
-                                                            <td>
-                                                                <ul>
-                                                                    <li>เงินสด ณ หน้างานในวันแรกของการอบรม</li>
-                                                                    <li>โอนเงินเข้าบัญชีออมทรัพย์ ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3</li>
-                                                                    <ul>
-                                                                        <li><strong>หมายเหตุ</strong>             
-                                                                            ส่งหลักฐานการโอนเงินมาได้ที่ pinhatai.d@gmail.com</li>
-                                                                        <li><strong>นโยบายการขอยกเลิกและคืนเงิน</strong><br/>             
-                                                                            แจ้งยกเลิกภายใน 7 วันก่อนวันเรียน (ภายใน 12 ธันวาคม 2558) ได้รับเงินคืนเต็มจำนวน แจ้งยกเลิกหลังวันที่ 12 ธันวาคม 2558 ผู้เรียนยังต้องจ่ายค่าลงทะเบียนเต็มจำนวน</li>
-                                                                    </ul>
-                                                                </ul>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <strong>Contact Person :</strong>
-                                                            </td>
-                                                            <td>
-                                                                <p>Ms. Pinhatai Dechsingharat</p>
-                                                                <p>Tel: 081-9023872</p>
-                                                                <p>Facebook: www.facebook.com/richplanning</p>
-                                                                <p>Website: www.gogetrich.net</p>
-                                                                <p>Email: pinhatai.d@setalk.net</p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <strong>Location:</strong>
-                                                            </td>
-                                                            <td><br/>
-                                                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                                                    <div id="tg-map" class="tg-map">
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="2" style="text-align:center !important;">
-                                                                <br/>
-                                                                <?php
-                                                                if (empty($_SESSION['username'])) {
+                            <?php
+                            if (!empty($rowHeader['HEADER_NAME'])) {
+                                ?>
+                                <div class="tg-aboutus-section">
+                                    <div class="col-md-10 col-sm-10 col-xs-10">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="span12">
+                                                    <table class="table table-condensed table-hover schedule_detail_table">
+                                                        <tbody>
+                                                            <?php
+                                                            $sqlGetCourseDetailByHeaderID = "SELECT * FROM GTRICH_COURSE_DETAIL GCD"
+                                                                    . " LEFT JOIN GTRICH_DESCRIPTION_HEADER GDH ON GCD.DESC_HEADER_ID = GDH.DESC_HEADER_ID "
+                                                                    . " WHERE 1=1"
+                                                                    . " AND GCD.REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "'"
+                                                                    . " ORDER BY DETAIL_ORDER ASC";
+                                                            $resGetCourseDetailByHeaderID = mysql_query($sqlGetCourseDetailByHeaderID);
+                                                            while ($rowGetCourseDetailByHeaderID = mysql_fetch_array($resGetCourseDetailByHeaderID)) {
+                                                                if (!empty($rowGetCourseDetailByHeaderID['DETAIL_LAT'])) {
                                                                     ?>
-                                                                    <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
+                                                                    <tr>
+                                                                        <td width="250px"><strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong></td>
+                                                                        <td>
+                                                                            <br/>
+                                                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                                <script type="text/javascript">
+                                                                                    $(document).ready(function () {
+                                                                                        $("#<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>").gmap3({
+                                                                                            marker: {
+                                                                                                values: [
+                                                                                                    {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "Saminar Position !"}
+                                                                                                ]},
+                                                                                            map: {
+                                                                                                options: {
+                                                                                                    zoom: 16,
+                                                                                                    scrollwheel: false,
+                                                                                                    navigationControl: false,
+                                                                                                    mapTypeControl: false,
+                                                                                                    scaleControl: false,
+                                                                                                    draggable: false
+                                                                                                }
+                                                                                            }
+                                                                                        });
+                                                                                    });
+                                                                                </script>
+                                                                                <div id="<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>" class="tg-map">
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
                                                                     <?php
                                                                 } else {
                                                                     ?>
-                                                                    <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
+                                                                    <tr>
+                                                                        <td width="250px"><strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong></td>
+                                                                        <td>
+                                                                            <?= $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION'] ?>
+                                                                        </td>
+                                                                    </tr>
                                                                     <?php
                                                                 }
-                                                                ?>                                                                
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                            }
+                                                            ?>
+                                                            <tr>
+                                                                <td colspan="2" style="text-align:center !important;">
+                                                                    <br/>
+                                                                    <?php
+                                                                    if (empty($_SESSION['username'])) {
+                                                                        ?>
+                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
+                                                                        <?php
+                                                                    } else {
+                                                                        ?>
+                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
+                                                                        <?php
+                                                                    }
+                                                                    ?>                                                                
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
 
+                                                </div>
                                             </div>
                                         </div>
+                                    </div>                                 
+                                </div>
+                                <?php
+                            } else {
+                                ?>
+                                <div class="row">
+                                    <div class="tg-error-section">
+                                        <div class="tg-message">
+                                            <h2>404 Error</h2>
+                                            <h3>Cannot found couse</h3>
+                                            <div class="tg-img-border">
+                                                <img src="assets/images/404NotFound.jpg" width="398px" height="269px" alt="image description">
+                                            </div>
+                                            <span>Go back to <a href="trainingSchedule">Training Schedule</a></span>
+                                        </div>
                                     </div>
-                                </div>                                
-                            </div>
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </section>
