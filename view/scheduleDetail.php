@@ -730,6 +730,9 @@ $rowHeader = mysql_fetch_assoc($res);
                     }
                 }
             });
+            $("#moreUser_1").val("");
+            $("#moreUserEmail_1").val("");
+            $("#phone_number_1").val("");
         }
     </script>
 </html>
