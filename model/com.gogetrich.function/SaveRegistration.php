@@ -25,12 +25,12 @@ $customerVO->setCusFirstName($_GET['fName']);
 $customerVO->setCusLastName($_GET['lName']);
 $customerVO->setCusGender($_GET['gender']);
 $customerVO->setCusContactAddr($_GET['address']);
-$isSmameAddr = $_GET['isSameAddress'];
-if ($isSmameAddr == true) {
-    $customerVO->setCusReceiptAddr($_GET['address']);
-} else {
-    $customerVO->setCusReceiptAddr($_GET['addressForReceipt']);
-}
+//$isSmameAddr = $_GET['isSameAddress'];
+//if ($isSmameAddr == true) {
+//    $customerVO->setCusReceiptAddr($_GET['address']);
+//} else {
+//    $customerVO->setCusReceiptAddr($_GET['addressForReceipt']);
+//}
 $customerVO->setPhoneNumber($_GET['phone']);
 $customerVO->setCusFacebookAddr($_GET['facebookAdr']);
 

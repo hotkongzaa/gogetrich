@@ -202,14 +202,14 @@ if (isset($_SESSION['expire'])) {
                                                 <label for="address">ที่อยู่ (เพื่อการติดต่อ) (Contact address) *</label>
                                                 <textarea id="address" name="address" cols="20" style="height: 150px;"></textarea>
                                             </div>
-                                            <div class="form-group">                                                
+                                            <!--div class="form-group">                                                
                                                 <label for="isSameAddress">ที่อยู่ (เพื่อออกใบเสร็จรับเงิน) (Address in receipt)</label><br/><br/>  
                                                 <input type="checkbox" id="isSameAddress" value="true" name="isSameAddress" >  เช่นเดียวกับที่อยู่เพื่อการติดต่อ
                                             </div>
                                             <div class="form-group">
                                                 <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
                                                 <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px;"></textarea>
-                                            </div>
+                                            </div-->
                                             <div class="form-group">
                                                 <label for="phone">หมายเลขโทรศัพท์ เพื่อการติดต่อ (Phone number) *</label>
                                                 <input type="text" id="phone" name="phone" placeholder="Phone number" class="form-control">
@@ -312,7 +312,7 @@ if (isset($_SESSION['expire'])) {
                         required: true
                     },
                     password: {
-                        minlength: 6,
+                        minlength: 8,
                         required: true
                     },
                     confirmPassword: {

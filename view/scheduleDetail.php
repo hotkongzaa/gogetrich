@@ -244,11 +244,11 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                     <?php
                                                                     if (empty($_SESSION['username'])) {
                                                                         ?>
-                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
+                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".login-modalbox" onclick="clearTmp()">ลงทะเบียน</a>
                                                                         <?php
                                                                     } else {
                                                                         ?>
-                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
+                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".register-modalbox" onclick="clearTmp()">ลงทะเบียน</a>
                                                                         <?php
                                                                     }
                                                                     ?>                                                                
@@ -256,7 +256,6 @@ $rowHeader = mysql_fetch_assoc($res);
                                                             </tr>
                                                         </tbody>
                                                     </table>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -306,7 +305,7 @@ $rowHeader = mysql_fetch_assoc($res);
         *************************************-->
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
-                <h2>LOGIN FORM</h2>
+                <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2>
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
@@ -367,10 +366,10 @@ $rowHeader = mysql_fetch_assoc($res);
                                         <td style="text-align: left;" width="150px">Contact Address: </td>
                                         <td style="text-align: left;"><?= $row['CUS_CONTACT_ADDRESS'] ?></td>
                                     </tr>
-                                    <tr>
+                                    <!--tr>
                                         <td style="text-align: left;" width="150px">Receipt Address: </td>
                                         <td style="text-align: left;"><?= $row['CUS_RECEIPT_ADDRESS'] ?></td>
-                                    </tr>
+                                    </tr-->
                                     <tr>
                                         <td style="text-align: left;" width="150px">Phone number: </td>
                                         <td style="text-align: left;"><?= $row['CUS_PHONE_NUMBER'] ?></td>
@@ -385,16 +384,44 @@ $rowHeader = mysql_fetch_assoc($res);
                                     </tr>
                                 </tbody>
                             </table>
-                            <button class="btn btn-sm" type="submit"><i class="fa fa-pencil"></i> Edit Profile</button><br/><br/>
+                            <button class="btn btn-sm" type="button"><i class="fa fa-pencil"></i> Edit Profile</button><br/><br/>
                         </fieldset>
                         <fieldset>
                             <legend>Register Detail</legend>
+                            <div class="form-group">
+                                <strong>ลงทะเบียน*</strong>
+                                <br/>
+                                <input type="radio" name="paymentCondition" value="1"> ลงทะเบียนให้ตัวเอง
+                                <br>
+                                <input type="radio" name="paymentCondition" value="2"> ลงทะเบียนมากกว่า 1 คน
+                            </div>
+                            <div class="form-group" id="regisMoreThan1User">                                                
+                                <label for="moreUser_1">ชื่อ-สกุล (Name)</label> 
+                                <input type="text" id="moreUser_1"/>
+                                <label for="phone_number_1">เบอร์โทรศัพท์ (Phone number)</label> 
+                                <input type="text" id="phone_number_1"/>
+                                <label for="moreUserEmail_1">อีเมล์ (Email)</label> 
+                                <input type="text" id="moreUserEmail_1"/><br/><br/>
+                                <div id="addMoreRegister"></div>
+                                <button class="btn btn-sm" type="button" onclick="addMoreRegister()">
+                                    <i class="fa fa-pencil"></i> เพิ่มผู้สมัคร
+                                </button>
+                                <div id="loadMoreUser" style="margin-top: 10px;"></div>
+                            </div>
                             <div class="form-group">
                                 <strong>ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
                                 <br/>
                                 <input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม
                                 <br>
                                 <input type="radio" name="paymentTerm" value="2"> โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
+                            </div>
+                            <div class="form-group">                                                
+                                <label for="isSameAddress">ที่อยู่ (เพื่อออกใบเสร็จรับเงิน) (Address in receipt)</label><br/><br/>  
+                                <input type="checkbox" id="isSameAddress" value="true" name="isSameAddress" >  เช่นเดียวกับที่อยู่เพื่อการติดต่อ
+                            </div>
+                            <div class="form-group">
+                                <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
+                                <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px;"></textarea>
                             </div>
                             <div class="form-group">
                                 <strong>คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
@@ -471,7 +498,30 @@ $rowHeader = mysql_fetch_assoc($res);
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
+            $("#regisMoreThan1User").hide();
             $("#hideReasonBenifitOther").hide();
+
+            $("#isSameAddress").click(function () {
+                if ($("#isSameAddress").is(":checked")) {
+                    $("#addressForReceipt").val("");
+                    $("#addressForReceipt").attr("readonly", "true");
+                } else {
+                    $("#addressForReceipt").removeAttr("readonly");
+                }
+            });
+
+            $('input[name=paymentCondition]').click(function () {
+                if ($(this).val() == 1) {
+                    $("#regisMoreThan1User").hide();
+                    $("#moreUser_1").val("");
+                    $("#moreUserEmail_1").val("");
+                    $("#phone_number_1").val("");
+                } else {
+                    $("#regisMoreThan1User").show();
+                    $("#loadMoreUser").load("moreUserTbl.php");
+                }
+            });
+
             $("#benifitOther").click(function () {
                 if (document.getElementById('benifitOther').checked) {
                     $("#hideReasonBenifitOther").show();
@@ -542,16 +592,19 @@ $rowHeader = mysql_fetch_assoc($res);
 
                     var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
 
+                    var isSameAddress = $("#isSameAddress").val();
+                    var addressForReceipt = $("#addressForReceipt").val();
+
                     $.ajax({
                         url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                         type: 'POST',
-                        data: {'custID': '<?php
+                        data: {'contactAddress': '<?= $row['CUS_CONTACT_ADDRESS'] ?>', 'addressForReceipt': addressForReceipt, 'isSameAddress': isSameAddress, 'custID': '<?php
                         if (isset($_SESSION['userId'])) {
                             echo $_SESSION['userId'];
                         } else {
                             echo '';
                         }
-                        ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
+                        ?>', 'courseID': '<?= $rowHeader['HEADER_ID'] ?>', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
                         success: function (data, textStatus, jqXHR) {
                             if (data == 200) {
                                 alert("ลงทะเบียนเรียบร้อยแล้ว");
@@ -626,5 +679,57 @@ $rowHeader = mysql_fetch_assoc($res);
                 }
             });
         };
+        function deleteMoreUserTmp(tmpID) {
+            $.ajax({
+                url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
+                type: 'POST',
+                success: function (data, textStatus, jqXHR) {
+                    if (data == 200) {
+                        $("#loadMoreUser").load("moreUserTbl.php");
+                    } else {
+                        alert(data);
+                    }
+                }
+            });
+        }
+        function addMoreRegister() {
+            var name = $("#moreUser_1").val();
+            var email = $("#moreUserEmail_1").val();
+            var phone = $("#phone_number_1").val();
+            if (name == "") {
+                alert("Please enter name");
+            } else if (email == "") {
+                alert("Please enter email");
+            } else if (phone == "") {
+                alert("Please enter phone");
+            } else {
+                $.ajax({
+                    url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=" + name + "&email=" + email + "&phone=" + phone,
+                    type: 'POST',
+                    success: function (data, textStatus, jqXHR) {
+                        if (data == 200) {
+                            $("#loadMoreUser").load("moreUserTbl.php");
+
+                        } else {
+                            alert(data);
+                        }
+                        $("#moreUser_1").val("");
+                        $("#moreUserEmail_1").val("");
+                        $("#phone_number_1").val("");
+                    }
+                });
+            }
+        }
+        function clearTmp() {
+            $.ajax({
+                url: "../model/com.gogetrich.function/clearTmp.php",
+                type: 'POST',
+                success: function (data, textStatus, jqXHR) {
+                    if (!data == 200) {
+                        alert(data);
+                    }
+                }
+            });
+        }
     </script>
 </html>

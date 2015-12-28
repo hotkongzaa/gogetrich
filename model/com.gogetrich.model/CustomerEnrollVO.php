@@ -24,6 +24,7 @@ class CustomerEnrollVO {
     private $newsFrom;
     private $createDateTime;
     private $courseID;
+    private $additionalUser;
 
     function getEnrollID() {
         return $this->enrollID;
@@ -104,5 +105,14 @@ class CustomerEnrollVO {
     function setCourseID($courseID) {
         $this->courseID = $courseID;
     }
+    function getAdditionalUser() {
+        return $this->additionalUser;
+    }
+
+    function setAdditionalUser($additionalUser) {
+        $this->additionalUser = $additionalUser;
+    }
+
+
 
 }

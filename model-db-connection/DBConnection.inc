@@ -49,6 +49,16 @@ if (mysqli_query($con, $sql)) {
             . "FOREIGN KEY (ENROLL_CUS_ID) REFERENCES RICH_CUSTOMER(CUS_ID)"
             . ")ENGINE=InnoDB DEFAULT CHARSET=utf8;";
     mysqli_query($con_create_tbl, $sqlCreateCustomerEnroll);
+
+    $sqlCreateMoreUserTmp = "CREATE TABLE IF NOT EXISTS MORE_REGISTRED_TMP ("
+            . "TMP_ID VARCHAR(100) NOT NULL,"
+            . "TMP_NAME VARCHAR(255),"
+            . "TMP_EMAIL VARCHAR(255),"
+            . "TMP_PHONE_NUMBER VARCHAR(255),"
+            . "TMP_CUS_ID VARCHAR(255),"
+            . "PRIMARY KEY (TMP_ID)"
+            . ")ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+    mysqli_query($con_create_tbl, $sqlCreateMoreUserTmp);
     return true;
 } else {
     echo "Error creating database: " . mysqli_error($con);
