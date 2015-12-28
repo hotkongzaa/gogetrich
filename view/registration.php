@@ -252,7 +252,7 @@ if (isset($_SESSION['expire'])) {
         *************************************-->
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
-                <h2>LOGIN FORM</h2>
+                <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2></h2>
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
@@ -309,7 +309,6 @@ if (isset($_SESSION['expire'])) {
             formRegis.validate({
                 rules: {
                     username: {
-                        minlength: 6,
                         required: true
                     },
                     password: {
@@ -401,9 +400,23 @@ if (isset($_SESSION['expire'])) {
                 success: function (data, textStatus, jqXHR) {
                     if (data == 200) {
                         alert("Registration complete");
-                        setTimeout(function () {
-                            window.location = 'trainingSchedule';
-                        }, 100);
+
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/LoginSubmit.php",
+                            type: 'POST',
+                            data: {'username': $("#username").val(), 'password': $("#password").val()},
+                            success: function (data, textStatus, jqXHR) {
+                                if (data == 503) {
+                                    alert("Username/password is invalid");
+                                } else {
+                                    setTimeout(function () {
+                                        window.location = 'trainingSchedule';
+                                    }, 100);
+                                }
+                            }
+                        });
+
+
                     } else {
                         alert(data);
                     }
