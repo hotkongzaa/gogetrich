@@ -44,6 +44,7 @@ if (mysqli_query($con, $sql)) {
             . "ENROLL_COURSE_ID VARCHAR(255),"
             . "CREATED_DATE_TIME TIMESTAMP,"
             . "PAYMENT_STATUS VARCHAR(255),"
+            . "ADDITIONAL_ENROLL_CUS_NAME VARCHAR(255),"
             . "PRIMARY KEY (ENROLL_ID),"
             . "FOREIGN KEY (ENROLL_CUS_ID) REFERENCES RICH_CUSTOMER(CUS_ID)"
             . ")ENGINE=InnoDB DEFAULT CHARSET=utf8;";
