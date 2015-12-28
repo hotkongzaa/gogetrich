@@ -539,7 +539,57 @@ require '../model-db-connection/config.php';
 
                 <form style="padding:20px" id="registerSeminar">
                     <div style="overflow: auto;max-height: 450px;">
+                        <?php
+                        $sqlgetUserDetail = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userId'] . "'";
+                        $res = mysql_query($sqlgetUserDetail);
+                        $row = mysql_fetch_assoc($res);
+                        ?>
                         <fieldset>
+                            <legend>User Profile</legend>
+                            <table class="table table-condensed table-hover schedule_detail_table">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Username: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_USERNAME'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Name: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_FIRST_NAME'] ?> <?= $row['CUS_LAST_NAME'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Email: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_EMAIL'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Gender: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_GENDER'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Contact Address: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_CONTACT_ADDRESS'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Receipt Address: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_RECEIPT_ADDRESS'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Phone number: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_PHONE_NUMBER'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Facebook: </td>
+                                        <td style="text-align: left;"><?= $row['CUS_FACEBOOK_ADDRESS'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left;" width="150px">Register Date time: </td>
+                                        <td style="text-align: left;"><?= $row['CREATED_DATE_TIME'] ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-sm" type="submit"><i class="fa fa-pencil"></i> Edit Profile</button><br/><br/>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Register Detail</legend>
                             <div class="form-group">
                                 <strong>ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
                                 <br/>
@@ -724,12 +774,12 @@ require '../model-db-connection/config.php';
                         url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                         type: 'POST',
                         data: {'custID': '<?php
-            if (isset($_SESSION['userId'])) {
-                echo $_SESSION['userId'];
-            } else {
-                echo '';
-            }
-            ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
+                        if (isset($_SESSION['userId'])) {
+                            echo $_SESSION['userId'];
+                        } else {
+                            echo '';
+                        }
+                        ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
                         success: function (data, textStatus, jqXHR) {
                             if (data == 200) {
                                 alert("ลงทะเบียนเรียบร้อยแล้ว");
