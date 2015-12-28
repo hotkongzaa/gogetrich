@@ -404,7 +404,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                 <input type="text" id="moreUserEmail_1"/><br/><br/>
                                 <div id="addMoreRegister"></div>
                                 <button class="btn btn-sm" type="button" onclick="addMoreRegister()">
-                                    <i class="fa fa-pencil"></i> เพิ่มผู้สมัคร
+                                    เพิ่มผู้สมัคร
                                 </button>
                                 <div id="loadMoreUser" style="margin-top: 10px;"></div>
                             </div>
@@ -478,7 +478,7 @@ $rowHeader = mysql_fetch_assoc($res);
                             </div>
                         </fieldset>
                     </div>
-                    <button class="tg-theme-btn tg-theme-btn-lg" type="submit">ลงทะเบียนสัมนา</button>
+                    <button class="tg-theme-btn tg-theme-btn-lg" type="submit">ลงทะเบียนสัมมนา</button>
                 </form>
 
             </div>
