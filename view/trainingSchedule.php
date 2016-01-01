@@ -211,7 +211,7 @@ require '../model-db-connection/config.php';
                                                                         <?php
                                                                         $noDaysOfCourse = explode(",", $rowGetCourseHeader['HEADER_EVENT_DATE']);
                                                                         ?>
-                                                                        <td><?= sizeof($noDaysOfCourse) ?></td>
+                                                                        <td><?= $rowGetCourseHeader['HEADER_COURSE_DURATION'] ?></td>
                                                                         <td id="<?= $rowGetCourseHeader['HEADER_ID'] ?>" style="text-align: left">                    
                                                                             <?= $rowGetCourseHeader['HEADER_DETAIL'] ?>                                           
                                                                         </td>
