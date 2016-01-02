@@ -167,7 +167,7 @@ if (isset($_SESSION['expire'])) {
                                                 <input type="text" name="username" id="username" placeholder="Username" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label for="password">รหัสผ่าน (Password) *</label>
+                                                <label for="password">รหัสผ่าน (Password) * </label> (กรุณาใส่อย่างน้อย 8 ตัวอักษร)
                                                 <input type="password" name="password" id="password" placeholder="Password" class="form-control">
                                             </div>
                                             <div class="form-group">
@@ -250,6 +250,15 @@ if (isset($_SESSION['expire'])) {
         <!--************************************
                         Popup Start
         *************************************-->
+        <div class="modal fade notification-modalBox" tabindex="-1" role="dialog">
+            <div class="tg-login-modalbox">
+                <h2>System notification <span class="pull-right" style="cursor: pointer" onclick="$('.notification-modalBox').modal('hide')">x</span></h2></h2>
+                <div class="alert alert-error">
+                    <a class="close" data-dismiss="alert"></a>
+                    <span class="notification_detail"></span>
+                </div>
+            </div>
+        </div>
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
                 <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2></h2>
@@ -303,7 +312,6 @@ if (isset($_SESSION['expire'])) {
                 arrow: false
             });
             runSetDefaultValidation();
-
             var formRegis = $('.cus_registration_form');
             var errorHandler = $('.errorHandler', formRegis);
             formRegis.validate({
@@ -346,7 +354,6 @@ if (isset($_SESSION['expire'])) {
                     errorHandler.show();
                 }
             });
-
             var form = $('.login-form');
             var errorHandler = $('.errorHandler', form);
             form.validate({
@@ -399,26 +406,26 @@ if (isset($_SESSION['expire'])) {
                 type: 'POST',
                 success: function (data, textStatus, jqXHR) {
                     if (data == 200) {
-                        alert("Registration complete");
-
                         $.ajax({
                             url: "../model/com.gogetrich.function/LoginSubmit.php",
                             type: 'POST',
                             data: {'username': $("#username").val(), 'password': $("#password").val()},
                             success: function (data, textStatus, jqXHR) {
                                 if (data == 503) {
-                                    alert("Username/password is invalid");
+                                    $(".notification-modalBox").modal("show");
+                                    $(".notification_detail").html("Username/password is invalid");
                                 } else {
+                                    $(".notification-modalBox").modal("show");
+                                    $(".notification_detail").html("ท่านได้สมัครสมาชิกสำเร็จแล้ว<br/> ยินดีต้อนรับท่านเข้าสู่ Go Get Rich");
                                     setTimeout(function () {
                                         window.location = 'trainingSchedule';
-                                    }, 100);
+                                    }, 1500);
                                 }
                             }
                         });
-
-
                     } else {
-                        alert(data);
+                        $(".notification-modalBox").modal("show");
+                        $(".notification_detail").html(data);
                     }
                 }
             });

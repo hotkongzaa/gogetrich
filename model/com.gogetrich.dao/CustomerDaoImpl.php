@@ -73,4 +73,15 @@ class CustomerDaoImpl implements CustomerDao {
         }
     }
 
+    public function duplicationEmail($email) {
+        $sqlChecDupUser = "SELECT count(*) as counts FROM RICH_CUSTOMER WHERE CUS_EMAIL LIKE '" . $email . "'";
+        $query = mysql_query($sqlChecDupUser);
+        $row = mysql_fetch_assoc($query);
+        if ($row['counts'] >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

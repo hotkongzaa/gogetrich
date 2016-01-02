@@ -49,4 +49,8 @@ class CustomerService {
         return $this->dispatcher->verfiUsernameAndPassword($username, $password);
     }
 
+    public function duplicationEmail($email) {
+        return $this->dispatcher->duplicationEmail($email);
+    }
+
 }

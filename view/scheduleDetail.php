@@ -425,14 +425,16 @@ $rowHeader = mysql_fetch_assoc($res);
                             </div>
                             <div class="form-group">
                                 <strong>คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="ลงทะเบียนก่อนหรือภายในวันที่ 28 พฤศจิกายน 2558"> ลงทะเบียนก่อนหรือภายในวันที่ 28 พฤศจิกายน 2558
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="มาเป็นคู่ หรือ กลุ่ม จำนวน 5 ท่านต่อกลุ่ม"> มาเป็นคู่ หรือ กลุ่ม จำนวน 5 ท่านต่อกลุ่ม
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="แนะนำผ่าน Finkey Group หรือยืนยันส่วนลดกับเจ้าหน้าที่ทางโทรศัพท์"> แนะนำผ่าน Finkey Group หรือยืนยันส่วนลดกับเจ้าหน้าที่ทางโทรศัพท์
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="โปรโมชั่นพิเศษ (กรุณาติดต่อคุณปิ่นหทัย 081-9023872 เพื่อสอบถามและขอรับโปรโมชั่นพิเศษ)"> โปรโมชั่นพิเศษ (กรุณาติดต่อคุณปิ่นหทัย 081-9023872 เพื่อสอบถามและขอรับโปรโมชั่นพิเศษ)
+                                <?php
+                                $sqlGetPromotion = "SELECT * FROM GTRICH_COURSE_PROMOTION WHERE REF_COURSE_HEADER_ID = '" . $_GET['cname'] . "'";
+                                $resGetPromotion = mysql_query($sqlGetPromotion);
+                                while ($rowGetPromotion = mysql_fetch_array($resGetPromotion)) {
+                                    ?>
+                                    <br/>
+                                    <input type="checkbox" name="seminarDiscount" value="<?= $rowGetPromotion['PRO_NAME'] ?>"> <?= $rowGetPromotion['PRO_NAME'] ?>
+                                    <?php
+                                }
+                                ?>
                             </div>
                             <div class="form-group">
                                 <strong>หากได้รับส่วนลดผ่านการแนะนำ กรุณาระบุชื่อผู้แนะนำ</strong>
@@ -599,12 +601,12 @@ $rowHeader = mysql_fetch_assoc($res);
                         url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                         type: 'POST',
                         data: {'contactAddress': '<?= $row['CUS_CONTACT_ADDRESS'] ?>', 'addressForReceipt': addressForReceipt, 'isSameAddress': isSameAddress, 'custID': '<?php
-                        if (isset($_SESSION['userId'])) {
-                            echo $_SESSION['userId'];
-                        } else {
-                            echo '';
-                        }
-                        ?>', 'courseID': '<?= $rowHeader['HEADER_ID'] ?>', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
+                                if (isset($_SESSION['userId'])) {
+                                    echo $_SESSION['userId'];
+                                } else {
+                                    echo '';
+                                }
+                                ?>', 'courseID': '<?= $rowHeader['HEADER_ID'] ?>', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
                         success: function (data, textStatus, jqXHR) {
                             if (data == 200) {
                                 alert("ลงทะเบียนเรียบร้อยแล้ว");

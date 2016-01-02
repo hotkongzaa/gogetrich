@@ -37,6 +37,8 @@ $customerVO->setCusFacebookAddr($_GET['facebookAdr']);
 
 if ($customerService->duplicationUsername($_GET['username'])) {
     echo "This username have been used";
+} else if ($customerService->duplicationEmail($_GET['email'])) {
+    echo "This email have been used";
 } else {
     echo $customerService->saveCustomer($customerVO);
 }
