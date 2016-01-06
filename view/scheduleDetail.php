@@ -87,7 +87,7 @@ $rowHeader = mysql_fetch_assoc($res);
                     </strong>
                     <div class="navigation-area">
                         <?php
-                        if (empty($_SESSION['username'])) {
+                        if (!isset($_SESSION['username'])) {
                             ?>
                             <ul class="add-nav">
                                 <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
@@ -185,6 +185,22 @@ $rowHeader = mysql_fetch_assoc($res);
                                                 <div class="span12">
                                                     <table class="table table-condensed table-hover schedule_detail_table">
                                                         <tbody>
+                                                            <tr>
+                                                                <td colspan="2" style="text-align:right !important;">
+                                                                    <br/>
+                                                                    <?php
+                                                                    if (!isset($_SESSION['username'])) {
+                                                                        ?>
+                                                                    <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
+                                                                        <?php
+                                                                    } else {
+                                                                        ?>
+                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
+                                                                        <?php
+                                                                    }
+                                                                    ?>                                                                
+                                                                </td>
+                                                            </tr>
                                                             <?php
                                                             $sqlGetCourseDetailByHeaderID = "SELECT * FROM GTRICH_COURSE_DETAIL GCD"
                                                                     . " LEFT JOIN GTRICH_DESCRIPTION_HEADER GDH ON GCD.DESC_HEADER_ID = GDH.DESC_HEADER_ID "
@@ -239,16 +255,16 @@ $rowHeader = mysql_fetch_assoc($res);
                                                             }
                                                             ?>
                                                             <tr>
-                                                                <td colspan="2" style="text-align:center !important;">
+                                                                <td colspan="2" style="text-align:right !important;">
                                                                     <br/>
                                                                     <?php
-                                                                    if (empty($_SESSION['username'])) {
+                                                                    if (!isset($_SESSION['username'])) {
                                                                         ?>
-                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".login-modalbox" onclick="clearTmp()">ลงทะเบียน</a>
+                                                                    <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
                                                                         <?php
                                                                     } else {
                                                                         ?>
-                                                                        <a href="#" class="tg-theme-btn" data-toggle="modal" data-target=".register-modalbox" onclick="clearTmp()">ลงทะเบียน</a>
+                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
                                                                         <?php
                                                                     }
                                                                     ?>                                                                
@@ -335,153 +351,7 @@ $rowHeader = mysql_fetch_assoc($res);
         <div class="modal fade register-modalbox" tabindex="-1" role="dialog">
             <div class="tg-signup-modalbox">
                 <h2>REGISTRATION FORM <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
-                <form style="padding:20px" id="registerSeminar">
-                    <div style="overflow: auto;max-height: 450px;">
-                        <?php
-                        $sqlgetUserDetail = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userId'] . "'";
-                        $res = mysql_query($sqlgetUserDetail);
-                        $row = mysql_fetch_assoc($res);
-                        ?>
-                        <fieldset>
-                            <legend>User Profile</legend>
-                            <table class="table table-condensed table-hover schedule_detail_table">
-                                <tbody>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Username: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_USERNAME'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Name: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_FIRST_NAME'] ?> <?= $row['CUS_LAST_NAME'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Email: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_EMAIL'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Gender: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_GENDER'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Contact Address: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_CONTACT_ADDRESS'] ?></td>
-                                    </tr>
-                                    <!--tr>
-                                        <td style="text-align: left;" width="150px">Receipt Address: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_RECEIPT_ADDRESS'] ?></td>
-                                    </tr-->
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Phone number: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_PHONE_NUMBER'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Facebook: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_FACEBOOK_ADDRESS'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Register Date time: </td>
-                                        <td style="text-align: left;"><?= $row['CREATED_DATE_TIME'] ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button class="btn btn-sm" type="button"><i class="fa fa-pencil"></i> Edit Profile</button><br/><br/>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Register Detail</legend>
-                            <div class="form-group">
-                                <strong>ลงทะเบียน*</strong>
-                                <br/>
-                                <input type="radio" name="paymentCondition" value="1"> ลงทะเบียนให้ตัวเอง
-                                <br>
-                                <input type="radio" name="paymentCondition" value="2"> ลงทะเบียนมากกว่า 1 คน
-                            </div>
-                            <div class="form-group" id="regisMoreThan1User">                                                
-                                <label for="moreUser_1">ชื่อ-สกุล (Name)</label> 
-                                <input type="text" id="moreUser_1"/>
-                                <label for="phone_number_1">เบอร์โทรศัพท์ (Phone number)</label> 
-                                <input type="text" id="phone_number_1"/>
-                                <label for="moreUserEmail_1">อีเมล์ (Email)</label> 
-                                <input type="text" id="moreUserEmail_1"/><br/><br/>
-                                <div id="addMoreRegister"></div>
-                                <button class="btn btn-sm" type="button" onclick="addMoreRegister()">
-                                    เพิ่มผู้สมัคร
-                                </button>
-                                <div id="loadMoreUser" style="margin-top: 10px;"></div>
-                            </div>
-                            <div class="form-group">
-                                <strong>ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
-                                <br/>
-                                <input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม
-                                <br>
-                                <input type="radio" name="paymentTerm" value="2"> โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
-                            </div>
-                            <div class="form-group">                                                
-                                <label for="isSameAddress">ที่อยู่ (เพื่อออกใบเสร็จรับเงิน) (Address in receipt)</label><br/><br/>  
-                                <input type="checkbox" id="isSameAddress" value="true" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
-                            </div>
-                            <div class="form-group">
-                                <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-                                <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px;"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <strong>คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
-                                <?php
-                                $sqlGetPromotion = "SELECT * FROM GTRICH_COURSE_PROMOTION WHERE REF_COURSE_HEADER_ID = '" . $_GET['cname'] . "'";
-                                $resGetPromotion = mysql_query($sqlGetPromotion);
-                                while ($rowGetPromotion = mysql_fetch_array($resGetPromotion)) {
-                                    ?>
-                                    <br/>
-                                    <input type="checkbox" name="seminarDiscount" value="<?= $rowGetPromotion['PRO_NAME'] ?>"> <?= $rowGetPromotion['PRO_NAME'] ?>
-                                    <?php
-                                }
-                                ?>
-                            </div>
-                            <div class="form-group">
-                                <strong>หากได้รับส่วนลดผ่านการแนะนำ กรุณาระบุชื่อผู้แนะนำ</strong>
-                                <input type="text" name="inviteSuggest" id="inviteSuggest" placeholder="ชื่อผู้แนะนำ"/> 
-                            </div>
-                            <!--div class="form-group">
-                                <strong>ท่านต้องการความรู้ไปเพื่อประโยชน์ด้านใด (เลือกได้มากกว่า 1 ข้อ)</strong>
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อจัดการค่าใช้จ่าย หรือลดรายจ่าย"> เพื่อจัดการค่าใช้จ่าย หรือลดรายจ่าย
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อหาทางลดภาระหนี้สิน ให้ลดได้เร็วที่สุด"> เพื่อหาทางลดภาระหนี้สิน ให้ลดได้เร็วที่สุด
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อวางแผนภาษีบุคคล ลดการจ่ายภาษี"> เพื่อวางแผนภาษีบุคคล ลดการจ่ายภาษี
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อวางแผนประกันชีวิตได้อย่างคุ้มค่ามากที่สุด"> เพื่อวางแผนประกันชีวิตได้อย่างคุ้มค่ามากที่สุด
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อหาทางเพิ่มรายได้"> เพื่อหาทางเพิ่มรายได้
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อเริ่มต้นลงทุนอย่างเข้าใจ"> เพื่อเริ่มต้นลงทุนอย่างเข้าใจ
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="อื่นๆ" id="benifitOther"> อื่นๆ
-
-                            </div-->
-                            <div class="form-group" id="hideReasonBenifitOther">
-                                <strong>หากเลือก อื่นๆ โปรดระบุ</strong>
-                                <textarea name="other_register" id="otherKnowledgeForReason" cols="20" style="height: 150px;"></textarea>
-                            </div>
-                            <!--div class="form-group">
-                                <strong>ท่านทราบข่าวสารนี้จากแหล่งข้อมูลใด</strong>
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="https://www.facebook.com/RichPlanning"> <a href="https://www.facebook.com/RichPlanning" target="_blank">https://www.facebook.com/RichPlanning</a>
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="https://www.facebook.com/FinkeyGroup"> <a href="https://www.facebook.com/FinkeyGroup" target="_blank">https://www.facebook.com/FinkeyGroup</a>
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="ข่าวประชาสัมพันธ์ (line, email)"> ข่าวประชาสัมพันธ์ (line, email)
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="เพื่อนแนะนำ"> เพื่อนแนะนำ
-                            </div-->
-                            <div class="form-group">
-                                <strong>ยืนยันการลงทะเบียน *</strong>
-                                <br/>
-                                <input type="checkbox" name="confirmRegister">  ข้าพเจ้าขอยืนยันการลงทะเบียนหลักสูตร และรับทราบว่า หากจะยกเลิกการลงทะเบียน ต้องแจ้งทางผู้จัดหลักสูตร อย่างน้อย 7 วันก่อนวันอบรมจึงจะได้รับเงินค่าเรียนคืนเต็มจำนวน  ข้าพเจ้ายินยอมที่จะเสียอัตราค่าเรียนเต็มจำนวนหากไม่ได้เข้าเรียนและไม่ได้แจ้งยกเลิกล่วงหน้าก่อนวันเรียน อย่างน้อย 7 วัน
-                            </div>
-                        </fieldset>
-                    </div>
-                    <button class="tg-theme-btn tg-theme-btn-lg" type="submit">ลงทะเบียนสัมมนา</button>
-                </form>
+                <div id="scheduleFormDiv"></div>
 
             </div>
         </div>
@@ -500,37 +370,7 @@ $rowHeader = mysql_fetch_assoc($res);
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#regisMoreThan1User").hide();
-            $("#hideReasonBenifitOther").hide();
 
-            $("#isSameAddress").click(function () {
-                if ($("#isSameAddress").is(":checked")) {
-                    $("#addressForReceipt").val("");
-                    $("#addressForReceipt").attr("readonly", "true");
-                } else {
-                    $("#addressForReceipt").removeAttr("readonly");
-                }
-            });
-
-            $('input[name=paymentCondition]').click(function () {
-                if ($(this).val() == 1) {
-                    $("#regisMoreThan1User").hide();
-                    $("#moreUser_1").val("");
-                    $("#moreUserEmail_1").val("");
-                    $("#phone_number_1").val("");
-                } else {
-                    $("#regisMoreThan1User").show();
-                    $("#loadMoreUser").load("moreUserTbl.php");
-                }
-            });
-
-            $("#benifitOther").click(function () {
-                if (document.getElementById('benifitOther').checked) {
-                    $("#hideReasonBenifitOther").show();
-                } else {
-                    $("#hideReasonBenifitOther").hide();
-                }
-            });
             $('#login_menu').tooltipster({
                 contentAsHTML: true,
                 content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
@@ -563,65 +403,7 @@ $rowHeader = mysql_fetch_assoc($res);
                     errorHandler.show();
                 }
             });
-            var formRegisterSeminar = $('#registerSeminar');
-            var errorHandlers = $('.errorHandler', formRegisterSeminar);
-            formRegisterSeminar.validate({
-                rules: {
-                    paymentTerm: {
-                        required: true
-                    },
-                    confirmRegister: {
-                        required: true
-                    }
-                },
-                submitHandler: function (form) {
-                    errorHandlers.hide();
-                    var seminarDiscount = "";
-                    $('input[name="seminarDiscount"]:checked').each(function () {
-                        seminarDiscount += this.value + "||";
-                    });
-                    var knowledgeFor = "";
-                    $('input[name="knowledgeFor"]:checked').each(function () {
-                        knowledgeFor += this.value + "||";
-                    });
-                    var inviteSuggest = $("#inviteSuggest").val();
 
-                    var newsFrom = "";
-                    $('input[name="newsFrom"]:checked').each(function () {
-                        newsFrom += this.value + "||";
-                    });
-                    var otherKnowledgeForReason = $("#otherKnowledgeForReason").val();
-
-                    var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
-
-                    var isSameAddress = $("#isSameAddress").val();
-                    var addressForReceipt = $("#addressForReceipt").val();
-
-                    $.ajax({
-                        url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
-                        type: 'POST',
-                        data: {'contactAddress': '<?= $row['CUS_CONTACT_ADDRESS'] ?>', 'addressForReceipt': addressForReceipt, 'isSameAddress': isSameAddress, 'custID': '<?php
-                                if (isset($_SESSION['userId'])) {
-                                    echo $_SESSION['userId'];
-                                } else {
-                                    echo '';
-                                }
-                                ?>', 'courseID': '<?= $rowHeader['HEADER_ID'] ?>', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
-                        success: function (data, textStatus, jqXHR) {
-                            if (data == 200) {
-                                alert("ลงทะเบียนเรียบร้อยแล้ว");
-                                window.location.href = 'scheduleDetail?cname=<?= $_GET['cname'] ?>';
-                            } else {
-                                alert(data);
-                            }
-                        }
-                    });
-
-                },
-                invalidHandler: function (event, validator) {//display error alert on form submit
-                    errorHandlers.show();
-                }
-            });
         });
         function logoutFromApplication() {
             $.ajax({
@@ -643,7 +425,7 @@ $rowHeader = mysql_fetch_assoc($res);
                     if (data == 503) {
                         alert("Username/password is invalid");
                     } else {
-                        window.location = 'trainingSchedule';
+                        window.location = 'scheduleDetail?cname=<?= $_GET['cname'] ?>';
                     }
                 }
             });
@@ -681,60 +463,21 @@ $rowHeader = mysql_fetch_assoc($res);
                 }
             });
         };
-        function deleteMoreUserTmp(tmpID) {
-            $.ajax({
-                url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
-                type: 'POST',
-                success: function (data, textStatus, jqXHR) {
-                    if (data == 200) {
-                        $("#loadMoreUser").load("moreUserTbl.php");
-                    } else {
-                        alert(data);
-                    }
-                }
-            });
-        }
-        function addMoreRegister() {
-            var name = $("#moreUser_1").val();
-            var email = $("#moreUserEmail_1").val();
-            var phone = $("#phone_number_1").val();
-            if (name == "") {
-                alert("Please enter name");
-            } else if (email == "") {
-                alert("Please enter email");
-            } else if (phone == "") {
-                alert("Please enter phone");
-            } else {
-                $.ajax({
-                    url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=" + name + "&email=" + email + "&phone=" + phone,
-                    type: 'POST',
-                    success: function (data, textStatus, jqXHR) {
-                        if (data == 200) {
-                            $("#loadMoreUser").load("moreUserTbl.php");
 
-                        } else {
-                            alert(data);
-                        }
-                        $("#moreUser_1").val("");
-                        $("#moreUserEmail_1").val("");
-                        $("#phone_number_1").val("");
-                    }
-                });
-            }
-        }
-        function clearTmp() {
+        function clearMoreTmp() {
             $.ajax({
                 url: "../model/com.gogetrich.function/clearTmp.php",
                 type: 'POST',
                 success: function (data, textStatus, jqXHR) {
-                    if (!data == 200) {
-                        alert(data);
+                    if (data != 200) {
+                        console.log(data);
+                    } else {
+                        $("#scheduleFormDiv").load("register_partial.php?cname=<?= $_GET['cname'] ?>");
+                        $("#loadMoreUser").load("moreUserTbl.php");
                     }
+
                 }
             });
-            $("#moreUser_1").val("");
-            $("#moreUserEmail_1").val("");
-            $("#phone_number_1").val("");
         }
     </script>
 </html>
