@@ -11,6 +11,8 @@ require '../../model-db-connection/config.php';
 require '../../model/com.gogetrich.dao/CustomerDaoImpl.php';
 require '../../model/com.gogetrich.service/CustomerService.php';
 require '../../model/com.gogetrich.model/CustomerVO.php';
+$configuration = require '../../model-db-connection/GoGetRighconf.properties.php';
+
 
 error_reporting(0);
 $cusDaoImpl = new CustomerDaoImpl();
@@ -22,7 +24,7 @@ if ($reuslt == 503) {
 } else {
     $obj = json_decode($reuslt);
 
-    $_SESSION['expire'] = time() + (60 * 30);
+    $_SESSION['expire'] = time() + (60 * $configuration['applicationTimeOut']);
     $_SESSION['username'] = $obj->{'CUS_USERNAME'};
     $_SESSION['userId'] = $obj->{'CUS_ID'};
 

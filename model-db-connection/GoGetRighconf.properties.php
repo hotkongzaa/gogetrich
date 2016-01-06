@@ -10,5 +10,6 @@ return array(
     'msg_encode' => 'SET NAMES utf8',
     'msg_save_success' => 'บันทึกสำเร็จแล้ว',
     'msg_delete_success' => 'ลบข้อมูลเรียบร้อย',
-    'msg_edit_success' => 'แก้ไขสำเร็จแล้ว'
+    'msg_edit_success' => 'แก้ไขสำเร็จแล้ว',
+    'applicationTimeOut' => '60'
 );

@@ -191,7 +191,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                     <?php
                                                                     if (!isset($_SESSION['username'])) {
                                                                         ?>
-                                                                    <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
+                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
                                                                         <?php
                                                                     } else {
                                                                         ?>
@@ -260,7 +260,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                     <?php
                                                                     if (!isset($_SESSION['username'])) {
                                                                         ?>
-                                                                    <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
+                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
                                                                         <?php
                                                                     } else {
                                                                         ?>
@@ -350,7 +350,7 @@ $rowHeader = mysql_fetch_assoc($res);
         </div>
         <div class="modal fade register-modalbox" tabindex="-1" role="dialog">
             <div class="tg-signup-modalbox">
-                <h2>REGISTRATION FORM <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
+                <h2>REGISTRATION COURSE <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
                 <div id="scheduleFormDiv"></div>
 
             </div>
@@ -465,19 +465,21 @@ $rowHeader = mysql_fetch_assoc($res);
         };
 
         function clearMoreTmp() {
-            $.ajax({
-                url: "../model/com.gogetrich.function/clearTmp.php",
-                type: 'POST',
-                success: function (data, textStatus, jqXHR) {
-                    if (data != 200) {
-                        console.log(data);
-                    } else {
-                        $("#scheduleFormDiv").load("register_partial.php?cname=<?= $_GET['cname'] ?>");
-                        $("#loadMoreUser").load("moreUserTbl.php");
-                    }
+            $("#scheduleFormDiv").load("register_partial.php?cname=<?= $_GET['cname'] ?>", function () {
+                $.ajax({
+                    url: "../model/com.gogetrich.function/clearTmp.php",
+                    type: 'POST',
+                    success: function (data, textStatus, jqXHR) {
+                        if (data != 200) {
+                            console.log(data);
+                        } else {
+                            $("#loadMoreUser").load("moreUserTbl.php");
+                        }
 
-                }
+                    }
+                });
             });
+
         }
     </script>
 </html>
