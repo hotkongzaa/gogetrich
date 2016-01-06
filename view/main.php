@@ -978,7 +978,7 @@ require '../model-db-connection/config.php';
             <div class="tg-signup-modalbox">
                 <h2>MENTOR DETAIl</h2>
                 <form style="padding:20px" >
-                    <div style="overflow-x:hidden; auto;max-height: 450px;">
+                    <div style="overflow-x:hidden; max-height: 450px;">
                         <div class="row">
                             <div class="col-sm-4">                                        
                                 <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
