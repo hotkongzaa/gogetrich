@@ -12,7 +12,7 @@ $sqlGetRichUser = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['us
 $resGetRichUser = mysql_query($sqlGetRichUser);
 $rowGetRichUser = mysql_fetch_assoc($resGetRichUser);
 
-if ($rowGetTmpTbl['TMP_EMAIL'] == $rowGetRichUser['CUS_EMAIL'] && $rowGetTmpTbl['TMP_NAME'] == $rowGetRichUser['CUS_FIRST_NAME'] . " " . $rowGetRichUser['CUS_LAST_NAME']) {
+if ($rowGetTmpTbl['TMP_EMAIL'] == $rowGetRichUser['CUS_EMAIL']) {
     echo 200;
 } else {
     echo 'User not match';

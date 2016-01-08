@@ -27,7 +27,7 @@ if (isset($_SESSION['userId'])) {
             while ($rowGetSChedule = mysql_fetch_array($resGetSchedule)) {
                 ?>
                 <br/>
-                <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"> เริ่ม <?= $rowGetSChedule['START_EVENT_DATE_TIME'] ?> ถึง <?= $rowGetSChedule['END_EVENT_DATE_TIME'] ?>
+                <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม <?= $rowGetSChedule['START_EVENT_DATE_TIME'] ?> ถึง <?= $rowGetSChedule['END_EVENT_DATE_TIME'] ?></span>
                 <?php
             }
             ?>
@@ -62,7 +62,7 @@ if (isset($_SESSION['userId'])) {
             <input type="radio" name="paymentTerm" value="2"> โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
         </div>
         <div class="form-group">                                                
-            <label for="isSameAddress">ที่อยู่ (เพื่อออกใบเสร็จรับเงิน) (Address in receipt)</label><br/><br/>  
+            <label>ที่อยู่ (เพื่อออกใบเสร็จรับเงิน)</label>&nbsp; 
             <input type="checkbox" id="isSameAddress" value="true" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
         </div>
         <div class="form-group">
@@ -85,10 +85,10 @@ if (isset($_SESSION['userId'])) {
         <div class="form-group">
             <strong>ยืนยันการลงทะเบียน *</strong>
             <br/>
-            <input type="checkbox" name="confirmRegister">  ข้าพเจ้าขอยืนยันการลงทะเบียนหลักสูตร และรับทราบว่า หากจะยกเลิกการลงทะเบียน ต้องแจ้งทางผู้จัดหลักสูตร อย่างน้อย 7 วันก่อนวันอบรมจึงจะได้รับเงินค่าเรียนคืนเต็มจำนวน  ข้าพเจ้ายินยอมที่จะเสียอัตราค่าเรียนเต็มจำนวนหากไม่ได้เข้าเรียนและไม่ได้แจ้งยกเลิกล่วงหน้าก่อนวันเรียน อย่างน้อย 7 วัน
+            <input type="checkbox" name="confirmRegister" id="confirmRegister">  ข้าพเจ้าขอยืนยันการลงทะเบียนหลักสูตร และรับทราบว่า หากจะยกเลิกการลงทะเบียน ต้องแจ้งทางผู้จัดหลักสูตร อย่างน้อย 7 วันก่อนวันอบรมจึงจะได้รับเงินค่าเรียนคืนเต็มจำนวน  ข้าพเจ้ายินยอมที่จะเสียอัตราค่าเรียนเต็มจำนวนหากไม่ได้เข้าเรียนและไม่ได้แจ้งยกเลิกล่วงหน้าก่อนวันเรียน อย่างน้อย 7 วัน
         </div>
     </div>
-    <button class="tg-theme-btn tg-theme-btn-lg" type="submit">ลงทะเบียนสัมมนา</button>
+    <button class="tg-theme-btn tg-theme-btn-lg" type="button" id="registerCourseBtn">ลงทะเบียนสัมมนา</button>
 </form>
 
 
@@ -154,47 +154,58 @@ if (isset($_SESSION['userId'])) {
                 $("#phone_number_1").val("");
             }
         });
+        $("#registerCourseBtn").click(function () {
+            var seminarDiscount = "";
+            $('input[name="seminarDiscount"]:checked').each(function () {
+                seminarDiscount += this.value + "||";
+            });
+            var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
+            var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
+            var isSameAddress = $("#isSameAddress").val();
+            var addressForReceipt = $("#addressForReceipt").val();
 
-        runSetDefaultValidation();
-        var formRegisterSeminar = $('#registerSeminar');
-        var errorHandlers = $('.errorHandler', formRegisterSeminar);
-        formRegisterSeminar.validate({
-            rules: {
-                paymentTerm: {
-                    required: true
-                },
-                confirmRegister: {
-                    required: true
+            $.ajax({
+                url: "../model/com.gogetrich.function/checkIsRegister.php",
+                type: 'POST',
+                success: function (data, textStatus, jqXHR) {
+                    if (typeof (timeSchedule) === "undefined") {
+                        alert("กรุณาเลือกเวลาเรียน");
+                    } else if (data <= 0) {
+                        alert("กรุณาเลือกเงื่อนไขการลงทะเบียน");
+                    } else if (typeof (paymentTerm) === "undefined") {
+                        alert("กรุณาเลือกช่องทางการจ่ายเงิน");
+                    } else if (!$("#confirmRegister").is(":checked")) {
+                        alert("กรุณายืนยันการลงทะเบียน");
+                    } else if ($("#isSameAddress").is(":checked")) {
+                        alert("กรุณายืนยันการลงทะเบียน");
+                    }
+                    else {
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
+                            type: 'POST',
+                            data: {'isSameAddress': isSameAddress, 'contactAddress': '<?= $rowGetUserInfo['CUS_CONTACT_ADDRESS'] ?>', 'addressForReceipt': addressForReceipt, 'courseID': '<?= $_GET['cname'] ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount},
+                            success: function (data, textStatus, jqXHR) {
+                                if (data == 200) {
+                                    $.ajax({
+                                        url: "../model/com.gogetrich.function/getEventDt.php?id=" + timeSchedule,
+                                        type: 'POST',
+                                        success: function (eventDt, textStatus, jqXHR) {
+                                            alert("ท่านลงทะเบียนสำเร็จแล้ว\nหลักสูตร <?= $rowHeader['HEADER_NAME'] ?>\nในวันที่ " + eventDt + "\n ขอบคุณค่ะ");
+                                            window.location.href = "scheduleDetail?cname=<?= $_GET['cname'] ?>";
+                                        }
+                                    });
+
+                                } else {
+                                    alert(data);
+                                }
+                            }
+                        });
+
+                    }
                 }
-            },
-            submitHandler: function (form) {
-                errorHandlers.hide();
-                var seminarDiscount = "";
-                $('input[name="seminarDiscount"]:checked').each(function () {
-                    seminarDiscount += this.value + "||";
-                });
-                var knowledgeFor = "";
-                $('input[name="knowledgeFor"]:checked').each(function () {
-                    knowledgeFor += this.value + "||";
-                });
-                var inviteSuggest = $("#inviteSuggest").val();
-
-                var newsFrom = "";
-                $('input[name="newsFrom"]:checked').each(function () {
-                    newsFrom += this.value + "||";
-                });
-                var otherKnowledgeForReason = $("#otherKnowledgeForReason").val();
-
-                var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
-
-                var isSameAddress = $("#isSameAddress").val();
-                var addressForReceipt = $("#addressForReceipt").val();
-
-            },
-            invalidHandler: function (event, validator) {//display error alert on form submit
-                errorHandlers.show();
-            }
+            });
         });
+
     });
     function deleteMoreUserTmp(tmpID) {
         checkMoreTmpIsMain(tmpID);
@@ -289,36 +300,4 @@ if (isset($_SESSION['userId'])) {
             });
         }
     }
-    var runSetDefaultValidation = function () {
-        $.validator.setDefaults({
-            errorElement: "span", // contain the error msg in a small tag
-            errorClass: 'help-block',
-            errorPlacement: function (error, element) {// render error placement for each input type
-                if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
-                    error.insertAfter($(element).closest('.form-group').children('div').children().last());
-                } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
-                    error.appendTo($(element).closest('.form-group').children('div'));
-                } else {
-                    error.insertAfter(element);
-                    // for other inputs, just perform default behavior
-                }
-            },
-            ignore: ':hidden',
-            success: function (label, element) {
-                label.addClass('help-block valid');
-                // mark the current input as valid and display OK icon
-                $(element).closest('.form-group').removeClass('has-error');
-            },
-            highlight: function (element) {
-                $(element).closest('.help-block').removeClass('valid');
-                // display OK icon
-                $(element).closest('.form-group').addClass('has-error');
-                // add the Bootstrap error class to the control group
-            },
-            unhighlight: function (element) {// revert the change done by hightlight
-                $(element).closest('.form-group').removeClass('has-error');
-                // set error class to the control group
-            }
-        });
-    };
 </script>

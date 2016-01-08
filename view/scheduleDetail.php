@@ -191,12 +191,22 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                     <?php
                                                                     if (!isset($_SESSION['username'])) {
                                                                         ?>
-                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
+                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
                                                                         <?php
                                                                     } else {
-                                                                        ?>
-                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
-                                                                        <?php
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userId'] . "'";
+                                                                        $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
+                                                                        $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
+                                                                        if ($rowCheckAlreadyRegis['counts'] >= 1) {
+                                                                            ?>
+                                                                            <span style="color: #ffcc33"><p>คุณได้ลงทะเบียนคอร์สนี้เรียบร้อยแล้ว</p></span>
+                                                                            <a href="#" class="btn btn-default disabled"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
+                                                                            <?php
+                                                                        } else {
+                                                                            ?>
+                                                                            <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
+                                                                            <?php
+                                                                        }
                                                                     }
                                                                     ?>                                                                
                                                                 </td>
@@ -260,12 +270,22 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                     <?php
                                                                     if (!isset($_SESSION['username'])) {
                                                                         ?>
-                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
+                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
                                                                         <?php
                                                                     } else {
-                                                                        ?>
-                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> ลงทะเบียนเรียน</a>
-                                                                        <?php
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userId'] . "'";
+                                                                        $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
+                                                                        $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
+                                                                        if ($rowCheckAlreadyRegis['counts'] >= 1) {
+                                                                            ?>
+                                                                            <span style="color: #ffcc33"><p>คุณได้ลงทะเบียนคอร์สนี้เรียบร้อยแล้ว</p></span>
+                                                                            <a href="#" class="btn btn-default disabled"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
+                                                                            <?php
+                                                                        } else {
+                                                                            ?>
+                                                                            <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
+                                                                            <?php
+                                                                        }
                                                                     }
                                                                     ?>                                                                
                                                                 </td>

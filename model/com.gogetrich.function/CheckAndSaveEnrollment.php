@@ -40,12 +40,12 @@ $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($_POST['courseID'
 if ($result == 200) {
     $custEnrollVO = new CustomerEnrollVO();
     $custEnrollVO->setEnrollID(md5(date("h:i:sa")));
-    $custEnrollVO->setRefCusID($_POST['custID']);
+    $custEnrollVO->setRefCusID($_SESSION['userId']);
     $custEnrollVO->setCourseID($_POST['courseID']);
-    $custEnrollVO->setInviteSuggestPersonName($_POST['inviteSuggest']);
-    $custEnrollVO->setKnowledgeForReason($_POST['knowledgeFor']);
-    $custEnrollVO->setNewsFrom($_POST['newsFrom']);
-    $custEnrollVO->setOtherknowledgeForReason($_POST['otherKnowledgeForReason']);
+    $custEnrollVO->setInviteSuggestPersonName("");
+    $custEnrollVO->setKnowledgeForReason("");
+    $custEnrollVO->setNewsFrom("");
+    $custEnrollVO->setOtherknowledgeForReason("");
     $custEnrollVO->setPaymentTerm($_POST['paymentTerm']);
     $custEnrollVO->setSeminarDiscountReason($_POST['seminarDiscount']);
     $custEnrollVO->setAdditionalUser($additionalUser);
