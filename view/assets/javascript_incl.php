@@ -17,3 +17,4 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/jquery-validation/jquery.validate.min.js"></script>
 <script src="assets/js/jquery.tooltipster.js"></script>
+<script src="assets/js/alertify.min.js"></script>
