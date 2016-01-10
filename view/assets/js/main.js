@@ -275,3 +275,44 @@ $(document).ready(function (e) {
 //    $("#menu-wrapper").niceScroll({cursorcolor:"#ffcc33"});
 
 });
+
+
+function showWarningNotficationDialog(informTxt) {
+    modal({type: 'warning', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
+        //title: 'ข้อความเตือน', //Modal Title
+        text: informTxt, //Modal HTML Content
+        size: 'normal', //Modal Size (normal | large | small)
+        buttons: [{
+                text: 'ตกลง', //Button Text
+                val: 'ok', //Button Value
+                eKey: true, //Enter Keypress
+                addClass: 'btn-black', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled)
+                onClick: function (dialog) {
+                    return true;
+                }
+            }],
+        center: true, //Center Modal Box?
+        autoclose: false //Auto Close Modal Box?});
+    });
+}
+function showSuccessNotficationDialog(informTxt, url) {
+    modal({type: 'success', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
+        //title: 'Success message', //Modal Title
+        text: informTxt, //Modal HTML Content
+        size: 'normal', //Modal Size (normal | large | small)
+        buttons: [{
+                text: 'ตกลง', //Button Text
+                val: 'ok', //Button Value
+                eKey: true, //Enter Keypress
+                addClass: 'btn-black', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled)
+                onClick: function (dialog) {
+                    window.location.href = url;
+                    return true;
+                }
+            }],
+        center: true, //Center Modal Box?
+        autoclose: false, //Auto Close Modal Box?});
+        closeClick: false,
+        closable: false
+    });
+}

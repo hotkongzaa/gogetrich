@@ -11,3 +11,4 @@
 <link rel="stylesheet" href="assets/css/responsive.css">
 <link rel="stylesheet" href="assets/css/tooltipster.css">
 <link rel="stylesheet" href="assets/css/alertify.bootstrap.css">
+<link rel="stylesheet" href="assets/css/jquery.modal.css">

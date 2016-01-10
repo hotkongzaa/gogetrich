@@ -168,14 +168,19 @@ if (isset($_SESSION['userId'])) {
                 url: "../model/com.gogetrich.function/checkIsRegister.php",
                 type: 'POST',
                 success: function (data, textStatus, jqXHR) {
-                    if (typeof (timeSchedule) === "undefined") {
-                        alert("กรุณาเลือกเวลาเรียน");
+                    if (typeof (timeSchedule) === "undefined" &&
+                            data <= 0 &&
+                            typeof (paymentTerm) === "undefined" &&
+                            !$("#confirmRegister").is(":checked")) {
+                        showWarningNotficationDialog("<ul><li>กรุณาเลือกเวลาเรียน</li><li>กรุณาเลือกเงื่อนไขการลงทะเบียน</li><li>กรุณาเลือกช่องทางการจ่ายเงิน</li><li>กรุณายืนยันการลงทะเบียน</li></ul>");
+                    } else if (typeof (timeSchedule) === "undefined") {
+                        showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
                     } else if (data <= 0) {
-                        alert("กรุณาเลือกเงื่อนไขการลงทะเบียน");
+                        showWarningNotficationDialog("กรุณาเลือกเงื่อนไขการลงทะเบียน");
                     } else if (typeof (paymentTerm) === "undefined") {
-                        alert("กรุณาเลือกช่องทางการจ่ายเงิน");
+                        showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน");
                     } else if (!$("#confirmRegister").is(":checked")) {
-                        alert("กรุณายืนยันการลงทะเบียน");
+                        showWarningNotficationDialog("กรุณายืนยันการลงทะเบียน");
                     } else {
                         $.ajax({
                             url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
@@ -187,13 +192,12 @@ if (isset($_SESSION['userId'])) {
                                         url: "../model/com.gogetrich.function/getEventDt.php?id=" + timeSchedule,
                                         type: 'POST',
                                         success: function (eventDt, textStatus, jqXHR) {
-                                            alert("ท่านลงทะเบียนสำเร็จแล้ว\nหลักสูตร <?= $rowHeader['HEADER_NAME'] ?>\nในวันที่ " + eventDt + "\n ขอบคุณค่ะ");
-                                            window.location.href = "scheduleDetail?cname=<?= $_GET['cname'] ?>";
+                                            showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/> ขอบคุณค่ะ", "scheduleDetail?cname=<?= $_GET['cname'] ?>");
                                         }
                                     });
 
                                 } else {
-                                    alert(data);
+                                    showWarningNotficationDialog(data);
                                 }
                             }
                         });
@@ -204,6 +208,7 @@ if (isset($_SESSION['userId'])) {
         });
 
     });
+
     function deleteMoreUserTmp(tmpID) {
         checkMoreTmpIsMain(tmpID);
         $.ajax({
