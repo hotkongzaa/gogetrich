@@ -18,7 +18,7 @@ if (isset($_SESSION['userId'])) {
             <strong style="font-size: 16px;">ชื่อคอร์ส: </strong> <span style="font-size: 16px;"><?= $rowHeader['HEADER_NAME'] ?></span>
         </div>
         <div class="form-group">
-            <strong>เลื่อกเวลาเรียน *</strong>
+            <strong>เลือกเวลาเรียน *</strong>
 
             <?php
             $sqlGetSchedule = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "' ORDER BY EVENT_CREATED_DATE_TIME ASC";
@@ -35,9 +35,9 @@ if (isset($_SESSION['userId'])) {
         <div class="form-group">
             <strong>ลงทะเบียน*</strong>
             <br/>
-            <input type="checkbox" id="registerOwn"> ลงทะเบียนให้ตัวเอง
+            <input type="checkbox" id="registerOwn"> ลงทะเบียนให้ตนเอง
             <br>
-            <input type="checkbox" id="registerMore"> ลงทะเบียนมากกว่า 1 คน
+            <input type="checkbox" id="registerMore"> ลงทะเบียนให้คนอื่น
         </div>
         <div class="form-group" id="regisMoreThan1User">
             <label for="moreUser_1">ชื่อ-สกุล (Name)*</label> 
@@ -85,7 +85,7 @@ if (isset($_SESSION['userId'])) {
         <div class="form-group">
             <strong>ยืนยันการลงทะเบียน *</strong>
             <br/>
-            <input type="checkbox" name="confirmRegister" id="confirmRegister">  ข้าพเจ้าขอยืนยันการลงทะเบียนหลักสูตร และรับทราบว่า หากจะยกเลิกการลงทะเบียน ต้องแจ้งทางผู้จัดหลักสูตร อย่างน้อย 7 วันก่อนวันอบรมจึงจะได้รับเงินค่าเรียนคืนเต็มจำนวน  ข้าพเจ้ายินยอมที่จะเสียอัตราค่าเรียนเต็มจำนวนหากไม่ได้เข้าเรียนและไม่ได้แจ้งยกเลิกล่วงหน้าก่อนวันเรียน อย่างน้อย 7 วัน
+            <input type="checkbox" name="confirmRegister" id="confirmRegister">  ข้าพเจ้าขอยืนยันการลงทะเบียน และรับทราบว่า หากจะยกเลิกการลงทะเบียน ต้องแจ้งทางผู้จัดหลักสูตร อย่างน้อย 7 วันก่อนวันอบรมจึงจะได้รับเงินค่าเรียนคืนเต็มจำนวน  ข้าพเจ้ายินยอมที่จะเสียอัตราค่าเรียนเต็มจำนวนหากไม่ได้เข้าเรียนและไม่ได้แจ้งยกเลิกล่วงหน้าก่อนวันเรียน อย่างน้อย 7 วัน
         </div>
     </div>
     <button class="tg-theme-btn tg-theme-btn-lg" type="button" id="registerCourseBtn">ลงทะเบียนสัมมนา</button>
