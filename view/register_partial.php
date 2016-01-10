@@ -176,10 +176,7 @@ if (isset($_SESSION['userId'])) {
                         alert("กรุณาเลือกช่องทางการจ่ายเงิน");
                     } else if (!$("#confirmRegister").is(":checked")) {
                         alert("กรุณายืนยันการลงทะเบียน");
-                    } else if ($("#isSameAddress").is(":checked")) {
-                        alert("กรุณายืนยันการลงทะเบียน");
-                    }
-                    else {
+                    } else {
                         $.ajax({
                             url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                             type: 'POST',
