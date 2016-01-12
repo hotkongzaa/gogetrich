@@ -15,5 +15,6 @@ $rowGetRichUser = mysql_fetch_assoc($resGetRichUser);
 if ($rowGetTmpTbl['TMP_EMAIL'] == $rowGetRichUser['CUS_EMAIL']) {
     echo 200;
 } else {
-    echo 'User not match';
+    //User not match
+    echo 111;
 }

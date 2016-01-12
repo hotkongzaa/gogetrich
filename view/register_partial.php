@@ -33,11 +33,11 @@ if (isset($_SESSION['userId'])) {
             ?>
         </div>
         <div class="form-group">
-            <strong>ลงทะเบียน*</strong>
-            <br/>
-            <input type="checkbox" id="registerOwn"> ลงทะเบียนให้ตนเอง
-            <br>
-            <input type="checkbox" id="registerMore"> ลงทะเบียนให้คนอื่น
+            <strong>ลงทะเบียน*&nbsp;&nbsp;</strong>
+            <div class="btn-group" >
+                <label><input type="checkbox" id="registerOwn"> ลงทะเบียนให้ตนเอง &nbsp;&nbsp;</label>
+                <label id="label_dis"><input type="checkbox" id="registerMore"> ลงทะเบียนให้คนอื่น</label>                
+            </div>
         </div>
         <div class="form-group" id="regisMoreThan1User">
             <label for="moreUser_1">ชื่อ-สกุล (Name)*</label> 
@@ -104,9 +104,12 @@ if (isset($_SESSION['userId'])) {
                 $("#addressForReceipt").removeAttr("readonly");
             }
         });
-
+        if (!$("#registerOwn").is(":checked")) {
+            $("#registerMore").attr("disabled", true);
+        }
         $("#registerOwn").click(function () {
             if ($("#registerOwn").is(":checked")) {
+                $("#registerMore").removeAttr("disabled");
                 $.ajax({
                     url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=<?php
             if (isset($_SESSION['userId'])) {
@@ -140,6 +143,7 @@ if (isset($_SESSION['userId'])) {
                     }
                 });
             } else {
+                $("#registerMore").attr("disabled", true);
                 deleteTmpFromCheckBox();
             }
 
@@ -210,36 +214,48 @@ if (isset($_SESSION['userId'])) {
     });
 
     function deleteMoreUserTmp(tmpID) {
-        checkMoreTmpIsMain(tmpID);
-        $.ajax({
-            url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
-            type: 'POST',
-            success: function (data, textStatus, jqXHR) {
-                if (data == 200) {
-                    $("#loadMoreUser").load("moreUserTbl.php", function () {
-
-                    });
-                } else {
-                    alert(data);
-                }
-            }
-        });
-    }
-    function checkMoreTmpIsMain(tmpID) {
         $.ajax({
             url: "../model/com.gogetrich.function/checkMoreTmpIsMain.php?tmpID=" + tmpID,
             type: 'POST',
             success: function (data, textStatus, jqXHR) {
                 if (data == 200) {
                     $("#registerOwn").attr("checked", false);
+                    $.ajax({
+                        url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
+                        type: 'POST',
+                        success: function (data2, textStatus, jqXHR) {
+                            if (data2 == 200) {
+                                $("#loadMoreUser").load("moreUserTbl.php");
+                            } else {
+                                showWarningNotficationDialog(data2);
+                            }
+                        }
+                    });
                 } else {
-                    console.log(data);
+                    if (data == 111) {
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
+                            type: 'POST',
+                            success: function (data2, textStatus, jqXHR) {
+                                if (data2 == 200) {
+                                    $("#loadMoreUser").load("moreUserTbl.php");
+                                } else {
+                                    showWarningNotficationDialog(data2);
+                                }
+                            }
+                        });
+                    } else {
+                        showWarningNotficationDialog(data);
+                    }
+
                 }
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 return false;
             }
         });
+
+
     }
     function deleteTmpFromCheckBox() {
         $.ajax({
@@ -278,12 +294,15 @@ if (isset($_SESSION['userId'])) {
         var name = $("#moreUser_1").val();
         var email = $("#moreUserEmail_1").val();
         var phone = $("#phone_number_1").val();
-        if (name == "") {
-            alert("กรุณาระบุ ชื่อ สกุล");
+
+        if (name == "" && phone == "" || !validatePhone(phone) && email == "" || !validateEmail(email)) {
+            showWarningNotficationDialog("<li>กรุณาระบุ ชื่อ สกุล ของผู้สมัครท่านอื่น</li><li>กรุณาระบุ เบอร์โทรศัพท์ ให้ถูกต้อง (กรุณาระบุเป็นตัวเลขเท่านั้น)</li><li>กรุณาระบุ อีเมล ให้ถูกต้อง</li>");
+        } else if (name == "") {
+            showWarningNotficationDialog("กรุณาระบุ ชื่อ สกุล");
         } else if (phone == "" || !validatePhone(phone)) {
-            alert("กรุณาระบุ เบอร์โทรศัพท์ ให้ถูกต้อง");
+            showWarningNotficationDialog("กรุณาระบุ เบอร์โทรศัพท์ ให้ถูกต้อง (กรุณาระบุเป็นตัวเลขเท่านั้น)");
         } else if (email == "" || !validateEmail(email)) {
-            alert("กรุณาระบุ อีเมล ให้ถูกต้อง");
+            showWarningNotficationDialog("กรุณาระบุ อีเมล ให้ถูกต้อง");
         } else {
             $.ajax({
                 url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=" + name + "&email=" + email + "&phone=" + phone,
