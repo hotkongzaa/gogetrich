@@ -8,7 +8,7 @@ $resGetTmpTbl = mysql_query($sqlGetTmpTbl);
 $rowGetTmpTbl = mysql_fetch_assoc($resGetTmpTbl);
 
 
-$sqlGetRichUser = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userId'] . "'";
+$sqlGetRichUser = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
 $resGetRichUser = mysql_query($sqlGetRichUser);
 $rowGetRichUser = mysql_fetch_assoc($resGetRichUser);
 

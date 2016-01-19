@@ -17,17 +17,17 @@ $isSmameAddr = $_POST['isSameAddress'];
 if ($isSmameAddr == true) {
     $sqlUpdate = "UPDATE RICH_CUSTOMER"
             . " SET CUS_RECEIPT_ADDRESS = '" . $_POST['contactAddress'] . "'"
-            . " WHERE CUS_ID = '" . $_SESSION['userId'] . "'";
+            . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
     mysql_query($sqlUpdate);
 } else {
     $sqlUpdate = "UPDATE RICH_CUSTOMER"
             . " SET CUS_RECEIPT_ADDRESS = '" . $_POST['addressForReceipt'] . "'"
-            . " WHERE CUS_ID = '" . $_SESSION['userId'] . "'";
+            . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
     mysql_query($sqlUpdate);
 }
 
 $additionalUser = "";
-$sql = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userId'] . "'";
+$sql = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
 $res = mysql_query($sql);
 while ($row = mysql_fetch_array($res)) {
     $additionalUser.=$row['TMP_NAME'] . "," . $row['TMP_EMAIL'] . "," . $row['TMP_PHONE_NUMBER'] . "||";
@@ -40,7 +40,7 @@ $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($_POST['courseID'
 if ($result == 200) {
     $custEnrollVO = new CustomerEnrollVO();
     $custEnrollVO->setEnrollID(md5(date("h:i:sa")));
-    $custEnrollVO->setRefCusID($_SESSION['userId']);
+    $custEnrollVO->setRefCusID($_SESSION['userIdFrontEnd']);
     $custEnrollVO->setCourseID($_POST['courseID']);
     $custEnrollVO->setInviteSuggestPersonName("");
     $custEnrollVO->setKnowledgeForReason("");
