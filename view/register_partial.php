@@ -220,6 +220,9 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             success: function (data, textStatus, jqXHR) {
                 if (data == 200) {
                     $("#registerOwn").attr("checked", false);
+                    $("#registerMore").attr("checked", false);
+                    $("#registerMore").attr("disabled", true);
+                    $("#regisMoreThan1User").hide();
                     $.ajax({
                         url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
                         type: 'POST',
@@ -295,7 +298,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         var email = $("#moreUserEmail_1").val();
         var phone = $("#phone_number_1").val();
 
-        if (name == "" && phone == "" || !validatePhone(phone) && email == "" || !validateEmail(email)) {
+        if (name == "" && phone == "" && !validatePhone(phone) && email == "" && !validateEmail(email)) {
             showWarningNotficationDialog("<li>กรุณาระบุ ชื่อ สกุล ของผู้สมัครท่านอื่น</li><li>กรุณาระบุ เบอร์โทรศัพท์ ให้ถูกต้อง (กรุณาระบุเป็นตัวเลขเท่านั้น)</li><li>กรุณาระบุ อีเมล ให้ถูกต้อง</li>");
         } else if (name == "") {
             showWarningNotficationDialog("กรุณาระบุ ชื่อ สกุล");
