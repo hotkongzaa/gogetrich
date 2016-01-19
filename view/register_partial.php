@@ -5,8 +5,8 @@ $sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '"
 $res = mysql_query($sqlGetCourseHeaderID);
 $rowHeader = mysql_fetch_assoc($res);
 
-if (isset($_SESSION['userId'])) {
-    $sqlgetUserInformation = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userId'] . "'";
+if (isset($_SESSION['userIdFrontEnd'])) {
+    $sqlgetUserInformation = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
     $resGetUserInfo = mysql_query($sqlgetUserInformation);
     $rowGetUserInfo = mysql_fetch_assoc($resGetUserInfo);
 }
@@ -112,19 +112,19 @@ if (isset($_SESSION['userId'])) {
                 $("#registerMore").removeAttr("disabled");
                 $.ajax({
                     url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=<?php
-            if (isset($_SESSION['userId'])) {
+            if (isset($_SESSION['userIdFrontEnd'])) {
                 echo $rowGetUserInfo['CUS_FIRST_NAME'] . " " . $rowGetUserInfo['CUS_LAST_NAME'];
             } else {
                 echo '';
             }
             ?>&email=<?php
-            if (isset($_SESSION['userId'])) {
+            if (isset($_SESSION['userIdFrontEnd'])) {
                 echo $rowGetUserInfo['CUS_EMAIL'];
             } else {
                 echo '';
             }
             ?>&phone=<?php
-            if (isset($_SESSION['userId'])) {
+            if (isset($_SESSION['userIdFrontEnd'])) {
                 echo $rowGetUserInfo['CUS_PHONE_NUMBER'];
             } else {
                 echo '';
@@ -260,13 +260,13 @@ if (isset($_SESSION['userId'])) {
     function deleteTmpFromCheckBox() {
         $.ajax({
             url: "../model/com.gogetrich.function/deleteOwnInTmp.php?name=<?php
-            if (isset($_SESSION['userId'])) {
+            if (isset($_SESSION['userIdFrontEnd'])) {
                 echo $rowGetUserInfo['CUS_FIRST_NAME'] . " " . $rowGetUserInfo['CUS_LAST_NAME'];
             } else {
                 echo '';
             }
             ?>&email=<?php
-            if (isset($_SESSION['userId'])) {
+            if (isset($_SESSION['userIdFrontEnd'])) {
                 echo $rowGetUserInfo['CUS_EMAIL'];
             } else {
                 echo '';

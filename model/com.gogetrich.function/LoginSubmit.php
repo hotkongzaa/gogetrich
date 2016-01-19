@@ -24,9 +24,9 @@ if ($reuslt == 503) {
 } else {
     $obj = json_decode($reuslt);
 
-    $_SESSION['expire'] = time() + (60 * $configuration['applicationTimeOut']);
-    $_SESSION['username'] = $obj->{'CUS_USERNAME'};
-    $_SESSION['userId'] = $obj->{'CUS_ID'};
+    $_SESSION['expireFrontEnd'] = time() + (60 * $configuration['applicationTimeOut']);
+    $_SESSION['usernameFrontEnd'] = $obj->{'CUS_USERNAME'};
+    $_SESSION['userIdFrontEnd'] = $obj->{'CUS_ID'};
 
     echo 200;
 }

@@ -1,8 +1,8 @@
 <?php
 session_start();
 $now = time();
-if (isset($_SESSION['expire'])) {
-    if ($now > $_SESSION['expire']) {
+if (isset($_SESSION['expireFrontEnd'])) {
+    if ($now > $_SESSION['expireFrontEnd']) {
         session_destroy();
     }
 }
@@ -82,7 +82,7 @@ if (isset($_SESSION['expire'])) {
                     </strong>
                     <div class="navigation-area">
                         <?php
-                        if (empty($_SESSION['username'])) {
+                        if (empty($_SESSION['usernameFrontEnd'])) {
                             ?>
                             <ul class="add-nav">
                                 <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
@@ -92,7 +92,7 @@ if (isset($_SESSION['expire'])) {
                         } else {
                             ?>
                             <ul class="add-nav">
-                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['username'] ?></strong></li>
+                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong></li>
                             </ul>
                             <?php
                         }

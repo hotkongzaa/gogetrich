@@ -1,8 +1,8 @@
 <?php
 session_start();
 $now = time();
-if (isset($_SESSION['expire'])) {
-    if ($now > $_SESSION['expire']) {
+if (isset($_SESSION['expireFrontEnd'])) {
+    if ($now > $_SESSION['expireFrontEnd']) {
         session_destroy();
     }
 }
@@ -83,7 +83,7 @@ require '../model-db-connection/config.php';
                     </strong>
                     <div class="navigation-area">
                         <?php
-                        if (empty($_SESSION['username'])) {
+                        if (empty($_SESSION['usernameFrontEnd'])) {
                             ?>
                             <ul class="add-nav">
                                 <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
@@ -93,7 +93,7 @@ require '../model-db-connection/config.php';
                         } else {
                             ?>
                             <ul class="add-nav">
-                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['username'] ?></strong></li>
+                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong></li>
                             </ul>
                             <?php
                         }
@@ -269,12 +269,12 @@ require '../model-db-connection/config.php';
                                                                 </td-->
                                                                 <td>
                                                                     <?php
-                                                                    if (empty($_SESSION['username'])) {
+                                                                    if (empty($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
                                                                         <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $rowGetCourseHeader['HEADER_ID'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userId'] . "'";
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $rowGetCourseHeader['HEADER_ID'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
                                                                         $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
@@ -484,7 +484,7 @@ require '../model-db-connection/config.php';
                 <form style="padding:20px" id="registerSeminar">
                     <div style="overflow: auto;max-height: 450px;">
                         <?php
-                        $sqlgetUserDetail = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userId'] . "'";
+                        $sqlgetUserDetail = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
                         $res = mysql_query($sqlgetUserDetail);
                         $row = mysql_fetch_assoc($res);
                         ?>
@@ -738,8 +738,8 @@ require '../model-db-connection/config.php';
                         url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                         type: 'POST',
                         data: {'custID': '<?php
-                        if (isset($_SESSION['userId'])) {
-                            echo $_SESSION['userId'];
+                        if (isset($_SESSION['userIdFrontEnd'])) {
+                            echo $_SESSION['userIdFrontEnd'];
                         } else {
                             echo '';
                         }

@@ -16,9 +16,9 @@ require '../model-db-connection/config.php';
 
         <?php
         $id = 1;
-        $sqlSelectCate = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userId'] . "'";
+        $sqlSelectCate = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
         $res = mysql_query($sqlSelectCate);
-        $sqlChec = "SELECT COUNT(*) AS CHECKEDROW FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userId'] . "'";
+        $sqlChec = "SELECT COUNT(*) AS CHECKEDROW FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
         $resCheck = mysql_query($sqlChec);
         $rowCheck = mysql_fetch_assoc($resCheck);
         if ($rowCheck['CHECKEDROW'] > 0) {

@@ -6,5 +6,8 @@
  * and open the template in the editor.
  */
 session_start();
-session_destroy();
+//session_destroy();
+unset($_SESSION['expireFrontEnd']);
+unset($_SESSION['usernameFrontEnd']);
+unset($_SESSION['userIdFrontEnd']);
 echo 200;

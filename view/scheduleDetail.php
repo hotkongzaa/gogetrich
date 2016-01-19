@@ -1,8 +1,8 @@
 <?php
 session_start();
 $now = time();
-if (isset($_SESSION['expire'])) {
-    if ($now > $_SESSION['expire']) {
+if (isset($_SESSION['expireFrontEnd'])) {
+    if ($now > $_SESSION['expireFrontEnd']) {
         session_destroy();
     }
 }
@@ -87,7 +87,7 @@ $rowHeader = mysql_fetch_assoc($res);
                     </strong>
                     <div class="navigation-area">
                         <?php
-                        if (!isset($_SESSION['username'])) {
+                        if (!isset($_SESSION['usernameFrontEnd'])) {
                             ?>
                             <ul class="add-nav">
                                 <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
@@ -97,7 +97,7 @@ $rowHeader = mysql_fetch_assoc($res);
                         } else {
                             ?>
                             <ul class="add-nav">
-                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['username'] ?></strong></li>
+                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong></li>
                             </ul>
                             <?php
                         }
@@ -189,12 +189,12 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                 <td colspan="2" style="text-align:right !important;">
                                                                     <br/>
                                                                     <?php
-                                                                    if (!isset($_SESSION['username'])) {
+                                                                    if (!isset($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
                                                                         <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userId'] . "'";
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
                                                                         $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
@@ -268,12 +268,12 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                 <td colspan="2" style="text-align:right !important;">
                                                                     <br/>
                                                                     <?php
-                                                                    if (!isset($_SESSION['username'])) {
+                                                                    if (!isset($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
                                                                         <a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userId'] . "'";
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
                                                                         $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
