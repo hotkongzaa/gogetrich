@@ -123,7 +123,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                         <a href="#">Training/Seminar</a>
                                         <ul>
                                             <li class="current-menu-item">
-                                                <a href="trainingSchedule">Training schedule</a>
+                                                <a href="trainingSchedule">Training Category</a>
                                             </li>
                                             <li>
                                                 <a href="speaker-list">Speaker</a>

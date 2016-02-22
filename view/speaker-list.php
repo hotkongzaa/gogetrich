@@ -118,7 +118,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         <a href="#">Training/Seminar</a>
                                         <ul>
                                             <li>
-                                                <a href="trainingSchedule">Training schedule</a>
+                                                <a href="trainingSchedule">Training Category</a>
                                             </li>
                                             <li class="current-menu-item">
                                                 <a href="speaker-list">Speaker</a>

@@ -35,17 +35,20 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         <div class="form-group">
             <strong>ลงทะเบียน*&nbsp;&nbsp;</strong>
             <div class="btn-group" >
-                <label><input type="checkbox" id="registerOwn"> ลงทะเบียนให้ตนเอง &nbsp;&nbsp;</label>
+                <label>
+                    <input type="checkbox" id="registerOwn"> ลงทะเบียนให้ตนเอง &nbsp;&nbsp;</label>
                 <label id="label_dis"><input type="checkbox" id="registerMore"> ลงทะเบียนให้คนอื่น</label>                
             </div>
         </div>
         <div class="form-group" id="regisMoreThan1User">
-            <label for="moreUser_1">ชื่อ-สกุล (Name)*</label> 
-            <input type="text" id="moreUser_1"/>
-            <label for="phone_number_1">เบอร์โทรศัพท์ (Phone number)*</label> 
-            <input type="text" id="phone_number_1"/>
-            <label for="moreUserEmail_1">อีเมล์ (Email)*</label> 
-            <input type="text" id="moreUserEmail_1"/><br/><br/>
+            <label for="moreUser_1">ชื่อ (First Name)*</label> 
+            <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;"/>
+            <label for="moreUser_1">สกุล (Last Name)*</label> 
+            <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;"/>
+            <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
+            <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;"/>
+            <label for="moreUserEmail_1" >อีเมล์ (Email)*</label> 
+            <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;"/><br/><br/>
             <div id="addMoreRegister"></div>
             <a href="#" class="btn btn-default" onclick="addMoreRegister()">
                 เพิ่มผู้สมัคร
@@ -57,7 +60,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         <div class="form-group">
             <strong>ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
             <br/>
-            <input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม
+            <!--input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม-->
             <br>
             <input type="radio" name="paymentTerm" value="2"> โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
         </div>
@@ -104,12 +107,8 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 $("#addressForReceipt").removeAttr("readonly");
             }
         });
-        if (!$("#registerOwn").is(":checked")) {
-            $("#registerMore").attr("disabled", true);
-        }
         $("#registerOwn").click(function () {
             if ($("#registerOwn").is(":checked")) {
-                $("#registerMore").removeAttr("disabled");
                 $.ajax({
                     url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=<?php
             if (isset($_SESSION['userIdFrontEnd'])) {
@@ -129,7 +128,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             } else {
                 echo '';
             }
-            ?>",
+            ?>&isOwner=1",
                     type: 'POST',
                     success: function (data, textStatus, jqXHR) {
                         if (data == 200) {
@@ -143,7 +142,6 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                     }
                 });
             } else {
-                $("#registerMore").attr("disabled", true);
                 deleteTmpFromCheckBox();
             }
 
@@ -220,9 +218,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             success: function (data, textStatus, jqXHR) {
                 if (data == 200) {
                     $("#registerOwn").attr("checked", false);
-                    $("#registerMore").attr("checked", false);
-                    $("#registerMore").attr("disabled", true);
-                    $("#regisMoreThan1User").hide();
+
                     $.ajax({
                         url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
                         type: 'POST',
@@ -294,32 +290,45 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         return phoneReg.test($phone);
     }
     function addMoreRegister() {
-        var name = $("#moreUser_1").val();
+        var firtName = $("#moreFirstName_1").val();
+        var lastName = $("#moreLastName_1").val();
         var email = $("#moreUserEmail_1").val();
         var phone = $("#phone_number_1").val();
 
-        if (name == "" && phone == "" && !validatePhone(phone) && email == "" && !validateEmail(email)) {
+        if (firtName == "" && lastName == "" && phone == "" && !validatePhone(phone) && email == "" && !validateEmail(email)) {
             showWarningNotficationDialog("<li>กรุณาระบุ ชื่อ สกุล ของผู้สมัครท่านอื่น</li><li>กรุณาระบุ เบอร์โทรศัพท์ ให้ถูกต้อง (กรุณาระบุเป็นตัวเลขเท่านั้น)</li><li>กรุณาระบุ อีเมล ให้ถูกต้อง</li>");
-        } else if (name == "") {
-            showWarningNotficationDialog("กรุณาระบุ ชื่อ สกุล");
+        } else if (firtName == "") {
+            showWarningNotficationDialog("กรุณาระบุ ชื่อ");
+        } else if (lastName == "") {
+            showWarningNotficationDialog("กรุณาระบุ สกุล");
         } else if (phone == "" || !validatePhone(phone)) {
             showWarningNotficationDialog("กรุณาระบุ เบอร์โทรศัพท์ ให้ถูกต้อง (กรุณาระบุเป็นตัวเลขเท่านั้น)");
         } else if (email == "" || !validateEmail(email)) {
             showWarningNotficationDialog("กรุณาระบุ อีเมล ให้ถูกต้อง");
         } else {
+            //check existing user by email
             $.ajax({
-                url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=" + name + "&email=" + email + "&phone=" + phone,
+                url: "../model/com.gogetrich.function/verifyUserExistingByEmail.php?email=" + email,
                 type: 'POST',
                 success: function (data, textStatus, jqXHR) {
-                    if (data == 200) {
-                        $("#loadMoreUser").load("moreUserTbl.php");
-
+                    if (data != 200) {
+                        showWarningNotficationDialog(data);
                     } else {
-                        alert(data);
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=0",
+                            type: 'POST',
+                            success: function (data, textStatus, jqXHR) {
+                                if (data == 200) {
+                                    $("#loadMoreUser").load("moreUserTbl.php");
+                                } else {
+                                    alert(data);
+                                }
+                                $("#moreUser_1").val("");
+                                $("#moreUserEmail_1").val("");
+                                $("#phone_number_1").val("");
+                            }
+                        });
                     }
-                    $("#moreUser_1").val("");
-                    $("#moreUserEmail_1").val("");
-                    $("#phone_number_1").val("");
                 }
             });
         }

@@ -25,6 +25,7 @@ class CustomerEnrollVO {
     private $createDateTime;
     private $courseID;
     private $additionalUser;
+    private $isRegisteredOwn;
 
     function getEnrollID() {
         return $this->enrollID;
@@ -105,6 +106,7 @@ class CustomerEnrollVO {
     function setCourseID($courseID) {
         $this->courseID = $courseID;
     }
+
     function getAdditionalUser() {
         return $this->additionalUser;
     }
@@ -113,6 +115,12 @@ class CustomerEnrollVO {
         $this->additionalUser = $additionalUser;
     }
 
+    function getIsRegisteredOwn() {
+        return $this->isRegisteredOwn;
+    }
 
+    function setIsRegisteredOwn($isRegisteredOwn) {
+        $this->isRegisteredOwn = $isRegisteredOwn;
+    }
 
 }

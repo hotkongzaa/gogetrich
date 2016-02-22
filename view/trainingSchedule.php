@@ -119,7 +119,7 @@ require '../model-db-connection/config.php';
                                         <a href="#">Training/Seminar</a>
                                         <ul>
                                             <li class="current-menu-item">
-                                                <a href="trainingSchedule">Training schedule</a>
+                                                <a href="trainingSchedule">Training Category</a>
                                             </li>
                                             <li>
                                                 <a href="speaker-list">Speaker</a>
@@ -173,24 +173,12 @@ require '../model-db-connection/config.php';
                                                     <table class="table table-striped table-bordered">
                                                         <thead>
                                                             <tr>
-                                                                <th>No.</th>
-                                                                <th>Course Name</th>
-                                                                <th>Days</th>
-                                                                <th>Fee (THB)</th>
-                                                                <th>Course Schedule</th>
-                                                                <!--th>Jan</th>
-                                                                <th>Feb</th>
-                                                                <th>Mar</th>
-                                                                <th>Apr</th>
-                                                                <th>May</th>
-                                                                <th>Jun</th>
-                                                                <th>Jul</th>
-                                                                <th>Aug</th>
-                                                                <th>Sep</th>
-                                                                <th>Oct</th>
-                                                                <th>Nov</th>
-                                                                <th>Dec</th-->
-                                                                <th></th>
+                                                                <th width="5%">No.</th>
+                                                                <th width="25%">Course Name</th>
+                                                                <th width="5%">Days</th>
+                                                                <th width="30%">Fee (THB)</th>
+                                                                <th width="30%">Course Schedule</th>
+                                                                <th width="10%"></th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -218,11 +206,6 @@ require '../model-db-connection/config.php';
                                                                             $sqlGetEventDateTime = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME WHERE REF_COURSE_HEADER_ID = '" . $rowGetCourseHeader['HEADER_ID'] . "'";
                                                                             $resGetEventDateTime = mysql_query($sqlGetEventDateTime);
                                                                             while ($rowGetEventDateTime = mysql_fetch_array($resGetEventDateTime)) {
-//                                                                            $dateStart = explode(" ", rtrim($rowGetEventDateTime['START_EVENT_DATE_TIME']))[0];
-//                                                                            $endDate = explode(" ", rtrim($rowGetEventDateTime['END_EVENT_DATE_TIME']))[0];
-//                                                                            if (explode("/", $dateStart)[1] == '01') {
-//                                                                                var_dump(explode("/", $dateStart)[0]);
-//                                                                            }
                                                                                 ?>
 
                                                                     <li class="linkHover" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">เริ่ม <?= $rowGetEventDateTime['START_EVENT_DATE_TIME'] ?> ถึง <?= $rowGetEventDateTime['END_EVENT_DATE_TIME'] ?></li>
@@ -231,42 +214,6 @@ require '../model-db-connection/config.php';
                                                                 }
                                                                 ?>
                                                                 </td>
-                                                                <!--td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td>
-                                                                <td>
-                                                                    <span class="linkHover"  style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"></span>
-                                                                </td-->
                                                                 <td>
                                                                     <?php
                                                                     if (empty($_SESSION['usernameFrontEnd'])) {

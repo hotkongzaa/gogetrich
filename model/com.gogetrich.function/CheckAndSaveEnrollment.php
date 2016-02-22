@@ -26,14 +26,15 @@ if ($isSmameAddr == true) {
     mysql_query($sqlUpdate);
 }
 
-$additionalUser = "";
+
 $sql = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
 $res = mysql_query($sql);
 while ($row = mysql_fetch_array($res)) {
-    $additionalUser.=$row['TMP_NAME'] . "," . $row['TMP_EMAIL'] . "," . $row['TMP_PHONE_NUMBER'] . "||";
+    //Verify existing user by user email
+    
 }
 
-error_reporting(0);
+
 $cusEnrollDaoImpl = new CustEnrollDaoImpl();
 $custEnrollService = new CustomerEnrollService($cusEnrollDaoImpl);
 $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($_POST['courseID'], $_POST['custID']);
@@ -49,6 +50,7 @@ if ($result == 200) {
     $custEnrollVO->setPaymentTerm($_POST['paymentTerm']);
     $custEnrollVO->setSeminarDiscountReason($_POST['seminarDiscount']);
     $custEnrollVO->setAdditionalUser($additionalUser);
+    $custEnrollVO->setIsRegisteredOwn("true");
     echo $custEnrollService->saveCustEnroll($custEnrollVO);
 } else {
     echo $result;

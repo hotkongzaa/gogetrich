@@ -45,6 +45,7 @@ if (mysqli_query($con, $sql)) {
             . "CREATED_DATE_TIME TIMESTAMP,"
             . "PAYMENT_STATUS VARCHAR(255),"
             . "ADDITIONAL_ENROLL_CUS_NAME VARCHAR(255),"
+            . "IS_REGISTERED_OWNER VARCHAR(100),"
             . "PRIMARY KEY (ENROLL_ID),"
             . "FOREIGN KEY (ENROLL_CUS_ID) REFERENCES RICH_CUSTOMER(CUS_ID)"
             . ")ENGINE=InnoDB DEFAULT CHARSET=utf8;";
@@ -56,6 +57,7 @@ if (mysqli_query($con, $sql)) {
             . "TMP_EMAIL VARCHAR(255),"
             . "TMP_PHONE_NUMBER VARCHAR(255),"
             . "TMP_CUS_ID VARCHAR(255),"
+            . "REF_CUS_ID VARCHAR(255),"
             . "PRIMARY KEY (TMP_ID)"
             . ")ENGINE=InnoDB DEFAULT CHARSET=utf8;";
     mysqli_query($con_create_tbl, $sqlCreateMoreUserTmp);
