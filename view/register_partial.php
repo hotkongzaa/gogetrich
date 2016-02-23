@@ -60,8 +60,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         <div class="form-group">
             <strong>ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
             <br/>
-            <!--input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม-->
-            <br>
+            <!--input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม-->            
             <input type="radio" name="paymentTerm" value="2"> โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
         </div>
         <div class="form-group">                                                
@@ -70,7 +69,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         </div>
         <div class="form-group">
             <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-            <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px;"></textarea>
+            <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"></textarea>
         </div>
         <div class="form-group">
             <strong>คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
