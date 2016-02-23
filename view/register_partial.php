@@ -110,9 +110,15 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         $("#registerOwn").click(function () {
             if ($("#registerOwn").is(":checked")) {
                 $.ajax({
-                    url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?name=<?php
+                    url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=<?php
             if (isset($_SESSION['userIdFrontEnd'])) {
-                echo $rowGetUserInfo['CUS_FIRST_NAME'] . " " . $rowGetUserInfo['CUS_LAST_NAME'];
+                echo $rowGetUserInfo['CUS_FIRST_NAME'];
+            } else {
+                echo '';
+            }
+            ?>&lName=<?php
+            if (isset($_SESSION['userIdFrontEnd'])) {
+                echo $rowGetUserInfo['CUS_LAST_NAME'];
             } else {
                 echo '';
             }
@@ -128,7 +134,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             } else {
                 echo '';
             }
-            ?>&isOwner=1",
+            ?>&isOwner=true",
                     type: 'POST',
                     success: function (data, textStatus, jqXHR) {
                         if (data == 200) {
@@ -170,10 +176,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 url: "../model/com.gogetrich.function/checkIsRegister.php",
                 type: 'POST',
                 success: function (data, textStatus, jqXHR) {
-                    if (typeof (timeSchedule) === "undefined" &&
-                            data <= 0 &&
-                            typeof (paymentTerm) === "undefined" &&
-                            !$("#confirmRegister").is(":checked")) {
+                    if (typeof (timeSchedule) === "undefined" && data <= 0 && typeof (paymentTerm) === "undefined" && !$("#confirmRegister").is(":checked")) {
                         showWarningNotficationDialog("<ul><li>กรุณาเลือกเวลาเรียน</li><li>กรุณาเลือกเงื่อนไขการลงทะเบียน</li><li>กรุณาเลือกช่องทางการจ่ายเงิน</li><li>กรุณายืนยันการลงทะเบียน</li></ul>");
                     } else if (typeof (timeSchedule) === "undefined") {
                         showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
@@ -203,7 +206,6 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                                 }
                             }
                         });
-
                     }
                 }
             });
@@ -315,7 +317,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                         showWarningNotficationDialog(data);
                     } else {
                         $.ajax({
-                            url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=0",
+                            url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=false",
                             type: 'POST',
                             success: function (data, textStatus, jqXHR) {
                                 if (data == 200) {
