@@ -343,7 +343,7 @@ require '../model-db-connection/config.php';
                 <!--************************************
                                 Virtually Build Start
                 *************************************-->
-                <section class="tg-main-section tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/who_are_you.jpg">
+                <section class="tg-main-section tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/testimonial_image.jpg">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-7 tg-displayinlineblock">
@@ -397,24 +397,6 @@ require '../model-db-connection/config.php';
                                                     <img src="assets/images//portfolio/pop_image.png" alt="อ. วิธิวัต โรจนตรีคูณ">
                                                 </figure>
                                             </div>
-                                            <!--div role="tabpanel" class="tab-pane fade" id="portfolio-item-three">
-                                                <figure><img src="assets/images//portfolio/img-03.jpg" alt="image description"></figure>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="portfolio-item-four">
-                                                <figure><img src="assets/images//portfolio/img-04.jpg" alt="image description"></figure>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade in" id="portfolio-item-five">
-                                                <figure><img src="assets/images//portfolio/img-05.jpg" alt="image description"></figure>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="portfolio-item-six">
-                                                <figure><img src="assets/images//portfolio/img-06.jpg" alt="image description"></figure>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="portfolio-item-seven">
-                                                <figure><img src="assets/images//portfolio/img-07.jpg" alt="image description"></figure>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="portfolio-item-eight">
-                                                <figure><img src="assets/images//portfolio/img-08.jpg" alt="image description"></figure>
-                                            </div-->
                                         </div>
                                     </div>
                                 </div>
@@ -423,9 +405,6 @@ require '../model-db-connection/config.php';
                                         <ul id="gallery-cats" class="gallery-cats option-set haslayout">
                                             <li class="select"><a href="#" data-filter="*">All</a></li>
                                             <li><a href="#" data-filter=".construction">พี่เลี้ยงการเงิน</a></li>
-                                            <!--li><a href="#" data-filter=".digging">Digging</a></li>
-                                            <li><a href="#" data-filter=".renovation">Renovation</a></li>
-                                            <li><a href="#" data-filter=".interior">Interior</a></li-->
                                         </ul>
                                         <div class="row">
                                             <div class="portfolio-content tg-haslayout portfolio-image grid" role="tablist">
@@ -562,62 +541,7 @@ require '../model-db-connection/config.php';
                 <!--************************************
                                 Portfolio End
                 *************************************-->
-                <!--************************************
-                                Testimonials Start
-                *************************************-->
-                <section class="tg-main-section tg-haslayout testimonial-image">
-                    <div class="container">
-                        <div class="row">
-                            <div class="tg-testimonials tg-haslayout">
-                                <div class="col-sm-5">
-                                    <div class="tg-testimonials-img">
-                                        <figure><img src="assets/images//img-02.png" alt="image description"></figure>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-7 col-sm-7">
-                                    <div id="tg-testi-slider" class="tg-testi-slider">
-                                        <div class="item">
-                                            <div class="tg-theme-heading">
-                                                <span>our happy customers</span>
-                                                <h2>Mr. David <span>&amp; Family</span></h2>
-                                            </div>
-                                            <div class="tg-description">
-                                                <blockquote>
-                                                    <q>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam.</q>
-                                                </blockquote>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="tg-theme-heading">
-                                                <span>our happy customers</span>
-                                                <h2>Mr. David <span>&amp; Family</span></h2>
-                                            </div>
-                                            <div class="tg-description">
-                                                <blockquote>
-                                                    <q>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam.</q>
-                                                </blockquote>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="tg-theme-heading">
-                                                <span>our happy customers</span>
-                                                <h2>Mr. David <span>&amp; Family</span></h2>
-                                            </div>
-                                            <div class="tg-description">
-                                                <blockquote>
-                                                    <q>Sed ut perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudantium, totam.</q>
-                                                </blockquote>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!--************************************
-                                Testimonials End
-                *************************************-->
+
                 <!--************************************
                                 Latest Blog Start
                 *************************************-->
