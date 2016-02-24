@@ -218,7 +218,7 @@ require '../model-db-connection/config.php';
                                                                     <?php
                                                                     if (empty($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
-                                                                        <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox">ลงทะเบียน</a>
+                                                                        <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
                                                                         <?php
                                                                     } else {
                                                                         $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $rowGetCourseHeader['HEADER_ID'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
@@ -226,11 +226,11 @@ require '../model-db-connection/config.php';
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
                                                                             ?>
-                                                                            <a href="#" class="tg-theme-btn-sm disabled" onclick="alert('คุณได้ลงทะเบียนคอร์สนี้เรียบร้อยแล้ว')">ลงทะเบียน</a>
+                                                                            <a href="#" class="tg-theme-btn-sm disabled" onclick="showWarningNotficationDialog('คุณได้ลงทะเบียนคอร์สนี้เรียบร้อยแล้ว')">ลงทะเบียน</a>
                                                                             <?php
                                                                         } else {
                                                                             ?>
-                                                                            <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox">ลงทะเบียน</a>
+                                                                            <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
                                                                             <?php
                                                                         }
                                                                     }
@@ -426,151 +426,26 @@ require '../model-db-connection/config.php';
         </div>
         <div class="modal fade register-modalbox" tabindex="-1" role="dialog">
             <div class="tg-signup-modalbox">
-                <h2>REGISTRATION FORM <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
-
-                <form style="padding:20px" id="registerSeminar">
-                    <div style="overflow: auto;max-height: 450px;">
-                        <?php
-                        $sqlgetUserDetail = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
-                        $res = mysql_query($sqlgetUserDetail);
-                        $row = mysql_fetch_assoc($res);
-                        ?>
-                        <fieldset>
-                            <legend>User Profile</legend>
-                            <table class="table table-condensed table-hover schedule_detail_table">
-                                <tbody>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Username: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_USERNAME'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Name: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_FIRST_NAME'] ?> <?= $row['CUS_LAST_NAME'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Email: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_EMAIL'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Gender: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_GENDER'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Contact Address: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_CONTACT_ADDRESS'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Receipt Address: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_RECEIPT_ADDRESS'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Phone number: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_PHONE_NUMBER'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Facebook: </td>
-                                        <td style="text-align: left;"><?= $row['CUS_FACEBOOK_ADDRESS'] ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left;" width="150px">Register Date time: </td>
-                                        <td style="text-align: left;"><?= $row['CREATED_DATE_TIME'] ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button class="btn btn-sm" type="submit"><i class="fa fa-pencil"></i> Edit Profile</button><br/><br/>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Register Detail</legend>
-                            <div class="form-group">
-                                <strong>ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
-                                <br/>
-                                <input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม
-                                <br>
-                                <input type="radio" name="paymentTerm" value="2"> โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
-                            </div>
-                            <div class="form-group">
-                                <strong>คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="ลงทะเบียนก่อนหรือภายในวันที่ 28 พฤศจิกายน 2558"> ลงทะเบียนก่อนหรือภายในวันที่ 28 พฤศจิกายน 2558
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="มาเป็นคู่ หรือ กลุ่ม จำนวน 5 ท่านต่อกลุ่ม"> มาเป็นคู่ หรือ กลุ่ม จำนวน 5 ท่านต่อกลุ่ม
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="แนะนำผ่าน Finkey Group หรือยืนยันส่วนลดกับเจ้าหน้าที่ทางโทรศัพท์"> แนะนำผ่าน Finkey Group หรือยืนยันส่วนลดกับเจ้าหน้าที่ทางโทรศัพท์
-                                <br/>
-                                <input type="checkbox" name="seminarDiscount" value="โปรโมชั่นพิเศษ (กรุณาติดต่อคุณปิ่นหทัย 081-9023872 เพื่อสอบถามและขอรับโปรโมชั่นพิเศษ)"> โปรโมชั่นพิเศษ (กรุณาติดต่อคุณปิ่นหทัย 081-9023872 เพื่อสอบถามและขอรับโปรโมชั่นพิเศษ)
-                            </div>
-                            <div class="form-group">
-                                <strong>หากได้รับส่วนลดผ่านการแนะนำ กรุณาระบุชื่อผู้แนะนำ</strong>
-                                <input type="text" name="inviteSuggest" id="inviteSuggest" placeholder="ชื่อผู้แนะนำ"/> 
-                            </div>
-                            <div class="form-group">
-                                <strong>ท่านต้องการความรู้ไปเพื่อประโยชน์ด้านใด (เลือกได้มากกว่า 1 ข้อ)</strong>
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อจัดการค่าใช้จ่าย หรือลดรายจ่าย"> เพื่อจัดการค่าใช้จ่าย หรือลดรายจ่าย
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อหาทางลดภาระหนี้สิน ให้ลดได้เร็วที่สุด"> เพื่อหาทางลดภาระหนี้สิน ให้ลดได้เร็วที่สุด
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อวางแผนภาษีบุคคล ลดการจ่ายภาษี"> เพื่อวางแผนภาษีบุคคล ลดการจ่ายภาษี
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อวางแผนประกันชีวิตได้อย่างคุ้มค่ามากที่สุด"> เพื่อวางแผนประกันชีวิตได้อย่างคุ้มค่ามากที่สุด
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อหาทางเพิ่มรายได้"> เพื่อหาทางเพิ่มรายได้
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="เพื่อเริ่มต้นลงทุนอย่างเข้าใจ"> เพื่อเริ่มต้นลงทุนอย่างเข้าใจ
-                                <br/>
-                                <input type="checkbox" name="knowledgeFor" value="อื่นๆ" id="benifitOther"> อื่นๆ
-
-                            </div>
-                            <div class="form-group" id="hideReasonBenifitOther">
-                                <strong>หากเลือก อื่นๆ โปรดระบุ</strong>
-                                <textarea name="other_register" id="otherKnowledgeForReason" cols="20" style="height: 150px;"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <strong>ท่านทราบข่าวสารนี้จากแหล่งข้อมูลใด</strong>
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="https://www.facebook.com/RichPlanning"> <a href="https://www.facebook.com/RichPlanning" target="_blank">https://www.facebook.com/RichPlanning</a>
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="https://www.facebook.com/FinkeyGroup"> <a href="https://www.facebook.com/FinkeyGroup" target="_blank">https://www.facebook.com/FinkeyGroup</a>
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="ข่าวประชาสัมพันธ์ (line, email)"> ข่าวประชาสัมพันธ์ (line, email)
-                                <br/>
-                                <input type="checkbox" name="newsFrom" value="เพื่อนแนะนำ"> เพื่อนแนะนำ
-                            </div>
-                            <div class="form-group">
-                                <strong>ยืนยันการลงทะเบียน *</strong>
-                                <br/>
-                                <input type="checkbox" name="confirmRegister">  ข้าพเจ้าขอยืนยันการลงทะเบียนหลักสูตร Secret$ of Money Cat และรับทราบว่า หากจะยกเลิกการลงทะเบียน ต้องแจ้งทางผู้จัดหลักสูตร อย่างน้อย 7 วันก่อนวันอบรมจึงจะได้รับเงินค่าเรียนคืนเต็มจำนวน  ข้าพเจ้ายินยอมที่จะเสียอัตราค่าเรียนเต็มจำนวนหากไม่ได้เข้าเรียนและไม่ได้แจ้งยกเลิกล่วงหน้าก่อนวันเรียน อย่างน้อย 7 วัน
-                            </div>
-                        </fieldset>
-                    </div>
-                    <button class="tg-theme-btn tg-theme-btn-lg" type="submit">ลงทะเบียนสัมนา</button>
-                </form>
+                <h2>REGISTRATION COURSE <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
+                <div id="scheduleFormDiv"></div>
 
             </div>
         </div>
         <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
             <div class="tg-signup-modalbox">
-                <h2>MENTOR DETAIl</h2>
+                <h2>MENTOR DETAIl <span class="pull-right" style="cursor: pointer" onclick="$('.mentor-modalbox').modal('hide')">x</span></h2>
                 <form style="padding:20px" >
-                    <div style="overflow-x:hidden; max-height: 450px;">
+                    <div>
                         <div class="row">
                             <div class="col-sm-4">                                        
                                 <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <br/>
+                                <br/><br/>
                                 <fieldset>
                                     <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
                                 </fieldset>
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-sm-8 scrollbar-inner" style="overflow-x:hidden; max-height: 450px;">
                                 <fieldset>
-                                    <!--legend>ประวัติ และคุณวุฒิ​</legend>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</li-->
                                     <legend>ประวัติการศึกษา</legend>
                                     <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
                                     <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
@@ -610,17 +485,9 @@ require '../model-db-connection/config.php';
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#hideReasonBenifitOther").hide();
-            $("#benifitOther").click(function () {
-                if (document.getElementById('benifitOther').checked) {
-                    $("#hideReasonBenifitOther").show();
-                } else {
-                    $("#hideReasonBenifitOther").hide();
-                }
-            });
             $('#login_menu').tooltipster({
                 contentAsHTML: true,
-                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
+                content: $('<ul><li class="linkHover" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Profile</div></li><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),
                 touchDevices: true,
                 position: "bottom",
                 interactive: true,
@@ -629,7 +496,7 @@ require '../model-db-connection/config.php';
                 minWidth: 150,
                 arrow: false
             });
-            runSetDefaultValidation();
+
             var form = $('.login-form');
             var errorHandler = $('.errorHandler', form);
             form.validate({
@@ -647,63 +514,6 @@ require '../model-db-connection/config.php';
                 },
                 invalidHandler: function (event, validator) {//display error alert on form submit
                     errorHandler.show();
-                }
-            });
-
-            var formRegisterSeminar = $('#registerSeminar');
-            var errorHandlers = $('.errorHandler', formRegisterSeminar);
-            formRegisterSeminar.validate({
-                rules: {
-                    paymentTerm: {
-                        required: true
-                    },
-                    confirmRegister: {
-                        required: true
-                    }
-                },
-                submitHandler: function (form) {
-                    errorHandlers.hide();
-                    var seminarDiscount = "";
-                    $('input[name="seminarDiscount"]:checked').each(function () {
-                        seminarDiscount += this.value + "||";
-                    });
-                    var knowledgeFor = "";
-                    $('input[name="knowledgeFor"]:checked').each(function () {
-                        knowledgeFor += this.value + "||";
-                    });
-                    var inviteSuggest = $("#inviteSuggest").val();
-
-                    var newsFrom = "";
-                    $('input[name="newsFrom"]:checked').each(function () {
-                        newsFrom += this.value + "||";
-                    });
-                    var otherKnowledgeForReason = $("#otherKnowledgeForReason").val();
-
-                    var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
-
-                    $.ajax({
-                        url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
-                        type: 'POST',
-                        data: {'custID': '<?php
-                        if (isset($_SESSION['userIdFrontEnd'])) {
-                            echo $_SESSION['userIdFrontEnd'];
-                        } else {
-                            echo '';
-                        }
-                        ?>', 'courseID': 'SECRETMONEY01', 'seminarDiscount': seminarDiscount, 'knowledgeFor': knowledgeFor, 'inviteSuggest': inviteSuggest, 'newsFrom': newsFrom, 'otherKnowledgeForReason': otherKnowledgeForReason, 'paymentTerm': paymentTerm},
-                        success: function (data, textStatus, jqXHR) {
-                            if (data == 200) {
-                                alert("ลงทะเบียนเรียบร้อยแล้ว");
-                                window.location.href = 'trainingSchedule';
-                            } else {
-                                alert(data);
-                            }
-                        }
-                    });
-
-                },
-                invalidHandler: function (event, validator) {//display error alert on form submit
-                    errorHandlers.show();
                 }
             });
         });
@@ -734,6 +544,23 @@ require '../model-db-connection/config.php';
         }
         function showCourseDetali(courseName) {
             window.location = "scheduleDetail?cname=" + courseName;
+        }
+
+        function clearMoreTmp(cid) {
+            $("#scheduleFormDiv").load("register_partial.php?cname=" + cid, function () {
+                $.ajax({
+                    url: "../model/com.gogetrich.function/clearTmp.php",
+                    type: 'POST',
+                    success: function (data, textStatus, jqXHR) {
+                        if (data != 200) {
+                            console.log(data);
+                        } else {
+                            $("#loadMoreUser").load("moreUserTbl.php");
+                        }
+
+                    }
+                });
+            });
         }
         var runSetDefaultValidation = function () {
             $.validator.setDefaults({

@@ -245,11 +245,8 @@ require '../model-db-connection/config.php';
                                             <div class="tg-border-topleft tg-haslayout">
                                                 <div class="tg-displaytable">
                                                     <div class="tg-displaytablecell">
-                                                        <span class="fa fa-edit"></span>
-                                                        <h3>จัดการชีวีด้วยงบการเงิน</h3>
-                                                        <!--div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-                                                        </div-->
+                                                        <span class="fa fa-plus"></span>
+                                                        <h3>เพิ่มเติม</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -976,18 +973,18 @@ require '../model-db-connection/config.php';
         </div>
         <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
             <div class="tg-signup-modalbox">
-                <h2>MENTOR DETAIl</h2>
+                <h2>MENTOR DETAIl <span class="pull-right" style="cursor: pointer" onclick="$('.mentor-modalbox').modal('hide')">x</span></h2>
                 <form style="padding:20px" >
-                    <div style="overflow-x:hidden; max-height: 450px;">
+                    <div>
                         <div class="row">
                             <div class="col-sm-4">                                        
                                 <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <br/>
+                                <br/><br/>
                                 <fieldset>
                                     <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
                                 </fieldset>
                             </div>
-                            <div class="col-sm-8">
+                            <div class="col-sm-8" style="overflow-x:hidden; max-height: 450px;">
                                 <fieldset>
                                     <!--legend>ประวัติ และคุณวุฒิ​</legend>
                                     <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>

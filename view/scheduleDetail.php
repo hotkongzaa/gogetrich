@@ -393,7 +393,7 @@ $rowHeader = mysql_fetch_assoc($res);
 
             $('#login_menu').tooltipster({
                 contentAsHTML: true,
-                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
+                content: $('<ul><li class="linkHover" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Profile</div></li><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),
                 touchDevices: true,
                 position: "bottom",
                 interactive: true,
