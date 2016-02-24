@@ -307,13 +307,29 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         } else if (email == "" || !validateEmail(email)) {
             showWarningNotficationDialog("กรุณาระบุ อีเมล ให้ถูกต้อง");
         } else {
+
             //check existing user by email
             $.ajax({
                 url: "../model/com.gogetrich.function/verifyUserExistingByEmail.php?email=" + email,
                 type: 'POST',
                 success: function (data, textStatus, jqXHR) {
                     if (data != 200) {
-                        showWarningNotficationDialog(data);
+                        //showWarningNotficationDialog(data);
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=true",
+                            type: 'POST',
+                            success: function (data, textStatus, jqXHR) {
+                                if (data == 200) {
+                                    $("#loadMoreUser").load("moreUserTbl.php");
+                                } else {
+                                    alert(data);
+                                }
+                                $("#fName").val("");
+                                $("#lName").val("");
+                                $("#moreUserEmail_1").val("");
+                                $("#phone_number_1").val("");
+                            }
+                        });
                     } else {
                         $.ajax({
                             url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=false",
@@ -324,7 +340,8 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                                 } else {
                                     alert(data);
                                 }
-                                $("#moreUser_1").val("");
+                                $("#fName").val("");
+                                $("#lName").val("");
                                 $("#moreUserEmail_1").val("");
                                 $("#phone_number_1").val("");
                             }

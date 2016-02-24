@@ -21,31 +21,39 @@ $iniConfiguration = parse_ini_file("../../model-db-connection/configuration.ini"
 $cusEnrollDaoImpl = new CustEnrollDaoImpl();
 $custEnrollService = new CustomerEnrollService($cusEnrollDaoImpl);
 
+$theNoti = "";
+
 $sqlGetMoreRegis = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
 $resGetMoreRegis = mysql_query($sqlGetMoreRegis);
 while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
+
     if ($rowGetMore['REF_CUS_ID'] == "true") {
 
-        //Same address if user are member only
-        
+        //Get customerID from email is member
+        $cusEmailCheck = $rowGetMore['TMP_EMAIL'];
+        $sqlGetCusID = "SELECT * FROM RICH_CUSTOMER WHERE CUS_EMAIL LIKE '" . $cusEmailCheck . "'";
+        $resGetCusID = mysql_query($sqlGetCusID);
+        $rowGetCusID = mysql_fetch_assoc($resGetCusID);
+
+        //Same address if user are member only        
         $isSmameAddr = $_POST['isSameAddress'];
         if ($isSmameAddr == true) {
             $sqlUpdate = "UPDATE RICH_CUSTOMER"
                     . " SET CUS_RECEIPT_ADDRESS = '" . $_POST['contactAddress'] . "'"
-                    . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
+                    . " WHERE CUS_ID = '" . $rowGetCusID['CUS_ID'] . "'";
             mysql_query($sqlUpdate);
         } else {
             $sqlUpdate = "UPDATE RICH_CUSTOMER"
                     . " SET CUS_RECEIPT_ADDRESS = '" . $_POST['addressForReceipt'] . "'"
-                    . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
+                    . " WHERE CUS_ID = '" . $rowGetCusID['CUS_ID'] . "'";
             mysql_query($sqlUpdate);
         }
 
-        $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($_POST['courseID'], $_SESSION['userIdFrontEnd']);
+        $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($_POST['courseID'], $rowGetCusID['CUS_ID']);
         if ($result == 200) {
             $custEnrollVO = new CustomerEnrollVO();
-            $custEnrollVO->setEnrollID(md5(date("h:i:sa") . "-" . $_SESSION['userIdFrontEnd']));
-            $custEnrollVO->setRefCusID($_SESSION['userIdFrontEnd']);
+            $custEnrollVO->setEnrollID(md5(date("h:i:sa") . "-" . $rowGetCusID['CUS_ID']));
+            $custEnrollVO->setRefCusID($rowGetCusID['CUS_ID']);
             $custEnrollVO->setCourseID($_POST['courseID']);
             $custEnrollVO->setInviteSuggestPersonName("");
             $custEnrollVO->setKnowledgeForReason("");
