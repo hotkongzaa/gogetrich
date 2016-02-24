@@ -6,7 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="tg-cols">
-                    <div class="col-sm-4 tg-colfirst-bgcolor">
+                    
+                    <div class="col-sm-5 tg-colmid-bgcolor">
                         <div class="tg-col">
                             <div class="tg-theme-heading">
                                 <h3>About Us</h3>
@@ -20,51 +21,14 @@
                                 <p>Go Get Rich เกิดขึ้นมาจาก กลุ่มคนเล็กๆ ที่เห็นความสำคัญของ การจัดการและการวางแผนทางการเงิน เราเคยแอบบ่นกันเองว่า "นี่ถ้ามีความรู้เรื่องการจัดการ การวางแผนการเงิน และการลงทุน ตั้งแต่ตอนเรียนมหาวิทยาลัย หรือเมื่อตอนอายุยี่สิบ พวกเราคงรวย และได้เกษียณ ไม่ต้องทำงาน กันไปนานแล้ว"</p>
                             </div>
                             <ul class="tg-social-icon">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                                <li><a href="https://www.facebook.com/richplanning/?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-4 tg-colmid-bgcolor">
-                        <div class="tg-col">
+                    <div class="col-sm-5 tg-collast-bgcolor" style="margin-left: 50px !important;">
+                        <div class="tg-col" >
                             <div class="tg-theme-heading">
-                                <h3>Latest news</h3>
-                            </div>
-                            <div class="tg-latest-post">
-                                <ul>
-                                    <li>
-                                        <span class="tg-date">04<i>Feb</i></span>
-                                        <div class="tg-post-contentbox">
-                                            <div class="tg-description">
-                                                <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium</p>
-                                            </div>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">26 Comments</a></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span class="tg-date">04<i>Feb</i></span>
-                                        <div class="tg-post-contentbox">
-                                            <div class="tg-description">
-                                                <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium</p>
-                                            </div>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">26 Comments</a></span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 tg-collast-bgcolor">
-                        <div class="tg-col">
-                            <div class="tg-theme-heading">
-                                <h3>get in touch</h3>
+                                <h3>Contact Us</h3>
                             </div>
                             <div class="contact-info">
                                 <ul>
