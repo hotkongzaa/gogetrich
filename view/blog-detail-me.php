@@ -189,63 +189,71 @@ require '../model-db-connection/config.php';
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">2. วันนี้ฉันไม่กังวลหากรายได้หยุดกะทันหัน  เพราะมีเงินสำรองฉุกเฉินเพียงพอสำหรับค่าใช้จ่าย 6 เดือน </td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no2" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no2" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no2" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">3. ฉันมีแผนชัดเจนในการชำระหนี้สินและชำระได้หมดก่อนเกษียณอายุ</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no3" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no3" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no3" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">4. ค่างวดผ่อนชำระของฉันทั้งหมดไม่รวมค่างวดผ่อนบ้าน น้อยกว่า 20% ของรายได้ต่อเดือน</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no4" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no4" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no4" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">5. ค่างวดผ่อนชำระของฉันทั้งหมดในแต่ละเดือน น้อยกว่า 35% ของรายได้ต่อเดือน</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no5" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no5" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no5" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">6. ฉันจ่ายเงินคืนบัตรเครดิตเต็มจำนวนทุกเดือน</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no6" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no6" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no6" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">7. ฉันเตรียมค่าใช้จ่ายสำหรับใช้จ่ายหลังเกษียณได้อย่างน้อย 15 ปี ในวันที่เกษียณมาถึง</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no7" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no7" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no7" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">8. หากเกิดการจากไปกะทันหันของหัวหน้าครอบครัว สมาชิกในอุปการะยังคงมีเงินสำหรับค่าใช้จ่ายได้อย่างน้อย 5 ปี หรือ 60 เดือน</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no8" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no8" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no8" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">9. หากเกิดการเจ็บป่วยหรืออุบัติเหตุหนักของฉันหรือสมาชิกในครอบครัว ที่ต้องใช้ค่ารักษาหลักแสน ไม่กระทบกับค่าใช้จ่ายและเงินออมรายเดือน</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no9" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no9" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no9" value="2"></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">10. หากวันนี้หัวหน้าครอบครัวเกิดเหตุทำให้ไม่สามารถทำงานอีกต่อไป เช่น พิการ ครอบครัวสามารถอยู่ได้อย่างน้อย 5 ปีหรือ 60 เดือน</td>
-                                                            <td width="100px"><input type="radio" name="no1" value="0"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="1"></td>
-                                                            <td width="100px"><input type="radio" name="no1" value="2"></td>
+                                                            <td width="100px"><input type="radio" name="no10" value="0"></td>
+                                                            <td width="100px"><input type="radio" name="no10" value="1"></td>
+                                                            <td width="100px"><input type="radio" name="no10" value="2"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;"><strong></strong></td>
+                                                            <td width="300px" colspan="3">
+                                                                <a style="cursor:pointer" onclick="calculateAss()" class="btn btn-default pull-right">
+                                                                    <i class="fa fa-calculator"></i> เริ่มคำนวณ
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;"><strong>A) จำนวนข้อที่เลือก</strong></td>
-                                                            <td width="100px">3</td>
-                                                            <td width="100px">3</td>
-                                                            <td width="100px">4</td>
+                                                            <td width="100px"><span id="totalSelectFirstChoice"></span></td>
+                                                            <td width="100px"><span id="totalSelectSecondChoice"></span></td>
+                                                            <td width="100px"><span id="totalSelectThirdChoice"></span></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;"><strong>B) ให้คะแนน</strong></td>
@@ -255,18 +263,18 @@ require '../model-db-connection/config.php';
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;"><strong>C) รวมคะแนนแต่ละช่อง</strong></td>
-                                                            <td width="100px">9</td>
+                                                            <td width="100px"><span id="totalPointFirstChoice"></span></td>
                                                             <td width="100px">0</td>
-                                                            <td width="100px">-12</td>
+                                                            <td width="100px"><span id="totalPointThirdChoice"></span></td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;"><strong>D) คะแนนรวม</strong></td>
-                                                            <td td colspan="3" style="text-align:center !important;"><strong>-3</strong></td>
+                                                            <td td colspan="3" style="text-align:center !important;"><strong><span id="totalPointSummary"></span></strong></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
-                                            <p><strong>ระดับความพร้อมของคุณ:</strong> เสี่ยงต่อการเป็นหนี้ที่ควบคุมไม่ได้สูง <br/>
+                                            <p><strong>ระดับความพร้อมของคุณ:</strong> <span id="summaryText">กรุณาทำแบบสอบถาม</span><br/>
                                                 <a href="blog-detail-me-2" class="btn btn-default"><i class="fa fa-book"></i> รายละเอียดเพิ่มเติม</a></p>
                                             <blockquote>
                                                 <q>"การวางแผนการเงินเพื่อให้เกิดความชัดเจนเรื่องเงิน ตลอดทุกช่วงชีวิต เพื่อความสงบสุขทางใจ เพื่อสร้างความมั่นคงให้กับครอบครัว"</q>
@@ -365,6 +373,133 @@ require '../model-db-connection/config.php';
         *************************************-->
     </body>
     <script type="text/javascript">
+        $(document).ready(function () {
 
+        });
+        function calculateAss() {
+            var totalChoiceOne = 0;
+            var totalChoiceTwo = 0;
+            var totalChoiceThree = 0;
+
+            var no1 = $('input:radio[name=no1]').filter(":checked").val();
+            if (no1 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no1 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no1 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no2 = $('input:radio[name=no2]').filter(":checked").val();
+            if (no2 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no2 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no2 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no3 = $('input:radio[name=no3]').filter(":checked").val();
+            if (no3 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no3 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no3 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no4 = $('input:radio[name=no4]').filter(":checked").val();
+            if (no4 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no4 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no4 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no5 = $('input:radio[name=no5]').filter(":checked").val();
+            if (no5 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no5 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no5 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no6 = $('input:radio[name=no6]').filter(":checked").val();
+            if (no6 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no6 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no6 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no7 = $('input:radio[name=no7]').filter(":checked").val();
+            if (no7 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no7 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no7 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no8 = $('input:radio[name=no8]').filter(":checked").val();
+            if (no8 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no8 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no8 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no9 = $('input:radio[name=no9]').filter(":checked").val();
+            if (no9 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no9 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no9 == 2) {
+                totalChoiceThree += 1;
+            }
+            var no10 = $('input:radio[name=no10]').filter(":checked").val();
+            if (no10 == 0) {
+                totalChoiceOne += 1;
+            }
+            if (no10 == 1) {
+                totalChoiceTwo += 1;
+            }
+            if (no10 == 2) {
+                totalChoiceThree += 1;
+            }
+
+            $("#totalSelectFirstChoice").html(totalChoiceOne);
+            $("#totalSelectSecondChoice").html(totalChoiceTwo);
+            $("#totalSelectThirdChoice").html(totalChoiceThree);
+
+            $("#totalPointFirstChoice").html(totalChoiceOne * 3);
+            $("#totalPointThirdChoice").html(totalChoiceThree * -3);
+
+            var totalSum = (totalChoiceOne * 3) + (totalChoiceThree * -3) + 0;
+
+            $("#totalPointSummary").html(totalSum);
+
+            if (totalSum <= 15) {
+                $("#summaryText").html("เสี่ยงต่อการเป็นหนี้ที่ควบคุมไม่ได้สูง");
+            } else if (totalSum >= 16 && totalSum <= 20) {
+                $("#summaryText").html("มีความพร้อมในปัจจุบัน แต่เสี่ยงที่ระดับความพร้อมจะลดลง");
+            } else if (totalSum > 20) {
+                $("#summaryText").html("มีความพร้อมในปัจจุบัน");
+            }
+        }
     </script>
 </html>
