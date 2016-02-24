@@ -314,20 +314,29 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 type: 'POST',
                 success: function (data, textStatus, jqXHR) {
                     if (data != 200) {
-                        //showWarningNotficationDialog(data);
                         $.ajax({
-                            url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=true",
+                            url: "../model/com.gogetrich.function/verifyEmailEnrollment.php?email=" + email + "&courseID=<?= $rowHeader['HEADER_ID'] ?>",
                             type: 'POST',
-                            success: function (data, textStatus, jqXHR) {
-                                if (data == 200) {
-                                    $("#loadMoreUser").load("moreUserTbl.php");
+                            success: function (dataCheckRegistered, textStatus, jqXHR) {
+                                if (dataCheckRegistered == 200) {
+                                    $.ajax({
+                                        url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=true",
+                                        type: 'POST',
+                                        success: function (data, textStatus, jqXHR) {
+                                            if (data == 200) {
+                                                $("#loadMoreUser").load("moreUserTbl.php");
+                                            } else {
+                                                alert(data);
+                                            }
+                                            $("#moreFirstName_1").val("");
+                                            $("#moreLastName_1").val("");
+                                            $("#moreUserEmail_1").val("");
+                                            $("#phone_number_1").val("");
+                                        }
+                                    });
                                 } else {
-                                    alert(data);
+                                    showWarningNotficationDialog(dataCheckRegistered);
                                 }
-                                $("#fName").val("");
-                                $("#lName").val("");
-                                $("#moreUserEmail_1").val("");
-                                $("#phone_number_1").val("");
                             }
                         });
                     } else {
@@ -340,8 +349,8 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                                 } else {
                                     alert(data);
                                 }
-                                $("#fName").val("");
-                                $("#lName").val("");
+                                $("#moreFirstName_1").val("");
+                                $("#moreLastName_1").val("");
                                 $("#moreUserEmail_1").val("");
                                 $("#phone_number_1").val("");
                             }
