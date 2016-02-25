@@ -79,7 +79,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
         $customerService = new CustomerService($cusDaoImpl);
 
         $customerVO = new CustomerVO();
-        $customerVO->setCusID($cusID);
+        $customerVO->setCusID($cusID . "-" . $email);
         $customerVO->setCusUsername($email);
         $customerVO->setCusPassword(md5($iniConfiguration['guest.password.default']));
         $customerVO->setCusEmail($email);
