@@ -149,14 +149,14 @@ require '../model-db-connection/config.php';
                 </div>
                 <div class="item">
                     <figure>
-                        <img src="assets/images/home-slider/img-02.jpg" alt="image description">
+                        <img src="assets/images/homepage_carousel_2_v3.png" alt="image description">
                     </figure>
-                    <div class="tg-banner-content">
+                    <!--div class="tg-banner-content">
                         <div class="tg-border-bottomleft">
                             <h1>Virtually <span>bUILD yOUR</span> HOUSE</h1>
                         </div>
                         <a class="tg-theme-btn" href="#">BUILD NOW</a>
-                    </div>
+                    </div-->
                 </div>                
             </div>
             <!--************************************
