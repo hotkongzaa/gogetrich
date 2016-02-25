@@ -69,17 +69,17 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
         }
     } else {
         //Promote guest to new member
-        $cusID = md5(date("h:i:sa"));
         $fName = explode(" ", $rowGetMore['TMP_NAME'])[0];
         $lName = explode(" ", $rowGetMore['TMP_NAME'])[1];
         $email = $rowGetMore['TMP_EMAIL'];
         $phone = $rowGetMore['TMP_PHONE_NUMBER'];
+        $cusID = md5(date("h:i:sa") . "-" . $email);
 
         $cusDaoImpl = new CustomerDaoImpl();
         $customerService = new CustomerService($cusDaoImpl);
 
         $customerVO = new CustomerVO();
-        $customerVO->setCusID($cusID . "-" . $email);
+        $customerVO->setCusID($cusID);
         $customerVO->setCusUsername($email);
         $customerVO->setCusPassword(md5($iniConfiguration['guest.password.default']));
         $customerVO->setCusEmail($email);
