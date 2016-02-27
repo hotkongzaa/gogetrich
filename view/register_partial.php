@@ -40,6 +40,9 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 <label id="label_dis"><input type="checkbox" id="registerMore"> ลงทะเบียนให้คนอื่น</label>                
             </div>
         </div>
+        <div class="form-group">
+            <div id="loadMoreUser" style="margin-top: 10px;"></div>
+        </div>
         <div class="form-group" id="regisMoreThan1User">
             <label for="moreUser_1">ชื่อ (First Name)*</label> 
             <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;"/>
@@ -54,9 +57,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 เพิ่มผู้สมัคร
             </a>
         </div>
-        <div class="form-group">
-            <div id="loadMoreUser" style="margin-top: 10px;"></div>
-        </div>
+
         <div class="form-group">
             <strong>ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
             <br/>
@@ -108,8 +109,23 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         });
         $("#registerOwn").click(function () {
             if ($("#registerOwn").is(":checked")) {
+
+                //Very duplicate in temp table
                 $.ajax({
-                    url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=<?php
+                    url: "../model/com.gogetrich.function/verifyUserExistingIntmpTbleByEmail.php?email=<?php
+            if (isset($_SESSION['userIdFrontEnd'])) {
+                echo $rowGetUserInfo['CUS_EMAIL'];
+            } else {
+                echo '';
+            }
+            ?>",
+                    type: 'POST',
+                    success: function (isDuplicate, textStatus, jqXHR) {
+                        if (isDuplicate == 409) {
+                            showWarningNotficationDialog("อีเมลนี้ได้ถูกใช้ในการลงทะเบียนเรียบร้อยแล้ว");
+                        } else {
+                            $.ajax({
+                                url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=<?php
             if (isset($_SESSION['userIdFrontEnd'])) {
                 echo $rowGetUserInfo['CUS_FIRST_NAME'];
             } else {
@@ -134,16 +150,20 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 echo '';
             }
             ?>&isOwner=true",
-                    type: 'POST',
-                    success: function (data, textStatus, jqXHR) {
-                        if (data == 200) {
-                            $("#loadMoreUser").load("moreUserTbl.php");
-                        } else {
-                            alert(data);
+                                type: 'POST',
+                                success: function (data, textStatus, jqXHR) {
+                                    if (data == 200) {
+                                        $("#loadMoreUser").load("moreUserTbl.php");
+                                    } else {
+                                        showWarningNotficationDialog(data)
+                                    }
+                                    $("#moreFirstName_1").val("");
+                                    $("#moreLastName_1").val("");
+                                    $("#moreUserEmail_1").val("");
+                                    $("#phone_number_1").val("");
+                                }
+                            });
                         }
-                        $("#moreUser_1").val("");
-                        $("#moreUserEmail_1").val("");
-                        $("#phone_number_1").val("");
                     }
                 });
             } else {
@@ -156,7 +176,8 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 $("#regisMoreThan1User").show();
             } else {
                 $("#regisMoreThan1User").hide();
-                $("#moreUser_1").val("");
+                $("#moreFirstName_1").val("");
+                $("#moreLastName_1").val("");
                 $("#moreUserEmail_1").val("");
                 $("#phone_number_1").val("");
             }
@@ -307,7 +328,6 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         } else if (email == "" || !validateEmail(email)) {
             showWarningNotficationDialog("กรุณาระบุ อีเมล ให้ถูกต้อง");
         } else {
-
             //check existing user by email
             $.ajax({
                 url: "../model/com.gogetrich.function/verifyUserExistingByEmail.php?email=" + email,
@@ -315,12 +335,52 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                 success: function (data, textStatus, jqXHR) {
                     if (data != 200) {
                         $.ajax({
-                            url: "../model/com.gogetrich.function/verifyEmailEnrollment.php?email=" + email + "&courseID=<?= $rowHeader['HEADER_ID'] ?>",
+                            url: "../model/com.gogetrich.function/verifyUserExistingIntmpTbleByEmail.php?email=" + email,
                             type: 'POST',
-                            success: function (dataCheckRegistered, textStatus, jqXHR) {
-                                if (dataCheckRegistered == 200) {
+                            success: function (isDuplicate, textStatus, jqXHR) {
+                                if (isDuplicate == 409) {
+                                    showWarningNotficationDialog("อีเมลนี้ได้ถูกใช้ในการลงทะเบียนเรียบร้อยแล้ว");
+                                } else {
                                     $.ajax({
-                                        url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=true",
+                                        url: "../model/com.gogetrich.function/verifyEmailEnrollment.php?email=" + email + "&courseID=<?= $rowHeader['HEADER_ID'] ?>",
+                                        type: 'POST',
+                                        success: function (dataCheckRegistered, textStatus, jqXHR) {
+                                            if (dataCheckRegistered == 200) {
+                                                $.ajax({
+                                                    url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=true",
+                                                    type: 'POST',
+                                                    success: function (data, textStatus, jqXHR) {
+                                                        if (data == 200) {
+                                                            $("#loadMoreUser").load("moreUserTbl.php");
+                                                        } else {
+                                                            alert(data);
+                                                        }
+                                                        $("#moreFirstName_1").val("");
+                                                        $("#moreLastName_1").val("");
+                                                        $("#moreUserEmail_1").val("");
+                                                        $("#phone_number_1").val("");
+                                                    }
+                                                });
+                                            } else {
+                                                showWarningNotficationDialog(dataCheckRegistered);
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    } else {
+                        //Very duplicate in temp table
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/verifyUserExistingIntmpTbleByEmail.php?email=" + email,
+                            type: 'POST',
+                            success: function (isDuplicate, textStatus, jqXHR) {
+                                if (isDuplicate == 409) {
+                                    showWarningNotficationDialog("อีเมลนี้ได้ถูกใช้ในการลงทะเบียนเรียบร้อยแล้ว");
+                                } else {
+                                    //Save additional User to tmp table with isOwner equal to false
+                                    $.ajax({
+                                        url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=false",
                                         type: 'POST',
                                         success: function (data, textStatus, jqXHR) {
                                             if (data == 200) {
@@ -334,25 +394,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                                             $("#phone_number_1").val("");
                                         }
                                     });
-                                } else {
-                                    showWarningNotficationDialog(dataCheckRegistered);
                                 }
-                            }
-                        });
-                    } else {
-                        $.ajax({
-                            url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=false",
-                            type: 'POST',
-                            success: function (data, textStatus, jqXHR) {
-                                if (data == 200) {
-                                    $("#loadMoreUser").load("moreUserTbl.php");
-                                } else {
-                                    alert(data);
-                                }
-                                $("#moreFirstName_1").val("");
-                                $("#moreLastName_1").val("");
-                                $("#moreUserEmail_1").val("");
-                                $("#phone_number_1").val("");
                             }
                         });
                     }
