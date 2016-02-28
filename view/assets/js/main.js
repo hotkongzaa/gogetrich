@@ -21,6 +21,21 @@ ga('send', 'pageview');
  CUSTOM FUNCTION WRITE HERE
  -------------------------------------- */
 $(document).ready(function (e) {
+
+    $(function () {
+
+        $(document).on('scroll', function () {
+
+            if ($(window).scrollTop() > 100) {
+                $('.scroll-top-wrapper').addClass('show');
+            } else {
+                $('.scroll-top-wrapper').removeClass('show');
+            }
+        });
+
+        $('.scroll-top-wrapper').on('click', scrollToTop);
+    });
+
     /* -------------------------------------
      HOME SLIDER
      -------------------------------------- */
@@ -342,4 +357,11 @@ function closeRegisterPartialDialog(dialogElement) {
         center: true, //Center Modal Box?
         autoclose: false //Auto Close Modal Box?});
     });
+}
+function scrollToTop() {
+//    verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;
+//    element = $('body');
+//    offset = element.offset();
+//    offsetTop = offset.top;
+    $('html, body').animate({scrollTop: 0}, 500, 'linear');
 }

@@ -491,7 +491,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             </div>
                             <div class="col-sm-8" style="overflow-x:hidden; max-height: 450px;">
                                 <fieldset>
-                                    
+
                                     <legend>ประวัติการศึกษา</legend>
                                     <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
                                     <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
@@ -518,6 +518,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                     </div>
                 </form> 
             </div>
+        </div>
+        <div class="scroll-top-wrapper ">
+            <span class="scroll-top-inner">
+                <i class="fa fa-2x fa-arrow-circle-up"></i>
+            </span>
         </div>
     </body>
     <style type="text/css">

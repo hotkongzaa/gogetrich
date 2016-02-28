@@ -156,7 +156,7 @@ require '../model-db-connection/config.php';
                             <h1>Virtually <span>bUILD yOUR</span> HOUSE</h1>
                         </div-->
                         <!--a class="tg-theme-btn" href="#">BUILD NOW</a-->
-						<a class="tg-theme-btn" href="aboutus">ดูรายละเอียด</a>
+                        <a class="tg-theme-btn" href="aboutus">ดูรายละเอียด</a>
                     </div>
                 </div>                
             </div>
@@ -818,6 +818,11 @@ require '../model-db-connection/config.php';
         <!--************************************
                         Popup End
         *************************************-->
+        <div class="scroll-top-wrapper ">
+            <span class="scroll-top-inner">
+                <i class="fa fa-2x fa-arrow-circle-up"></i>
+            </span>
+        </div>
     </body>
     <style type="text/css">
         .linkHover:hover{

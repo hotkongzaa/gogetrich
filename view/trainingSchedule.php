@@ -480,6 +480,11 @@ require '../model-db-connection/config.php';
         <!--************************************
                         Popup End
         *************************************-->
+        <div class="scroll-top-wrapper ">
+            <span class="scroll-top-inner">
+                <i class="fa fa-2x fa-arrow-circle-up"></i>
+            </span>
+        </div>
     </body>
     <style type="text/css">
         .linkHover:hover{
