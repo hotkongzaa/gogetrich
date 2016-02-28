@@ -316,3 +316,30 @@ function showSuccessNotficationDialog(informTxt, url) {
         closable: false
     });
 }
+function closeRegisterPartialDialog(dialogElement) {
+    modal({type: 'warning', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
+        //title: 'ข้อความเตือน', //Modal Title
+        text: 'คุณต้องการที่จะยกเลิกการลงทะเบียนนี้หรือไม่', //Modal HTML Content
+        size: 'normal', //Modal Size (normal | large | small)
+        buttons: [{
+                text: 'ตกลง', //Button Text
+                val: 'ok', //Button Value
+                eKey: true, //Enter Keypress
+                addClass: 'btn-black', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled)
+                onClick: function (dialog) {
+                    dialogElement.modal('hide');
+                    return true;
+                }
+            }, {
+                text: 'ยกเลิก', //Button Text
+                val: 'cancel', //Button Value
+                eKey: true, //Enter Keypress
+                addClass: 'btn-black', //Button Classes (btn-large | btn-small | btn-green | btn-light-green | btn-purple | btn-orange | btn-pink | btn-turquoise | btn-blue | btn-light-blue | btn-light-red | btn-red | btn-yellow | btn-white | btn-black | btn-rounded | btn-circle | btn-square | btn-disabled)
+                onClick: function (dialog) {
+                    return true;
+                }
+            }],
+        center: true, //Center Modal Box?
+        autoclose: false //Auto Close Modal Box?});
+    });
+}

@@ -368,9 +368,9 @@ $rowHeader = mysql_fetch_assoc($res);
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-        <div class="modal fade register-modalbox" tabindex="-1" role="dialog">
+        <div class="modal fade register-modalbox" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
             <div class="tg-signup-modalbox">
-                <h2>REGISTRATION COURSE <span class="pull-right" style="cursor: pointer" onclick="$('.register-modalbox').modal('hide')">x</span></h2>
+                <h2>REGISTRATION COURSE <span class="pull-right" style="cursor: pointer" onclick="closeRegisterPartialDialog($('.register-modalbox'))">x</span></h2>
                 <div id="scheduleFormDiv"></div>
 
             </div>
@@ -393,7 +393,7 @@ $rowHeader = mysql_fetch_assoc($res);
 
             $('#login_menu').tooltipster({
                 contentAsHTML: true,
-                content: $('<ul><li class="linkHover" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Profile</div></li><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),
+                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),
                 touchDevices: true,
                 position: "bottom",
                 interactive: true,

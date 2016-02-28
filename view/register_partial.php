@@ -27,13 +27,20 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             <strong>เลือกเวลาเรียน *</strong>
 
             <?php
-            $sqlGetSchedule = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "' ORDER BY EVENT_CREATED_DATE_TIME ASC";
+            $sqlGetSchedule = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME "
+                    . "WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "' "
+                    . "ORDER BY EVENT_CREATED_DATE_TIME ASC";
             $resGetSchedule = mysql_query($sqlGetSchedule);
 
             while ($rowGetSChedule = mysql_fetch_array($resGetSchedule)) {
+                $startDate = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME'])[0];
+                $startTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME'])[1];
+
+                $endDate = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME'])[0];
+                $endTime = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME'])[1];
                 ?>
                 <br/>
-                <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม <?= $rowGetSChedule['START_EVENT_DATE_TIME'] ?> ถึง <?= $rowGetSChedule['END_EVENT_DATE_TIME'] ?></span>
+                <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
                 <?php
             }
             ?>
@@ -118,7 +125,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             } else {
                 $("#addressForReceipt").removeAttr("readonly");
                 $("#divForAddressContact").hide();
-                $("#addressForContact").empty();
+                $("#addressForContact").html('<?= $cusContactAddr ?>');
             }
         });
         $("#registerOwn").click(function () {
