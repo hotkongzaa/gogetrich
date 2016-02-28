@@ -244,7 +244,7 @@ require '../model-db-connection/config.php';
                                                         } else {
                                                             ?>
                                                             <tr>
-                                                                <td colspan="17"> No course are available for this section </td>
+                                                                <td colspan="17"> Course will available soon <span class="fa fa-clock-o"></span> </td>
                                                             </tr>
                                                             <?php
                                                         }

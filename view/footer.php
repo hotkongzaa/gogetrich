@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="tg-cols">
-                    
+
                     <div class="col-sm-5 tg-colmid-bgcolor">
                         <div class="tg-col">
                             <div class="tg-theme-heading">
@@ -20,10 +20,23 @@
                             <div class="tg-description">
                                 <p>Go Get Rich เกิดขึ้นมาจาก กลุ่มคนเล็กๆ ที่เห็นความสำคัญของ การจัดการและการวางแผนทางการเงิน เราเคยแอบบ่นกันเองว่า "นี่ถ้ามีความรู้เรื่องการจัดการ การวางแผนการเงิน และการลงทุน ตั้งแต่ตอนเรียนมหาวิทยาลัย หรือเมื่อตอนอายุยี่สิบ พวกเราคงรวย และได้เกษียณ ไม่ต้องทำงาน กันไปนานแล้ว"</p>
                             </div>
+
                             <ul class="tg-social-icon">
-                                <li><a href="https://www.facebook.com/richplanning/?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li>
+                                    <a href="https://www.facebook.com/richplanning/" target="_blank">
+                                        <i class="fa fa-facebook"></i> 
+                                    </a>
+                                </li>
+                                <li style="cursor: pointer;" onclick="window.open('https://www.facebook.com/richplanning/', '_blank');" >
+                                    <span id="liHover">https://www.facebook.com/richplanning</span>
+                                </li>
                             </ul>
                         </div>
+                        <style>
+                            #liHover:hover { 
+                                color: #ffcc33 !important;
+                            }
+                        </style>
                     </div>
                     <div class="col-sm-5 tg-collast-bgcolor" style="margin-left: 50px !important;">
                         <div class="tg-col" >

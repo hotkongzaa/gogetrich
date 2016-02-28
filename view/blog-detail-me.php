@@ -144,7 +144,7 @@ require '../model-db-connection/config.php';
             *************************************-->
             <!--************************************
                             Main Start
-            *************************************-->
+            *************************************-->    
             <main id="main" class="tg-haslayout">
                 <!--************************************
                                 Blog Detail Section Start
@@ -152,7 +152,7 @@ require '../model-db-connection/config.php';
                 <div class="tg-main-section tg-haslayout">
                     <div class="container">
                         <div class="row">
-                            <div id="content" class="col-md-9 col-sm-8 col-xs-12">
+                            <div id="content" class="col-md-9 col-sm-8 col-xs-12" style="margin-left: 11%">
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
                                         <img src="assets/images/ice_berg_image_v6_653x310.png" alt="สำรวจความพร้อมการเงิน">
@@ -171,11 +171,11 @@ require '../model-db-connection/config.php';
                                     <div class="tg-post-detail">
                                         <div class="tg-description">
                                             <h2>แบบสำรวจความพร้อมการเงิน</h2>
-                                            <p><legend>กรุณาใส่เครื่องหมายถูก / ในข้อที่ตรงกับสถานการณ์ปัจจุบันของคุณ “ใช่, ไม่ใช่, ไม่แน่ใจ”</legend></p>
+                                            <legend style="padding-bottom: 20px;">กรุณาใส่เครื่องหมายถูก / ในข้อที่ตรงกับสถานการณ์ปัจจุบันของคุณ “ใช่, ไม่ใช่, ไม่แน่ใจ”</legend>
                                             <div class="12">
                                                 <table class="table table-condensed table-hover schedule_detail_table">
                                                     <tbody>
-                                                        <tr>
+                                                        <tr style="background-color:#E7E7E7">
                                                             <td><strong>การเงินที่เตรียมแล้วของฉัน</strong></td>
                                                             <td><strong>ใช่</strong></td>
                                                             <td><strong>ไม่ใช่</strong></td>
@@ -243,11 +243,15 @@ require '../model-db-connection/config.php';
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;"><strong></strong></td>
-                                                            <td width="300px" colspan="3">
+                                                            <td width="300px" colspan="3">                                                                
                                                                 <a style="cursor:pointer" onclick="calculateAss()" class="btn btn-default pull-right">
                                                                     <i class="fa fa-calculator"></i> เริ่มคำนวณ
                                                                 </a>
+                                                                <a style="cursor:pointer; margin-right:5px;" onclick="resetAss()" class="btn btn-default pull-right">
+                                                                    <i class="fa fa-refresh"></i> เริ่มต้นใหม่
+                                                                </a>
                                                             </td>
+
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;"><strong>A) จำนวนข้อที่เลือก</strong></td>
@@ -274,8 +278,15 @@ require '../model-db-connection/config.php';
                                                     </tbody>
                                                 </table>
                                             </div>
-                                            <p><strong>ระดับความพร้อมของคุณ:</strong> <span id="summaryText">กรุณาทำแบบสอบถาม</span><br/>
-                                                <a href="blog-detail-me-2" class="btn btn-default"><i class="fa fa-book"></i> รายละเอียดเพิ่มเติม</a></p>
+                                            <p>
+                                                <span style="margin-left:28%; font-size:18px; width:100%">
+                                                    ระดับความพร้อมของคุณ: <strong><span id="summaryText">กรุณาทำแบบสอบถาม</span></strong>
+                                                </span>
+                                                <br/><br/>
+                                                <a href="blog-detail-me-2" class="btn btn-default">
+                                                    <i class="fa fa-book"></i> รายละเอียดเพิ่มเติม
+                                                </a>
+                                            </p>
                                             <blockquote>
                                                 <q>"การวางแผนการเงินเพื่อให้เกิดความชัดเจนเรื่องเงิน ตลอดทุกช่วงชีวิต เพื่อความสงบสุขทางใจ เพื่อสร้างความมั่นคงให้กับครอบครัว"</q>
                                             </blockquote>
@@ -373,9 +384,27 @@ require '../model-db-connection/config.php';
         *************************************-->
     </body>
     <script type="text/javascript">
-        $(document).ready(function () {
 
-        });
+        function resetAss() {
+            $('input:radio[name=no1]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no2]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no3]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no4]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no5]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no6]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no7]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no8]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no9]').filter(":checked").prop("checked", false);
+            $('input:radio[name=no10]').filter(":checked").prop("checked", false);
+
+            $("#totalSelectFirstChoice").empty();
+            $("#totalSelectSecondChoice").empty();
+            $("#totalSelectThirdChoice").empty();
+
+            $("#totalPointFirstChoice").empty();
+            $("#totalPointThirdChoice").empty();
+            $("#totalPointSummary").empty();
+        }
         function calculateAss() {
             var totalChoiceOne = 0;
             var totalChoiceTwo = 0;

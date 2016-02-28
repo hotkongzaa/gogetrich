@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div id="content" class="col-md-9 col-sm-8 col-xs-12">
+                            <div id="content" class="col-md-9 col-sm-8 col-xs-12" style="margin-left: 11%">
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
                                         <img src="assets/images/ice_berg_image_v6_653x310.png" alt="image description">
