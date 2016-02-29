@@ -389,7 +389,40 @@ require '../model-db-connection/config.php';
         </div>
     </body>
     <script type="text/javascript">
+        $(document).ready(function () {
+            $('#login_menu').tooltipster({
+                contentAsHTML: true,
+                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
+                touchDevices: true,
+                position: "bottom",
+                interactive: true,
+                autoClose: true,
+                trigger: "click",
+                minWidth: 150,
+                arrow: false
+            });
 
+            runSetDefaultValidation();
+            var form = $('.login-form');
+            var errorHandler = $('.errorHandler', form);
+            form.validate({
+                rules: {
+                    username: {
+                        required: true
+                    },
+                    password: {
+                        required: true
+                    }
+                },
+                submitHandler: function (form) {
+                    errorHandler.hide();
+                    submitLogin(form);
+                },
+                invalidHandler: function (event, validator) {//display error alert on form submit
+                    errorHandler.show();
+                }
+            });
+        });
         function resetAss() {
             $('input:radio[name=no1]').filter(":checked").prop("checked", false);
             $('input:radio[name=no2]').filter(":checked").prop("checked", false);
@@ -535,5 +568,66 @@ require '../model-db-connection/config.php';
                 $("#summaryText").html("มีความพร้อมในปัจจุบัน");
             }
         }
+        function logoutFromApplication() {
+            $.ajax({
+                url: "../model/com.gogetrich.function/Logout.php",
+                success: function (data, textStatus, jqXHR) {
+                    if (data == 200) {
+                        window.location.href = "main";
+                    }
+                }
+            });
+        }
+        function submitLogin(form) {
+            $.ajax({
+                url: "../model/com.gogetrich.function/LoginSubmit.php",
+                type: 'POST',
+                data: {'username': $("#username").val(), 'password': $("#password").val()},
+                success: function (data, textStatus, jqXHR) {
+                    if (data == 503) {
+                        alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                    }
+                    if (data == 205) {
+                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php");
+                    }
+                    if (data == 200) {
+                        window.location = 'trainingSchedule';
+                        $(form).trigger('reset');
+                    }
+                }
+            });
+        }
+        var runSetDefaultValidation = function () {
+            $.validator.setDefaults({
+                errorElement: "span", // contain the error msg in a small tag
+                errorClass: 'help-block',
+                errorPlacement: function (error, element) {// render error placement for each input type
+                    if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
+                        error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                    } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
+                        error.appendTo($(element).closest('.form-group').children('div'));
+                    } else {
+                        error.insertAfter(element);
+                        // for other inputs, just perform default behavior
+                    }
+                },
+                ignore: ':hidden',
+                success: function (label, element) {
+                    label.addClass('help-block valid');
+                    // mark the current input as valid and display OK icon
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                highlight: function (element) {
+                    $(element).closest('.help-block').removeClass('valid');
+                    // display OK icon
+                    $(element).closest('.form-group').addClass('has-error');
+                    // add the Bootstrap error class to the control group
+                },
+                unhighlight: function (element) {// revert the change done by hightlight
+                    $(element).closest('.form-group').removeClass('has-error');
+                    // set error class to the control group
+                }
+            });
+        };
     </script>
 </html>

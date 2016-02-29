@@ -441,16 +441,20 @@ $rowHeader = mysql_fetch_assoc($res);
             });
         }
         function submitLogin(form) {
-            var formLogin = $(form).serialize();
             $.ajax({
                 url: "../model/com.gogetrich.function/LoginSubmit.php",
                 type: 'POST',
-                data: {'username': $("#usernameLogin").val(), 'password': $("#passwordLogin").val()},
+                data: {'username': $("#username").val(), 'password': $("#password").val()},
                 success: function (data, textStatus, jqXHR) {
                     if (data == 503) {
-                        alert("Username/password is invalid");
-                    } else {
-                        window.location = 'scheduleDetail?cname=<?= $_GET['cname'] ?>';
+                        alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                    }
+                    if (data == 205) {
+                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php");
+                    }
+                    if (data == 200) {
+                        window.location = 'trainingSchedule';
+                        $(form).trigger('reset');
                     }
                 }
             });

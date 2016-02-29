@@ -835,7 +835,7 @@ require '../model-db-connection/config.php';
 
             $('#login_menu').tooltipster({
                 contentAsHTML: true,
-                content: $('<ul><li class="linkHover" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Profile</div></li><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),
+                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),
                 touchDevices: true,
                 position: "bottom",
                 interactive: true,
@@ -878,16 +878,20 @@ require '../model-db-connection/config.php';
             });
         }
         function submitLogin(form) {
-            var formLogin = $(form).serialize();
             $.ajax({
                 url: "../model/com.gogetrich.function/LoginSubmit.php",
                 type: 'POST',
                 data: {'username': $("#username").val(), 'password': $("#password").val()},
                 success: function (data, textStatus, jqXHR) {
                     if (data == 503) {
-                        alert("Username/password is invalid");
-                    } else {
+                        alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                    }
+                    if (data == 205) {
+                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?eMail=" + $("#username").val());
+                    }
+                    if (data == 200) {
                         window.location = 'trainingSchedule';
+                        $(form).trigger('reset');
                     }
                 }
             });

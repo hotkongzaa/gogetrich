@@ -28,7 +28,7 @@ class CustomerDaoImpl implements CustomerDao {
     }
 
     public function saveCustomer(\CustomerVO $customerVO) {
-        $sqlSaveCus = "INSERT INTO RICH_CUSTOMER (CUS_ID,CUS_USERNAME,CUS_PASSWORD,CUS_EMAIL,CUS_FIRST_NAME,CUS_LAST_NAME,CUS_GENDER,CUS_CONTACT_ADDRESS,CUS_RECEIPT_ADDRESS,CUS_PHONE_NUMBER,CUS_FACEBOOK_ADDRESS,CREATED_DATE_TIME) "
+        $sqlSaveCus = "INSERT INTO RICH_CUSTOMER (CUS_ID,CUS_USERNAME,CUS_PASSWORD,CUS_EMAIL,CUS_FIRST_NAME,CUS_LAST_NAME,CUS_GENDER,CUS_CONTACT_ADDRESS,CUS_RECEIPT_ADDRESS,CUS_PHONE_NUMBER,CUS_FACEBOOK_ADDRESS,CREATED_DATE_TIME,FORCE_CHANGE) "
                 . "VALUES "
                 . "('" . $customerVO->getCusID()
                 . "','" . $customerVO->getCusUsername()
@@ -39,7 +39,7 @@ class CustomerDaoImpl implements CustomerDao {
                 . "','" . $customerVO->getCusGender()
                 . "','" . $customerVO->getCusContactAddr()
                 . "','" . $customerVO->getCusReceiptAddr()
-                . "','" . $customerVO->getPhoneNumber() . "','" . $customerVO->getCusFacebookAddr() . "',NOW());";
+                . "','" . $customerVO->getPhoneNumber() . "','" . $customerVO->getCusFacebookAddr() . "',NOW(),'" . $customerVO->getForceChange() . "');";
         mysql_query("SET character_set_results=utf8");
         mysql_query("SET character_set_client=utf8");
         mysql_query("SET character_set_connection=utf8");
@@ -67,8 +67,14 @@ class CustomerDaoImpl implements CustomerDao {
         $query = mysql_query($sqlVerifyUser);
         if (mysql_num_rows($query) >= 1) {
             $row = mysql_fetch_assoc($query);
-            return json_encode($row);
+            if ($row['FORCE_CHANGE'] == "true") {
+                //Force change password
+                return 205;
+            } else {
+                return json_encode($row);
+            }
         } else {
+            //invalid username and password
             return 503;
         }
     }

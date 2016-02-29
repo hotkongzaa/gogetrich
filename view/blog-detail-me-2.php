@@ -217,12 +217,12 @@
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
-                            <i class="fa fa-envelope"></i>
-                            <input type="email" placeholder="Email" class="form-control">
+                            <i class="fa fa-group"></i>
+                            <input type="text" id="username" name="username" placeholder="User name" class="form-control">
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="text" placeholder="Name" class="form-control">
+                            <input type="password" id="password" name="password"  placeholder="Password" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>
@@ -237,44 +237,111 @@
                         <button class="tg-theme-btn tg-theme-btn-lg" type="submit">login</button>
                     </fieldset>
                 </form>
-                <p>Not a Member? <a href="#">Create an Account</a></p>
+                <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-        <div class="modal fade signup-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>REGISTRATION FORM</h2>
-                <form class="login-form">
-                    <fieldset>
-                        <div class="form-group">
-                            <input type="text" placeholder="Username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Confirm Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="First Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Last Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label><input type="checkbox"><em>I agree with the terms and conditions</em></label>
-                        </div>
-                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Create an Account</button>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
+
         <div class="scroll-top-wrapper ">
             <span class="scroll-top-inner">
                 <i class="fa fa-2x fa-arrow-circle-up"></i>
             </span>
         </div>
     </body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#login_menu').tooltipster({
+                contentAsHTML: true,
+                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
+                touchDevices: true,
+                position: "bottom",
+                interactive: true,
+                autoClose: true,
+                trigger: "click",
+                minWidth: 150,
+                arrow: false
+            });
+
+            runSetDefaultValidation();
+            var form = $('.login-form');
+            var errorHandler = $('.errorHandler', form);
+            form.validate({
+                rules: {
+                    username: {
+                        required: true
+                    },
+                    password: {
+                        required: true
+                    }
+                },
+                submitHandler: function (form) {
+                    errorHandler.hide();
+                    submitLogin(form);
+                },
+                invalidHandler: function (event, validator) {//display error alert on form submit
+                    errorHandler.show();
+                }
+            });
+        });
+        function logoutFromApplication() {
+            $.ajax({
+                url: "../model/com.gogetrich.function/Logout.php",
+                success: function (data, textStatus, jqXHR) {
+                    if (data == 200) {
+                        window.location.href = "main";
+                    }
+                }
+            });
+        }
+        function submitLogin(form) {
+            $.ajax({
+                url: "../model/com.gogetrich.function/LoginSubmit.php",
+                type: 'POST',
+                data: {'username': $("#username").val(), 'password': $("#password").val()},
+                success: function (data, textStatus, jqXHR) {
+                    if (data == 503) {
+                        alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                    }
+                    if (data == 205) {
+                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php");
+                    }
+                    if (data == 200) {
+                        window.location = 'trainingSchedule';
+                        $(form).trigger('reset');
+                    }
+                }
+            });
+        }
+        var runSetDefaultValidation = function () {
+            $.validator.setDefaults({
+                errorElement: "span", // contain the error msg in a small tag
+                errorClass: 'help-block',
+                errorPlacement: function (error, element) {// render error placement for each input type
+                    if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
+                        error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                    } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
+                        error.appendTo($(element).closest('.form-group').children('div'));
+                    } else {
+                        error.insertAfter(element);
+                        // for other inputs, just perform default behavior
+                    }
+                },
+                ignore: ':hidden',
+                success: function (label, element) {
+                    label.addClass('help-block valid');
+                    // mark the current input as valid and display OK icon
+                    $(element).closest('.form-group').removeClass('has-error');
+                },
+                highlight: function (element) {
+                    $(element).closest('.help-block').removeClass('valid');
+                    // display OK icon
+                    $(element).closest('.form-group').addClass('has-error');
+                    // add the Bootstrap error class to the control group
+                },
+                unhighlight: function (element) {// revert the change done by hightlight
+                    $(element).closest('.form-group').removeClass('has-error');
+                    // set error class to the control group
+                }
+            });
+        };
+    </script>
 </html>

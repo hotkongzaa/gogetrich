@@ -20,7 +20,11 @@ $customerService = new CustomerService($cusDaoImpl);
 
 $reuslt = $customerService->verfiUsernameAndPassword($_POST['username'], md5($_POST['password']));
 if ($reuslt == 503) {
+    //invalid username and password
     echo 503;
+} else if ($reuslt == 205) {
+    //Force change password
+    echo 205;
 } else {
     $obj = json_decode($reuslt);
 

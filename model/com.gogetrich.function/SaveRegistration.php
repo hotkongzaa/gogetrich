@@ -28,6 +28,7 @@ $customerVO->setCusContactAddr($_GET['address']);
 
 $customerVO->setPhoneNumber($_GET['phone']);
 $customerVO->setCusFacebookAddr($_GET['facebookAdr']);
+$customerVO->setForceChange("false");
 
 if ($customerService->duplicationUsername($_GET['username']) && $customerService->duplicationEmail($_GET['email'])) {
     echo "Your username and email have been used";

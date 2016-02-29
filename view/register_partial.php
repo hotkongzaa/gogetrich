@@ -351,6 +351,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                                                         $("#phone_number_1").val("");
                                                     }
                                                 });
+                                                $("body, html, #scheduleFormDiv").animate({scrollTop: 0}, "fast");
                                             } else {
                                                 showWarningNotficationDialog(dataCheckRegistered);
                                             }

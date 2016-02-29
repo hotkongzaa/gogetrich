@@ -24,6 +24,7 @@ class CustomerVO {
     private $cusReceiptAddr;
     private $phoneNumber;
     private $cusFacebookAddr;
+    private $forceChange;
 
     function getCusID() {
         return $this->cusID;
@@ -111,6 +112,14 @@ class CustomerVO {
 
     function setCusFacebookAddr($cusFacebookAddr) {
         $this->cusFacebookAddr = $cusFacebookAddr;
+    }
+
+    function getForceChange() {
+        return $this->forceChange;
+    }
+
+    function setForceChange($forceChange) {
+        $this->forceChange = $forceChange;
     }
 
 }

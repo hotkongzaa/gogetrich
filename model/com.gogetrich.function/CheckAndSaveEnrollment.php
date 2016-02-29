@@ -89,6 +89,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
         $customerVO->setCusContactAddr("");
         $customerVO->setPhoneNumber($phone);
         $customerVO->setCusFacebookAddr("");
+        $customerVO->setForceChange("true");
 
         if ($customerService->duplicationUsername($email) && $customerService->duplicationEmail($email)) {
             echo "Your username and email have been used";

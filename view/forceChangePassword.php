@@ -56,10 +56,10 @@ if (isset($_SESSION['expireFrontEnd'])) {
                         <div class="tg-displaytable">
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
-                                    <h1>Registration</h1>
+                                    <h1>Force Change Password</h1>
                                     <ol class="tg-breadcrumb">
                                         <li><a href="main">Home</a></li>
-                                        <li class="active">Registration</li>
+                                        <li class="active">Force Change Password</li>
                                     </ol>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                         <div class="row">    
                             <div class="col-xs-12">
                                 <div class="tg-theme-heading">
-                                    <h2>REGISTRATION FORM</h2>
+                                    <h2>FORCE CHANGE PASSWORD</h2>
                                 </div>
                             </div>
                             <h2></h2>
@@ -176,7 +176,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">อีเมล์ (Email) *</label>
-                                                <input type="email" id="email" name="email" placeholder="Email Address" class="form-control">
+                                                <input type="email" id="email" name="email" placeholder="Email Address" class="form-control" value="<?= $_GET['eMail'] ?>" readonly="true">
                                             </div>
                                         </fieldset>
                                         <fieldset>
@@ -202,14 +202,6 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                 <label for="address">ที่อยู่ (เพื่อการติดต่อ) (Contact address) *</label>
                                                 <textarea id="address" name="address" cols="20" style="height: 150px;"></textarea>
                                             </div>
-                                            <!--div class="form-group">                                                
-                                                <label for="isSameAddress">ที่อยู่ (เพื่อออกใบเสร็จรับเงิน) (Address in receipt)</label><br/><br/>  
-                                                <input type="checkbox" id="isSameAddress" value="true" name="isSameAddress" >  เช่นเดียวกับที่อยู่เพื่อการติดต่อ
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-                                                <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px;"></textarea>
-                                            </div-->
                                             <div class="form-group">
                                                 <label for="phone">หมายเลขโทรศัพท์ เพื่อการติดต่อ (Phone number) *</label>
                                                 <input type="text" id="phone" name="phone" placeholder="Phone number" class="form-control">
@@ -220,7 +212,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             </div>
 
                                         </fieldset>
-                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Create an Account</button>
+                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Update an Account</button>
                                     </form>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 width-480">
