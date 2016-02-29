@@ -33,11 +33,13 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             $resGetSchedule = mysql_query($sqlGetSchedule);
 
             while ($rowGetSChedule = mysql_fetch_array($resGetSchedule)) {
-                $startDate = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME'])[0];
-                $startTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME'])[1];
+                $firstDateTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME']);
+                $startDate = $firstDateTime[0];
+                $startTime = $firstDateTime[1];
 
-                $endDate = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME'])[0];
-                $endTime = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME'])[1];
+                $secondDateTime = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME']);
+                $endDate = $secondDateTime[0];
+                $endTime = $secondDateTime[1];
                 ?>
                 <br/>
                 <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>

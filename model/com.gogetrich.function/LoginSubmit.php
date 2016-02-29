@@ -19,15 +19,15 @@ $cusDaoImpl = new CustomerDaoImpl();
 $customerService = new CustomerService($cusDaoImpl);
 
 $reuslt = $customerService->verfiUsernameAndPassword($_POST['username'], md5($_POST['password']));
-$resultLogin = explode("||", $reuslt)[0];
-if ($resultLogin == 503) {
+$resultLogin = explode("||", $reuslt);
+if ($resultLogin[0] == 503) {
     //invalid username and password
     echo "503:";
-} else if ($resultLogin == 205) {
+} else if ($resultLogin[0] == 205) {
     //Force change password
-    echo "205:" . explode("||", $reuslt)[1];
+    echo "205:" . $resultLogin[1];
 } else {
-    $jsonValue = explode("||", $reuslt)[1];
+    $jsonValue = $resultLogin[1];
     $obj = json_decode($jsonValue);
 
     $_SESSION['expireFrontEnd'] = time() + (60 * $configuration['applicationTimeOut']);
