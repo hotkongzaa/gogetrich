@@ -6,6 +6,21 @@ if (isset($_SESSION['expireFrontEnd'])) {
         session_destroy();
     }
 }
+require '../model-db-connection/config.php';
+$cusID = (string) filter_input(INPUT_GET, 'cusID');
+$sqlgetUserInformation = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $cusID . "'";
+$resGetUserInfo = mysql_query($sqlgetUserInformation);
+$rowGetUserInfo = mysql_fetch_assoc($resGetUserInfo);
+
+if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
+    $cusEmail = $rowGetUserInfo['CUS_EMAIL'];
+    $cusFirstName = $rowGetUserInfo['CUS_FIRST_NAME'];
+    $cusLastName = $rowGetUserInfo['CUS_LAST_NAME'];
+    $cusPhoneNum = $rowGetUserInfo['CUS_PHONE_NUMBER'];
+    $cusContactAddr = $rowGetUserInfo['CUS_CONTACT_ADDRESS'];
+} else {
+    header("Location: main");
+}
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -176,18 +191,18 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">อีเมล์ (Email) *</label>
-                                                <input type="email" id="email" name="email" placeholder="Email Address" class="form-control" value="<?= $_GET['eMail'] ?>" readonly="true">
+                                                <input type="email" value="<?= $cusEmail ?>" id="email" name="email" placeholder="Email Address" class="form-control" readonly="true">
                                             </div>
                                         </fieldset>
                                         <fieldset>
                                             <legend>User Information</legend>
                                             <div class="form-group">
                                                 <label for="fName">ชื่อ (First Name) *</label>
-                                                <input type="text" id="fName" name="fName" placeholder="First Name" class="form-control">
+                                                <input type="text" value="<?= $cusFirstName ?>" id="fName" name="fName" placeholder="First Name" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="lName">สกุล (Last Name) *</label>
-                                                <input type="text" id="lName" name="lName" placeholder="Last Name" class="form-control">
+                                                <input type="text" value="<?= $cusLastName ?>" id="lName" name="lName" placeholder="Last Name" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="gender">เพศ (Gender)</label>
@@ -204,7 +219,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             </div>
                                             <div class="form-group">
                                                 <label for="phone">หมายเลขโทรศัพท์ เพื่อการติดต่อ (Phone number) *</label>
-                                                <input type="text" id="phone" name="phone" placeholder="Phone number" class="form-control">
+                                                <input type="text" id="phone" value="<?= $cusPhoneNum ?>" name="phone" placeholder="Phone number" class="form-control">
                                             </div>
                                             <div class="form-group">
                                                 <label for="facebookAdr">Facebook address</label>
@@ -253,16 +268,16 @@ if (isset($_SESSION['expireFrontEnd'])) {
         </div>
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
-                <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2></h2>
+                <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2>
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
                             <i class="fa fa-group"></i>
-                            <input type="text" id="usernameLogin" name="username" placeholder="User name" class="form-control">
+                            <input type="text" id="usernameLogin" name="usernameLogin" placeholder="User name" class="form-control">
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="password" id="passwordLogin" name="password"  placeholder="Password" class="form-control">
+                            <input type="password" id="passwordLogin" name="passwordLogin"  placeholder="Password" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>
@@ -385,15 +400,16 @@ if (isset($_SESSION['expireFrontEnd'])) {
             $.ajax({
                 url: "../model/com.gogetrich.function/LoginSubmit.php",
                 type: 'POST',
-                data: {'username': $("#username").val(), 'password': $("#password").val()},
+                data: {'username': $("#usernameLogin").val(), 'password': $("#passwordLogin").val()},
                 success: function (data, textStatus, jqXHR) {
-                    if (data == 503) {
+                    var resData = data.split(":");
+                    if (resData[0] == 503) {
                         alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
                     }
-                    if (data == 205) {
-                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php");
+                    if (resData[0] == 205) {
+                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
                     }
-                    if (data == 200) {
+                    if (resData[0] == 200) {
                         window.location = 'trainingSchedule';
                         $(form).trigger('reset');
                     }
@@ -401,35 +417,36 @@ if (isset($_SESSION['expireFrontEnd'])) {
             });
         }
         function submitCustomer(form) {
-            var fromObj = $(form).serialize();
-            $.ajax({
-                url: "../model/com.gogetrich.function/SaveRegistration.php?" + fromObj,
-                type: 'POST',
-                success: function (data, textStatus, jqXHR) {
-                    if (data == 200) {
-                        $.ajax({
-                            url: "../model/com.gogetrich.function/LoginSubmit.php",
-                            type: 'POST',
-                            data: {'username': $("#username").val(), 'password': $("#password").val()},
-                            success: function (data, textStatus, jqXHR) {
-                                if (data == 503) {
-                                    $(".notification-modalBox").modal("show");
-                                    $(".notification_detail").html("Username/password is invalid");
-                                } else {
-                                    $(".notification-modalBox").modal("show");
-                                    $(".notification_detail").html("ท่านได้สมัครสมาชิกสำเร็จแล้ว<br/> ยินดีต้อนรับท่านเข้าสู่ Go Get Rich");
-                                    setTimeout(function () {
-                                        window.location = 'trainingSchedule';
-                                    }, 1500);
-                                }
-                            }
-                        });
-                    } else {
-                        $(".notification-modalBox").modal("show");
-                        $(".notification_detail").html(data);
-                    }
-                }
-            });
+            showWarningNotficationDialog("This feature is not implement yet !");
+//            var fromObj = $(form).serialize();
+//            $.ajax({
+//                url: "../model/com.gogetrich.function/UpdateRegistration.php?" + fromObj,
+//                type: 'POST',
+//                success: function (data, textStatus, jqXHR) {
+//                    if (data == 200) {
+//                        $.ajax({
+//                            url: "../model/com.gogetrich.function/LoginSubmit.php",
+//                            type: 'POST',
+//                            data: {'username': $("#username").val(), 'password': $("#password").val()},
+//                            success: function (data, textStatus, jqXHR) {
+//                                if (data == 503) {
+//                                    $(".notification-modalBox").modal("show");
+//                                    $(".notification_detail").html("Username/password is invalid");
+//                                } else {
+//                                    $(".notification-modalBox").modal("show");
+//                                    $(".notification_detail").html("ท่านได้สมัครสมาชิกสำเร็จแล้ว<br/> ยินดีต้อนรับท่านเข้าสู่ Go Get Rich");
+//                                    setTimeout(function () {
+//                                        window.location = 'trainingSchedule';
+//                                    }, 1500);
+//                                }
+//                            }
+//                        });
+//                    } else {
+//                        $(".notification-modalBox").modal("show");
+//                        $(".notification_detail").html(data);
+//                    }
+//                }
+//            });
         }
         var runSetDefaultValidation = function () {
             $.validator.setDefaults({

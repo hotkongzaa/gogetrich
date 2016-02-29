@@ -69,13 +69,13 @@ class CustomerDaoImpl implements CustomerDao {
             $row = mysql_fetch_assoc($query);
             if ($row['FORCE_CHANGE'] == "true") {
                 //Force change password
-                return 205;
+                return "205||" . $row['CUS_ID'];
             } else {
-                return json_encode($row);
+                return "200||" . json_encode($row);
             }
         } else {
             //invalid username and password
-            return 503;
+            return "503||";
         }
     }
 

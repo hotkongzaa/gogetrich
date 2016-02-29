@@ -883,13 +883,16 @@ require '../model-db-connection/config.php';
                 type: 'POST',
                 data: {'username': $("#username").val(), 'password': $("#password").val()},
                 success: function (data, textStatus, jqXHR) {
-                    if (data == 503) {
+                    var resData = data.split(":");
+                    if (resData[0] == 503) {
                         alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                        $(form).trigger('reset');
                     }
-                    if (data == 205) {
-                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?eMail=" + $("#username").val());
+                    if (resData[0] == 205) {
+                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                        $(form).trigger('reset');
                     }
-                    if (data == 200) {
+                    if (resData[0] == 200) {
                         window.location = 'trainingSchedule';
                         $(form).trigger('reset');
                     }

@@ -206,11 +206,13 @@ require '../model-db-connection/config.php';
                                                                             $sqlGetEventDateTime = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME WHERE REF_COURSE_HEADER_ID = '" . $rowGetCourseHeader['HEADER_ID'] . "'";
                                                                             $resGetEventDateTime = mysql_query($sqlGetEventDateTime);
                                                                             while ($rowGetEventDateTime = mysql_fetch_array($resGetEventDateTime)) {
-                                                                                $startDate = explode(" ", $rowGetEventDateTime['START_EVENT_DATE_TIME'])[0];
-                                                                                $startTime = explode(" ", $rowGetEventDateTime['START_EVENT_DATE_TIME'])[1];
+                                                                                $firstDateTime = explode(" ", $rowGetEventDateTime['START_EVENT_DATE_TIME']);
+                                                                                $startDate = $firstDateTime[0];
+                                                                                $startTime = $firstDateTime[1];
 
-                                                                                $endDate = explode(" ", $rowGetEventDateTime['END_EVENT_DATE_TIME'])[0];
-                                                                                $endTime = explode(" ", $rowGetEventDateTime['END_EVENT_DATE_TIME'])[1];
+                                                                                $secondDateTime = explode(" ", $rowGetEventDateTime['END_EVENT_DATE_TIME']);
+                                                                                $endDate = $secondDateTime[0];
+                                                                                $endTime = $secondDateTime[1];
                                                                                 ?>
 
                                                                     <li class="linkHover" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</li>
