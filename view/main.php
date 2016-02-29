@@ -885,11 +885,15 @@ require '../model-db-connection/config.php';
                 success: function (data, textStatus, jqXHR) {
                     var resData = data.split(":");
                     if (resData[0] == 503) {
-                        alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                        setTimeout(function () {
+                            showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                        }, 50);
                         $(form).trigger('reset');
                     }
                     if (resData[0] == 205) {
-                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                        setTimeout(function () {
+                            showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                        }, 50);
                         $(form).trigger('reset');
                     }
                     if (resData[0] == 200) {

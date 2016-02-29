@@ -20,7 +20,28 @@ class CustomerDaoImpl implements CustomerDao {
     }
 
     public function editCustomer(\CustomerVO $customerVO) {
-        
+        $sqlUpdate = "UPDATE RICH_CUSTOMER "
+                . "SET CUS_USERNAME = '" . $customerVO->getCusUsername() . "',"
+                . "CUS_PASSWORD='" . $customerVO->getCusPassword() . "',"
+                . "CUS_EMAIL='" . $customerVO->getCusEmail() . "',"
+                . "CUS_FIRST_NAME='" . $customerVO->getCusFirstName() . "',"
+                . "CUS_LAST_NAME='" . $customerVO->getCusLastName() . "',"
+                . "CUS_GENDER='" . $customerVO->getCusGender() . "',"
+                . "CUS_CONTACT_ADDRESS='" . $customerVO->getCusContactAddr() . "',"
+                . "CUS_RECEIPT_ADDRESS='" . $customerVO->getCusReceiptAddr() . "',"
+                . "CUS_PHONE_NUMBER='" . $customerVO->getPhoneNumber() . "',"
+                . "CUS_FACEBOOK_ADDRESS='" . $customerVO->getCusFacebookAddr() . "',"
+                . "FORCE_CHANGE='" . $customerVO->getForceChange() . "' "
+                . "WHERE CUS_ID LIKE '" . $customerVO->getCusID() . "'";
+        mysql_query("SET character_set_results=utf8");
+        mysql_query("SET character_set_client=utf8");
+        mysql_query("SET character_set_connection=utf8");
+        $query = mysql_query($sqlUpdate);
+        if ($query) {
+            return 200;
+        } else {
+            return "Cannot save customer with error '" . mysql_error() . "'";
+        }
     }
 
     public function getCustomerById($cusID) {

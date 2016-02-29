@@ -177,6 +177,9 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
                                     <form class="cus_registration_form">
                                         <fieldset>
                                             <legend>User Credential</legend>
+
+                                            <input type="hidden" name="cusID" id="cusID" value="<?= $cusID ?>">
+
                                             <div class="form-group">
                                                 <label for="username">ชื่อผู้ใช้ (Username) *</label>
                                                 <input type="text" name="username" id="username" placeholder="Username" class="form-control">
@@ -404,10 +407,16 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
                 success: function (data, textStatus, jqXHR) {
                     var resData = data.split(":");
                     if (resData[0] == 503) {
-                        alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                        setTimeout(function () {
+                            showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                        }, 100);
+                        $(form).trigger('reset');
                     }
                     if (resData[0] == 205) {
-                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                        setTimeout(function () {
+                            showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                        }, 100);
+                        $(form).trigger('reset');
                     }
                     if (resData[0] == 200) {
                         window.location = 'trainingSchedule';
@@ -417,36 +426,43 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
             });
         }
         function submitCustomer(form) {
-            showWarningNotficationDialog("This feature is not implement yet !");
-//            var fromObj = $(form).serialize();
-//            $.ajax({
-//                url: "../model/com.gogetrich.function/UpdateRegistration.php?" + fromObj,
-//                type: 'POST',
-//                success: function (data, textStatus, jqXHR) {
-//                    if (data == 200) {
-//                        $.ajax({
-//                            url: "../model/com.gogetrich.function/LoginSubmit.php",
-//                            type: 'POST',
-//                            data: {'username': $("#username").val(), 'password': $("#password").val()},
-//                            success: function (data, textStatus, jqXHR) {
-//                                if (data == 503) {
-//                                    $(".notification-modalBox").modal("show");
-//                                    $(".notification_detail").html("Username/password is invalid");
-//                                } else {
-//                                    $(".notification-modalBox").modal("show");
-//                                    $(".notification_detail").html("ท่านได้สมัครสมาชิกสำเร็จแล้ว<br/> ยินดีต้อนรับท่านเข้าสู่ Go Get Rich");
-//                                    setTimeout(function () {
-//                                        window.location = 'trainingSchedule';
-//                                    }, 1500);
-//                                }
-//                            }
-//                        });
-//                    } else {
-//                        $(".notification-modalBox").modal("show");
-//                        $(".notification_detail").html(data);
-//                    }
-//                }
-//            });
+//            showWarningNotficationDialog("This feature is not implement yet !");
+            var fromObj = $(form).serialize();
+            $.ajax({
+                url: "../model/com.gogetrich.function/UpdateRegistration.php?" + fromObj,
+                type: 'POST',
+                success: function (data, textStatus, jqXHR) {
+                    if (data == 200) {
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/LoginSubmit.php",
+                            type: 'POST',
+                            data: {'username': $("#username").val(), 'password': $("#password").val()},
+                            success: function (data, textStatus, jqXHR) {
+                                var resData = data.split(":");
+                                if (resData[0] == 503) {
+                                    setTimeout(function () {
+                                        showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                                    }, 50);
+                                    $(form).trigger('reset');
+                                }
+                                if (resData[0] == 205) {
+                                    setTimeout(function () {
+                                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                                    }, 50);
+                                    $(form).trigger('reset');
+                                }
+                                if (resData[0] == 200) {
+                                    window.location = 'trainingSchedule';
+                                    $(form).trigger('reset');
+                                }
+                            }
+                        });
+                    } else {
+                        $(".notification-modalBox").modal("show");
+                        $(".notification_detail").html(data);
+                    }
+                }
+            });
         }
         var runSetDefaultValidation = function () {
             $.validator.setDefaults({

@@ -393,15 +393,22 @@ if (isset($_SESSION['expireFrontEnd'])) {
             $.ajax({
                 url: "../model/com.gogetrich.function/LoginSubmit.php",
                 type: 'POST',
-                data: {'username': $("#username").val(), 'password': $("#password").val()},
+                data: {'username': $("#usernameLogin").val(), 'password': $("#passwordLogin").val()},
                 success: function (data, textStatus, jqXHR) {
-                    if (data == 503) {
-                        alert("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                    var resData = data.split(":");
+                    if (resData[0] == 503) {
+                        setTimeout(function () {
+                            showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                        }, 100);
+                        $(form).trigger('reset');
                     }
-                    if (data == 205) {
-                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php");
+                    if (resData[0] == 205) {
+                        setTimeout(function () {
+                            showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                        }, 100);
+                        $(form).trigger('reset');
                     }
-                    if (data == 200) {
+                    if (resData[0] == 200) {
                         window.location = 'trainingSchedule';
                         $(form).trigger('reset');
                     }
