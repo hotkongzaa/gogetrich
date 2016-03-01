@@ -5,7 +5,7 @@ require '../../model-db-connection/config.php';
 
 $regisEmail = (string) filter_input(INPUT_GET, 'email');
 
-$sqlGetTmpTbl = "SELECT count(*) as counts FROM MORE_REGISTRED_TMP WHERE TMP_EMAIL like '" . $regisEmail . "'";
+$sqlGetTmpTbl = "SELECT count(*) as counts FROM MORE_REGISTRED_TMP WHERE TMP_EMAIL like '" . $regisEmail . "' AND TMP_CUS_ID LIKE '" . $_SESSION['userIdFrontEnd'] . "'";
 $resGetTmpTbl = mysql_query($sqlGetTmpTbl);
 $rowGetTmpTbl = mysql_fetch_assoc($resGetTmpTbl);
 

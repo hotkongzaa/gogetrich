@@ -115,6 +115,11 @@ if (isset($_SESSION['userIdFrontEnd'])) {
 
 <script type="text/javascript">
     $(document).ready(function () {
+//        $("div#scheduleFormDiv")block({
+//            message: '<h1>Processing</h1>',
+//            css: {border: '3px solid #a00'}
+//        });
+
         $("#divForAddressContact").hide();
         $("#regisMoreThan1User").hide();
         $("#loadMoreUser").load("moreUserTbl.php");
@@ -271,19 +276,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
     }
     function deleteTmpFromCheckBox() {
         $.ajax({
-            url: "../model/com.gogetrich.function/deleteOwnInTmp.php?name=<?php
-            if (isset($_SESSION['userIdFrontEnd'])) {
-                echo $rowGetUserInfo['CUS_FIRST_NAME'] . " " . $rowGetUserInfo['CUS_LAST_NAME'];
-            } else {
-                echo '';
-            }
-            ?>&email=<?php
-            if (isset($_SESSION['userIdFrontEnd'])) {
-                echo $rowGetUserInfo['CUS_EMAIL'];
-            } else {
-                echo '';
-            }
-            ?>",
+            url: "../model/com.gogetrich.function/deleteOwnInTmp.php?name=<?= $cusFirstName . " " . $cusLastName ?>&email=<?= $cusEmail ?>",
             type: 'POST',
             success: function (data, textStatus, jqXHR) {
                 if (data == 200) {
