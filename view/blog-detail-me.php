@@ -442,6 +442,8 @@ require '../model-db-connection/config.php';
             $("#totalPointFirstChoice").empty();
             $("#totalPointThirdChoice").empty();
             $("#totalPointSummary").empty();
+
+            $("#summaryText").html("กรุณาทำแบบสอบถาม");
         }
         function calculateAss() {
             var totalChoiceOne = 0;

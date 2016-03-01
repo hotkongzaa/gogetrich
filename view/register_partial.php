@@ -115,10 +115,6 @@ if (isset($_SESSION['userIdFrontEnd'])) {
 
 <script type="text/javascript">
     $(document).ready(function () {
-//        $("div#scheduleFormDiv")block({
-//            message: '<h1>Processing</h1>',
-//            css: {border: '3px solid #a00'}
-//        });
 
         $("#divForAddressContact").hide();
         $("#regisMoreThan1User").hide();
@@ -144,6 +140,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                     success: function (isDuplicate, textStatus, jqXHR) {
                         if (isDuplicate == 409) {
                             showWarningNotficationDialog("อีเมลนี้ได้ถูกใช้ในการลงทะเบียนเรียบร้อยแล้ว");
+                            $("#registerOwn").attr("checked", false);
                         } else {
                             $.ajax({
                                 url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?fName=<?= $cusFirstName ?>&lName=<?= $cusLastName ?>&email=<?= $cusEmail ?>&phone=<?= $cusPhoneNum ?>&isOwner=true",
@@ -188,6 +185,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
             var isSameAddress = $("#isSameAddress").val();
             var addressForReceipt = $("#addressForReceipt").val();
+            var addressForContact = $("#addressForContact").val();
 
             $.ajax({
                 url: "../model/com.gogetrich.function/checkIsRegister.php",
@@ -207,7 +205,18 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                         $.ajax({
                             url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                             type: 'POST',
-                            data: {'isSameAddress': isSameAddress, 'contactAddress': '<?= $cusContactAddr ?>', 'addressForReceipt': addressForReceipt, 'courseID': '<?= $_GET['cname'] ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount},
+                            beforeSend: function (xhr) {
+                                $('form#registerSeminar').block({css: {
+                                        border: 'none',
+                                        padding: '15px',
+                                        backgroundColor: '#000',
+                                        '-webkit-border-radius': '10px',
+                                        '-moz-border-radius': '10px',
+                                        opacity: .5,
+                                        color: '#fff'
+                                    }, message: '<img src="assets/images/hourglass.gif"/>'});
+                            },
+                            data: {'isSameAddress': isSameAddress, 'contactAddress': addressForContact, 'addressForReceipt': addressForReceipt, 'courseID': '<?= $_GET['cname'] ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount},
                             success: function (data, textStatus, jqXHR) {
                                 if (data == 200) {
                                     $.ajax({
@@ -220,6 +229,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                                 } else {
                                     showWarningNotficationDialog(data);
                                 }
+                                $('form#registerSeminar').unblock();
                             }
                         });
                     }

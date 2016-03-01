@@ -28,6 +28,9 @@ $theNoti = "";
 $courseID = (string) filter_input(INPUT_POST, 'courseID');
 $paymentTerm = (string) filter_input(INPUT_POST, 'paymentTerm');
 $seminarDiscount = (string) filter_input(INPUT_POST, 'seminarDiscount');
+$isSameAddr = (string) filter_input(INPUT_POST, 'isSameAddress');
+$contactAddr = (string) filter_input(INPUT_POST, 'contactAddress');
+$addressForReceipt = (string) filter_input(INPUT_POST, 'addressForReceipt');
 
 $sqlGetMoreRegis = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
 $resGetMoreRegis = mysql_query($sqlGetMoreRegis);
@@ -42,16 +45,16 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
         $rowGetCusID = mysql_fetch_assoc($resGetCusID);
 
         //Same address if user are member only        
-        $isSmameAddr = $_POST['isSameAddress'];
-        if ($isSmameAddr == true) {
+
+        if ($isSameAddr == true) {
             $sqlUpdate = "UPDATE RICH_CUSTOMER"
-                    . " SET CUS_RECEIPT_ADDRESS = '" . $_POST['contactAddress'] . "'"
-                    . " WHERE CUS_ID = '" . $rowGetCusID['CUS_ID'] . "'";
+                    . " SET CUS_RECEIPT_ADDRESS = '" . $contactAddr . "',CUS_CONTACT_ADDRESS='" . $contactAddr . "'"
+                    . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
             mysql_query($sqlUpdate);
         } else {
             $sqlUpdate = "UPDATE RICH_CUSTOMER"
-                    . " SET CUS_RECEIPT_ADDRESS = '" . $_POST['addressForReceipt'] . "'"
-                    . " WHERE CUS_ID = '" . $rowGetCusID['CUS_ID'] . "'";
+                    . " SET CUS_RECEIPT_ADDRESS = '" . $addressForReceipt . "',CUS_CONTACT_ADDRESS='" . $contactAddr . "'"
+                    . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
             mysql_query($sqlUpdate);
         }
 
