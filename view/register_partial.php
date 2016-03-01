@@ -212,7 +212,6 @@ if (isset($_SESSION['userIdFrontEnd'])) {
                                             showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/> ขอบคุณค่ะ", "scheduleDetail?cname=<?= $_GET['cname'] ?>");
                                         }
                                     });
-
                                 } else {
                                     showWarningNotficationDialog(data);
                                 }

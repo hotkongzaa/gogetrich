@@ -99,7 +99,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
 
                 $emailContent = new EmailContent();
                 $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate);
-                $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $rowGetCusID['CUS_EMAIL'], $iniConfiguration['email.subject.customer.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $rowGetCusID['CUS_EMAIL'], $iniConfiguration['email.subject.customer.enrollment.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                 $sendingEmail->sendingEmail();
             }
 
@@ -212,13 +212,36 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
 
                         $emailContent = new EmailContent();
                         $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate);
-                        $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $email, $iniConfiguration['email.subject.customer.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                        $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $email, $iniConfiguration['email.subject.customer.enrollment.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                         $sendingEmail->sendingEmail();
                     }
 
                     //Sending enrollment email to official
                     if ($iniConfiguration['email.sending.to.official'] == true) {
-                        
+                        $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
+                                . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
+                                . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
+                                . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+
+                        $resReport = mysql_query($sqlGetCourseDetailByCourseID);
+                        $rowReport = mysql_fetch_assoc($resReport);
+
+                        $courseName = $rowReport['HEADER_NAME'];
+
+                        $firstDateTime = explode(" ", $rowReport['START_EVENT_DATE_TIME']);
+                        $startDate = $firstDateTime[0];
+                        $startTime = $firstDateTime[1];
+
+                        $secondDateTime = explode(" ", $rowReport['END_EVENT_DATE_TIME']);
+                        $endDate = $secondDateTime[0];
+                        $endTime = $secondDateTime[1];
+
+                        $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
+
+                        $emailContent = new EmailContent();
+                        $emailBody = $emailContent->getOfficialEmailEnrollment($fName . " " . $lName, $email, $phone, "", "", $courseName, $courseDate);
+                        $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $iniConfiguration['email.official'], $iniConfiguration['email.subject.official.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                        $sendingEmail->sendingEmail();
                     }
                 } else {
                     echo $resultFromCheckCust;
