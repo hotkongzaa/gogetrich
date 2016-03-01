@@ -38,8 +38,8 @@ class SendingEmail {
     }
 
     public function sendingEmail() {
-        $mail = new PHPMailer();
-
+        $mail = new PHPMailer(true);
+        $mail->CharSet = "UTF-8";
         $mail->IsSMTP();                                      // set mailer to use SMTP
         $mail->Host = $this->host;  // specify main and backup server
         $mail->SMTPAuth = true;     // turn on SMTP authentication

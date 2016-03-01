@@ -15,6 +15,8 @@ require '../../model-db-connection/config.php';
 require '../../model/com.gogetrich.dao/CustomerDaoImpl.php';
 require '../../model/com.gogetrich.service/CustomerService.php';
 require '../../model/com.gogetrich.model/CustomerVO.php';
+require './EmailContent.php';
+require './SendingEmail.php';
 
 $iniConfiguration = parse_ini_file("../../model-db-connection/configuration.ini");
 
@@ -22,6 +24,10 @@ $cusEnrollDaoImpl = new CustEnrollDaoImpl();
 $custEnrollService = new CustomerEnrollService($cusEnrollDaoImpl);
 
 $theNoti = "";
+
+$courseID = (string) filter_input(INPUT_POST, 'courseID');
+$paymentTerm = (string) filter_input(INPUT_POST, 'paymentTerm');
+$seminarDiscount = (string) filter_input(INPUT_POST, 'seminarDiscount');
 
 $sqlGetMoreRegis = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
 $resGetMoreRegis = mysql_query($sqlGetMoreRegis);
@@ -49,21 +55,59 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
             mysql_query($sqlUpdate);
         }
 
-        $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($_POST['courseID'], $rowGetCusID['CUS_ID']);
+        $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($courseID, $rowGetCusID['CUS_ID']);
         if ($result == 200) {
             $custEnrollVO = new CustomerEnrollVO();
             $custEnrollVO->setEnrollID(md5(date("h:i:sa") . "-" . $rowGetCusID['CUS_ID']));
             $custEnrollVO->setRefCusID($rowGetCusID['CUS_ID']);
-            $custEnrollVO->setCourseID($_POST['courseID']);
+            $custEnrollVO->setCourseID($courseID);
             $custEnrollVO->setInviteSuggestPersonName("");
             $custEnrollVO->setKnowledgeForReason("");
             $custEnrollVO->setNewsFrom("");
             $custEnrollVO->setOtherknowledgeForReason("");
-            $custEnrollVO->setPaymentTerm($_POST['paymentTerm']);
-            $custEnrollVO->setSeminarDiscountReason($_POST['seminarDiscount']);
+            $custEnrollVO->setPaymentTerm($paymentTerm);
+            $custEnrollVO->setSeminarDiscountReason($seminarDiscount);
             $custEnrollVO->setAdditionalUser("");
             $custEnrollVO->setIsRegisteredOwn("true");
             $theNoti = $custEnrollService->saveCustEnroll($custEnrollVO);
+            
+            //Sending enrollment email to customer
+            if ($iniConfiguration['email.sending.to.customer'] == "true") {
+                $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
+                        . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
+                        . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
+                        . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+
+                $resReport = mysql_query($sqlGetCourseDetailByCourseID);
+                $rowReport = mysql_fetch_assoc($resReport);
+
+
+                $courseNameAndSubCourseName = $rowReport['HEADER_NAME'] . ' <br/> ' . $rowReport['SUB_HEADER_NAME'];
+                $linkToCourse = $iniConfiguration['web.application.prefix'] . '/view/scheduleDetail?cname=' . $courseID;
+
+                $courseName = $rowReport['HEADER_NAME'];
+
+                $firstDateTime = explode(" ", $rowReport['START_EVENT_DATE_TIME']);
+                $startDate = $firstDateTime[0];
+                $startTime = $firstDateTime[1];
+
+                $secondDateTime = explode(" ", $rowReport['END_EVENT_DATE_TIME']);
+                $endDate = $secondDateTime[0];
+                $endTime = $secondDateTime[1];
+
+                $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
+
+                $emailContent = new EmailContent();
+                $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate);
+                $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $rowGetCusID['CUS_EMAIL'], $iniConfiguration['email.subject.customer.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                $sendingEmail->sendingEmail();
+            }
+            
+
+            //Sending enrollment email to official
+            if ($iniConfiguration['email.sending.to.official'] == "true") {
+                
+            }
         } else {
             echo $result;
         }
@@ -101,18 +145,18 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
             $saveResult = $customerService->saveCustomer($customerVO);
             if ($saveResult == 200) {
 
-                $resultFromCheckCust = $custEnrollService->checkCustAlreadyEnrollByEnrollID($_POST['courseID'], $cusID);
+                $resultFromCheckCust = $custEnrollService->checkCustAlreadyEnrollByEnrollID($courseID, $cusID);
                 if ($resultFromCheckCust == 200) {
                     $custEnrollVO = new CustomerEnrollVO();
                     $custEnrollVO->setEnrollID(md5(date("h:i:sa") . "-" . $cusID));
                     $custEnrollVO->setRefCusID($cusID);
-                    $custEnrollVO->setCourseID($_POST['courseID']);
+                    $custEnrollVO->setCourseID($courseID);
                     $custEnrollVO->setInviteSuggestPersonName("");
                     $custEnrollVO->setKnowledgeForReason("");
                     $custEnrollVO->setNewsFrom("");
                     $custEnrollVO->setOtherknowledgeForReason("");
-                    $custEnrollVO->setPaymentTerm($_POST['paymentTerm']);
-                    $custEnrollVO->setSeminarDiscountReason($_POST['seminarDiscount']);
+                    $custEnrollVO->setPaymentTerm($paymentTerm);
+                    $custEnrollVO->setSeminarDiscountReason($seminarDiscount);
                     $custEnrollVO->setAdditionalUser("");
                     $custEnrollVO->setIsRegisteredOwn("false");
                     $theNoti = $custEnrollService->saveCustEnroll($custEnrollVO);
@@ -126,3 +170,5 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
     }
 }
 echo $theNoti;
+
+
