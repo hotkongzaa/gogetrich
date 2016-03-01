@@ -70,9 +70,9 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
             $custEnrollVO->setAdditionalUser("");
             $custEnrollVO->setIsRegisteredOwn("true");
             $theNoti = $custEnrollService->saveCustEnroll($custEnrollVO);
-            
+
             //Sending enrollment email to customer
-            if ($iniConfiguration['email.sending.to.customer'] == "true") {
+            if ($iniConfiguration['email.sending.to.customer'] == true) {
                 $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
                         . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
                         . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
@@ -102,19 +102,42 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                 $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $rowGetCusID['CUS_EMAIL'], $iniConfiguration['email.subject.customer.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                 $sendingEmail->sendingEmail();
             }
-            
 
             //Sending enrollment email to official
-            if ($iniConfiguration['email.sending.to.official'] == "true") {
-                
+            if ($iniConfiguration['email.sending.to.official'] == true) {
+                $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
+                        . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
+                        . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
+                        . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+
+                $resReport = mysql_query($sqlGetCourseDetailByCourseID);
+                $rowReport = mysql_fetch_assoc($resReport);
+
+                $courseName = $rowReport['HEADER_NAME'];
+
+                $firstDateTime = explode(" ", $rowReport['START_EVENT_DATE_TIME']);
+                $startDate = $firstDateTime[0];
+                $startTime = $firstDateTime[1];
+
+                $secondDateTime = explode(" ", $rowReport['END_EVENT_DATE_TIME']);
+                $endDate = $secondDateTime[0];
+                $endTime = $secondDateTime[1];
+
+                $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
+
+                $emailContent = new EmailContent();
+                $emailBody = $emailContent->getOfficialEmailEnrollment($rowGetCusID['CUS_FIRST_NAME'] . " " . $rowGetCusID['CUS_LAST_NAME'], $rowGetCusID['CUS_EMAIL'], $rowGetCusID['CUS_PHONE_NUMBER'], $rowGetCusID['CUS_CONTACT_ADDRESS'], $rowGetCusID['CUS_RECEIPT_ADDRESS'], $courseName, $courseDate);
+                $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $iniConfiguration['email.official'], $iniConfiguration['email.subject.official.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                $sendingEmail->sendingEmail();
             }
         } else {
             echo $result;
         }
     } else {
         //Promote guest to new member
-        $fName = explode(" ", $rowGetMore['TMP_NAME'])[0];
-        $lName = explode(" ", $rowGetMore['TMP_NAME'])[1];
+        $tmpName = explode(" ", $rowGetMore['TMP_NAME']);
+        $fName = $tmpName[0];
+        $lName = $tmpName[1];
         $email = $rowGetMore['TMP_EMAIL'];
         $phone = $rowGetMore['TMP_PHONE_NUMBER'];
         $cusID = md5(date("h:i:sa") . "-" . $email);
@@ -160,6 +183,43 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $custEnrollVO->setAdditionalUser("");
                     $custEnrollVO->setIsRegisteredOwn("false");
                     $theNoti = $custEnrollService->saveCustEnroll($custEnrollVO);
+
+                    //Sending enrollment email to customer
+                    if ($iniConfiguration['email.sending.to.customer'] == true) {
+                        $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
+                                . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
+                                . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
+                                . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+
+                        $resReport = mysql_query($sqlGetCourseDetailByCourseID);
+                        $rowReport = mysql_fetch_assoc($resReport);
+
+
+                        $courseNameAndSubCourseName = $rowReport['HEADER_NAME'] . ' <br/> ' . $rowReport['SUB_HEADER_NAME'];
+                        $linkToCourse = $iniConfiguration['web.application.prefix'] . '/view/scheduleDetail?cname=' . $courseID;
+
+                        $courseName = $rowReport['HEADER_NAME'];
+
+                        $firstDateTime = explode(" ", $rowReport['START_EVENT_DATE_TIME']);
+                        $startDate = $firstDateTime[0];
+                        $startTime = $firstDateTime[1];
+
+                        $secondDateTime = explode(" ", $rowReport['END_EVENT_DATE_TIME']);
+                        $endDate = $secondDateTime[0];
+                        $endTime = $secondDateTime[1];
+
+                        $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
+
+                        $emailContent = new EmailContent();
+                        $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate);
+                        $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $email, $iniConfiguration['email.subject.customer.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                        $sendingEmail->sendingEmail();
+                    }
+
+                    //Sending enrollment email to official
+                    if ($iniConfiguration['email.sending.to.official'] == true) {
+                        
+                    }
                 } else {
                     echo $resultFromCheckCust;
                 }
@@ -170,5 +230,3 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
     }
 }
 echo $theNoti;
-
-
