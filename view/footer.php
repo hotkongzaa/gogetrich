@@ -45,22 +45,20 @@
                             </div>
                             <div class="contact-info">
                                 <ul>
-                                    <li>
+                                    <!--li>
                                         <span>Address:</span>
                                         <span>795 South Park Avenue, Door 6 Wonderland, CA 94107, Australia</span>
-                                    </li>
+                                    </li-->
                                     <li>
                                         <span>Phone:</span>
                                         <span>
-                                            <i>+440 875369208 - Office</i>
-                                            <i>+440 353363114 - Fax</i>
+                                            <i>0819023872 (ปิ่นหทัย) - Mobile</i>
                                         </span>
                                     </li>
                                     <li>
                                         <span>Email:</span>
                                         <span>
-                                            <i><a href="support@sitename.com">support@sitename.com</a></i>
-                                            <i><a href="info@sitename.com">info@sitename.com</a></i>
+                                            <i><a href="pinhatai.d@setalk.net">pinhatai.d@setalk.net</a></i>
                                         </span>
                                     </li>
                                 </ul>
@@ -83,7 +81,7 @@
                         <li><a href="#">Blog</a></li>
                     </ul>
                 </nav>
-                <span class="copyright">&copy; 2015 | All Rights Reserved</span>
+                <span class="copyright">&copy; 2015 by www.gogetrich.net. Developed by SE Talk Co.,Ltd. </span>
             </div>
         </div>
     </div>

@@ -86,7 +86,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
 
 
                 $courseNameAndSubCourseName = $rowReport['HEADER_NAME'] . ' <br/> ' . $rowReport['SUB_HEADER_NAME'];
-                $linkToCourse = $iniConfiguration['web.application.prefix'] . '/view/scheduleDetail?cname=' . $courseID;
+                $linkToCourse = $iniConfiguration['web.application.prefix'] . 'view/scheduleDetail?cname=' . $courseID;
 
                 $courseName = $rowReport['HEADER_NAME'];
 
@@ -171,6 +171,15 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
             $saveResult = $customerService->saveCustomer($customerVO);
             if ($saveResult == 200) {
 
+                //Sending register email
+                if ($iniConfiguration['email.sending.to.customer'] == true) {
+                    $resetUrl = $iniConfiguration['web.application.prefix'] . "view/forceChangePassword?cusID=" . $cusID;
+                    $emailContent = new EmailContent();
+                    $emailBody = $emailContent->getCustomerEmailRegister($resetUrl, $email, $iniConfiguration['guest.password.default']);
+                    $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $email, $iniConfiguration['email.subject.customer.register.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                    $sendingEmail->sendingEmail();
+                }
+
                 $resultFromCheckCust = $custEnrollService->checkCustAlreadyEnrollByEnrollID($courseID, $cusID);
                 if ($resultFromCheckCust == 200) {
                     $custEnrollVO = new CustomerEnrollVO();
@@ -199,7 +208,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
 
 
                         $courseNameAndSubCourseName = $rowReport['HEADER_NAME'] . ' <br/> ' . $rowReport['SUB_HEADER_NAME'];
-                        $linkToCourse = $iniConfiguration['web.application.prefix'] . '/view/scheduleDetail?cname=' . $courseID;
+                        $linkToCourse = $iniConfiguration['web.application.prefix'] . 'view/scheduleDetail?cname=' . $courseID;
 
                         $courseName = $rowReport['HEADER_NAME'];
 
