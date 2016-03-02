@@ -1143,7 +1143,7 @@ class EmailContent {
                                                                                                 <!-- title -->
                                                                                                 <tr>
                                                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;">
-                                                                                                        ขอบคุณสำหรับการสมัครสมาชิค
+                                                                                                        ขอบคุณสำหรับการสมัครสมาชิก
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <!-- end of title -->
@@ -1204,11 +1204,11 @@ class EmailContent {
                                                                                     <td colspan="2" height="10"></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td valign="top" width="5%"><strong>Username</strong></td>
+                                                                                    <td valign="top" width="5%"><strong>Username:</strong></td>
                                                                                     <td>' . $username . '</td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td valign="top" width="5%"><strong>Password</strong></td>
+                                                                                    <td valign="top" width="5%"><strong>Password:</strong></td>
                                                                                     <td>' . $password . '</td>
                                                                                 </tr>  
 
@@ -1594,7 +1594,7 @@ class EmailContent {
                                                                                                 <!-- title -->
                                                                                                 <tr>
                                                                                                     <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;">
-                                                                                                        ขอบคุณสำหรับการสมัครสมาชิค
+                                                                                                        ขอบคุณสำหรับการสมัครสมาชิก
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <!-- end of title -->
