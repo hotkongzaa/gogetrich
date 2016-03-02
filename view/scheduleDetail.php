@@ -346,11 +346,11 @@ $rowHeader = mysql_fetch_assoc($res);
                     <fieldset>
                         <div class="form-group">
                             <i class="fa fa-group"></i>
-                            <input type="text" id="usernameLogin" name="username" placeholder="User name" class="form-control">
+                            <input type="text" id="username" name="username" placeholder="User name" class="form-control">
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="password" id="passwordLogin" name="password"  placeholder="Password" class="form-control">
+                            <input type="password" id="password" name="password"  placeholder="Password" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>
