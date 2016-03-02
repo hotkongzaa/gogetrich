@@ -230,7 +230,7 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
                                             </div>
 
                                         </fieldset>
-                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Update an Account</button>
+                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit" id="submitAccount">Update an Account</button>
                                     </form>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 width-480">
@@ -431,6 +431,9 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
             $.ajax({
                 url: "../model/com.gogetrich.function/UpdateRegistration.php?" + fromObj,
                 type: 'POST',
+                beforeSend: function (xhr) {
+                    $("#submitAccount").prop('disabled', true);
+                },
                 success: function (data, textStatus, jqXHR) {
                     if (data == 200) {
                         $.ajax({
@@ -461,6 +464,7 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
                         $(".notification-modalBox").modal("show");
                         $(".notification_detail").html(data);
                     }
+                    $("#submitAccount").prop('disabled', false);
                 }
             });
         }

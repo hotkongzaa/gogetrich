@@ -220,7 +220,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             </div>
 
                                         </fieldset>
-                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Create an Account</button>
+                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit" id="submitAccount">Create an Account</button>
                                     </form>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 width-480">
@@ -420,6 +420,9 @@ if (isset($_SESSION['expireFrontEnd'])) {
             $.ajax({
                 url: "../model/com.gogetrich.function/SaveRegistration.php?" + fromObj,
                 type: 'POST',
+                beforeSend: function (xhr) {
+                    $("#submitAccount").prop('disabled', true);
+                },
                 success: function (data, textStatus, jqXHR) {
                     if (data == 200) {
                         $.ajax({
@@ -443,6 +446,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                         $(".notification-modalBox").modal("show");
                         $(".notification_detail").html(data);
                     }
+                    $("#submitAccount").prop('disabled', false);
                 }
             });
         }
