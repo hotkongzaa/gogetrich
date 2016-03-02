@@ -10,24 +10,35 @@ require '../../model-db-connection/config.php';
 require '../../model/com.gogetrich.dao/CustomerDaoImpl.php';
 require '../../model/com.gogetrich.service/CustomerService.php';
 require '../../model/com.gogetrich.model/CustomerVO.php';
+require './EmailContent.php';
+require './SendingEmail.php';
 
-
-error_reporting(0);
+$iniConfiguration = parse_ini_file("../../model-db-connection/configuration.ini");
 $cusDaoImpl = new CustomerDaoImpl();
 $customerService = new CustomerService($cusDaoImpl);
 
+$username = (string) filter_input(INPUT_GET, 'username');
+$password = (string) filter_input(INPUT_GET, 'password');
+$email = (string) filter_input(INPUT_GET, 'email');
+$fName = (string) filter_input(INPUT_GET, 'fName');
+$lName = (string) filter_input(INPUT_GET, 'lName');
+$gender = (string) filter_input(INPUT_GET, 'gender');
+$address = (string) filter_input(INPUT_GET, 'address');
+$phone = (string) filter_input(INPUT_GET, 'phone');
+$facebookAdr = (string) filter_input(INPUT_GET, 'facebookAdr');
+
 $customerVO = new CustomerVO();
 $customerVO->setCusID(md5(date("h:i:sa")));
-$customerVO->setCusUsername($_GET['username']);
-$customerVO->setCusPassword(md5($_GET['password']));
-$customerVO->setCusEmail($_GET['email']);
-$customerVO->setCusFirstName($_GET['fName']);
-$customerVO->setCusLastName($_GET['lName']);
-$customerVO->setCusGender($_GET['gender']);
-$customerVO->setCusContactAddr($_GET['address']);
+$customerVO->setCusUsername($username);
+$customerVO->setCusPassword(md5($password));
+$customerVO->setCusEmail($email);
+$customerVO->setCusFirstName($fName);
+$customerVO->setCusLastName($lName);
+$customerVO->setCusGender($gender);
+$customerVO->setCusContactAddr($address);
 
-$customerVO->setPhoneNumber($_GET['phone']);
-$customerVO->setCusFacebookAddr($_GET['facebookAdr']);
+$customerVO->setPhoneNumber($phone);
+$customerVO->setCusFacebookAddr($facebookAdr);
 $customerVO->setForceChange("false");
 
 if ($customerService->duplicationUsername($_GET['username']) && $customerService->duplicationEmail($_GET['email'])) {
@@ -37,6 +48,18 @@ if ($customerService->duplicationUsername($_GET['username']) && $customerService
 } else if ($customerService->duplicationEmail($_GET['email'])) {
     echo "This email have been used";
 } else {
-    echo $customerService->saveCustomer($customerVO);
+    $saveResult = $customerService->saveCustomer($customerVO);
+    if ($saveResult == 200) {
+        if ($iniConfiguration['email.sending.to.customer'] == true) {
+            $emailContent = new EmailContent();
+            $emailBody = $emailContent->getCusRegisterNormalContent($iniConfiguration['web.application.prefix']);
+            $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $email, $iniConfiguration['email.subject.customer.register.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+            echo $sendingEmail->sendingEmail();
+        } else {
+            echo $saveResult;
+        }
+    } else {
+        echo $saveResult;
+    }
 }
 
