@@ -224,31 +224,30 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                     <tr>
                                                                         <td width="250px"><strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong></td>
                                                                         <td>
+                                                                            <?= $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION'] ?>
                                                                             <br/>
-                                                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                                                <script type="text/javascript">
-                                                                                    $(document).ready(function () {
-                                                                                        $("#<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>").gmap3({
-                                                                                            marker: {
-                                                                                                values: [
-                                                                                                    {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "Saminar Position !"}
-                                                                                                ]},
-                                                                                            map: {
-                                                                                                options: {
-                                                                                                    zoom: 16,
-                                                                                                    scrollwheel: false,
-                                                                                                    navigationControl: false,
-                                                                                                    mapTypeControl: false,
-                                                                                                    scaleControl: false,
-                                                                                                    draggable: false
-                                                                                                }
-                                                                                            }
-                                                                                        });
-                                                                                    });
-                                                                                </script>
-                                                                                <div id="<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>" class="tg-map">
-                                                                                </div>
+                                                                            <div id="<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>" class="tg-map" style="height:200px !important;">
                                                                             </div>
+                                                                            <script type="text/javascript">
+                                                                                $(document).ready(function () {
+                                                                                    $("#<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>").gmap3({
+                                                                                        marker: {
+                                                                                            values: [
+                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "Saminar Position !"}
+                                                                                            ]},
+                                                                                        map: {
+                                                                                            options: {
+                                                                                                zoom: 16,
+                                                                                                scrollwheel: false,
+                                                                                                navigationControl: false,
+                                                                                                mapTypeControl: false,
+                                                                                                scaleControl: false,
+                                                                                                draggable: true
+                                                                                            }
+                                                                                        }
+                                                                                    });
+                                                                                });
+                                                                            </script>
                                                                         </td>
                                                                     </tr>
                                                                     <?php
