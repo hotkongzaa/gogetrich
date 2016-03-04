@@ -1,3 +1,13 @@
+<?php
+session_start();
+$now = time();
+if (isset($_SESSION['expireFrontEnd'])) {
+    if ($now > $_SESSION['expireFrontEnd']) {
+        session_destroy();
+    }
+}
+require '../model-db-connection/config.php';
+?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -143,7 +153,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 pull-left">
-                                <a href="blog-detail-me" class="btn btn-default"><i class="fa fa-backward"></i> Back</a>
+                                <a href="financial-check" class="btn btn-default"><i class="fa fa-backward"></i> Back</a>
                                 <br/><br/>
                             </div>
                         </div>

@@ -290,7 +290,7 @@ require '../model-db-connection/config.php';
                                                     ระดับความพร้อมของคุณ: <strong><span id="summaryText">กรุณาทำแบบสอบถาม</span></strong>
                                                 </span>
                                                 <br/><br/>
-                                                <a href="blog-detail-me-2" class="btn btn-default">
+                                                <a href="financial-check-detail" class="btn btn-default">
                                                     <i class="fa fa-book"></i> รายละเอียดเพิ่มเติม
                                                 </a>
                                             </p>
@@ -328,16 +328,16 @@ require '../model-db-connection/config.php';
         *************************************-->
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
-                <h2>LOGIN FORM</h2>
+                <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2>
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
-                            <i class="fa fa-envelope"></i>
-                            <input type="email" placeholder="Email" class="form-control">
+                            <i class="fa fa-group"></i>
+                            <input type="text" id="username" name="username" placeholder="User name" class="form-control">
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="text" placeholder="Name" class="form-control">
+                            <input type="password" id="password" name="password"  placeholder="Password" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>
@@ -352,40 +352,10 @@ require '../model-db-connection/config.php';
                         <button class="tg-theme-btn tg-theme-btn-lg" type="submit">login</button>
                     </fieldset>
                 </form>
-                <p>Not a Member? <a href="#">Create an Account</a></p>
+                <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
-        </div>
-        <div class="modal fade signup-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>REGISTRATION FORM</h2>
-                <form class="login-form">
-                    <fieldset>
-                        <div class="form-group">
-                            <input type="text" placeholder="Username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Confirm Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="First Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Last Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label><input type="checkbox"><em>I agree with the terms and conditions</em></label>
-                        </div>
-                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Create an Account</button>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
+        </div>   
+
         <!--************************************
                         Popup End
         *************************************-->

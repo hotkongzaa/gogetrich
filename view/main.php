@@ -363,8 +363,8 @@ require '../model-db-connection/config.php';
                                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
                                     </div>
                                     <div class="tg-btn-box">
-                                        <a class="tg-theme-btn" href="blog-detail-me">ตรวจสอบเดี๋ยวนี้</a>
-                                        <a class="tg-theme-btn" href="blog-detail-me-2">รายละเอียด</a>
+                                        <a class="tg-theme-btn" href="financial-check">ตรวจสอบเดี๋ยวนี้</a>
+                                        <a class="tg-theme-btn" href="financial-check-detail">รายละเอียด</a>
                                     </div>
                                 </div>
                             </div>
