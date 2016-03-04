@@ -115,7 +115,9 @@ if (isset($_SESSION['userIdFrontEnd'])) {
 
 <script type="text/javascript">
     $(document).ready(function () {
-
+        //Fixed address for contact
+        $("#addressForContact").html('<?= $cusContactAddr ?>');
+        
         $("#divForAddressContact").hide();
         $("#regisMoreThan1User").hide();
         $("#loadMoreUser").load("moreUserTbl.php");
