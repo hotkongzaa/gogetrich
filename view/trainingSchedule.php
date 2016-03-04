@@ -347,7 +347,7 @@ require '../model-db-connection/config.php';
                 <!--************************************
                                 Testimonials Start
                 *************************************-->
-                <section class="tg-main-section tg-haslayout testimonial-image">
+                <!--section class="tg-main-section tg-haslayout testimonial-image">
                     <div class="container">
                         <div class="row">
                             <div class="tg-testimonials tg-haslayout">
@@ -380,7 +380,7 @@ require '../model-db-connection/config.php';
                             </div>
                         </div>
                     </div>
-                </section>
+                </section-->
                 <!--************************************
                                 Testimonials End
                 *************************************-->                

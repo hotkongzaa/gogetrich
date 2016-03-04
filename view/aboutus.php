@@ -273,7 +273,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 <!--************************************
                                 Testimonials Start
                 *************************************-->
-                <section class="tg-main-section tg-haslayout testimonial-image">
+                <!--section class="tg-main-section tg-haslayout testimonial-image">
                     <div class="container">
                         <div class="row">
                             <div class="tg-testimonials tg-haslayout">
@@ -306,7 +306,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section-->
                 <!--************************************
                                 Testimonials End
                 *************************************-->                
