@@ -561,7 +561,7 @@ require '../model-db-connection/config.php';
                                         <div class="tg-post-img">
                                             <figure>
                                                 <a href="#">
-                                                    <img src="assets/images//blog/img-01.jpg" alt="image description">
+                                                    <img src="assets/images/blog/whyplanningMain.jpg" alt="image description">
                                                 </a>
                                             </figure>
                                             <div class="tg-post-hover">
@@ -572,13 +572,13 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">blog title here</a></h3>
+                                            <h3><a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a></h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
                                             </div>
                                             <div class="tg-description">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                <p>ยุคสมัยเปลี่ยนแปลงไป เราได้รับการศึกษาในระบบมากขึ้น โอกาสมากขึ้น มีการเปลี่ยนจากทำเกษตร...</p>
                                             </div>
                                         </div>
                                     </div>
@@ -588,7 +588,7 @@ require '../model-db-connection/config.php';
                                         <div class="tg-post-img">
                                             <figure>
                                                 <a href="#">
-                                                    <img src="assets/images//blog/img-02.jpg" alt="image description">
+                                                    <img src="assets/images/blog/financialSitMain.jpg" alt="image description">
                                                 </a>
                                             </figure>
                                             <div class="tg-post-hover">
@@ -599,13 +599,13 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">blog title here</a></h3>
+                                            <h3><a href="financial-check-detail">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a></h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
                                             </div>
                                             <div class="tg-description">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                <p>สถานะการเงินโดยทั่วไปมีอยู่ 6 สถานการณ์: สถานะพึ่งพิง, หนี้สินล้นพ้นตัว, ไม่มีหนี้...</p>
                                             </div>
                                         </div>
                                     </div>
@@ -615,7 +615,7 @@ require '../model-db-connection/config.php';
                                         <div class="tg-post-img">
                                             <figure>
                                                 <a href="#">
-                                                    <img src="assets/images//blog/img-01.jpg" alt="image description">
+                                                    <img src="assets/images/blog/financialStatusMain.jpg" alt="image description">
                                                 </a>
                                             </figure>
                                             <div class="tg-post-hover">
@@ -626,13 +626,13 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">blog title here</a></h3>
+                                            <h3><a href="financial-check">สถานะการเงินกับจิตใต้สำนึก</a></h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
                                             </div>
                                             <div class="tg-description">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                <p>ทฤษฎีภูเขาน้ำแข็งของซิกมันด์ ฟรอยด์ (Sigmund Freud) บิดาแห่งจิตวิทยาผู้ให้ความสนใจพฤติกรรม...</p>
                                             </div>
                                         </div>
                                     </div>
@@ -642,7 +642,7 @@ require '../model-db-connection/config.php';
                                         <div class="tg-post-img">
                                             <figure>
                                                 <a href="#">
-                                                    <img src="assets/images//blog/img-02.jpg" alt="image description">
+                                                    <img src="assets/images/blog/blog_piramidMain.jpg" alt="image description">
                                                 </a>
                                             </figure>
                                             <div class="tg-post-hover">
@@ -653,71 +653,18 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">blog title here</a></h3>
+                                            <h3><a href="financialpyramid-blog">ปิรามิดการเงิน</a></h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
                                             </div>
                                             <div class="tg-description">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                <p>ขั้นตอนในกระบวนการวางแผนการเงินเป็นเรื่องง่าย ๆ ที่จะซับซ้อนมากหากอธิบายเป็นตัวหนังสือเป็นข้อ ๆ...</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item">
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images//blog/img-01.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">blog title here</a></h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images//blog/img-02.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">blog title here</a></h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
