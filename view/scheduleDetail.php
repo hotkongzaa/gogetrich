@@ -262,7 +262,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                         <td>
                                                                             <div id="<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>gallery" style="display:none;">
                                                                                 <?php
-                                                                                $sqlGetImageGallery = "SELECT * FROM GTRICH_GALLERY_IMAGES_UPLOAD WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "'";
+                                                                                $sqlGetImageGallery = "SELECT * FROM GTRICH_GALLERY_IMAGES_UPLOAD WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "' AND REF_COURSE_DESCRIPTION_HEADER_ID='" . $rowGetCourseDetailByHeaderID['DESC_HEADER_ID'] . "'";
                                                                                 $resGetImageGallery = mysql_query($sqlGetImageGallery);
                                                                                 while ($rowGetImageGallery = mysql_fetch_array($resGetImageGallery)) {
                                                                                     ?>
