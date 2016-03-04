@@ -81,7 +81,7 @@ if (isset($_SESSION['userIdFrontEnd'])) {
         </div>
         <div class="form-group">                                                
             <label>ที่อยู่ (เพื่อออกใบเสร็จรับเงิน)</label>&nbsp; 
-            <input type="checkbox" id="isSameAddress" value="true" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
+            <input type="checkbox" id="isSameAddress" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
         </div>
         <div class="form-group" id="divForAddressContact">
             <textarea name="addressForContact" id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"></textarea>
@@ -183,10 +183,14 @@ if (isset($_SESSION['userIdFrontEnd'])) {
             });
             var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
             var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
-            var isSameAddress = $("#isSameAddress").val();
+            var isSameAddress = "";
             var addressForReceipt = $("#addressForReceipt").val();
             var addressForContact = $("#addressForContact").val();
-
+            if ($("#isSameAddress").is(":checked")) {
+                isSameAddress = "true";
+            } else {
+                isSameAddress = "false";
+            }
             $.ajax({
                 url: "../model/com.gogetrich.function/checkIsRegister.php",
                 type: 'POST',

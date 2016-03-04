@@ -45,8 +45,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
         $rowGetCusID = mysql_fetch_assoc($resGetCusID);
 
         //Same address if user are member only        
-
-        if ($isSameAddr == true) {
+        if ($isSameAddr == "true") {
             $sqlUpdate = "UPDATE RICH_CUSTOMER"
                     . " SET CUS_RECEIPT_ADDRESS = '" . $contactAddr . "',CUS_CONTACT_ADDRESS='" . $contactAddr . "'"
                     . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
@@ -57,6 +56,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     . " WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
             mysql_query($sqlUpdate);
         }
+
 
         $result = $custEnrollService->checkCustAlreadyEnrollByEnrollID($courseID, $rowGetCusID['CUS_ID']);
         if ($result == 200) {
