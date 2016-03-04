@@ -25,6 +25,7 @@ $rowHeader = mysql_fetch_assoc($res);
         <meta http-equiv=Content-Type content="text/html; charset=utf-8">
         <?php include './assets/css_incl.php'; ?>
         <?php include './assets/javascript_incl.php'; ?>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -251,10 +252,36 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                         </td>
                                                                     </tr>
                                                                     <?php
+                                                                } else if ($rowGetCourseDetailByHeaderID['REF_GALLERY_ID'] == true) {
+                                                                    ?>
+                                                                    <tr>
+                                                                        <td width="250px">
+                                                                            <strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div id="<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>gallery" style="display:none;">
+                                                                                <img alt="ภาพกิจกรรม"
+                                                                                     src="http://www.abc.net.au/news/linkableblob/5827754/data/special-operations-soldier-data.jpg"
+                                                                                     data-image="http://www.abc.net.au/news/linkableblob/5827754/data/special-operations-soldier-data.jpg">                                                                           
+                                                                            </div>
+                                                                            <script>
+                                                                                var api;
+                                                                                jQuery(document).ready(function () {
+                                                                                    api = jQuery("#<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>gallery").unitegallery();
+                                                                                    api.togglePlay();
+                                                                                });
+
+                                                                            </script>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <?php
                                                                 } else {
                                                                     ?>
                                                                     <tr>
-                                                                        <td width="250px"><strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong></td>
+                                                                        <td width="250px">
+                                                                            <strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong>
+                                                                        </td>
                                                                         <td>
                                                                             <?= $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION'] ?>
                                                                         </td>

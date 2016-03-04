@@ -21,3 +21,5 @@
 <script src="assets/js/jquery.modal.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/unitegallery.min.js"></script>
+<script src="assets/js/ug-theme-grid.js"></script>

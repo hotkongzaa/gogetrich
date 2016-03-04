@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="assets/css/tooltipster.css">
 <link rel="stylesheet" href="assets/css/alertify.bootstrap.css">
 <link rel="stylesheet" href="assets/css/jquery.modal.css">
+<link rel="stylesheet" href="assets/css/unite-gallery.css">
 
 <style type="text/css">
     .pointer{
