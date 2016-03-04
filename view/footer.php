@@ -52,7 +52,7 @@
                                     <li>
                                         <span>Phone:</span>
                                         <span>
-                                            <i>0819023872 (ปิ่นหทัย) - Mobile</i>
+                                            <i>08 1902 3872 (ปิ่นหทัย)</i>
                                         </span>
                                     </li>
                                     <li>
