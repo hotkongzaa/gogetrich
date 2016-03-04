@@ -234,7 +234,7 @@
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">ปิรามิดการเงิน</a></h3>
+                                            <h3><a href="financialpyramid-blog">ปิรามิดการเงิน</a></h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
