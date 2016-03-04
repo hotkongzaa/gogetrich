@@ -158,7 +158,7 @@
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">ทำไมต้องวางแผนการเงิน</a></h3>
+                                            <h3><a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a></h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
@@ -172,7 +172,7 @@
                                         <div class="tg-post-img">
                                             <figure>
                                                 <a href="#">
-                                                    
+
                                                     <img src="assets/images/blog/financialSit.jpg" alt="image description">
                                                 </a>
                                             </figure>
@@ -209,7 +209,7 @@
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="#">สถานะการเงินกับจิตใต้สำนึก</a></h3>
+                                            <h3><a href="blog-detail-me">สถานะการเงินกับจิตใต้สำนึก</a></h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
@@ -250,10 +250,10 @@
                                     <ul class="tg-pagination">
                                         <li class="tg-prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
                                         <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
+                                        <!--li><a href="#">2</a></li>
                                         <li><a href="#">3</a></li>
                                         <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">5</a></li-->
                                         <li class="tg-next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
                                     </ul>
                                     <!--************************************
@@ -337,11 +337,11 @@
                                                     <h3>Recent Posts</h3>
                                                     <ul>
                                                         <li>
-                                                            <p>Claritas est etiam processus dynamicus, qui sequitur...</p>
+                                                            <p>ทำไมต้องวางแผนการเงิน</p>
                                                             <time datetime="2008-02-14 20:00" class="tg-post-date">04 February 2015</time>
                                                         </li>
                                                         <li>
-                                                            <p>Duis aytem eum iriure dolor...</p>
+                                                            <p>ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</p>
                                                             <time datetime="2008-02-14 20:00" class="tg-post-date">04 February 2015</time>
                                                         </li>
                                                     </ul>
