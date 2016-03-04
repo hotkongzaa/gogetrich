@@ -7,6 +7,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
     }
 }
 require '../model-db-connection/config.php';
+$iniConfiguration = parse_ini_file("../model-db-connection/configuration.ini");
 $sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $_GET['cname'] . "'";
 $res = mysql_query($sqlGetCourseHeaderID);
 $rowHeader = mysql_fetch_assoc($res);
@@ -260,9 +261,17 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                         </td>
                                                                         <td>
                                                                             <div id="<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>gallery" style="display:none;">
-                                                                                <img alt="ภาพกิจกรรม"
-                                                                                     src="http://www.abc.net.au/news/linkableblob/5827754/data/special-operations-soldier-data.jpg"
-                                                                                     data-image="http://www.abc.net.au/news/linkableblob/5827754/data/special-operations-soldier-data.jpg">                                                                           
+                                                                                <?php
+                                                                                $sqlGetImageGallery = "SELECT * FROM GTRICH_GALLERY_IMAGES_UPLOAD WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "'";
+                                                                                $resGetImageGallery = mysql_query($sqlGetImageGallery);
+                                                                                while ($rowGetImageGallery = mysql_fetch_array($resGetImageGallery)) {
+                                                                                    ?>
+                                                                                    <img alt="ภาพกิจกรรม"
+                                                                                         src="<?= $iniConfiguration['web.application.admin.prefix'] ?>view/assets/uploads/images/<?= $rowGetImageGallery['IMAGE_NAME'] ?>"
+                                                                                         data-image="<?= $iniConfiguration['web.application.admin.prefix'] ?>view/assets/uploads/images/<?= $rowGetImageGallery['IMAGE_NAME'] ?>">                                                                           
+                                                                                         <?php
+                                                                                     }
+                                                                                     ?>
                                                                             </div>
                                                                             <script>
                                                                                 var api;
