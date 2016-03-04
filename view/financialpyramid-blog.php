@@ -1,3 +1,13 @@
+<?php
+session_start();
+$now = time();
+if (isset($_SESSION['expireFrontEnd'])) {
+    if ($now > $_SESSION['expireFrontEnd']) {
+        session_destroy();
+    }
+}
+require '../model-db-connection/config.php';
+?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -6,7 +16,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BootStrap HTML5 CSS3 Theme</title>
+        <title>Go Get Rich.net</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -154,7 +164,7 @@
                                         <div class="tg-img-hover">
                                             <div class="tg-displaytable">
                                                 <div class="tg-displaytablecell">
-                                                    <h2>blog title here</h2>
+                                                    <h2>ปิรามิดการเงิน</h2>
                                                     <ul class="tg-metadata">
                                                         <li class="author"><a href="#">By Admin / </a></li>
                                                         <li class="catagory"><a href="#">In Photography</a></li>
@@ -165,17 +175,17 @@
                                     </figure>
                                     <div class="tg-post-detail">
                                         <div class="tg-description">
-                                            <p>ขั้นตอนในกระบวนการวางแผนการเงินเป็นเรื่องง่าย ๆ ที่จะซับซ้อนมากหากอธิบายเป็นตัวหนังสือเป็นข้อ ๆ ปิรามิดการเงินเป็นภาพช่วยสื่อสารขั้นตอนการวางแผนการเงินเรียงลำดับจากล่างขึ้นบน และจากซ้ายไปขวา</p>
+                                            <p>&emsp;&emsp;&emsp;ขั้นตอนในกระบวนการวางแผนการเงินเป็นเรื่องง่าย ๆ ที่จะซับซ้อนมากหากอธิบายเป็นตัวหนังสือเป็นข้อ ๆ ปิรามิดการเงินเป็นภาพช่วยสื่อสารขั้นตอนการวางแผนการเงินเรียงลำดับจากล่างขึ้นบน และจากซ้ายไปขวา</p>
                                             <p><strong>ขั้นที่ 1 ปกป้องทรัพย์สิน (Wealth Protection)</strong></p>
-											<p>การวางแผนขั้นที่ 1 ครบทั้ง 4 เรื่องหลัก ๆ คือ Budgeting, Emergency Cash, Debt Management และ Risk Management จะเป็นการวางรากฐานการเงินที่ป้องกันการเป็นหนี้ที่ควบคุมไม่ได้ โดยเริ่มจากการบันทึกรายรับรายจ่ายพร้อมกับการทำงบประมาณเพื่อบริหารกระแสเงินสดรับจ่ายให้สมดุล ควบคุมได้</p>
-											<p>การเตรียมเงินสำรองฉุกเฉิน ป้องการค่าใช้จ่ายที่ไม่ได้วางแผนสร้างผลกระทบกับแผนการออมการลงทุน หรือทำให้กระแสเงินสดรับจ่ายเสียสมดุล ทำให้เกิดภาระหนี้สินได้</p>
-											<p>การจัดการหนี้สิน คือการบริหารหนี้ค่างวดผ่อนชำระอยู่ในเกณฑ์ที่ไม่กระทบกับกระแสเงินสดและเป้าหมายการเงินอื่น ๆ ในอัตราดอกเบี้ยและค่าใช้จ่ายต่ำที่สุด ภายในระยะเวลาที่เหมาะสม</p>
-											<p>การจัดการความเสี่ยง เป็นการโอนความรับผิดชอบค่าใช้จ่ายที่มีความเสี่ยงอาจจะสร้างค่าใช้จ่ายมหาศาล และสร้างผลกระทบกับกระแสเงินสดและเป้าหมายการเงินอื่น ๆ ด้วยการจำกัดความรับผิดชอบเท่ากับเบี้ยประกัน เพื่อให้แผ
-											<p><strong>ขั้นที่ 2 ออมและลงทุนตามเป้าหมายการเงิน (Wealth Accumulation)</strong></p>
-											<p>เป็นการเตรียมค่าใช้จ่ายที่จะเกิดขึ้นในอนาคต เป็นจำนวนเงินและเวลาที่ต้องการใช้ที่ชัดเจน มักวางแผนเป็น 3 ระยะ คือ แผนระยะสั้น แผนระยะกลาง และแผนระยะยาว เพื่อจะนำเงินไปออมและลงทุนในสินค้าการเงินได้อย่างเหมาะสม ให้ได้เงินตามจำนวนที่ต้องการในวันที่ต้องการใช้ เช่น แผนเตรียมค่าใช้จ่ายหลังเกษียณ แผนเตรียมค่าเล่าเรียน แผนการซื้อบ้านของครอบครัว เป็นต้น</p>
-											<p><strong>ขั้นที่ 3 ส่งต่อทรัพย์สิน (Wealth Distribution/Wealth Transfer)</strong></p>
-											<p>การเตรียมการในการส่งมอบทรัพย์สินในวันที่เราจากไป ให้มั่นใจได้ว่า ทรัพย์สินถึงคนที่เรารักได้รวดเร็วด้วยค่าใช้จ่ายต่ำและไม่เป็นภาระใคร เรียกว่า การวางแผนมรดก</p>
-                                            <blockquote>
+                                            <p>&emsp;&emsp;&emsp;การวางแผนขั้นที่ 1 ครบทั้ง 4 เรื่องหลัก ๆ คือ Budgeting, Emergency Cash, Debt Management และ Risk Management จะเป็นการวางรากฐานการเงินที่ป้องกันการเป็นหนี้ที่ควบคุมไม่ได้ โดยเริ่มจากการบันทึกรายรับรายจ่ายพร้อมกับการทำงบประมาณเพื่อบริหารกระแสเงินสดรับจ่ายให้สมดุล ควบคุมได้</p>
+                                            <p>&emsp;&emsp;&emsp;การเตรียมเงินสำรองฉุกเฉิน ป้องการค่าใช้จ่ายที่ไม่ได้วางแผนสร้างผลกระทบกับแผนการออมการลงทุน หรือทำให้กระแสเงินสดรับจ่ายเสียสมดุล ทำให้เกิดภาระหนี้สินได้</p>
+                                            <p>&emsp;&emsp;&emsp;การจัดการหนี้สิน คือการบริหารหนี้ค่างวดผ่อนชำระอยู่ในเกณฑ์ที่ไม่กระทบกับกระแสเงินสดและเป้าหมายการเงินอื่น ๆ ในอัตราดอกเบี้ยและค่าใช้จ่ายต่ำที่สุด ภายในระยะเวลาที่เหมาะสม</p>
+                                            <p>&emsp;&emsp;&emsp;การจัดการความเสี่ยง เป็นการโอนความรับผิดชอบค่าใช้จ่ายที่มีความเสี่ยงอาจจะสร้างค่าใช้จ่ายมหาศาล และสร้างผลกระทบกับกระแสเงินสดและเป้าหมายการเงินอื่น ๆ ด้วยการจำกัดความรับผิดชอบเท่ากับเบี้ยประกัน เพื่อให้แผ
+                                            <p><strong>ขั้นที่ 2 ออมและลงทุนตามเป้าหมายการเงิน (Wealth Accumulation)</strong></p>
+                                            <p>&emsp;&emsp;&emsp;เป็นการเตรียมค่าใช้จ่ายที่จะเกิดขึ้นในอนาคต เป็นจำนวนเงินและเวลาที่ต้องการใช้ที่ชัดเจน มักวางแผนเป็น 3 ระยะ คือ แผนระยะสั้น แผนระยะกลาง และแผนระยะยาว เพื่อจะนำเงินไปออมและลงทุนในสินค้าการเงินได้อย่างเหมาะสม ให้ได้เงินตามจำนวนที่ต้องการในวันที่ต้องการใช้ เช่น แผนเตรียมค่าใช้จ่ายหลังเกษียณ แผนเตรียมค่าเล่าเรียน แผนการซื้อบ้านของครอบครัว เป็นต้น</p>
+                                            <p><strong>ขั้นที่ 3 ส่งต่อทรัพย์สิน (Wealth Distribution/Wealth Transfer)</strong></p>
+                                            <p>&emsp;&emsp;&emsp;การเตรียมการในการส่งมอบทรัพย์สินในวันที่เราจากไป ให้มั่นใจได้ว่า ทรัพย์สินถึงคนที่เรารักได้รวดเร็วด้วยค่าใช้จ่ายต่ำและไม่เป็นภาระใคร เรียกว่า การวางแผนมรดก</p>
+                                            <blockquote style="font-size: 20px;">
                                                 <q>“ขั้นตอนในกระบวนการวางแผนการเงินเป็นเรื่องง่าย ๆ ที่จะซับซ้อนมากหากอธิบายเป็นตัวหนังสือเป็นข้อ ๆ ปิรามิดการเงินเป็นภาพช่วยสื่อสารขั้นตอนการวางแผนการ”</q>
                                                 <!--span class="author"><a href="#">Frank Smith, Company Inc.</a></span-->
                                             </blockquote>
@@ -237,18 +247,19 @@
         <!--************************************
                         Popup Start
         *************************************-->
+        
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
                 <h2>LOGIN FORM</h2>
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
-                            <i class="fa fa-envelope"></i>
-                            <input type="email" placeholder="Email" class="form-control">
+                            <i class="fa fa-group"></i>
+                            <input type="text" id="username" name="username" placeholder="User name" class="form-control">
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="text" placeholder="Name" class="form-control">
+                            <input type="password" id="password" name="password"  placeholder="Password" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>
@@ -263,40 +274,113 @@
                         <button class="tg-theme-btn tg-theme-btn-lg" type="submit">login</button>
                     </fieldset>
                 </form>
-                <p>Not a Member? <a href="#">Create an Account</a></p>
+                <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-        <div class="modal fade signup-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>REGISTRATION FORM</h2>
-                <form class="login-form">
-                    <fieldset>
-                        <div class="form-group">
-                            <input type="text" placeholder="Username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Confirm Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="First Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Last Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label><input type="checkbox"><em>I agree with the terms and conditions</em></label>
-                        </div>
-                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Create an Account</button>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#login_menu').tooltipster({
+                    contentAsHTML: true,
+                    content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
+                    touchDevices: true,
+                    position: "bottom",
+                    interactive: true,
+                    autoClose: true,
+                    trigger: "click",
+                    minWidth: 150,
+                    arrow: false
+                });
+
+                runSetDefaultValidation();
+                var form = $('.login-form');
+                var errorHandler = $('.errorHandler', form);
+                form.validate({
+                    rules: {
+                        username: {
+                            required: true
+                        },
+                        password: {
+                            required: true
+                        }
+                    },
+                    submitHandler: function (form) {
+                        errorHandler.hide();
+                        submitLogin(form);
+                    },
+                    invalidHandler: function (event, validator) {//display error alert on form submit
+                        errorHandler.show();
+                    }
+                });
+            });
+            function logoutFromApplication() {
+                $.ajax({
+                    url: "../model/com.gogetrich.function/Logout.php",
+                    success: function (data, textStatus, jqXHR) {
+                        if (data == 200) {
+                            window.location.href = "main";
+                        }
+                    }
+                });
+            }
+            function submitLogin(form) {
+                $.ajax({
+                    url: "../model/com.gogetrich.function/LoginSubmit.php",
+                    type: 'POST',
+                    data: {'username': $("#username").val(), 'password': $("#password").val()},
+                    success: function (data, textStatus, jqXHR) {
+                        var resData = data.split(":");
+                        if (resData[0] == 503) {
+                            setTimeout(function () {
+                                showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                            }, 100);
+                            $(form).trigger('reset');
+                        }
+                        if (resData[0] == 205) {
+                            setTimeout(function () {
+                                showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                            }, 100);
+                            $(form).trigger('reset');
+                        }
+                        if (resData[0] == 200) {
+                            window.location = 'trainingSchedule';
+                            $(form).trigger('reset');
+                        }
+                    }
+                });
+            }
+            var runSetDefaultValidation = function () {
+                $.validator.setDefaults({
+                    errorElement: "span", // contain the error msg in a small tag
+                    errorClass: 'help-block',
+                    errorPlacement: function (error, element) {// render error placement for each input type
+                        if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
+                            error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                        } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
+                            error.appendTo($(element).closest('.form-group').children('div'));
+                        } else {
+                            error.insertAfter(element);
+                            // for other inputs, just perform default behavior
+                        }
+                    },
+                    ignore: ':hidden',
+                    success: function (label, element) {
+                        label.addClass('help-block valid');
+                        // mark the current input as valid and display OK icon
+                        $(element).closest('.form-group').removeClass('has-error');
+                    },
+                    highlight: function (element) {
+                        $(element).closest('.help-block').removeClass('valid');
+                        // display OK icon
+                        $(element).closest('.form-group').addClass('has-error');
+                        // add the Bootstrap error class to the control group
+                    },
+                    unhighlight: function (element) {// revert the change done by hightlight
+                        $(element).closest('.form-group').removeClass('has-error');
+                        // set error class to the control group
+                    }
+                });
+            };
+        </script>
         <!--************************************
                         Popup End
         *************************************-->
