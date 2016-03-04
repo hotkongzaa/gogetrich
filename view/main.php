@@ -108,7 +108,7 @@ require '../model-db-connection/config.php';
                                         <a href="#">Register</a>
                                     </li-->
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a href="blog-list">Blog</a>
                                     </li> 
                                 </ul>
                             </div>
@@ -156,7 +156,7 @@ require '../model-db-connection/config.php';
                             <h1>Virtually <span>bUILD yOUR</span> HOUSE</h1>
                         </div-->
                         <!--a class="tg-theme-btn" href="#">BUILD NOW</a-->
-                        <a class="tg-theme-btn" href="aboutus">ดูรายละเอียด</a>
+                        <!--a class="tg-theme-btn" href="aboutus">ดูรายละเอียด</a-->
                     </div>
                 </div>                
             </div>

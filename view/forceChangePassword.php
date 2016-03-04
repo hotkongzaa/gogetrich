@@ -145,7 +145,7 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
                                         <a href="#">Register</a>
                                     </li-->
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a href="blog-list">Blog</a>
                                     </li>                                    
                                 </ul>
                             </div>

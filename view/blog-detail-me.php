@@ -131,7 +131,7 @@ require '../model-db-connection/config.php';
                                         <a href="#">Register</a>
                                     </li-->
                                     <li class="current-menu-item">
-                                        <a href="#">Blog</a>
+                                        <a href="blog-list">Blog</a>
                                     </li>                                    
                                 </ul>
                             </div>
