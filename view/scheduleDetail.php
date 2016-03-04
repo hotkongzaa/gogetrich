@@ -253,7 +253,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                         </td>
                                                                     </tr>
                                                                     <?php
-                                                                } else if ($rowGetCourseDetailByHeaderID['REF_GALLERY_ID'] == true) {
+                                                                } else if ($rowGetCourseDetailByHeaderID['REF_GALLERY_ID'] == "true") {
                                                                     ?>
                                                                     <tr>
                                                                         <td width="250px">
