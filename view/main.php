@@ -239,7 +239,7 @@ require '../model-db-connection/config.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tg-service services-content tg-haslayout pointer">
+                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href='learn-to-rich-lists'">
                                             <figure class="tg-sercice-img">
                                                 <img src="assets/images/icon-4.jpg" alt="image description">
                                             </figure>
