@@ -1259,7 +1259,7 @@ ul.gallery-cats:after{
     top:50%;
     left:35%;
     box-shadow:none;
-    border-radius:0;
+    border-radius:10px;
     background:#fff;
     margin:-215px 0 0 -190px;
 }

@@ -16,25 +16,30 @@ require '../model-db-connection/config.php';
 
         <?php
         $id = 1;
-        $sqlSelectCate = "SELECT * FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
-        $res = mysql_query($sqlSelectCate);
-        $sqlChec = "SELECT COUNT(*) AS CHECKEDROW FROM MORE_REGISTRED_TMP WHERE TMP_CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
-        $resCheck = mysql_query($sqlChec);
-        $rowCheck = mysql_fetch_assoc($resCheck);
-        if ($rowCheck['CHECKEDROW'] > 0) {
-            while ($row = mysql_fetch_array($res)) {
+        if (isset($_SESSION['MORE_TEMP_REGIST'])) {
+            $sqlGetContent = "SELECT * FROM TMP_REGISTER_" . $_SESSION['MORE_TEMP_REGIST'];
+            $res = mysql_query($sqlGetContent);
+            if (mysql_num_rows($res) >= 1) {
+                while ($row = mysql_fetch_array($res)) {
+                    ?>
+                    <tr>       
+                        <td style="text-align: center" width="50px"><?= $id ?></td>
+                        <td><?= $row['TMP_NAME'] ?></td>
+                        <td style="text-align: center"><?= $row['TMP_PHONE_NUMBER'] ?></td>
+                        <td style="text-align: center"><?= $row['TMP_EMAIL'] ?></td>
+                        <td style="text-align: center" width="50px">                    
+                            <a href="#" class="btn btn-small" title="Delete" onclick="deleteMoreUserTmp('<?= $row['TMP_ID'] ?>')"><i class="icon-trash"></i> Delete</a>
+                        </td>
+                    </tr>
+                    <?php
+                    $id++;
+                }
+            } else {
                 ?>
                 <tr>       
-                    <td style="text-align: center" width="50px"><?= $id ?></td>
-                    <td><?= $row['TMP_NAME'] ?></td>
-                    <td style="text-align: center"><?= $row['TMP_PHONE_NUMBER'] ?></td>
-                    <td style="text-align: center"><?= $row['TMP_EMAIL'] ?></td>
-                    <td style="text-align: center" width="50px">                    
-                        <a href="#" class="btn btn-small" title="Delete" onclick="deleteMoreUserTmp('<?= $row['TMP_ID'] ?>')"><i class="icon-trash"></i> Delete</a>
-                    </td>
+                    <td style="text-align: center" colspan="5">ไม่พบผู้สมัครอื่น</td>
                 </tr>
                 <?php
-                $id++;
             }
         } else {
             ?>
