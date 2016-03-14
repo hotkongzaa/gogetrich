@@ -7,6 +7,8 @@ if (isset($_SESSION['expireFrontEnd'])) {
     }
 }
 require '../model-db-connection/config.php';
+
+$currentFile = basename(__FILE__, '.php');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -225,7 +227,9 @@ require '../model-db-connection/config.php';
                                                                     <?php
                                                                     if (empty($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
-                                                                        <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
+                                                                                                                                                                    <!--a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a-->
+                                                                                                    <!--                                                                        <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>-->
+                                                                        <a href="#" class="tg-theme-btn-sm" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
                                                                         <?php
                                                                     } else {
                                                                         $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $rowGetCourseHeader['HEADER_ID'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
@@ -237,7 +241,8 @@ require '../model-db-connection/config.php';
                                                                             <?php
                                                                         } else {
                                                                             ?>
-                                                                            <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
+                                                                            <!--<a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>-->
+                                                                            <a href="#" class="tg-theme-btn-sm" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
                                                                             <?php
                                                                         }
                                                                     }
@@ -569,20 +574,38 @@ require '../model-db-connection/config.php';
         }
 
         function clearMoreTmp(cid) {
-            $("#scheduleFormDiv").load("register_partial.php?cname=" + cid, function () {
-                $.ajax({
-                    url: "../model/com.gogetrich.function/clearTmp.php",
-                    type: 'POST',
-                    success: function (data, textStatus, jqXHR) {
-                        if (data != 200) {
-                            console.log(data);
-                        } else {
-                            $("#loadMoreUser").load("moreUserTbl.php");
-                        }
-
+            $.ajax({
+                url: "../model/com.gogetrich.function/clearTmp.php",
+                type: 'POST',
+                beforeSend: function (xhr) {
+                    $(".preloader").show();
+                },
+                success: function (data, textStatus, jqXHR) {
+                    if (data != 200) {
+                        console.log(data);
+                    } else {
+                        window.location.href = 'registrationCourse?cId=' + cid + "&fPage=<?= $currentFile ?>";
                     }
-                });
+                    $(".preloader").fadeOut("slow");
+
+                }
             });
+
+
+//            $("#scheduleFormDiv").load("register_partial.php?cname=" + cid, function () {
+//                $.ajax({
+//                    url: "../model/com.gogetrich.function/clearTmp.php",
+//                    type: 'POST',
+//                    success: function (data, textStatus, jqXHR) {
+//                        if (data != 200) {
+//                            console.log(data);
+//                        } else {
+//                            $("#loadMoreUser").load("moreUserTbl.php");
+//                        }
+//
+//                    }
+//                });
+//            });
         }
         var runSetDefaultValidation = function () {
             $.validator.setDefaults({
