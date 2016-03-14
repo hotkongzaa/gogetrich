@@ -11,6 +11,7 @@ $iniConfiguration = parse_ini_file("../model-db-connection/configuration.ini");
 $sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $_GET['cname'] . "'";
 $res = mysql_query($sqlGetCourseHeaderID);
 $rowHeader = mysql_fetch_assoc($res);
+$currentFile = basename(__FILE__, '.php');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -196,7 +197,10 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                         <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()">
                                                                             <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                         </a-->
-                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
+                                                                        <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
+                                                                            <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
+                                                                        </a-->
+                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
                                                                             <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                         </a>
                                                                         <?php
@@ -211,7 +215,10 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                             <?php
                                                                         } else {
                                                                             ?>
-                                                                            <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
+                                                                            <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
+                                                                                <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
+                                                                            </a-->
+                                                                            <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
                                                                                 <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                             </a>
                                                                             <?php
@@ -315,7 +322,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                         <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()">
                                                                             <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                         </a-->
-                                                                        <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
+                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
                                                                             <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                         </a>
                                                                         <?php
@@ -330,7 +337,7 @@ $rowHeader = mysql_fetch_assoc($res);
                                                                             <?php
                                                                         } else {
                                                                             ?>
-                                                                            <a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
+                                                                            <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
                                                                                 <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                             </a>
                                                                             <?php
@@ -550,19 +557,21 @@ $rowHeader = mysql_fetch_assoc($res);
         };
 
         function clearMoreTmp() {
-            $("#scheduleFormDiv").load("register_partial.php?cname=<?= $_GET['cname'] ?>", function () {
-                $.ajax({
-                    url: "../model/com.gogetrich.function/clearTmp.php",
-                    type: 'POST',
-                    success: function (data, textStatus, jqXHR) {
-                        if (data != 200) {
-                            console.log(data);
-                        } else {
-                            $("#loadMoreUser").load("moreUserTbl.php");
-                        }
-
+            $.ajax({
+                url: "../model/com.gogetrich.function/clearTmp.php",
+                type: 'POST',
+                beforeSend: function (xhr) {
+                    $(".preloader").show();
+                },
+                success: function (data, textStatus, jqXHR) {
+                    if (data != 200) {
+                        console.log(data);
+                    } else {
+                        window.location.href = "registrationCourse?cId=<?= $_GET['cname'] ?>&fPage=<?= $currentFile ?>?cname=<?= $_GET['cname'] ?>";
                     }
-                });
+                    $(".preloader").fadeOut("slow");
+
+                }
             });
 
         }

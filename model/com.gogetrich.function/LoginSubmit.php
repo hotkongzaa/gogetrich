@@ -18,7 +18,10 @@ error_reporting(0);
 $cusDaoImpl = new CustomerDaoImpl();
 $customerService = new CustomerService($cusDaoImpl);
 
-$reuslt = $customerService->verfiUsernameAndPassword($_POST['username'], md5($_POST['password']));
+$username = (string) filter_input(INPUT_POST, 'username');
+$password = (string) filter_input(INPUT_POST, 'password');
+
+$reuslt = $customerService->verfiUsernameAndPassword($username, md5($password));
 $resultLogin = explode("||", $reuslt);
 if ($resultLogin[0] == 503) {
     //invalid username and password
@@ -34,5 +37,5 @@ if ($resultLogin[0] == 503) {
     $_SESSION['usernameFrontEnd'] = $obj->{'CUS_USERNAME'};
     $_SESSION['userIdFrontEnd'] = $obj->{'CUS_ID'};
 
-    echo "200:";
+    echo "200:" . $obj->{'CUS_FIRST_NAME'} . "||" . $obj->{'CUS_LAST_NAME'} . "||" . $obj->{'CUS_PHONE_NUMBER'} . "||" . $obj->{'CUS_EMAIL'} . "||" . $obj->{'CUS_CONTACT_ADDRESS'} . "||" . $obj->{'CUS_RECEIPT_ADDRESS'};
 }

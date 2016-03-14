@@ -7,14 +7,15 @@ if (isset($_SESSION['expireFrontEnd'])) {
     }
 }
 require '../model-db-connection/config.php';
-$sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $_GET['cId'] . "'";
+$cId = (string) filter_input(INPUT_GET, 'cId');
+$fPage = (string) filter_input(INPUT_GET, 'fPage');
+$sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $cId . "'";
 $res = mysql_query($sqlGetCourseHeaderID);
 if (mysql_num_rows($res) <= 0) {
     header("Refresh:0; url=pageNotFound");
 } else {
     $rowHeader = mysql_fetch_assoc($res);
 }
-$fPage = (string) filter_input(INPUT_GET, 'fPage');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -216,6 +217,11 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                             <div class="form-group">
                                                 <div id="loadMoreUser" style="margin-top: 10px;"></div>
                                             </div>
+                                            <div class="form-group">
+                                                <span id="hideRegisterForm" style="cursor: pointer;margin-bottom: 10px;">
+                                                    <span class="fa fa-upload"></span> ซ่อนฟอร์มการลงทะเบียน
+                                                </span>
+                                            </div>
                                             <div class="form-group" id="regisMoreThan1User" style="border:1px solid #BDBDBD; padding: 15px;">                  
                                                 <label for="moreUser_1">ชื่อ (First Name)*</label> 
                                                 <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;"/>
@@ -252,7 +258,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                             <div class="form-group">
                                                 <strong style="font-size: 18px;">คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
                                                 <?php
-                                                $sqlGetPromotion = "SELECT * FROM GTRICH_COURSE_PROMOTION WHERE REF_COURSE_HEADER_ID = '" . $_GET['cId'] . "'";
+                                                $sqlGetPromotion = "SELECT * FROM GTRICH_COURSE_PROMOTION WHERE REF_COURSE_HEADER_ID = '" . $cId . "'";
                                                 $resGetPromotion = mysql_query($sqlGetPromotion);
                                                 while ($rowGetPromotion = mysql_fetch_array($resGetPromotion)) {
                                                     ?>
@@ -345,9 +351,19 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
         }
     </style>
     <script type="text/javascript">
+        var state = 1;
         $(document).ready(function () {
+            $("#hideRegisterForm").click(function () {
+                if (state == 1) {
+                    $("#hideRegisterForm").html('<span class="fa fa-download"></span> แสดงฟอร์มการลงทะเบียน');
+                    state = 2;
+                } else {
+                    $("#hideRegisterForm").html('<span class="fa fa-upload"></span> ซ่อนฟอร์มการลงทะเบียน');
+                    state = 1;
+                }
+                $("#regisMoreThan1User").toggle();
+            });
             initialPage();
-
             $("#isSameAddress").click(function () {
                 if ($(this).is(":checked")) {
                     $("#addressForReceipt").prop("disabled", true);
@@ -357,6 +373,62 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                     $("#addressForReceipt").prop("disabled", false);
                     $("#addressForReceipt").removeClass("blockTextArea");
                 }
+            });
+            $("#registerCourseBtn").click(function () {
+                var seminarDiscount = "";
+                $('input[name="seminarDiscount"]:checked').each(function () {
+                    seminarDiscount += this.value + "||";
+                });
+                var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
+                var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
+                $.ajax({
+                    url: "../model/com.gogetrich.function/checkIsRegister.php",
+                    type: 'POST',
+                    success: function (data, textStatus, jqXHR) {
+                        if (typeof (timeSchedule) === "undefined" && data <= 0 && typeof (paymentTerm) === "undefined" && !$("#confirmRegister").is(":checked")) {
+                            showWarningNotficationDialog("<ul><li>กรุณาเลือกเวลาเรียน</li><li>กรุณากรอกข้อมูลการลงทะเบียน</li><li>กรุณาเลือกช่องทางการจ่ายเงิน</li><li>กรุณายืนยันการลงทะเบียน</li></ul>");
+                            $('html,body').animate({
+                                scrollTop: $("#registerSeminar").offset().top
+                            });
+                        } else if (typeof (timeSchedule) === "undefined") {
+                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
+                            $('html,body').animate({
+                                scrollTop: $("#registerSeminar").offset().top
+                            });
+                        } else if (data <= 0) {
+                            showWarningNotficationDialog("กรุณากรอกข้อมูลการลงทะเบียน");
+                            $('html,body').animate({
+                                scrollTop: $("#registerSeminar").offset().top
+                            });
+                        } else if (typeof (paymentTerm) === "undefined") {
+                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน");
+                            $('html,body').animate({
+                                scrollTop: $("#regisMoreThan1User").offset().top
+                            });
+                        } else if (!$("#confirmRegister").is(":checked")) {
+                            showWarningNotficationDialog("กรุณายืนยันการลงทะเบียน");
+                        } else {
+                            $.ajax({
+                                url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
+                                type: 'POST',
+                                data: {'courseID': '<?= $cId ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount},
+                                success: function (data, textStatus, jqXHR) {
+                                    if (data == 200) {
+                                        $.ajax({
+                                            url: "../model/com.gogetrich.function/getEventDt.php?id=" + timeSchedule,
+                                            type: 'POST',
+                                            success: function (eventDt, textStatus, jqXHR) {
+                                                showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/> ขอบคุณค่ะ", "scheduleDetail?cname=<?= $cId ?>");
+                                            }
+                                        });
+                                    } else {
+                                        showWarningNotficationDialog(data);
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
             });
             $("#regisAsMember").click(function () {
                 $("#login-modal").modal('toggle');
@@ -372,6 +444,42 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                     showWarningNotficationDialog("กรุณาระบุ รหัสผ่าน");
                 } else {
                     var formEle = $("#loginForGetRes").serialize();
+                    $.ajax({
+                        url: "../model/com.gogetrich.function/LoginSubmit.php",
+                        data: {'username': loginName, 'password': loginPassword},
+                        type: 'POST',
+                        success: function (data, textStatus, jqXHR) {
+                            var resData = data.split(":");
+                            if (resData[0] == 503) {
+                                setTimeout(function () {
+                                    showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                                }, 100);
+                                $("#loginForGetRes").trigger('reset');
+                            }
+                            if (resData[0] == 205) {
+                                setTimeout(function () {
+                                    showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                                }, 100);
+                                $("#loginForGetRes").trigger('reset');
+                            }
+                            if (resData[0] == 200) {
+                                var fName = resData[1].split("||")[0];
+                                var lName = resData[1].split("||")[1];
+                                var phone = resData[1].split("||")[2];
+                                var email = resData[1].split("||")[3];
+                                var contactAddr = resData[1].split("||")[4];
+                                var receiptAddr = resData[1].split("||")[5];
+                                $("#moreFirstName_1").val(fName);
+                                $("#moreLastName_1").val(lName);
+                                $("#phone_number_1").val(phone);
+                                $("#addressForContact").val(contactAddr);
+                                $("#moreUserEmail_1").val(email);
+                                $("#addressForReceipt").val(receiptAddr);
+                                $("#login-modal").modal('toggle');
+                                $("#loginForGetRes").trigger('reset');
+                            }
+                        }
+                    });
                 }
             });
         });
@@ -463,7 +571,6 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                         }
                     }
                 });
-
             }
         }
         function validateEmail($email) {
@@ -537,7 +644,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                         $(form).trigger('reset');
                     }
                     if (resData[0] == 200) {
-                        window.location = 'registrationCourse?cId=<?= $_GET['cId'] ?>';
+                        window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>';
                         $(form).trigger('reset');
                     }
                 }
@@ -600,7 +707,6 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                     }
                 }
             });
-
         }
     </script>
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -629,7 +735,8 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                 </div>
                                 <div class="form-group pull-right">
                                     <input type="button" class="btn btn-default" id="loginAsMember" value="เข้าสู่ระบบ">
-                                    <input type="button" class="btn btn-default" onclick="$('#login-modal').modal('toggle');$('#loginForGetRes').trigger('reset');" value="ยกเลิก">
+                                    <input type="button" class="btn btn-default" onclick="$('#login-modal').modal('toggle');
+                                            $('#loginForGetRes').trigger('reset');" value="ยกเลิก">
                                 </div>
                             </div>
                         </div>
