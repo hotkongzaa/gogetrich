@@ -6,6 +6,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
         session_destroy();
     }
 }
+$fPage = (string) filter_input(INPUT_GET, 'fPage');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -111,7 +112,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                     <li>
                                         <a href="main">Home</a>
                                     </li>
-                                    <li class="current-menu-item">
+                                    <li>
                                         <a href="aboutus">About</a>
                                     </li>
                                     <li>
@@ -149,6 +150,14 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 *************************************-->
                 <section class="tg-main-section tg-haslayout">
                     <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 pull-left">
+                                <a href="<?= $fPage ?>" class="btn btn-default">
+                                    <i class="fa fa-backward"></i> Back
+                                </a>
+                                <br/><br/>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="tg-theme-heading">

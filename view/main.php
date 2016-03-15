@@ -191,7 +191,7 @@ require '../model-db-connection/config.php';
                                 </div>
                                 <div class="col-md-8 col-sm-12 col-xs-12 zero-right-padding">
                                     <div class="tg-services row">
-                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href='life-target'">
+                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href = 'life-target?fPage=main'">
                                             <figure class="tg-sercice-img">
                                                 <img src="assets/images/icon-1.jpg" alt="image description">
                                             </figure>
@@ -207,7 +207,7 @@ require '../model-db-connection/config.php';
                                                 </div>
                                             </div>
                                         </div>
-										<div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href='mind-and-brain-take-to-rich'">
+                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href = 'mind-and-brain-take-to-rich?fPage=main'">
                                             <figure class="tg-sercice-img">
                                                 <img src="assets/images/icon-2.jpg" alt="image description">
                                             </figure>
@@ -223,7 +223,7 @@ require '../model-db-connection/config.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href='good-plan-good-health'">
+                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href = 'good-plan-good-health?fPage=main'">
                                             <figure class="tg-sercice-img">
                                                 <img src="assets/images/icon-3.jpg" alt="image description">
                                             </figure>
@@ -239,7 +239,7 @@ require '../model-db-connection/config.php';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href='learn-to-rich-lists'">
+                                        <div class="tg-service services-content tg-haslayout pointer" onclick="window.location.href = 'learn-to-rich'">
                                             <figure class="tg-sercice-img">
                                                 <img src="assets/images/icon-4.jpg" alt="image description">
                                             </figure>
@@ -664,7 +664,7 @@ require '../model-db-connection/config.php';
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

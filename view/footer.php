@@ -78,7 +78,7 @@
                         <li><a href="aboutus">About</a></li>
                         <li><a href="trainingSchedule">Training/seminar</a></li>
                         <li><a href="registration">Register</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="blog-list">Blog</a></li>
                     </ul>
                 </nav>
                 <span class="copyright">&copy; 2015 by www.gogetrich.net. Developed by SE Talk Co.,Ltd. </span>

@@ -7,8 +7,9 @@ if (isset($_SESSION['expireFrontEnd'])) {
     }
 }
 require '../model-db-connection/config.php';
+$cId = (string) filter_input(INPUT_GET, 'cname');
 $iniConfiguration = parse_ini_file("../model-db-connection/configuration.ini");
-$sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $_GET['cname'] . "'";
+$sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $cId . "'";
 $res = mysql_query($sqlGetCourseHeaderID);
 $rowHeader = mysql_fetch_assoc($res);
 $currentFile = basename(__FILE__, '.php');
@@ -205,7 +206,7 @@ $currentFile = basename(__FILE__, '.php');
                                                                         </a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cId . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
                                                                         $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
@@ -327,7 +328,7 @@ $currentFile = basename(__FILE__, '.php');
                                                                         </a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cId . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
                                                                         $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
@@ -356,18 +357,9 @@ $currentFile = basename(__FILE__, '.php');
                                 <?php
                             } else {
                                 ?>
-                                <div class="row">
-                                    <div class="tg-error-section">
-                                        <div class="tg-message">
-                                            <h2>404 Error</h2>
-                                            <h3>Cannot found couse</h3>
-                                            <div class="tg-img-border">
-                                                <img src="assets/images/404NotFound.jpg" width="398px" height="269px" alt="image description">
-                                            </div>
-                                            <span>Go back to <a href="trainingSchedule">Training Schedule</a></span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <script>
+                                    window.location.href = "pageNotFound?fPage=trainingSchedule";
+                                </script>
                                 <?php
                             }
                             ?>
@@ -567,7 +559,7 @@ $currentFile = basename(__FILE__, '.php');
                     if (data != 200) {
                         console.log(data);
                     } else {
-                        window.location.href = "registrationCourse?cId=<?= $_GET['cname'] ?>&fPage=<?= $currentFile ?>?cname=<?= $_GET['cname'] ?>";
+                        window.location.href = "registrationCourse?cId=<?= $cId ?>&fPage=<?= $currentFile ?>?cname=<?= $cId ?>";
                     }
                     $(".preloader").fadeOut("slow");
 

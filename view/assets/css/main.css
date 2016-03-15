@@ -561,7 +561,7 @@ body.home #header{
     border-bottom:1px solid;
 }
 body.home .affix-top #nav ul{padding:20px 0 0;}
-body.home .affix-top .add-nav{ padding:34px 0 13px;}
+body.home .affix-top .add-nav{ padding:30px 0 13px;}
 body.home .affix .add-nav{ padding:17px 0 13px;}
 .navigation-area {
     float: right;
@@ -570,7 +570,7 @@ body.home .affix .add-nav{ padding:17px 0 13px;}
 .add-nav{
     float:right;
     list-style:none;
-    padding:19px 0 0;
+    padding:15px 0 0;
 }
 .add-nav li{
     line-height:normal;
