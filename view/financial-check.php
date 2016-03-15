@@ -16,7 +16,7 @@ require '../model-db-connection/config.php';
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>My Blog</title>
+        <title>Go Get Rich.net</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -158,7 +158,7 @@ require '../model-db-connection/config.php';
                             </div>
                         </div>
                         <div class="row">
-                            <div id="content" class="col-md-9 col-sm-8 col-xs-12" style="margin-left: 11%">
+                            <div id="content" class="col-md-9 col-sm-8 col-xs-12">
 
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
@@ -300,8 +300,30 @@ require '../model-db-connection/config.php';
                                         </div>
                                     </div>
                                 </article>
-
-                            </div>                           
+                            </div>
+                            <aside id="sidebar" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                                <div class="row">
+                                    
+                                    <div class="col-md-12 col-xs-12">
+                                        <div class="tg-widget widget-recent-post">
+                                            <div class="tg-widget-holder">
+                                                <h3>Recent Posts</h3>
+                                                <ul>
+                                                    <li>
+                                                        <p>ทำไมต้องวางแผนการเงิน</p>
+                                                        <time datetime="2008-02-14 20:00" class="tg-post-date">04 February 2015</time>
+                                                    </li>
+                                                    <li>
+                                                        <p>ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</p>
+                                                        <time datetime="2008-02-14 20:00" class="tg-post-date">04 February 2015</time>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </aside>
                         </div>
                     </div>
                 </div>

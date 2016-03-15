@@ -237,6 +237,7 @@ $currentFile = basename(__FILE__, '.php');
                                                             $resGetCourseDetailByHeaderID = mysql_query($sqlGetCourseDetailByHeaderID);
                                                             while ($rowGetCourseDetailByHeaderID = mysql_fetch_array($resGetCourseDetailByHeaderID)) {
                                                                 if (!empty($rowGetCourseDetailByHeaderID['DETAIL_LAT'])) {
+                                                                    $showInMap = trim(preg_replace('/\s+/', ' ', $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION']));
                                                                     ?>
                                                                     <tr>
                                                                         <td width="250px"><strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong></td>
@@ -248,18 +249,47 @@ $currentFile = basename(__FILE__, '.php');
                                                                             <script type="text/javascript">
                                                                                 $(document).ready(function () {
                                                                                     $("#<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>").gmap3({
-                                                                                        marker: {
-                                                                                            values: [
-                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "Saminar Position !"}
-                                                                                            ]},
                                                                                         map: {
                                                                                             options: {
+                                                                                                center: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>],
                                                                                                 zoom: 16,
+                                                                                                fullscreenControl: true,
                                                                                                 scrollwheel: false,
                                                                                                 navigationControl: false,
                                                                                                 mapTypeControl: false,
-                                                                                                scaleControl: false,
+                                                                                                scaleControl: true,
                                                                                                 draggable: true
+                                                                                            }
+                                                                                        },
+                                                                                        marker: {
+                                                                                            values: [
+                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "<?= $showInMap ?><a href='#'>View large map</a>"}
+                                                                                            ],
+                                                                                            options: {
+                                                                                                draggable: false
+                                                                                            },
+                                                                                            events: {
+                                                                                                click: function (marker, event, context) {
+                                                                                                    var map = $(this).gmap3("get"),
+                                                                                                            infowindow = $(this).gmap3({get: {name: "infowindow"}});
+                                                                                                    if (infowindow) {
+                                                                                                        infowindow.open(map, marker);
+                                                                                                        infowindow.setContent(context.data);
+                                                                                                    } else {
+                                                                                                        $(this).gmap3({
+                                                                                                            infowindow: {
+                                                                                                                anchor: marker,
+                                                                                                                options: {content: context.data}
+                                                                                                            }
+                                                                                                        });
+                                                                                                    }
+                                                                                                }
+//                                                                                                mouseout: function () {
+//                                                                                                    var infowindow = $(this).gmap3({get: {name: "infowindow"}});
+//                                                                                                    if (infowindow) {
+//                                                                                                        infowindow.close();
+//                                                                                                    }
+//                                                                                                }
                                                                                             }
                                                                                         }
                                                                                     });
