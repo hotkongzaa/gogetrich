@@ -16,7 +16,7 @@ require '../model-db-connection/config.php';
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BootStrap HTML5 CSS3 Theme</title>
+        <title>Go Get Rich.net</title>
         <?php include './assets/css_incl.php'; ?>
         <?php include './assets/javascript_incl.php'; ?>
 

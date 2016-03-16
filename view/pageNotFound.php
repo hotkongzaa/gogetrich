@@ -1,3 +1,11 @@
+<?php
+$fPage = (string) filter_input(INPUT_GET, 'fPage');
+if (empty($fPage)) {
+    $linkTo = "main";
+} else {
+    $linkTo = $fPage;
+}
+?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -39,87 +47,6 @@
         *************************************-->
         <div id="wrapper">
             <!--************************************
-                            Banner Start
-            *************************************-->
-            <div class="tg-banner tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/page-banner-img/img-01.jpg">
-                <div class="tg-banner-holder">
-                    <div class="container">
-                        <div class="tg-displaytable">
-                            <div class="tg-displaytablecell">
-                                <div class="banner-content tg-haslayout">
-                                    <h1>404 Error</h1>
-                                    <ol class="tg-breadcrumb">
-                                        <li><a href="#">Home</a></li>
-                                        <li class="active">404 Error</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--************************************
-                            Banner End
-            *************************************-->
-            <!--************************************
-                            Header Start
-            *************************************-->
-            <header id="header" class="tg-haslayout">
-                <div class="container">
-                    <strong class="logo">
-                        <a href="main">
-                            <img src="assets/images/logo.png" alt="Constructioner">
-                        </a>
-                    </strong>
-                    <div class="navigation-area">
-                        <ul class="add-nav">
-                            <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
-                            <li><a href="registration">Register</a></li>
-                        </ul>
-                        <nav id="nav">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul>
-                                    <li>
-                                        <a href="main">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="aboutus">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Training/Seminar</a>
-                                        <ul>
-                                            <li>
-                                                <a href="trainingSchedule">Training Category</a>
-                                            </li>
-                                            <li>
-                                                <a href="speaker-list">Speaker</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!--li>
-                                        <a href="#">Register</a>
-                                    </li-->
-                                    <li>
-                                        <a href="#">Blog</a>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </header>
-            <!--************************************
-                            Header End
-            *************************************-->
-            <!--************************************
                             Main Start
             *************************************-->
             <main id="main" class="tg-haslayout">
@@ -136,7 +63,9 @@
                                     <div class="tg-img-border">
                                         <img src="assets/images/404NotFound.jpg" width="398px" height="269px" alt="image description">
                                     </div>
-                                    <span>Go back to <a href="main">Homepage</a></span>
+                                    <span>
+                                        Click <a href="<?= $linkTo ?>">here</a> to go back
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -149,66 +78,6 @@
             <!--************************************
                             Main End
             *************************************-->
-            <!--************************************
-                            Footer Start
-            *************************************-->
-            <?php include './footer.php'; ?>
-            <!--************************************
-                            Footer End
-            *************************************-->
         </div>
-        <!--************************************
-                        Wrapper End
-        *************************************-->
-        <!--************************************
-                        Popup Start
-        *************************************-->
-        <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-login-modalbox">
-                <h2>LOGIN FORM</h2>
-                <form class="login-form">
-                    <fieldset>
-                        <div class="form-group">
-                            <i class="fa fa-envelope"></i>
-                            <input type="email" placeholder="Email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <i class="fa fa-lock"></i>
-                            <input type="text" placeholder="Name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                <input type="checkbox">
-                                <em>Remember Me</em>
-                            </label>
-                            <a class="forgetpassword" href="#">
-                                <em>Forgot Password</em>
-                                <i class="fa fa-question-circle"></i>
-                            </a>
-                        </div>
-                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">login</button>
-                    </fieldset>
-                </form>
-                <p>Not a Member? <a href="registration">Create an Account</a></p>
-            </div>
-        </div>
-
-        <!--************************************
-                        Popup End
-        *************************************-->
-        <script src="js/vendor/jquery.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/jquery.bxslider.js"></script>
-        <script src="js/jquery.flexslider.js"></script>
-        <script src="js/jquery.prettyPhoto.js"></script>
-        <script src="js/jquery.appear.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/isotope.pkgd.js"></script>
-        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        <script src="js/gmap3.min.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/gnmenu.js"></script>
-        <script src="js/owl.carousel.js"></script>
-        <script src="js/main.js"></script>
     </body>
 </html>

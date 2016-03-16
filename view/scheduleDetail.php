@@ -7,8 +7,9 @@ if (isset($_SESSION['expireFrontEnd'])) {
     }
 }
 require '../model-db-connection/config.php';
+$cId = (string) filter_input(INPUT_GET, 'cname');
 $iniConfiguration = parse_ini_file("../model-db-connection/configuration.ini");
-$sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $_GET['cname'] . "'";
+$sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $cId . "'";
 $res = mysql_query($sqlGetCourseHeaderID);
 $rowHeader = mysql_fetch_assoc($res);
 $currentFile = basename(__FILE__, '.php');
@@ -205,7 +206,7 @@ $currentFile = basename(__FILE__, '.php');
                                                                         </a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cId . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
                                                                         $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
@@ -236,6 +237,7 @@ $currentFile = basename(__FILE__, '.php');
                                                             $resGetCourseDetailByHeaderID = mysql_query($sqlGetCourseDetailByHeaderID);
                                                             while ($rowGetCourseDetailByHeaderID = mysql_fetch_array($resGetCourseDetailByHeaderID)) {
                                                                 if (!empty($rowGetCourseDetailByHeaderID['DETAIL_LAT'])) {
+                                                                    $showInMap = trim(preg_replace('/\s+/', ' ', $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION']));
                                                                     ?>
                                                                     <tr>
                                                                         <td width="250px"><strong><?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?> </strong></td>
@@ -247,18 +249,47 @@ $currentFile = basename(__FILE__, '.php');
                                                                             <script type="text/javascript">
                                                                                 $(document).ready(function () {
                                                                                     $("#<?= $rowGetCourseDetailByHeaderID['DETAIL_ID'] ?>").gmap3({
-                                                                                        marker: {
-                                                                                            values: [
-                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "Saminar Position !"}
-                                                                                            ]},
                                                                                         map: {
                                                                                             options: {
+                                                                                                center: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>],
                                                                                                 zoom: 16,
+                                                                                                fullscreenControl: true,
                                                                                                 scrollwheel: false,
                                                                                                 navigationControl: false,
                                                                                                 mapTypeControl: false,
-                                                                                                scaleControl: false,
+                                                                                                scaleControl: true,
                                                                                                 draggable: true
+                                                                                            }
+                                                                                        },
+                                                                                        marker: {
+                                                                                            values: [
+                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "<?= $showInMap ?><a href='#'>View large map</a>"}
+                                                                                            ],
+                                                                                            options: {
+                                                                                                draggable: false
+                                                                                            },
+                                                                                            events: {
+                                                                                                click: function (marker, event, context) {
+                                                                                                    var map = $(this).gmap3("get"),
+                                                                                                            infowindow = $(this).gmap3({get: {name: "infowindow"}});
+                                                                                                    if (infowindow) {
+                                                                                                        infowindow.open(map, marker);
+                                                                                                        infowindow.setContent(context.data);
+                                                                                                    } else {
+                                                                                                        $(this).gmap3({
+                                                                                                            infowindow: {
+                                                                                                                anchor: marker,
+                                                                                                                options: {content: context.data}
+                                                                                                            }
+                                                                                                        });
+                                                                                                    }
+                                                                                                }
+//                                                                                                mouseout: function () {
+//                                                                                                    var infowindow = $(this).gmap3({get: {name: "infowindow"}});
+//                                                                                                    if (infowindow) {
+//                                                                                                        infowindow.close();
+//                                                                                                    }
+//                                                                                                }
                                                                                             }
                                                                                         }
                                                                                     });
@@ -327,7 +358,7 @@ $currentFile = basename(__FILE__, '.php');
                                                                         </a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $_GET['cname'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
+                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cId . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
                                                                         $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
                                                                         $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
                                                                         if ($rowCheckAlreadyRegis['counts'] >= 1) {
@@ -356,18 +387,9 @@ $currentFile = basename(__FILE__, '.php');
                                 <?php
                             } else {
                                 ?>
-                                <div class="row">
-                                    <div class="tg-error-section">
-                                        <div class="tg-message">
-                                            <h2>404 Error</h2>
-                                            <h3>Cannot found couse</h3>
-                                            <div class="tg-img-border">
-                                                <img src="assets/images/404NotFound.jpg" width="398px" height="269px" alt="image description">
-                                            </div>
-                                            <span>Go back to <a href="trainingSchedule">Training Schedule</a></span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <script>
+                                    window.location.href = "pageNotFound?fPage=trainingSchedule";
+                                </script>
                                 <?php
                             }
                             ?>
@@ -567,7 +589,7 @@ $currentFile = basename(__FILE__, '.php');
                     if (data != 200) {
                         console.log(data);
                     } else {
-                        window.location.href = "registrationCourse?cId=<?= $_GET['cname'] ?>&fPage=<?= $currentFile ?>?cname=<?= $_GET['cname'] ?>";
+                        window.location.href = "registrationCourse?cId=<?= $cId ?>&fPage=<?= $currentFile ?>?cname=<?= $cId ?>";
                     }
                     $(".preloader").fadeOut("slow");
 
