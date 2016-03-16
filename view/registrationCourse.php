@@ -440,7 +440,33 @@ if (mysql_num_rows($res) <= 0) {
                 });
             });
             $("#regisAsMember").click(function () {
-                $("#login-modal").modal('toggle');
+                $.ajax({
+                    url: "../model/com.gogetrich.function/VerifyIsLogin.php",
+                    type: 'POST',
+                    beforeSend: function (xhr) {
+                        $(".preloader").show();
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        $(".preloader").fadeOut("slow");
+                        var resData = data.split(":");
+                        if (resData[0] == 200) {
+                            var fName = resData[1].split("||")[0];
+                            var lName = resData[1].split("||")[1];
+                            var phone = resData[1].split("||")[2];
+                            var email = resData[1].split("||")[3];
+                            var contactAddr = resData[1].split("||")[4];
+                            var receiptAddr = resData[1].split("||")[5];
+                            $("#moreFirstName_1").val(fName);
+                            $("#moreLastName_1").val(lName);
+                            $("#phone_number_1").val(phone);
+                            $("#addressForContact").val(contactAddr);
+                            $("#moreUserEmail_1").val(email);
+                            $("#addressForReceipt").val(receiptAddr);
+                        } else {
+                            $("#login-modal").modal('toggle');
+                        }
+                    }
+                });
             });
             $("#loginAsMember").click(function () {
                 var loginPassword = $("#loginPassword").val();
