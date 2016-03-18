@@ -263,7 +263,7 @@ $currentFile = basename(__FILE__, '.php');
                                                                                         },
                                                                                         marker: {
                                                                                             values: [
-                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "<?= $showInMap ?><a href='#'>View large map</a>"}
+                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "<?= $showInMap ?><a href='fullmap?lng=<?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>&lat=<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>&name=<?= $showInMap ?>'>View large map</a>"}
                                                                                             ],
                                                                                             options: {
                                                                                                 draggable: false
@@ -284,12 +284,12 @@ $currentFile = basename(__FILE__, '.php');
                                                                                                         });
                                                                                                     }
                                                                                                 }
-//                                                                                                mouseout: function () {
-//                                                                                                    var infowindow = $(this).gmap3({get: {name: "infowindow"}});
-//                                                                                                    if (infowindow) {
-//                                                                                                        infowindow.close();
-//                                                                                                    }
-//                                                                                                }
+            //                                                                                                mouseout: function () {
+            //                                                                                                    var infowindow = $(this).gmap3({get: {name: "infowindow"}});
+            //                                                                                                    if (infowindow) {
+            //                                                                                                        infowindow.close();
+            //                                                                                                    }
+            //                                                                                                }
                                                                                             }
                                                                                         }
                                                                                     });

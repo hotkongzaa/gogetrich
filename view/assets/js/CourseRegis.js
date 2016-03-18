@@ -70,6 +70,8 @@ function addMoreRegister(headerId) {
                                                     scrollTop: $("#loadMoreUser").offset().top
                                                 });
                                             });
+                                            $("#addMoreRegisLab").toggle();
+                                            $("#regisMoreThan1User").toggle();
                                             $("#moreFirstName_1").val("");
                                             $("#moreLastName_1").val("");
                                             $("#moreUserEmail_1").val("");
@@ -104,6 +106,7 @@ function validatePhone($phone) {
     return phoneReg.test($phone);
 }
 function initialPageRegisCourse(cid, fpage) {
+    $("#addMoreRegisLab").hide();
     //Manage login 
     runSetDefaultValidation();
     var form = $('.login-form');
@@ -126,13 +129,13 @@ function initialPageRegisCourse(cid, fpage) {
         }
     });
     //Loading registration table into Div
-    $.ajax({
-        url: "moreUserTbl.php",
-        type: 'POST',
-        success: function (data, textStatus, jqXHR) {
-            $("#loadMoreUser").html(data);
-        }
-    });
+//    $.ajax({
+//        url: "moreUserTbl.php",
+//        type: 'POST',
+//        success: function (data, textStatus, jqXHR) {
+//            $("#loadMoreUser").html(data);
+//        }
+//    });
     //Show login popup
     $('#login_menu').tooltipster({
         contentAsHTML: true,
@@ -220,10 +223,32 @@ function deleteMoreUserTmp(tmpID) {
         type: 'POST',
         success: function (data2, textStatus, jqXHR) {
             if (data2 == 200) {
-                $("#loadMoreUser").load("moreUserTbl.php");
-                $('html,body').animate({
-                    scrollTop: $("#loadMoreUser").offset().top
+                $.ajax({
+                    url: "../model/com.gogetrich.function/checkIsRegister.php",
+                    type: 'POST',
+                    beforeSend: function (xhr) {
+                        $(".preloader").show();
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        $(".preloader").fadeOut("slow");
+                        if (data > 0) {
+                            $("#loadMoreUser").load("moreUserTbl.php");
+                            $('html,body').animate({
+                                scrollTop: $("#loadMoreUser").offset().top
+                            });
+                            $("#regisMoreThan1User").hide();
+                            $("#addMoreRegisLab").show();
+                        } else {
+                            $("#loadMoreUser").empty();
+                            $("#regisMoreThan1User").show();
+                            $("#addMoreRegisLab").hide();
+                            $('html,body').animate({
+                                scrollTop: $("#regisMoreThan1User").offset().top
+                            });
+                        }
+                    }
                 });
+
             } else {
                 showWarningNotficationDialog(data2);
             }

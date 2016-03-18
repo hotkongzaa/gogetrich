@@ -26,7 +26,7 @@ if (mysql_num_rows($res) <= 0) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Go Get Rich.net</title>
-        <meta name="description" content="">
+        <meta name="description" content="Go Get Rich">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php include './assets/css_incl.php'; ?>
         <?php include './assets/javascript_incl.php'; ?>
@@ -192,8 +192,8 @@ if (mysql_num_rows($res) <= 0) {
                                                         . "WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "' "
                                                         . "ORDER BY EVENT_CREATED_DATE_TIME ASC";
                                                 $resGetSchedule = mysql_query($sqlGetSchedule);
-
-                                                while ($rowGetSChedule = mysql_fetch_array($resGetSchedule)) {
+                                                if (mysql_num_rows($resGetSchedule) == 1) {
+                                                    $rowGetSChedule = mysql_fetch_assoc($resGetSchedule);
                                                     $firstDateTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME']);
                                                     $startDate = $firstDateTime[0];
                                                     $startTime = $firstDateTime[1];
@@ -203,26 +203,44 @@ if (mysql_num_rows($res) <= 0) {
                                                     $endTime = $secondDateTime[1];
                                                     ?>
                                                     <br/>
-                                                    <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
+                                                    <input type="radio" name="courseScheduleSelect" checked value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
                                                     <?php
+                                                } else {
+                                                    while ($rowGetSChedule = mysql_fetch_array($resGetSchedule)) {
+                                                        $firstDateTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME']);
+                                                        $startDate = $firstDateTime[0];
+                                                        $startTime = $firstDateTime[1];
+
+                                                        $secondDateTime = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME']);
+                                                        $endDate = $secondDateTime[0];
+                                                        $endTime = $secondDateTime[1];
+                                                        ?>
+                                                        <br/>
+                                                        <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
+                                                        <?php
+                                                    }
                                                 }
                                                 ?>
                                             </div>
                                             <div class="form-group">
                                                 <strong style="font-size: 18px;">ลงทะเบียน*&nbsp;&nbsp;</strong>
                                                 <br/>
-                                                <label for="signInAsMemeber" class="btn btn-default" style="margin-top: 10px;" id="regisAsMember">
-                                                    <span class="fa fa-user"></span> ลงทะเบียนแบบสมาชิก
-                                                </label>
-                                                <br/><br/>
                                             </div>
                                             <div class="form-group">
                                                 <div id="loadMoreUser" style="margin-top: 10px;"></div>
                                             </div>
                                             <div class="form-group">
                                                 <span id="hideRegisterForm" style="cursor: pointer;margin-bottom: 10px;">
-                                                    <span class="fa fa-upload"></span> ซ่อนฟอร์มการลงทะเบียน
+                                                    <span class="fa fa-upload"></span> ฟอร์มการลงทะเบียน
                                                 </span>
+
+                                                <label for="signInAsMemeber" class="pull-right" style="cursor: pointer;"  id="regisAsMember">
+                                                    <span class="fa fa-user"></span> ลงทะเบียนสมาชิก
+                                                </label>
+                                                <label class="pull-right" id="addMoreRegisLab" style="cursor: pointer; margin-right: 20px;" onclick="$('#regisMoreThan1User').show();
+                                                        $('#addMoreRegisLab').toggle();">
+                                                    <span class="fa fa-user-plus"></span> เพิ่มผู้สมัคร
+                                                </label>
                                             </div>
                                             <div class="form-group" id="regisMoreThan1User" style="border:1px solid #BDBDBD; padding: 15px;">                  
                                                 <label for="moreUser_1">ชื่อ (First Name)*</label> 
@@ -358,15 +376,41 @@ if (mysql_num_rows($res) <= 0) {
     <script>
         var state = 1;
         $(document).ready(function () {
+
+            //Load table if found user regis (In case of refresh page)
+            $.ajax({
+                url: "../model/com.gogetrich.function/checkIsRegister.php",
+                type: 'POST',
+                beforeSend: function (xhr) {
+                    $(".preloader").show();
+                },
+                success: function (data, textStatus, jqXHR) {
+                    $(".preloader").fadeOut("slow");
+                    if (data > 0) {
+                        $.ajax({
+                            url: "moreUserTbl.php",
+                            type: 'POST',
+                            success: function (data, textStatus, jqXHR) {
+                                $("#loadMoreUser").html(data);
+                            }
+                        });
+                        $("#regisMoreThan1User").toggle();
+                        $("#addMoreRegisLab").toggle();
+                    }
+                }
+            });
+
             $("#hideRegisterForm").click(function () {
                 if (state == 1) {
-                    $("#hideRegisterForm").html('<span class="fa fa-download"></span> แสดงฟอร์มการลงทะเบียน');
+                    $("#hideRegisterForm").html('<span class="fa fa-download"></span> ฟอร์มการลงทะเบียน');
                     state = 2;
                 } else {
-                    $("#hideRegisterForm").html('<span class="fa fa-upload"></span> ซ่อนฟอร์มการลงทะเบียน');
+                    $("#hideRegisterForm").html('<span class="fa fa-upload"></span> ฟอร์มการลงทะเบียน');
                     state = 1;
                 }
                 $("#regisMoreThan1User").toggle();
+                $("#addMoreRegisLab").toggle();
+                resetForm();
             });
             initialPageRegisCourse('<?= $cId ?>', '<?= $fPage ?>');
             $("#isSameAddress").click(function () {
@@ -465,6 +509,8 @@ if (mysql_num_rows($res) <= 0) {
                         } else {
                             $("#login-modal").modal('toggle');
                         }
+                        $("#regisMoreThan1User").show();
+                        $("#addMoreRegisLab").hide();
                     }
                 });
             });
