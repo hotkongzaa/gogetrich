@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-function addMoreRegister(headerId) {
+function addMoreRegister(headerId, courseId) {
     var firtName = $("#moreFirstName_1").val();
     var lastName = $("#moreLastName_1").val();
     var email = $("#moreUserEmail_1").val();
@@ -65,7 +65,7 @@ function addMoreRegister(headerId) {
                                     type: 'POST',
                                     success: function (data, textStatus, jqXHR) {
                                         if (data == 200) {
-                                            $("#loadMoreUser").load("moreUserTbl.php", function () {
+                                            $("#loadMoreUser").load("moreUserTbl.php?courseId=" + courseId, function () {
                                                 $('html,body').animate({
                                                     scrollTop: $("#loadMoreUser").offset().top
                                                 });
@@ -128,14 +128,6 @@ function initialPageRegisCourse(cid, fpage) {
             errorHandler.show();
         }
     });
-    //Loading registration table into Div
-//    $.ajax({
-//        url: "moreUserTbl.php",
-//        type: 'POST',
-//        success: function (data, textStatus, jqXHR) {
-//            $("#loadMoreUser").html(data);
-//        }
-//    });
     //Show login popup
     $('#login_menu').tooltipster({
         contentAsHTML: true,
@@ -217,7 +209,7 @@ function logoutFromApplication() {
         }
     });
 }
-function deleteMoreUserTmp(tmpID) {
+function deleteMoreUserTmp(tmpID, courseId) {
     $.ajax({
         url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
         type: 'POST',
@@ -232,7 +224,7 @@ function deleteMoreUserTmp(tmpID) {
                     success: function (data, textStatus, jqXHR) {
                         $(".preloader").fadeOut("slow");
                         if (data > 0) {
-                            $("#loadMoreUser").load("moreUserTbl.php");
+                            $("#loadMoreUser").load("moreUserTbl.php?courseId=" + courseId);
                             $('html,body').animate({
                                 scrollTop: $("#loadMoreUser").offset().top
                             });

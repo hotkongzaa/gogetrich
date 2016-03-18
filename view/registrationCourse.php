@@ -263,7 +263,7 @@ if (mysql_num_rows($res) <= 0) {
                                                     <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
                                                     <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"></textarea>
                                                 </div>
-                                                <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>')">
+                                                <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>', '<?= $cId ?>')">
                                                     <span class="fa fa-plus"></span> เพิ่มผู้สมัคร
                                                 </a>
                                                 <a href="#" class="btn btn-default" onclick="resetForm()">
@@ -388,7 +388,7 @@ if (mysql_num_rows($res) <= 0) {
                     $(".preloader").fadeOut("slow");
                     if (data > 0) {
                         $.ajax({
-                            url: "moreUserTbl.php",
+                            url: "moreUserTbl.php?courseId=<?= $cId ?>",
                             type: 'POST',
                             success: function (data, textStatus, jqXHR) {
                                 $("#loadMoreUser").html(data);

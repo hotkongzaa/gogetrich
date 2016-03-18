@@ -227,24 +227,12 @@ $currentFile = basename(__FILE__, '.php');
                                                                     <?php
                                                                     if (empty($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
-                                                                                                                                                                    <!--a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a-->
-                                                                                                    <!--                                                                        <a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>-->
-                                                                        <a href="#" class="tg-theme-btn-sm" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
+                                                                        <a href="#" class="tg-theme-btn-sm" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>', '')">ลงทะเบียน</a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $rowGetCourseHeader['HEADER_ID'] . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
-                                                                        $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
-                                                                        $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
-                                                                        if ($rowCheckAlreadyRegis['counts'] >= 1) {
-                                                                            ?>
-                                                                            <a href="#" class="tg-theme-btn-sm disabled" onclick="showWarningNotficationDialog('คุณได้ลงทะเบียนคอร์สนี้เรียบร้อยแล้ว')">ลงทะเบียน</a>
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <!--<a href="#" class="tg-theme-btn-sm" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>-->
-                                                                            <a href="#" class="tg-theme-btn-sm" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>')">ลงทะเบียน</a>
-                                                                            <?php
-                                                                        }
+                                                                        ?>                                                                            
+                                                                        <a href="#" class="tg-theme-btn-sm" onclick="clearMoreTmp('<?= $rowGetCourseHeader['HEADER_ID'] ?>', '<?= $_SESSION['userIdFrontEnd'] ?>')">ลงทะเบียน</a>
+                                                                        <?php
                                                                     }
                                                                     ?>
 
@@ -533,9 +521,9 @@ $currentFile = basename(__FILE__, '.php');
             window.location = "scheduleDetail?cname=" + courseName;
         }
 
-        function clearMoreTmp(cid) {
+        function clearMoreTmp(cid, userId) {
             $.ajax({
-                url: "../model/com.gogetrich.function/clearTmp.php",
+                url: "../model/com.gogetrich.function/clearTmp.php?userId=" + userId + "&cid=" + cid,
                 type: 'POST',
                 beforeSend: function (xhr) {
                     $(".preloader").show();
@@ -547,25 +535,8 @@ $currentFile = basename(__FILE__, '.php');
                         window.location.href = 'registrationCourse?cId=' + cid + "&fPage=<?= $currentFile ?>";
                     }
                     $(".preloader").fadeOut("slow");
-
                 }
             });
-
-
-//            $("#scheduleFormDiv").load("register_partial.php?cname=" + cid, function () {
-//                $.ajax({
-//                    url: "../model/com.gogetrich.function/clearTmp.php",
-//                    type: 'POST',
-//                    success: function (data, textStatus, jqXHR) {
-//                        if (data != 200) {
-//                            console.log(data);
-//                        } else {
-//                            $("#loadMoreUser").load("moreUserTbl.php");
-//                        }
-//
-//                    }
-//                });
-//            });
         }
         var runSetDefaultValidation = function () {
             $.validator.setDefaults({

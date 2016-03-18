@@ -27,9 +27,27 @@ require '../model-db-connection/config.php';
                         <td><?= $row['TMP_NAME'] ?></td>
                         <td style="text-align: center"><?= $row['TMP_PHONE_NUMBER'] ?></td>
                         <td style="text-align: center"><?= $row['TMP_EMAIL'] ?></td>
-                        <td style="text-align: center" width="50px">                    
-                            <a href="#" class="btn btn-small" title="Delete" onclick="deleteMoreUserTmp('<?= $row['TMP_ID'] ?>')"><i class="icon-trash"></i> Delete</a>
-                        </td>
+                        <?php
+                        $cid = (string) filter_input(INPUT_GET, 'courseId');
+                        if (isset($_SESSION['userIdFrontEnd'])) {
+                            $sqlCheck = "SELECT * FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cid . "' AND ENROLL_CUS_ID='" . $row['TMP_CUS_ID'] . "'";
+                            $resCheck = mysql_query($sqlCheck);
+                            if (mysql_num_rows($resCheck) >= 1) {
+                                ?>
+                                <td style="text-align: center" width="50px">                    
+                                    Registered
+                                </td>
+                                <?php
+                            }
+                        } else {
+                            ?>
+                            <td style="text-align: center" width="50px">                    
+                                <a href="#" class="btn btn-small" title="Delete" onclick="deleteMoreUserTmp('<?= $row['TMP_ID'] ?>', '<?= $cid ?>')"><i class="icon-trash"></i> Delete</a>
+                            </td>
+                            <?php
+                        }
+                        ?>
+
                     </tr>
                     <?php
                     $id++;
