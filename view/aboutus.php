@@ -130,7 +130,10 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                     </li-->
                                     <li>
                                         <a href="blog-list">Blog</a>
-                                    </li>                                    
+                                    </li>      
+                                    <li>
+                                        <a href="contactus">Contact us</a>
+                                    </li> 
                                 </ul>
                             </div>
                         </nav>
@@ -239,30 +242,6 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         </div>
                                     </div>
                                 </div>
-                                <!--div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pinhathai_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. ปิ่นหทัย เดชสิงหรัตน์</span>
-                                            <span class="tg-member-postion">Designer at Example.com</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div-->
                             </div>
                         </div>
                     </div>

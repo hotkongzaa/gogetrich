@@ -111,7 +111,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                     <li>
                                         <a href="main">Home</a>
                                     </li>
-                                    <li class="current-menu-item">
+                                    <li>
                                         <a href="aboutus">About</a>
                                     </li>
                                     <li>
@@ -125,12 +125,12 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             </li>
                                         </ul>
                                     </li>
-                                    <!--li>
-                                        <a href="#">Register</a>
-                                    </li-->
                                     <li>
                                         <a href="blog-list">Blog</a>
-                                    </li>                                    
+                                    </li>     
+                                    <li class="current-menu-item">
+                                        <a href="contactus">Contact us</a>
+                                    </li> 
                                 </ul>
                             </div>
                         </nav>

@@ -139,7 +139,10 @@ $currentFile = basename(__FILE__, '.php');
                                     </li-->
                                     <li>
                                         <a href="blog-list">Blog</a>
-                                    </li>                                    
+                                    </li>             
+                                    <li>
+                                        <a href="contactus">Contact us</a>
+                                    </li> 
                                 </ul>
                             </div>
                         </nav>

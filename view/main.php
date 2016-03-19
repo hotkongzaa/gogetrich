@@ -104,11 +104,11 @@ require '../model-db-connection/config.php';
                                             </li>
                                         </ul>
                                     </li>
-                                    <!--li>
-                                        <a href="#">Register</a>
-                                    </li-->
                                     <li>
                                         <a href="blog-list">Blog</a>
+                                    </li> 
+                                    <li>
+                                        <a href="contactus">Contact us</a>
                                     </li> 
                                 </ul>
                             </div>

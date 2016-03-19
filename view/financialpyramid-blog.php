@@ -126,12 +126,12 @@ require '../model-db-connection/config.php';
                                             </li>
                                         </ul>
                                     </li>
-                                    <!--li>
-                                        <a href="#">Register</a>
-                                    </li-->
                                     <li class="current-menu-item">
                                         <a href="blog-list">Blog</a>
-                                    </li>                                    
+                                    </li>             
+                                    <li>
+                                        <a href="contactus">Contact us</a>
+                                    </li> 
                                 </ul>
                             </div>
                         </nav>
