@@ -38,7 +38,7 @@ if (isset($_SESSION['MORE_TEMP_REGIST'])) {
                             . $rowUserInfo['CUS_FIRST_NAME'] . " " . $rowUserInfo['CUS_LAST_NAME'] . "','"
                             . $rowUserInfo['CUS_EMAIL'] . "','"
                             . $rowUserInfo['CUS_PHONE_NUMBER'] . "','"
-                            . "',"
+                            . $userId . "',"
                             . "NULL,'"
                             . $rowUserInfo['CUS_CONTACT_ADDRESS'] . "','"
                             . $rowUserInfo['CUS_RECEIPT_ADDRESS'] . "')";
@@ -80,7 +80,7 @@ if (isset($_SESSION['MORE_TEMP_REGIST'])) {
                         . $rowUserInfo['CUS_FIRST_NAME'] . " " . $rowUserInfo['CUS_LAST_NAME'] . "','"
                         . $rowUserInfo['CUS_EMAIL'] . "','"
                         . $rowUserInfo['CUS_PHONE_NUMBER'] . "','"
-                        . "',"
+                        . $userId . "',"
                         . "NULL,'"
                         . $rowUserInfo['CUS_CONTACT_ADDRESS'] . "','"
                         . $rowUserInfo['CUS_RECEIPT_ADDRESS'] . "')";

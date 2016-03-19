@@ -191,39 +191,20 @@ $currentFile = basename(__FILE__, '.php');
                                                         <tbody>
                                                             <tr>
                                                                 <td colspan="2" style="text-align:right !important;">
-                                                                    <br/>
+
                                                                     <?php
                                                                     if (!isset($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
-                                                                        <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()">
-                                                                            <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
-                                                                        </a-->
-                                                                        <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
-                                                                            <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
-                                                                        </a-->
-                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
+                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp('<?= $rowHeader['HEADER_ID'] ?>', '')">
                                                                             <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                         </a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cId . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
-                                                                        $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
-                                                                        $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
-                                                                        if ($rowCheckAlreadyRegis['counts'] >= 1) {
-                                                                            ?>
-                                                                            <span style="color: #ffcc33"><p>คุณได้ลงทะเบียนคอร์สนี้เรียบร้อยแล้ว</p></span>
-                                                                            <a href="#" class="btn btn-default disabled"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".register-modalbox" onclick="clearMoreTmp()">
-                                                                                <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
-                                                                            </a-->
-                                                                            <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
-                                                                                <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
-                                                                            </a>
-                                                                            <?php
-                                                                        }
+                                                                        ?>
+                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp('<?= $rowHeader['HEADER_ID'] ?>', '<?= $_SESSION['userIdFrontEnd'] ?>')">
+                                                                            <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
+                                                                        </a>
+                                                                        <?php
                                                                     }
                                                                     ?>                                                                
                                                                 </td>
@@ -253,9 +234,9 @@ $currentFile = basename(__FILE__, '.php');
                                                                                             options: {
                                                                                                 center: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>],
                                                                                                 zoom: 16,
-                                                                                                fullscreenControl: true,
+                                                                                                fullscreenControl: false,
                                                                                                 scrollwheel: false,
-                                                                                                navigationControl: false,
+                                                                                                navigationControl: true,
                                                                                                 mapTypeControl: false,
                                                                                                 scaleControl: true,
                                                                                                 draggable: true
@@ -263,7 +244,7 @@ $currentFile = basename(__FILE__, '.php');
                                                                                         },
                                                                                         marker: {
                                                                                             values: [
-                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "<?= $showInMap ?><a href='fullmap?lng=<?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>&lat=<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>&name=<?= $showInMap ?>'>View large map</a>"}
+                                                                                                {latLng: [<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>, <?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>], data: "<?= $showInMap ?><a href='fullmap?lng=<?= $rowGetCourseDetailByHeaderID['DETAIL_LNG'] ?>&lat=<?= $rowGetCourseDetailByHeaderID['DETAIL_LAT'] ?>&name=<?= $showInMap ?>' target='_blank'>View large map</a>"}
                                                                                             ],
                                                                                             options: {
                                                                                                 draggable: false
@@ -284,12 +265,6 @@ $currentFile = basename(__FILE__, '.php');
                                                                                                         });
                                                                                                     }
                                                                                                 }
-            //                                                                                                mouseout: function () {
-            //                                                                                                    var infowindow = $(this).gmap3({get: {name: "infowindow"}});
-            //                                                                                                    if (infowindow) {
-            //                                                                                                        infowindow.close();
-            //                                                                                                    }
-            //                                                                                                }
                                                                                             }
                                                                                         }
                                                                                     });
@@ -346,35 +321,21 @@ $currentFile = basename(__FILE__, '.php');
                                                             ?>
                                                             <tr>
                                                                 <td colspan="2" style="text-align:right !important;">
-                                                                    <br/>
                                                                     <?php
                                                                     if (!isset($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
-                                                                        <!--a href="#" class="btn btn-default" data-toggle="modal" data-target=".login-modalbox" onclick="clearMoreTmp()">
-                                                                            <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
-                                                                        </a-->
-                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
+                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp('<?= $rowHeader['HEADER_ID'] ?>', '')">
                                                                             <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
                                                                         </a>
                                                                         <?php
                                                                     } else {
-                                                                        $sqlCheckAlreadyRegis = "SELECT COUNT(*) AS counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cId . "' AND ENROLL_CUS_ID='" . $_SESSION['userIdFrontEnd'] . "'";
-                                                                        $resCheckAlreadyRegis = mysql_query($sqlCheckAlreadyRegis);
-                                                                        $rowCheckAlreadyRegis = mysql_fetch_assoc($resCheckAlreadyRegis);
-                                                                        if ($rowCheckAlreadyRegis['counts'] >= 1) {
-                                                                            ?>
-                                                                            <span style="color: #ffcc33"><p>คุณได้ลงทะเบียนคอร์สนี้เรียบร้อยแล้ว</p></span>
-                                                                            <a href="#" class="btn btn-default disabled"><i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span></a>
-                                                                            <?php
-                                                                        } else {
-                                                                            ?>
-                                                                            <a href="#" class="btn btn-default" onclick="clearMoreTmp()">
-                                                                                <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
-                                                                            </a>
-                                                                            <?php
-                                                                        }
+                                                                        ?>
+                                                                        <a href="#" class="btn btn-default" onclick="clearMoreTmp('<?= $rowHeader['HEADER_ID'] ?>', '<?= $_SESSION['userIdFrontEnd'] ?>')">
+                                                                            <i class="fa fa-pencil-square"></i> <span style="color: #ffcc33;font-weight: bold;">ลงทะเบียนเรียน</span>
+                                                                        </a>
+                                                                        <?php
                                                                     }
-                                                                    ?>                                                                
+                                                                    ?>                                                               
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -578,9 +539,9 @@ $currentFile = basename(__FILE__, '.php');
             });
         };
 
-        function clearMoreTmp() {
+        function clearMoreTmp(cid, userId) {
             $.ajax({
-                url: "../model/com.gogetrich.function/clearTmp.php",
+                url: "../model/com.gogetrich.function/clearTmp.php?userId=" + userId + "&cid=" + cid,
                 type: 'POST',
                 beforeSend: function (xhr) {
                     $(".preloader").show();

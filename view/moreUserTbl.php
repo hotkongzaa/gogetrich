@@ -38,6 +38,12 @@ require '../model-db-connection/config.php';
                                     Registered
                                 </td>
                                 <?php
+                            } else {
+                                ?>
+                                <td style="text-align: center" width="50px">                    
+                                    <a href="#" class="btn btn-small" title="Delete" onclick="deleteMoreUserTmp('<?= $row['TMP_ID'] ?>', '<?= $cid ?>')"><i class="icon-trash"></i> Delete</a>
+                                </td>
+                                <?php
                             }
                         } else {
                             ?>
