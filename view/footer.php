@@ -10,7 +10,7 @@
                     <div class="col-sm-5 tg-colmid-bgcolor">
                         <div class="tg-col">
                             <div class="tg-theme-heading">
-                                <h3>About Us</h3>
+                                <h3 style="cursor:pointer;" onclick="window.location.href = 'aboutus'">About Us</h3>
                             </div>
                             <strong class="logo">
                                 <a href="main">
@@ -41,7 +41,7 @@
                     <div class="col-sm-5 tg-collast-bgcolor" style="margin-left: 50px !important;">
                         <div class="tg-col" >
                             <div class="tg-theme-heading">
-                                <h3>Contact Us</h3>
+                                <h3 style="cursor:pointer;" onclick="window.location.href = 'contactus'">Contact Us</h3>
                             </div>
                             <div class="contact-info">
                                 <ul>
