@@ -8,7 +8,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
 }
 require '../model-db-connection/config.php';
 $cId = (string) filter_input(INPUT_GET, 'cname');
-$iniConfiguration = parse_ini_file("../model-db-connection/configuration.ini");
+$iniConfiguration = parse_ini_file("../model-db-connection/configuration.ini", false, INI_SCANNER_RAW);
 $sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $cId . "'";
 $res = mysql_query($sqlGetCourseHeaderID);
 $rowHeader = mysql_fetch_assoc($res);

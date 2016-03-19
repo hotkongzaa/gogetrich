@@ -7,6 +7,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
     }
 }
 require '../model-db-connection/config.php';
+$iniConfiguration = parse_ini_file("../model-db-connection/configuration.ini", false, INI_SCANNER_RAW);
 $cId = (string) filter_input(INPUT_GET, 'cId');
 $fPage = (string) filter_input(INPUT_GET, 'fPage');
 $sqlGetCourseHeaderID = "SELECT * FROM GTRICH_COURSE_HEADER WHERE HEADER_ID = '" . $cId . "'";
@@ -231,7 +232,7 @@ if (mysql_num_rows($res) <= 0) {
                                             </div>
                                             <div class="form-group">
                                                 <span id="hideRegisterForm" style="cursor: pointer;margin-bottom: 10px;">
-                                                    <span class="fa fa-upload"></span> ฟอร์มการลงทะเบียน
+                                                    <span class="fa fa-plus-square"></span> ฟอร์มการลงทะเบียน
                                                 </span>
 
                                                 <label for="signInAsMemeber" class="pull-right" style="cursor: pointer;"  id="regisAsMember">
@@ -274,9 +275,9 @@ if (mysql_num_rows($res) <= 0) {
 
                                             <div class="form-group">
                                                 <strong style="font-size: 18px;">ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
-                                                <br/>
-                                                <!--input type="radio" name="paymentTerm" value="1"> จ่ายเงินสดหน้างาน ในวันแรกของการอบรม-->            
-                                                <input type="radio" name="paymentTerm" value="2"> โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
+                                                <br/>                                                            
+                                                <input type="radio" name="paymentTerm" value="2" checked/> 
+                                                โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
                                             </div>
                                             <div class="form-group">
                                                 <strong style="font-size: 18px;">คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
@@ -294,7 +295,7 @@ if (mysql_num_rows($res) <= 0) {
                                             <div class="form-group">
                                                 <strong style="font-size: 18px;">ยืนยันการลงทะเบียน *</strong>
                                                 <br/>
-                                                <input type="checkbox" name="confirmRegister" id="confirmRegister">  ข้าพเจ้าขอยืนยันการลงทะเบียน และรับทราบว่า หากจะยกเลิกการลงทะเบียน ต้องแจ้งทางผู้จัดหลักสูตร อย่างน้อย 7 วันก่อนวันอบรมจึงจะได้รับเงินค่าเรียนคืนเต็มจำนวน  ข้าพเจ้ายินยอมที่จะเสียอัตราค่าเรียนเต็มจำนวนหากไม่ได้เข้าเรียนและไม่ได้แจ้งยกเลิกล่วงหน้าก่อนวันเรียน อย่างน้อย 7 วัน
+                                                <input type="checkbox" name="confirmRegister" id="confirmRegister">  <?= $iniConfiguration['confirmation.text'] ?>
                                             </div>
                                         </div>
                                         <button class="tg-theme-btn tg-theme-btn-lg" type="button" id="registerCourseBtn">
@@ -402,10 +403,10 @@ if (mysql_num_rows($res) <= 0) {
 
             $("#hideRegisterForm").click(function () {
                 if (state == 1) {
-                    $("#hideRegisterForm").html('<span class="fa fa-download"></span> ฟอร์มการลงทะเบียน');
+                    $("#hideRegisterForm").html('<span class="fa fa-minus-square"></span> ฟอร์มการลงทะเบียน');
                     state = 2;
                 } else {
-                    $("#hideRegisterForm").html('<span class="fa fa-upload"></span> ฟอร์มการลงทะเบียน');
+                    $("#hideRegisterForm").html('<span class="fa fa-plus-square"></span> ฟอร์มการลงทะเบียน');
                     state = 1;
                 }
                 $("#regisMoreThan1User").toggle();
@@ -431,7 +432,7 @@ if (mysql_num_rows($res) <= 0) {
                 var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
                 var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
                 $.ajax({
-                    url: "../model/com.gogetrich.function/checkIsRegister.php",
+                    url: "../model/com.gogetrich.function/checkIsRegisterIncaseRegisterCourse.php",
                     type: 'POST',
                     success: function (data, textStatus, jqXHR) {
                         if (typeof (timeSchedule) === "undefined" && data <= 0 && typeof (paymentTerm) === "undefined" && !$("#confirmRegister").is(":checked")) {
@@ -445,6 +446,7 @@ if (mysql_num_rows($res) <= 0) {
                                 scrollTop: $("#registerSeminar").offset().top
                             });
                         } else if (data <= 0) {
+                            blinkDiv($("#loadMoreUser"));
                             showWarningNotficationDialog("กรุณากรอกข้อมูลการลงทะเบียน");
                             $('html,body').animate({
                                 scrollTop: $("#registerSeminar").offset().top
@@ -471,7 +473,7 @@ if (mysql_num_rows($res) <= 0) {
                                             url: "../model/com.gogetrich.function/getEventDt.php?id=" + timeSchedule,
                                             type: 'POST',
                                             success: function (eventDt, textStatus, jqXHR) {
-                                                showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/> ขอบคุณค่ะ", "<?= $fPage ?>");
+                                                showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/>ท่านจะได้รับข้อมูลรายละเอียดของหลังสูตรที่ท่านได้ลงทะเบียนไว้ทางอีเมล<br/>ขอบคุณค่ะ", "<?= $fPage ?>");
                                             }
                                         });
                                     } else {

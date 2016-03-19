@@ -250,13 +250,14 @@ require '../model-db-connection/config.php';
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;"><strong></strong></td>
-                                                            <td width="300px" colspan="3">                                                                
-                                                                <a style="cursor:pointer" onclick="calculateAss()" class="btn btn-default pull-right">
-                                                                    <i class="fa fa-calculator"></i> เริ่มคำนวณ
-                                                                </a>
-                                                                <a style="cursor:pointer; margin-right:5px;" onclick="resetAss()" class="btn btn-default pull-right">
+                                                            <td width="300px" colspan="3">                       
+                                                                <a style="cursor:pointer; " onclick="resetAss()" class="btn btn-default pull-right">
                                                                     <i class="fa fa-refresh"></i> เริ่มต้นใหม่
                                                                 </a>
+                                                                <a style="cursor:pointer; margin-right:5px;" onclick="calculateAss()" class="btn btn-default pull-right">
+                                                                    <i class="fa fa-calculator"></i> เริ่มคำนวณ
+                                                                </a>
+
                                                             </td>
 
                                                         </tr>
@@ -303,7 +304,7 @@ require '../model-db-connection/config.php';
                             </div>
                             <aside id="sidebar" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                                 <div class="row">
-                                    
+
                                     <div class="col-md-12 col-xs-12">
                                         <div class="tg-widget widget-recent-post">
                                             <div class="tg-widget-holder">
@@ -321,7 +322,7 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </aside>
                         </div>

@@ -359,9 +359,10 @@ function closeRegisterPartialDialog(dialogElement) {
     });
 }
 function scrollToTop() {
-//    verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;
-//    element = $('body');
-//    offset = element.offset();
-//    offsetTop = offset.top;
     $('html, body').animate({scrollTop: 0}, 500, 'linear');
+}
+function blinkDiv(element) {
+    for (var i = 0; i < 3; i++) {
+        element.fadeTo('slow', 0.5).fadeTo('slow', 1.0);
+    }
 }
