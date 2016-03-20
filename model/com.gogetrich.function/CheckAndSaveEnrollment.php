@@ -30,7 +30,7 @@ $paymentTerm = (string) filter_input(INPUT_POST, 'paymentTerm');
 $seminarDiscount = (string) filter_input(INPUT_POST, 'seminarDiscount');
 
 
-$sqlGetMoreRegis = "SELECT * FROM TMP_REGISTER_" . $_SESSION['MORE_TEMP_REGIST'];
+$sqlGetMoreRegis = "SELECT * FROM TMP_REGISTER_" . $_SESSION['MORE_TEMP_REGIST'] . " WHERE TMP_CUS_ID =''";
 $resGetMoreRegis = mysql_query($sqlGetMoreRegis);
 while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
     $getEmailForCheckAndPromote = "SELECT * FROM RICH_CUSTOMER WHERE CUS_EMAIL LIKE '" . $rowGetMore['TMP_EMAIL'] . "'";

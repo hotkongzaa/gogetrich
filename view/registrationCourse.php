@@ -129,7 +129,7 @@ if (mysql_num_rows($res) <= 0) {
                                         <a href="aboutus">About</a>
                                     </li>
                                     <li class="current-menu-item">
-                                        <a href="#">Training/Seminar</a>
+                                        <a href="trainingSchedule">Training/Seminar</a>
                                         <ul>
                                             <li >
                                                 <a href="trainingSchedule">Training Category</a>
@@ -473,7 +473,7 @@ if (mysql_num_rows($res) <= 0) {
                                             url: "../model/com.gogetrich.function/getEventDt.php?id=" + timeSchedule,
                                             type: 'POST',
                                             success: function (eventDt, textStatus, jqXHR) {
-                                                showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/>ท่านจะได้รับข้อมูลรายละเอียดของหลังสูตรที่ท่านได้ลงทะเบียนไว้ทางอีเมล<br/>ขอบคุณค่ะ", "<?= $fPage ?>");
+                                                showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/>ท่านจะได้รับข้อมูลรายละเอียดของหลักสูตรที่ท่านได้ลงทะเบียนไว้ทางอีเมล<br/>ขอบคุณค่ะ", "<?= $fPage ?>");
                                             }
                                         });
                                     } else {

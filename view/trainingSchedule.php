@@ -118,7 +118,7 @@ $currentFile = basename(__FILE__, '.php');
                                         <a href="aboutus">About</a>
                                     </li>
                                     <li class="current-menu-item">
-                                        <a href="#">Training/Seminar</a>
+                                        <a href="trainingSchedule">Training/Seminar</a>
                                         <ul>
                                             <li class="current-menu-item">
                                                 <a href="trainingSchedule">Training Category</a>

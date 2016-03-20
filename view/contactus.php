@@ -431,7 +431,21 @@ if (isset($_SESSION['expireFrontEnd'])) {
         });
         function sendingContactEmail(form) {
             var formEle = $(form).serialize();
-            alert(formEle);
+            $.ajax({
+                url: "../model/com.gogetrich.function/SendingEmailContactUs.php?" + formEle,
+                type: 'POST',
+                beforeSend: function (xhr) {
+                    $(".preloader").show();
+                },
+                success: function (data, textStatus, jqXHR) {
+                    $(".preloader").fadeOut("slow");
+                    if (data == 200) {
+                        showWarningNotficationDialog("Send email success");
+                    } else {
+                        showWarningNotficationDialog(data);
+                    }
+                }
+            });
             $(form).trigger("reset");
         }
         function logoutFromApplication() {

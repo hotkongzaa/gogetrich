@@ -115,7 +115,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         <a href="aboutus">About</a>
                                     </li>
                                     <li>
-                                        <a href="#">Training/Seminar</a>
+                                        <a href="trainingSchedule">Training/Seminar</a>
                                         <ul>
                                             <li>
                                                 <a href="trainingSchedule">Training Category</a>
