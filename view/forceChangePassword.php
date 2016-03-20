@@ -218,7 +218,7 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
                                             </div>
                                             <div class="form-group">
                                                 <label for="address">ที่อยู่ (เพื่อการติดต่อ) (Contact address) *</label>
-                                                <textarea id="address" name="address" cols="20" style="height: 150px;"></textarea>
+                                                <textarea id="address" name="address" cols="20" style="height: 150px;"><?= $cusContactAddr ?></textarea>
                                             </div>
                                             <div class="form-group">
                                                 <label for="phone">หมายเลขโทรศัพท์ เพื่อการติดต่อ (Phone number) *</label>
