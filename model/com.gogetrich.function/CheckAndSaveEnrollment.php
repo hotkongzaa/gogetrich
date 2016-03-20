@@ -87,7 +87,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
 
                     $emailContent = new EmailContent();
                     $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate);
-                    $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $rowGetCusID['CUS_EMAIL'], $iniConfiguration['email.subject.customer.enrollment.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+                    $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $richUserDetail['CUS_EMAIL'], $iniConfiguration['email.subject.customer.enrollment.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                     $sendingEmail->sendingEmail();
                 }
 
@@ -114,7 +114,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
 
                     $emailContent = new EmailContent();
-                    $emailBody = $emailContent->getOfficialEmailEnrollment($rowGetCusID['CUS_FIRST_NAME'] . " " . $rowGetCusID['CUS_LAST_NAME'], $rowGetCusID['CUS_EMAIL'], $rowGetCusID['CUS_PHONE_NUMBER'], $rowGetCusID['CUS_CONTACT_ADDRESS'], $rowGetCusID['CUS_RECEIPT_ADDRESS'], $courseName, $courseDate);
+                    $emailBody = $emailContent->getOfficialEmailEnrollment($richUserDetail['CUS_FIRST_NAME'] . " " . $richUserDetail['CUS_LAST_NAME'], $richUserDetail['CUS_EMAIL'], $richUserDetail['CUS_PHONE_NUMBER'], $richUserDetail['CUS_CONTACT_ADDRESS'], $richUserDetail['CUS_RECEIPT_ADDRESS'], $courseName, $courseDate);
                     $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $iniConfiguration['email.official'], $iniConfiguration['email.subject.official.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                     $sendingEmail->sendingEmail();
                 }
