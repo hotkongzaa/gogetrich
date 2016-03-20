@@ -167,7 +167,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                             </div>
                             <div class="tg-aboutus-section">
                                 <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <figure class="tg-about-img"><img src="assets/images/cat_resized.jpg" alt="image description"></figure>
+                                    <figure class="tg-about-img"><img src="assets/images/learn-to-rich/life-by-financial.jpg" alt="image description"></figure>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="tg-aboutus">
