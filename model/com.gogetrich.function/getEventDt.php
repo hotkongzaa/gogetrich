@@ -3,7 +3,8 @@
 session_start();
 require '../../model-db-connection/config.php';
 
-$sqlGetTmpTbl = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME WHERE EVENT_ID = '" . $_GET['id'] . "'";
+$eventId = (string) filter_input(INPUT_GET, 'id');
+$sqlGetTmpTbl = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME WHERE EVENT_ID = '" . $eventId . "'";
 $resGetTmpTbl = mysql_query($sqlGetTmpTbl);
 $rowGetTmpTbl = mysql_fetch_assoc($resGetTmpTbl);
 

@@ -28,6 +28,7 @@ $theNoti = "";
 $courseID = (string) filter_input(INPUT_POST, 'courseID');
 $paymentTerm = (string) filter_input(INPUT_POST, 'paymentTerm');
 $seminarDiscount = (string) filter_input(INPUT_POST, 'seminarDiscount');
+$eventDateTime = (string) filter_input(INPUT_GET, 'timeSchedule');
 
 
 $sqlGetMoreRegis = "SELECT * FROM TMP_REGISTER_" . $_SESSION['MORE_TEMP_REGIST'] . " WHERE TMP_CUS_ID =''";
@@ -64,7 +65,8 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
                             . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
                             . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
-                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "' "
+                            . "AND EDATE.EVENT_ID = '" . $eventDateTime . "'";
 
                     $resReport = mysql_query($sqlGetCourseDetailByCourseID);
                     $rowReport = mysql_fetch_assoc($resReport);
@@ -96,7 +98,8 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
                             . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
                             . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
-                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "' "
+                            . "AND EDATE.EVENT_ID = '" . $eventDateTime . "'";
 
                     $resReport = mysql_query($sqlGetCourseDetailByCourseID);
                     $rowReport = mysql_fetch_assoc($resReport);
@@ -114,7 +117,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
 
                     $emailContent = new EmailContent();
-                    $emailBody = $emailContent->getOfficialEmailEnrollment($richUserDetail['CUS_FIRST_NAME'] . " " . $richUserDetail['CUS_LAST_NAME'], $richUserDetail['CUS_EMAIL'], $richUserDetail['CUS_PHONE_NUMBER'], $richUserDetail['CUS_CONTACT_ADDRESS'], $richUserDetail['CUS_RECEIPT_ADDRESS'], $courseName, $courseDate);
+                    $emailBody = $emailContent->getOfficialEmailEnrollment($richUserDetail['CUS_FIRST_NAME'] . " " . $richUserDetail['CUS_LAST_NAME'], $richUserDetail['CUS_EMAIL'], $richUserDetail['CUS_PHONE_NUMBER'], $rowGetMore['CONTACT_ADDR'], $rowGetMore['RECEIPT_ADDR'], $courseName, $courseDate);
                     $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $iniConfiguration['email.official'], $iniConfiguration['email.subject.official.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                     $sendingEmail->sendingEmail();
                 }
@@ -184,7 +187,8 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
                             . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
                             . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
-                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "' "
+                            . "AND EDATE.EVENT_ID = '" . $eventDateTime . "'";
 
                     $resReport = mysql_query($sqlGetCourseDetailByCourseID);
                     $rowReport = mysql_fetch_assoc($resReport);
@@ -216,7 +220,8 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $sqlGetCourseDetailByCourseID = "SELECT * FROM GTRICH_COURSE_HEADER HEADER "
                             . "LEFT JOIN GTRICH_COURSE_CATEGORY CATE ON HEADER.REF_CATE_ID = CATE.CATE_ID "
                             . "LEFT JOIN GTRICH_COURSE_EVENT_DATE_TIME EDATE ON HEADER.HEADER_ID = EDATE.REF_COURSE_HEADER_ID "
-                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "'";
+                            . "WHERE HEADER.HEADER_ID = '" . $courseID . "' "
+                            . "AND EDATE.EVENT_ID = '" . $eventDateTime . "'";
 
                     $resReport = mysql_query($sqlGetCourseDetailByCourseID);
                     $rowReport = mysql_fetch_assoc($resReport);
@@ -234,7 +239,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                     $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
 
                     $emailContent = new EmailContent();
-                    $emailBody = $emailContent->getOfficialEmailEnrollment($fName . " " . $lName, $email, $phone, "", "", $courseName, $courseDate);
+                    $emailBody = $emailContent->getOfficialEmailEnrollment($fName . " " . $lName, $email, $phone, $rowGetMore['CONTACT_ADDR'], $rowGetMore['RECEIPT_ADDR'], $courseName, $courseDate);
                     $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $iniConfiguration['email.official'], $iniConfiguration['email.subject.official.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                     $sendingEmail->sendingEmail();
                 }

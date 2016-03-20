@@ -462,7 +462,7 @@ if (mysql_num_rows($res) <= 0) {
                             $.ajax({
                                 url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
                                 type: 'POST',
-                                data: {'courseID': '<?= $cId ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount},
+                                data: {'courseID': '<?= $cId ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount, 'timeSchedule': timeSchedule},
                                 beforeSend: function (xhr) {
                                     $(".preloader").show();
                                 },
