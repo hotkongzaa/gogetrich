@@ -182,7 +182,7 @@ require '../model-db-connection/config.php';
                                         <div class="tg-description">
                                             <h2>แบบสำรวจความพร้อมการเงิน</h2>
                                             <legend style="padding-bottom: 20px;">กรุณาใส่เครื่องหมายถูก / ในข้อที่ตรงกับสถานการณ์ปัจจุบันของคุณ “ใช่, ไม่ใช่, ไม่แน่ใจ”</legend>
-                                            <div class="12">
+                                            <div class="col-md-12">
                                                 <table class="table table-condensed table-hover schedule_detail_table">
                                                     <tbody>
                                                         <tr style="background-color:#E7E7E7">
@@ -290,16 +290,26 @@ require '../model-db-connection/config.php';
                                                 </table>
                                             </div>
                                             <p>
-                                                <span style="margin-left:28%; font-size:18px; width:100%">
-                                                    ระดับความพร้อมของคุณ: <strong><span id="summaryText">กรุณาทำแบบสอบถาม</span></strong>
+                                            <div class="row">
+                                                <span style=" font-size:25px; width:100%">
+                                                    ระดับความพร้อมของคุณ: <strong><span id="summaryText" style="color: #0e62c7">กรุณาทำแบบสอบถาม</span>
+                                                    </strong>
                                                 </span>
-                                                <br/><br/>
-                                                <a href="financial-check-detail" class="btn btn-default">
-                                                    <i class="fa fa-book"></i> รายละเอียดเพิ่มเติม
-                                                </a>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12" style="margin-left: 15px;">
+                                                    <br/>
+                                                    <a href="financial-check-detail" class="btn btn-default">
+                                                        <i class="fa fa-book"></i> รายละเอียดเพิ่มเติม
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+
                                             </p>
                                             <blockquote>
-                                                <q>"การวางแผนการเงินเพื่อให้เกิดความชัดเจนเรื่องเงิน ตลอดทุกช่วงชีวิต เพื่อความสงบสุขทางใจ เพื่อสร้างความมั่นคงให้กับครอบครัว"</q>
+                                                <q style="font-size: 25px !important;">"การวางแผนการเงินเพื่อให้เกิดความชัดเจนเรื่องเงิน ตลอดทุกช่วงชีวิต เพื่อความสงบสุขทางใจ เพื่อสร้างความมั่นคงให้กับครอบครัว"</q>
                                             </blockquote>
                                         </div>
                                     </div>
