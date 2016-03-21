@@ -10,12 +10,12 @@ require '../../model-db-connection/config.php';
 $userId = (string) filter_input(INPUT_GET, 'userId');
 $cid = (string) filter_input(INPUT_GET, 'cid');
 
-$sqlCheck = "SELECT * as counts FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cid . "' AND ENROLL_CUS_ID='" . $userId . "'";
+$sqlCheck = "SELECT * FROM RICH_CUSTOMER_ENROLL WHERE ENROLL_COURSE_ID='" . $cid . "' AND ENROLL_CUS_ID='" . $userId . "'";
 $resCheck = mysql_query($sqlCheck);
 $rowGetTmpTbl = mysql_fetch_assoc($resCheck);
 
 //If user enroll then insert into tmp table
-if (mysql_num_rows($rowGetTmpTbl) >= 1) {
+if (mysql_num_rows($resCheck) >= 1) {
     $sqlGetUserInfoById = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $userId . "'";
     $resGetUserInFo = mysql_query($sqlGetUserInfoById);
     $rowUserInfo = mysql_fetch_assoc($resGetUserInFo);
@@ -32,4 +32,4 @@ if (mysql_num_rows($rowGetTmpTbl) >= 1) {
     mysql_query($sqlInsert);
 }
 
-echo mysql_num_rows($rowGetTmpTbl);
+echo mysql_num_rows($resCheck);

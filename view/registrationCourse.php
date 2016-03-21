@@ -556,11 +556,13 @@ if (mysql_num_rows($res) <= 0) {
                                                 url: "moreUserTbl.php?courseId=<?= $cId ?>",
                                                 type: 'POST',
                                                 success: function (data, textStatus, jqXHR) {
-                                                    $("#loadMoreUser").html(data);
+                                                    //$("#loadMoreUser").html(data);
+                                                    window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>';
                                                 }
                                             });
                                             $("#regisMoreThan1User").toggle();
                                             $("#addMoreRegisLab").toggle();
+                                            $("#login-modal").modal('toggle');
                                         } else {
                                             var fName = resData[1].split("||")[0];
                                             var lName = resData[1].split("||")[1];

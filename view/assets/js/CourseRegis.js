@@ -67,7 +67,7 @@ function addMoreRegister(headerId, courseId) {
                                         if (data == 200) {
                                             $("#loadMoreUser").load("moreUserTbl.php?courseId=" + courseId, function () {
                                                 $('html,body').animate({
-                                                    scrollTop: $("#loadMoreUser").offset().top
+                                                    scrollTop: $("#main").offset().top
                                                 });
                                             });
                                             $("#addMoreRegisLab").toggle();
@@ -226,7 +226,7 @@ function deleteMoreUserTmp(tmpID, courseId) {
                         if (data > 0) {
                             $("#loadMoreUser").load("moreUserTbl.php?courseId=" + courseId);
                             $('html,body').animate({
-                                scrollTop: $("#loadMoreUser").offset().top
+                                scrollTop: $("#main").offset().top
                             });
                             $("#regisMoreThan1User").hide();
                             $("#addMoreRegisLab").show();
@@ -235,7 +235,7 @@ function deleteMoreUserTmp(tmpID, courseId) {
                             $("#regisMoreThan1User").show();
                             $("#addMoreRegisLab").hide();
                             $('html,body').animate({
-                                scrollTop: $("#regisMoreThan1User").offset().top
+                                scrollTop: $("#main").offset().top
                             });
                         }
                     }
