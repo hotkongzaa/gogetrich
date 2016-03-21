@@ -28,7 +28,7 @@ $theNoti = "";
 $courseID = (string) filter_input(INPUT_POST, 'courseID');
 $paymentTerm = (string) filter_input(INPUT_POST, 'paymentTerm');
 $seminarDiscount = (string) filter_input(INPUT_POST, 'seminarDiscount');
-$eventDateTime = (string) filter_input(INPUT_GET, 'timeSchedule');
+$eventDateTime = (string) filter_input(INPUT_POST, 'timeSchedule');
 
 
 $sqlGetMoreRegis = "SELECT * FROM TMP_REGISTER_" . $_SESSION['MORE_TEMP_REGIST'] . " WHERE TMP_CUS_ID =''";

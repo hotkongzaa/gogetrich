@@ -24,6 +24,9 @@ $currentFile = basename(__FILE__, '.php');
         <meta http-equiv=Content-Type content="text/html; charset=utf-8">
         <?php include './assets/css_incl.php'; ?>
         <?php include './assets/javascript_incl.php'; ?>
+        <link rel="stylesheet" href="assets/css/footable.core.css">
+        <script src="assets/js/footable.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -168,7 +171,7 @@ $currentFile = basename(__FILE__, '.php');
                                                     <h3><?= $rowGetCate['CATE_NAME'] ?></h3>
                                                 </div> <!-- /widget-header -->
                                                 <div class="widget-content">   
-                                                    <table class="table table-striped table-bordered">
+                                                    <table class="table table-striped table-bordered footable">
                                                         <thead>
                                                             <tr>
                                                                 <th width="5%">No.</th>
@@ -445,6 +448,7 @@ $currentFile = basename(__FILE__, '.php');
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
+            $('.footable').footable();
             $('#login_menu').tooltipster({
                 contentAsHTML: true,
                 content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),

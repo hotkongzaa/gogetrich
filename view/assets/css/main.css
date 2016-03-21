@@ -2105,7 +2105,8 @@ body.comingsoon-page .comming-soon h2{
     text-align:left;
 }
 .tg-post-detail blockquote{
-    font-size:30px;
+    /*font-size:30px;*/
+    font-size:25px;
     line-height:33px;
     font-weight:bold;
     text-align:center;
