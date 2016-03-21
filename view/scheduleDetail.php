@@ -28,6 +28,8 @@ $currentFile = basename(__FILE__, '.php');
         <meta http-equiv=Content-Type content="text/html; charset=utf-8">
         <?php include './assets/css_incl.php'; ?>
         <?php include './assets/javascript_incl.php'; ?>
+        <link rel="stylesheet" href="assets/css/footable.core.css">
+        <script src="assets/js/footable.js"></script>
 
     </head>
     <body>
@@ -186,11 +188,10 @@ $currentFile = basename(__FILE__, '.php');
                                         <div class="container">
                                             <div class="row">
                                                 <div class="span12">
-                                                    <table class="table table-condensed table-hover schedule_detail_table">
+                                                    <table class="table table-condensed table-hover schedule_detail_table footable">
                                                         <tbody>
-                                                            <tr>
+                                                            <tr >
                                                                 <td colspan="2" style="text-align:right !important;">
-
                                                                     <?php
                                                                     if (!isset($_SESSION['usernameFrontEnd'])) {
                                                                         ?>
@@ -433,7 +434,7 @@ $currentFile = basename(__FILE__, '.php');
     </style>
     <script type="text/javascript">
         $(document).ready(function () {
-
+            $('.footable').footable();
             $('#login_menu').tooltipster({
                 contentAsHTML: true,
                 content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-sign-out"></i> Logout</div></li></ul>'),

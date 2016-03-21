@@ -176,9 +176,9 @@ $currentFile = basename(__FILE__, '.php');
                                                             <tr>
                                                                 <th width="5%">No.</th>
                                                                 <th width="25%">Course Name</th>
-                                                                <th width="5%">Days</th>
-                                                                <th width="30%">Fee (THB)</th>
-                                                                <th width="30%">Course Schedule</th>
+                                                                <th width="5%" data-hide="phone">Days</th>
+                                                                <th width="30%" data-hide="phone">Fee (THB)</th>
+                                                                <th width="30%" data-hide="phone">Course Schedule</th>
                                                                 <th width="10%"></th>
                                                             </tr>
                                                         </thead>
@@ -199,10 +199,10 @@ $currentFile = basename(__FILE__, '.php');
                                                                             <span class="linkHover" style="cursor: pointer" onclick="showCourseDetali('<?= $rowGetCourseHeader['HEADER_ID'] ?>')"><?= $rowGetCourseHeader['HEADER_NAME'] ?></span>
                                                                         </td>
                                                                         <td><?= $rowGetCourseHeader['HEADER_COURSE_DURATION'] ?></td>
-                                                                        <td width="450px" id="<?= $rowGetCourseHeader['HEADER_ID'] ?>" style="text-align: left">                    
+                                                                        <td width="450px" id="<?= $rowGetCourseHeader['HEADER_ID'] ?>" style="text-align: left !important;">                    
                                                                             <?= $rowGetCourseHeader['HEADER_DETAIL'] ?>                                           
                                                                         </td>
-                                                                        <td style="text-align:left;" width="320px">
+                                                                        <td style="text-align:left !important;" width="320px">
                                                                             <?php
                                                                             $sqlGetEventDateTime = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME WHERE REF_COURSE_HEADER_ID = '" . $rowGetCourseHeader['HEADER_ID'] . "'";
                                                                             $resGetEventDateTime = mysql_query($sqlGetEventDateTime);
@@ -243,7 +243,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         } else {
                                                             ?>
                                                             <tr>
-                                                                <td colspan="17"> Course will available soon <span class="fa fa-clock-o"></span> </td>
+                                                                <td colspan="6"> Course will available soon <span class="fa fa-clock-o"></span> </td>
                                                             </tr>
                                                             <?php
                                                         }
