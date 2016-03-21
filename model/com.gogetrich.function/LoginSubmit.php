@@ -37,5 +37,5 @@ if ($resultLogin[0] == 503) {
     $_SESSION['usernameFrontEnd'] = $obj->{'CUS_USERNAME'};
     $_SESSION['userIdFrontEnd'] = $obj->{'CUS_ID'};
 
-    echo "200:" . $obj->{'CUS_FIRST_NAME'} . "||" . $obj->{'CUS_LAST_NAME'} . "||" . $obj->{'CUS_PHONE_NUMBER'} . "||" . $obj->{'CUS_EMAIL'} . "||" . $obj->{'CUS_CONTACT_ADDRESS'} . "||" . $obj->{'CUS_RECEIPT_ADDRESS'};
+    echo "200:" . $obj->{'CUS_FIRST_NAME'} . "||" . $obj->{'CUS_LAST_NAME'} . "||" . $obj->{'CUS_PHONE_NUMBER'} . "||" . $obj->{'CUS_EMAIL'} . "||" . $obj->{'CUS_CONTACT_ADDRESS'} . "||" . $obj->{'CUS_RECEIPT_ADDRESS'} . "||" . $obj->{'CUS_ID'};
 }

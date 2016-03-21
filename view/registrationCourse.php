@@ -546,20 +546,39 @@ if (mysql_num_rows($res) <= 0) {
                                 $("#loginForGetRes").trigger('reset');
                             }
                             if (resData[0] == 200) {
-                                var fName = resData[1].split("||")[0];
-                                var lName = resData[1].split("||")[1];
-                                var phone = resData[1].split("||")[2];
-                                var email = resData[1].split("||")[3];
-                                var contactAddr = resData[1].split("||")[4];
-                                var receiptAddr = resData[1].split("||")[5];
-                                $("#moreFirstName_1").val(fName);
-                                $("#moreLastName_1").val(lName);
-                                $("#phone_number_1").val(phone);
-                                $("#addressForContact").val(contactAddr);
-                                $("#moreUserEmail_1").val(email);
-                                $("#addressForReceipt").val(receiptAddr);
-                                $("#login-modal").modal('toggle');
-                                $("#loginForGetRes").trigger('reset');
+                                //Check if register this course
+                                $.ajax({
+                                    url: "../model/com.gogetrich.function/CheckUserEnroll.php?userId=" + resData[1].split("||")[6] + "&cid=<?= $cId ?>",
+                                    type: 'POST',
+                                    success: function (data, textStatus, jqXHR) {
+                                        if (data > 0) {
+                                            $.ajax({
+                                                url: "moreUserTbl.php?courseId=<?= $cId ?>",
+                                                type: 'POST',
+                                                success: function (data, textStatus, jqXHR) {
+                                                    $("#loadMoreUser").html(data);
+                                                }
+                                            });
+                                            $("#regisMoreThan1User").toggle();
+                                            $("#addMoreRegisLab").toggle();
+                                        } else {
+                                            var fName = resData[1].split("||")[0];
+                                            var lName = resData[1].split("||")[1];
+                                            var phone = resData[1].split("||")[2];
+                                            var email = resData[1].split("||")[3];
+                                            var contactAddr = resData[1].split("||")[4];
+                                            var receiptAddr = resData[1].split("||")[5];
+                                            $("#moreFirstName_1").val(fName);
+                                            $("#moreLastName_1").val(lName);
+                                            $("#phone_number_1").val(phone);
+                                            $("#addressForContact").val(contactAddr);
+                                            $("#moreUserEmail_1").val(email);
+                                            $("#addressForReceipt").val(receiptAddr);
+                                            $("#login-modal").modal('toggle');
+                                            $("#loginForGetRes").trigger('reset');
+                                        }
+                                    }
+                                });
                             }
                         }
                     });

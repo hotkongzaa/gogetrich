@@ -14,7 +14,7 @@ if (isset($_SESSION['usernameFrontEnd'])) {
             . "FROM RICH_CUSTOMER WHERE CUS_ID = '" . $_SESSION['userIdFrontEnd'] . "'";
     $result = mysql_query($sqlGetRich);
     $row = mysql_fetch_assoc($result);
-    echo "200:" . $row['CUS_FIRST_NAME'] . "||" . $row['CUS_LAST_NAME'] . "||" . $row['CUS_PHONE_NUMBER'] . "||" . $row['CUS_EMAIL'] . "||" . $row['CUS_CONTACT_ADDRESS'] . "||" . $row['CUS_RECEIPT_ADDRESS'];
+    echo "200:" . $row['CUS_FIRST_NAME'] . "||" . $row['CUS_LAST_NAME'] . "||" . $row['CUS_PHONE_NUMBER'] . "||" . $row['CUS_EMAIL'] . "||" . $row['CUS_CONTACT_ADDRESS'] . "||" . $row['CUS_RECEIPT_ADDRESS'] . "||" . $row['CUS_ID'];
 } else {
     echo "101:";
 }
