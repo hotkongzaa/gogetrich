@@ -84,11 +84,7 @@ $currentFile = basename(__FILE__, '.php');
             *************************************-->
             <header id="header" class="tg-haslayout">
                 <div class="container">
-                    <strong class="logo">
-                        <a href="main">
-                            <img src="assets/images/logo.png" alt="Constructioner">
-                        </a>
-                    </strong>
+                    <?php include './logo_include.php'; ?>
                     <div class="navigation-area">
                         <?php
                         if (!isset($_SESSION['usernameFrontEnd'])) {

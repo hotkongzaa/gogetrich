@@ -88,11 +88,7 @@ if (mysql_num_rows($res) <= 0) {
             *************************************-->
             <header id="header" class="tg-haslayout">
                 <div class="container">
-                    <strong class="logo">
-                        <a href="main">
-                            <img src="assets/images/logo.png" alt="Constructioner">
-                        </a>
-                    </strong>
+                    <?php include './logo_include.php'; ?>
                     <div class="navigation-area">
                         <?php
                         if (empty($_SESSION['usernameFrontEnd'])) {
