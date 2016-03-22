@@ -607,6 +607,65 @@ if (!empty($uId)) {
                 }
             });
         });
+        function submitLogin(form, cid, fPage) {
+            $.ajax({
+                url: "../model/com.gogetrich.function/LoginSubmit.php",
+                type: 'POST',
+                data: {'username': $("#usernameLogin").val(), 'password': $("#passwordLogin").val()},
+                success: function (data, textStatus, jqXHR) {
+                    var resData = data.split(":");
+                    if (resData[0] == 503) {
+                        setTimeout(function () {
+                            showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                        }, 100);
+                        $(form).trigger('reset');
+                    }
+                    if (resData[0] == 205) {
+                        setTimeout(function () {
+                            showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                        }, 100);
+                        $(form).trigger('reset');
+                    }
+                    if (resData[0] == 200) {
+                        //Check if register this course
+                        $.ajax({
+                            url: "../model/com.gogetrich.function/CheckUserEnroll.php?userId=" + resData[1].split("||")[6] + "&cid=" + cid,
+                            type: 'POST',
+                            success: function (data, textStatus, jqXHR) {
+                                if (data > 0) {
+                                    $.ajax({
+                                        url: "moreUserTbl.php?courseId=" + cid,
+                                        type: 'POST',
+                                        success: function (data, textStatus, jqXHR) {
+                                            window.location = 'registrationCourse?cId=' + cid + '&fPage=<?= $fPage ?>';
+                                        }
+                                    });
+                                    $("#regisMoreThan1User").toggle();
+                                    $("#addMoreRegisLab").toggle();
+                                    $("#login-modal").modal('toggle');
+                                } else {
+                                    window.location = 'registrationCourse?cId=' + cid + '&fPage=<?= $fPage ?>&uId=' + resData[1].split("||")[6];
+                                    var fName = resData[1].split("||")[0];
+                                    var lName = resData[1].split("||")[1];
+                                    var phone = resData[1].split("||")[2];
+                                    var email = resData[1].split("||")[3];
+                                    var contactAddr = resData[1].split("||")[4];
+                                    var receiptAddr = resData[1].split("||")[5];
+                                    $("#moreFirstName_1").val(fName);
+                                    $("#moreLastName_1").val(lName);
+                                    $("#phone_number_1").val(phone);
+                                    $("#addressForContact").val(contactAddr);
+                                    $("#moreUserEmail_1").val(email);
+                                    $("#addressForReceipt").val(receiptAddr);
+                                    $("#login-modal").modal('toggle');
+                                    $("#loginForGetRes").trigger('reset');
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        }
     </script>
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">

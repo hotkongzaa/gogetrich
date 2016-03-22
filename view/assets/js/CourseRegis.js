@@ -141,32 +141,7 @@ function initialPageRegisCourse(cid, fpage) {
         arrow: false
     });
 }
-function submitLogin(form, cid, fPage) {
-    $.ajax({
-        url: "../model/com.gogetrich.function/LoginSubmit.php",
-        type: 'POST',
-        data: {'username': $("#usernameLogin").val(), 'password': $("#passwordLogin").val()},
-        success: function (data, textStatus, jqXHR) {
-            var resData = data.split(":");
-            if (resData[0] == 503) {
-                setTimeout(function () {
-                    showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
-                }, 100);
-                $(form).trigger('reset');
-            }
-            if (resData[0] == 205) {
-                setTimeout(function () {
-                    showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
-                }, 100);
-                $(form).trigger('reset');
-            }
-            if (resData[0] == 200) {
-                window.location = 'registrationCourse?cId=' + cid + '&fPage=' + fPage;
-                $(form).trigger('reset');
-            }
-        }
-    });
-}
+
 var runSetDefaultValidation = function () {
     $.validator.setDefaults({
         errorElement: "span", // contain the error msg in a small tag
