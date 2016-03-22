@@ -174,7 +174,7 @@ $currentFile = basename(__FILE__, '.php');
                                                     <table class="table table-striped table-bordered footable">
                                                         <thead>
                                                             <tr>
-                                                                <th width="5%">No.</th>
+                                                                <th>No.</th>
                                                                 <th width="25%">Course Name</th>
                                                                 <th width="5%" data-hide="phone">Days</th>
                                                                 <th width="30%" data-hide="phone">Fee (THB)</th>
