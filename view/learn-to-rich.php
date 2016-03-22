@@ -1,3 +1,6 @@
+<?php
+$currentFile = basename(__FILE__, '.php');
+?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -184,7 +187,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span>Graphic Design, Photoshop</span-->
-                                                            <h2><a href="life-target">ล็อคเป้าหมายชีวิต</a></h2>
+                                                            <h2><a href="life-target?fPage=<?= $currentFile ?>">ล็อคเป้าหมายชีวิต</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
@@ -216,7 +219,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span>Graphic Design, Photoshop</span-->
-                                                            <h2><a href="mind-and-brain-take-to-rich">จิตและสมองพารวย</a></h2>
+                                                            <h2><a href="mind-and-brain-take-to-rich?fPage=<?= $currentFile ?>">จิตและสมองพารวย</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
@@ -247,7 +250,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="good-plan-good-health">สวยด้วยสุขภาพการเงินที่ดี</a></h2>
+                                                            <h2><a href="good-plan-good-health?fPage=<?= $currentFile ?>">สวยด้วยสุขภาพการเงินที่ดี</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
@@ -278,7 +281,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="life-by-financial">จัดการชีวีด้วยงบการเงิน</a></h2>
+                                                            <h2><a href="life-by-financial?fPage=<?= $currentFile ?>">จัดการชีวีด้วยงบการเงิน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
@@ -309,7 +312,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="perfect-life-with-retirement">เดินมั่นคงด้วยแผนเกษียณ</a></h2>
+                                                            <h2><a href="perfect-life-with-retirement?fPage=<?= $currentFile ?>">เดินมั่นคงด้วยแผนเกษียณ</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
@@ -340,7 +343,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="way-to-deduct-tax">เรียนหนทางลดหย่อนภาษี</a></h2>
+                                                            <h2><a href="way-to-deduct-tax?fPage=<?= $currentFile ?>">เรียนหนทางลดหย่อนภาษี</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
@@ -371,7 +374,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="property-investment">อสังหาดีๆมีให้ลงทุน</a></h2>
+                                                            <h2><a href="property-investment?fPage=<?= $currentFile ?>">อสังหาดีๆมีให้ลงทุน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
@@ -402,7 +405,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="learn-to-invest">เล่นหุ้นต้องศึกษา</a></h2>
+                                                            <h2><a href="learn-to-invest?fPage=<?= $currentFile ?>">เล่นหุ้นต้องศึกษา</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
@@ -433,7 +436,7 @@
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="money-freedom">อิสระทางการเงิน</a></h2>
+                                                            <h2><a href="money-freedom?fPage=<?= $currentFile ?>">อิสระทางการเงิน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
