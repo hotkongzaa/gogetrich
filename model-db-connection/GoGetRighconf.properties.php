@@ -13,3 +13,17 @@ return array(
     'msg_edit_success' => 'แก้ไขสำเร็จแล้ว',
     'applicationTimeOut' => '60'
 );
+
+/* for production server */
+//return array(
+//    'username' => 'gtrich_db',
+//    'password' => 'gogetrich',
+//    'domain' => 'localhost',
+//    'databasename' => 'gtrich_db',
+//    'connection_error_msg' => 'ไม่สามารถเชื่อมต่อฐานข้อมูลได้',
+//    'msg_encode' => 'SET NAMES utf8',
+//    'msg_save_success' => 'บันทึกสำเร็จแล้ว',
+//    'msg_delete_success' => 'ลบข้อมูลเรียบร้อย',
+//    'msg_edit_success' => 'แก้ไขสำเร็จแล้ว',
+//    'applicationTimeOut' => '60'
+//);

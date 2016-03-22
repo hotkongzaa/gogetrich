@@ -194,7 +194,7 @@ $currentFile = basename(__FILE__, '.php');
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
                                                                 ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="life-target">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="life-target?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -225,7 +225,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="mind-and-brain-take-to-rich">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="mind-and-brain-take-to-rich?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -256,7 +256,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="good-plan-good-health">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="good-plan-good-health?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -287,7 +287,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="life-by-financial">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="life-by-financial?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -318,7 +318,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="perfect-life-with-retirement">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="perfect-life-with-retirement?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -349,7 +349,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="way-to-deduct-tax">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="way-to-deduct-tax?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -380,7 +380,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="property-investment">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="property-investment?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -411,7 +411,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="learn-to-invest">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="learn-to-invest?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -442,7 +442,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         <div class="tg-description">
                                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="money-freedom">View More »</a>
+                                                        <a class="tg-viewmore-btn" href="money-freedom?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
                                                 </div>
                                             </div>
