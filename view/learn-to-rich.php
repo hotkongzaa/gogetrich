@@ -165,6 +165,7 @@ $currentFile = basename(__FILE__, '.php');
                                     </ul>
                                 </div>
                             </div-->
+                            
                             <div class="portfolio masnory tg-haslayout">
                                 <div class="portfolio-content tg-haslayout list" role="tablist">
                                     <div class="portfolio-item grid-item dentist">
