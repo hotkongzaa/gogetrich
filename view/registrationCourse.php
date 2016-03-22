@@ -17,6 +17,25 @@ if (mysql_num_rows($res) <= 0) {
 } else {
     $rowHeader = mysql_fetch_assoc($res);
 }
+
+$uId = (string) filter_input(INPUT_GET, 'uId');
+$uFirstName = "";
+$uLastName = "";
+$uPhonNumber = "";
+$uEmail = "";
+$uAContact = "";
+$uAReceipt = "";
+if (!empty($uId)) {
+    $getUserInfo = "SELECT * FROM RICH_CUSTOMER WHERE CUS_ID = '" . $uId . "'";
+    $resUserInfo = mysql_query($getUserInfo);
+    $rowGetUserInfo = mysql_fetch_assoc($resUserInfo);
+    $uFirstName = $rowGetUserInfo['CUS_FIRST_NAME'];
+    $uLastName = $rowGetUserInfo['CUS_LAST_NAME'];
+    $uPhonNumber = $rowGetUserInfo['CUS_PHONE_NUMBER'];
+    $uEmail = $rowGetUserInfo['CUS_EMAIL'];
+    $uAContact = $rowGetUserInfo['CUS_CONTACT_ADDRESS'];
+    $uAReceipt = $rowGetUserInfo['CUS_RECEIPT_ADDRESS'];
+}
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -241,24 +260,24 @@ if (mysql_num_rows($res) <= 0) {
                                             </div>
                                             <div class="form-group" id="regisMoreThan1User" style="border:1px solid #BDBDBD; padding: 15px;">                  
                                                 <label for="moreUser_1">ชื่อ (First Name)*</label> 
-                                                <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;"/>
+                                                <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uFirstName ?>"/>
                                                 <label for="moreUser_1">สกุล (Last Name)*</label> 
-                                                <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;"/>
+                                                <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
                                                 <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
-                                                <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;"/>
+                                                <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
                                                 <label for="moreUserEmail_1" >อีเมล์ (Email)*</label> 
-                                                <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;"/><br/><br/>
+                                                <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
                                                 <!--<div id="addMoreRegister"></div>-->
                                                 <div class="form-group">                                                
                                                     <label>ที่อยู่ (เพื่อออกใบเสร็จรับเงิน)</label>&nbsp; 
                                                     <input type="checkbox" id="isSameAddress" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
                                                 </div>
                                                 <div class="form-group" id="divForAddressContact">
-                                                    <textarea name="addressForContact" id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"></textarea>
+                                                    <textarea name="addressForContact" id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAContact ?></textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-                                                    <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"></textarea>
+                                                    <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAReceipt ?></textarea>
                                                 </div>
                                                 <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>', '<?= $cId ?>')">
                                                     <span class="fa fa-plus"></span> เพิ่มผู้สมัคร
@@ -373,6 +392,11 @@ if (mysql_num_rows($res) <= 0) {
     <script>
         var state = 1;
         $(document).ready(function () {
+
+            if ("<?= $uId ?>" != "") {
+                $("#regisMoreThan1User").show();
+            }
+
 
             //Load table if found user regis (In case of refresh page)
             $.ajax({
@@ -552,7 +576,6 @@ if (mysql_num_rows($res) <= 0) {
                                                 url: "moreUserTbl.php?courseId=<?= $cId ?>",
                                                 type: 'POST',
                                                 success: function (data, textStatus, jqXHR) {
-                                                    //$("#loadMoreUser").html(data);
                                                     window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>';
                                                 }
                                             });
@@ -560,6 +583,7 @@ if (mysql_num_rows($res) <= 0) {
                                             $("#addMoreRegisLab").toggle();
                                             $("#login-modal").modal('toggle');
                                         } else {
+                                            window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>&uId=' + resData[1].split("||")[6];
                                             var fName = resData[1].split("||")[0];
                                             var lName = resData[1].split("||")[1];
                                             var phone = resData[1].split("||")[2];
