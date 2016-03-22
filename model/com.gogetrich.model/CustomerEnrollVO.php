@@ -26,6 +26,7 @@ class CustomerEnrollVO {
     private $courseID;
     private $additionalUser;
     private $isRegisteredOwn;
+    private $enrollmentStatus;
 
     function getEnrollID() {
         return $this->enrollID;
@@ -121,6 +122,14 @@ class CustomerEnrollVO {
 
     function setIsRegisteredOwn($isRegisteredOwn) {
         $this->isRegisteredOwn = $isRegisteredOwn;
+    }
+
+    function getEnrollmentStatus() {
+        return $this->enrollmentStatus;
+    }
+
+    function setEnrollmentStatus($enrollmentStatus) {
+        $this->enrollmentStatus = $enrollmentStatus;
     }
 
 }

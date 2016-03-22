@@ -46,6 +46,7 @@ if (mysqli_query($con, $sql)) {
             . "PAYMENT_STATUS VARCHAR(255),"
             . "ADDITIONAL_ENROLL_CUS_NAME VARCHAR(255),"
             . "IS_REGISTERED_OWNER VARCHAR(100),"
+            . "ENROLL_STATUS VARCHAR(100),"
             . "PRIMARY KEY (ENROLL_ID),"
             . "FOREIGN KEY (ENROLL_CUS_ID) REFERENCES RICH_CUSTOMER(CUS_ID)"
             . ")ENGINE=InnoDB DEFAULT CHARSET=utf8;";

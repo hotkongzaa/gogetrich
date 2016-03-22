@@ -57,6 +57,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
             $custEnrollVO->setSeminarDiscountReason($seminarDiscount);
             $custEnrollVO->setAdditionalUser("");
             $custEnrollVO->setIsRegisteredOwn("true");
+            $custEnrollVO->setEnrollmentStatus("Confirm");
             $saveEnrollRestul = $custEnrollService->saveCustEnroll($custEnrollVO);
             if ($saveEnrollRestul == 200) {
                 //Sending email to customer and official
@@ -180,6 +181,7 @@ while ($rowGetMore = mysql_fetch_array($resGetMoreRegis)) {
                 $custEnrollVO->setSeminarDiscountReason($seminarDiscount);
                 $custEnrollVO->setAdditionalUser("");
                 $custEnrollVO->setIsRegisteredOwn("false");
+                $custEnrollVO->setEnrollmentStatus("Confirm");
                 $theNoti = $custEnrollService->saveCustEnroll($custEnrollVO);
 
                 //Sending enrollment email to customer

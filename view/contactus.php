@@ -436,7 +436,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 success: function (data, textStatus, jqXHR) {
                     $(".preloader").fadeOut("slow");
                     if (data == 200) {
-                        showWarningNotficationDialog("Send email success");
+                        showWarningNotficationDialog("Thank your your submission, Our staff contact you as soon as posible.");
                     } else {
                         showWarningNotficationDialog(data);
                     }

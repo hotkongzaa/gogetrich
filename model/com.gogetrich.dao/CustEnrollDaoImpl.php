@@ -72,8 +72,9 @@ class CustEnrollDaoImpl implements CustEnrollDao {
 
         $mysqli->set_charset("utf8");
         // prepare and bind
-        $stmt = $mysqli->prepare("INSERT INTO RICH_CUSTOMER_ENROLL (ENROLL_ID, ENROLL_CUS_ID, ENROLL_PAYMENT_TERM,ENROLL_SEMINARDISCOUNT,ENROLL_INVITESUGGEST,ENROLL_KNOWLEDGE_FOR_REASON,ENROLL_OTHER_KNOWLEDGE_FOR_REASON,ENROLL_NEWSFROM,ENROLL_COURSE_ID,CREATED_DATE_TIME,PAYMENT_STATUS,ADDITIONAL_ENROLL_CUS_NAME,IS_REGISTERED_OWNER) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,NOW(),'PENDING',?,?)");
-        $stmt->bind_param("sssssssssss", $object->getEnrollID(), $object->getRefCusID(), $object->getPaymentTerm(), $object->getSeminarDiscountReason(), $object->getInviteSuggestPersonName(), $object->getKnowledgeForReason(), $object->getOtherknowledgeForReason(), $object->getNewsFrom(), $object->getCourseID(), $object->getAdditionalUser(), $object->getIsRegisteredOwn());
+        $stmt = $mysqli->prepare("INSERT INTO RICH_CUSTOMER_ENROLL (ENROLL_ID, ENROLL_CUS_ID, ENROLL_PAYMENT_TERM,ENROLL_SEMINARDISCOUNT,ENROLL_INVITESUGGEST,ENROLL_KNOWLEDGE_FOR_REASON,ENROLL_OTHER_KNOWLEDGE_FOR_REASON,ENROLL_NEWSFROM,ENROLL_COURSE_ID,CREATED_DATE_TIME,PAYMENT_STATUS,ADDITIONAL_ENROLL_CUS_NAME,IS_REGISTERED_OWNER,ENROLL_STATUS) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,NOW(),'PENDING',?,?,?)");
+        $stmt->bind_param("ssssssssssss", $object->getEnrollID(), $object->getRefCusID(), $object->getPaymentTerm(), $object->getSeminarDiscountReason(), $object->getInviteSuggestPersonName(), $object->getKnowledgeForReason(), $object->getOtherknowledgeForReason(), $object->getNewsFrom(), $object->getCourseID(), $object->getAdditionalUser(), $object->getIsRegisteredOwn(), $object->getEnrollmentStatus());
+
         $stmt->execute();
 
         $stmt->close();
