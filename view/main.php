@@ -276,7 +276,7 @@ require '../model-db-connection/config.php';
                                         <h2>Who are you? <span>คุณเป็นใคร ในภูเขาน้ำแข็งทางการเงิน</span></h2>
                                     </div>
                                     <div class="tg-description">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.</p>
+                                        <p>คุณอยู่สถานการณ์ไหน การรู้สถานการณ์ของตัวเองจะช่วยให้การจัดการการเงินถูกทิศทาง รวมถึงการวางแผนการเงินเพื่อให้เกิดความชัดเจนเรื่องเงิน ตลอดทุกช่วงชีวิต เพื่อความสงบสุขทางใจ เพื่อสร้างความมั่นคงให้กับครอบครัว</p>
                                     </div>
                                     <div class="tg-btn-box">
                                         <a class="tg-theme-btn" href="financial-check">ตรวจสอบเดี๋ยวนี้</a>
