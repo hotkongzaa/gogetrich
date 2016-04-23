@@ -191,8 +191,10 @@ $currentFile = basename(__FILE__, '.php');
                                                             <h2><a href="life-target?fPage=<?= $currentFile ?>">ล็อคเป้าหมายชีวิต</a></h2>
                                                         </div>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
-                                                                ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit lobortis.</p>
+                                                            <p>&emsp;&emsp;&emsp;ความรู้การเงินทำให้เรารู้วิธีสร้างเป้าหมายการเงิน เหมือนมีตะกร้าเงินหลาย ๆ 
+                                                                ใบที่จะค่อยกักเก็บเงินให้คุณตามเป้าหมายการเงินที่สนับสนุนเป้าหมายชีวิตของคุณ 
+                                                                หรืออย่างน้อยคุณมีตะกร้า “เป้าหมายอิสรภาพการเงิน” ที่ชัดเจนว่าต้องมีเงินเท่าไร 
+                                                                ตอนอายุเท่าไรตามที่เรากำหนด</p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="life-target?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
