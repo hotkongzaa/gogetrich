@@ -191,7 +191,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                                 <p style="text-align:center">
                                                     <img src="assets/images/learn-to-rich/life_goal_1.jpg" alt="image description" style="width:224px;height:192px;"/>
                                                 </p>
-                                                <p>วิธีสำรวจตนเองง่าย ๆ คือ<br/>
+                                                <p><strong>วิธีสำรวจตนเองง่าย ๆ คือ</strong><br/>
                                                     &emsp;&emsp;&emsp;1. หารายได้ผ่านมือ<br/>
                                                     &emsp;&emsp;&emsp;2. หามูลค่าทรัพย์สินสุทธิที่คงเหลือปัจจุบัน<br/>
                                                     &emsp;&emsp;&emsp;3. เปรียบเทียบกับมูลค่าทรัพย์สินสุทธิคงเหลือมาตรฐาน</p>
@@ -203,44 +203,86 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                                 <p>2. หามูลค่าทรัพย์สินสุทธิที่คงเหลือปัจจุบัน
                                                     มูลค่าทรัพย์สินสุทธิ = ทรัพย์สิน – หนี้สิน
                                                     ตัวอย่าง</p>
-                                                <table class="table table-condensed table-hover schedule_detail_table" style="width:70%">
+                                                <table class="table table-condensed schedule_detail_table" style="width:70%">
                                                     <tbody>
-<!--                                                        <tr style="background-color:#E7E7E7">
-                                                            <td><strong>การเงินที่เตรียมแล้วของฉัน</strong></td>
-                                                            <td><strong>ใช่</strong></td>
-                                                            <td><strong>ไม่ใช่</strong></td>
-                                                            <td><strong>ไม่แน่ใจ</strong></td>
-                                                        </tr>-->
                                                         <tr>
-                                                            <td style="text-align:left !important;" width="300px">เงินสด</td>
-                                                            <td style="text-align:left;width:300px !important;">10,000</td>
+                                                            <td style="text-align:left !important;">เงินสด</td>
+                                                            <td style="text-align:right !important;">10,000</td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">เงินฝากธนาคาร</td>
-                                                            <td style="text-align:left !important;">100,000</td>
+                                                            <td style="text-align:right !important;">100,000</td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">LTF</td>
-                                                            <td style="text-align:left !important;">200,000</td>
+                                                            <td style="text-align:right !important;">200,000</td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">กองทุนสำรองเลี้ยงชีพ</td>
-                                                            <td style="text-align:left !important;">300,000</td>
+                                                            <td style="text-align:right !important;">300,000</td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">มูลค่าเงินสดกรมธรรม์ประกันชีวิต</td>
-                                                            <td style="text-align:left !important;">300,000</td>
+                                                            <td style="text-align:right !important;">300,000</td>
                                                         </tr>
                                                         <tr>
                                                             <td style="text-align:left !important;">บ้าน (ราคาถ้าขายได้ตอนนี้)</td>
-                                                            <td style="text-align:left !important;">3,000,000</td>
+                                                            <td style="text-align:right !important;">3,000,000</td>
                                                         </tr>
                                                         <tr>
-                                                            <td style="text-align:left !important;">รถ (ราคารขายได้ตอนนี้)</td>
-                                                            <td style="text-align:left !important;">400,000</td>
+                                                            <td style="text-align:left !important;">รถ (ราคาถ้าขายได้ตอนนี้)</td>
+                                                            <td style="text-align:right !important;">400,000</td>
+                                                        </tr>
+                                                        <tr bgcolor="#ffcc33">
+                                                            <td style="text-align:left !important;">ทรัพย์สินรวม</td>
+                                                            <td style="text-align:right !important;">4,310,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">เงินกู้ซื้อบ้านคงเหลือ</td>
+                                                            <td style="text-align:right !important;">2,000,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">เงินกู้ซื้อรถคงเหลือ</td>
+                                                            <td style="text-align:right !important;">360,000</td>
+                                                        </tr>
+                                                        <tr bgcolor="#ffcc33">
+                                                            <td style="text-align:left !important;">หนี้สินรวม</td>
+                                                            <td style="text-align:right !important;">2,360,000</td>
+                                                        </tr>
+                                                        <tr bgcolor="#ffcc33">
+                                                            <td style="text-align:left !important;">มูลค่าทรัพย์สินสุทธิ</td>
+                                                            <td style="text-align:right !important;">1,950,000</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
+                                                <p>3. เปรียบเทียบกับมูลค่าทรัพย์สินสุทธิคงเหลือมาตรฐาน</p>
+                                                <table class="table table-condensed schedule_detail_table" style="width:70%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">มูลค่าทรัพย์สินสุทธิคงเหลือ</td>
+                                                            <td style="text-align:left !important;">=  รายได้ปีล่าสุด x จำนวนปีที่ทำงาน x 20%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2"  style="text-align:left !important;">ตัวอย่าง</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">มูลค่าทรัพย์สินสุทธิคงเหลือ</td>
+                                                            <td style="text-align:left !important;">= 720,000 บาท x 15 ปี x 20%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;"></td>
+                                                            <td style="text-align:left !important;">= 2,160,000 บาท</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>&emsp;&emsp;&emsp;จากตัวอย่างรายได้ผ่านมือตั้งแต่ทำงาน 15 ปี 6,750,000 บาท มีมูลค่าทรัพย์สินสุทธิจริง 1,950,000 บาท มูลค่าทรัพย์สินที่ควรจะมีคือ 2,160,000 บาท</p>
+                                                <p align="center">“แล้วของคุณมีมูลค่าทรัพย์สินคงเหลือเท่าไร? พอใจกับสถานะการเงินตอนนี้มั้ย”</p>
+                                                <p>&emsp;&emsp;&emsp;หลายคนมองย้อนกลับไปจะเห็นว่าทำไมแทบไม่เหลืออะไรเลย เหตุผลสำคัญคือ เราไม่มีเป้าหมายการเงิน มีรายได้เข้ามาทุกเดือนก็ใช้ไป รายได้เพิ่มหรือเปลี่ยนงานมีรายได้เพิ่มขึ้น ก็รู้สึกชีวิตสะดวกสบายขึ้น ซื้อสิ่งอำนวยความสะดวกได้มากขึ้น</p>
+                                                <p>&emsp;&emsp;&emsp;ความรู้การเงินทำให้เรารู้วิธีสร้างเป้าหมายการเงิน เหมือนมีตะกร้าเงินหลาย ๆ ใบที่จะค่อยกักเก็บเงินให้คุณตามเป้าหมายการเงินที่สนับสนุนเป้าหมายชีวิตของคุณ หรืออย่างน้อยคุณมีตะกร้า “เป้าหมายอิสรภาพการเงิน” ที่ชัดเจนว่าต้องมีเงินเท่าไร ตอนอายุเท่าไรตามที่เรากำหนด</p>
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <p>*แหล่งข้อมูล: <br />“ฮาร์วาร์ด มหาวิทยาลัยที่ดีที่สุดของโลก” สอนวิธีคิด เล่มที่ 1 - “วิชาชีวิตที่ไม่มีในตำรา" https://th-th.facebook.com/beemedia/posts/973694775998954:0</p>
                                             </div>
                                         </div>
                                     </div>
