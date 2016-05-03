@@ -167,7 +167,12 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a></h3>
+                                            <h3>
+                                                <a href="blog?id=<?= md5(1) ?>">ทำไมต้องวางแผนการเงิน</a>
+                                            </h3>
+                                            <!--h3>
+                                                <a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a>
+                                            </h3-->
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
@@ -192,7 +197,12 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="financial-situation">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a></h3>
+                                            <h3>
+                                                <a href="blog?id=<?= md5(2) ?>">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a>
+                                            </h3>
+                                            <!--h3>
+                                                <a href="financial-situation">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a>
+                                            </h3-->
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
@@ -217,13 +227,18 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="financial-check">สถานะการเงินกับจิตใต้สำนึก</a></h3>
+                                            <h3>
+                                                <a href="blog?id=<?= md5(3) ?>">สถานะการเงินมิติของอารมณ์ความรู้สึก</a>
+                                            </h3>
+                                            <!--h3>
+                                                <a href="financial-status">สถานะการเงินมิติของอารมณ์ความรู้สึก</a>
+                                            </h3-->
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
                                             </div>
                                             <div class="tg-description">
-                                                <p>ทฤษฎีภูเขาน้ำแข็งของซิกมันด์ ฟรอยด์ (Sigmund Freud) บิดาแห่งจิตวิทยาผู้ให้ความสนใจพฤติกรรมของมนุษย์ที่เกี่ยวข้องกับจิตใต้สำนึก โดยเปรียบเทียบกับภูเขาน้ำแข็ง...</p>
+                                                <p>สถานะการเงินเป็นอย่างไร นอกจากความรู้การเงินแล้ว สิ่งที่มีอิทธิพลสูงกว่าคือ ความเชื่อทางสังคม วัฒนธรรม สภาพแวดล้อม การถูกเลี้ยงดู...</p>
                                             </div>
                                         </div>
                                     </div>
@@ -242,13 +257,42 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                         <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="financialpyramid-blog">ปิรามิดการเงิน</a></h3>
+                                            <h3>
+                                                <a href="blog?id=<?= md5(4) ?>">ชะตาชีวิตลิขิตได้</a>
+                                            </h3>
                                             <div class="tg-post-meta">
                                                 <span><a href="#">By Admin / </a></span>
                                                 <span><a href="#">In Map</a></span>
                                             </div>
                                             <div class="tg-description">
-                                                <p>ขั้นตอนในกระบวนการวางแผนการเงินเป็นเรื่องง่าย ๆ ที่จะซับซ้อนมากหากอธิบายเป็นตัวหนังสือเป็นข้อ ๆ ปิรามิดการเงินเป็นภาพช่วยสื่อสารขั้นตอนการวางแผนการเงิน</p>
+                                                <p>ไม่ว่าสถานการณ์การเงินปัจจุบันจะเป็นอย่างไรก็ตามไม่มีผิดไม่มีถูก ที่ผ่านมาเป็นเพียงปรากฏการณ์ มาทำความรู้จักกับกลไกธรรมชาติที่มีในทุกคน...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tg-post">
+                                        <div class="tg-post-img">
+                                            <figure>
+                                                <a href="#">
+                                                    <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                </a>
+                                            </figure>
+                                            <div class="tg-post-hover">
+                                                <ul class="tg-post-hover-icons">
+                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="tg-post-content tg-border-topleft">
+                                            <h3>
+                                                <a href="blog?id=<?= md5(5) ?>">พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน</a>
+                                            </h3>
+                                            <div class="tg-post-meta">
+                                                <span><a href="#">By Admin / </a></span>
+                                                <span><a href="#">In Map</a></span>
+                                            </div>
+                                            <div class="tg-description">
+                                                <p>หลังจากเราทราบแล้วว่าตนเองอยู่ในสถานการณ์การเงินแบบใด ต่อไปคือการเข้ากระบวนการวางแผนการเงินเพื่อไปสู่อิสรภาพการเงิน ในกระบวนการอาจจะจำเป็นต้องปรับสภาพคล่องให้เหมาะสม สร้างแผนสำรองเพื่อรองรับความไม่แน่นอน...</p>
                                             </div>
                                         </div>
                                     </div>
