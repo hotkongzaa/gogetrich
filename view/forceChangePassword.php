@@ -138,7 +138,7 @@ if ($rowGetUserInfo["FORCE_CHANGE"] == "true") {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="blog-list">Blog</a>
+                                        <a href="blog-list?page=1">Blog</a>
                                     </li>    
                                     <li>
                                         <a href="contactus">Contact us</a>

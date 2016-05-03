@@ -122,7 +122,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="blog-list">Blog</a>
+                                        <a href="blog-list?page=1">Blog</a>
                                     </li>     
                                     <li class="current-menu-item">
                                         <a href="contactus">Contact us</a>

@@ -126,7 +126,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                         <a href="#">Register</a>
                                     </li-->
                                     <li>
-                                        <a href="blog-list">Blog</a>
+                                        <a href="blog-list?page=1">Blog</a>
                                     </li>                                    
                                 </ul>
                             </div>
