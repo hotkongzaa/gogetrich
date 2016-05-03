@@ -152,161 +152,287 @@ require '../model-db-connection/config.php';
                                         <span>from our</span>
                                         <h2>Blog พารวย</h2>
                                     </div>
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/whyplanning.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
+                                    <?php
+                                    $page = (string) filter_input(INPUT_GET, 'page');
+                                    if (!empty($page)) {
+                                        if ($page == 1) {
+                                            ?>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/whyplanning.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=1&id=<?= md5(1) ?>">ทำไมต้องวางแผนการเงิน</a>
+                                                    </h3>
+                                                    <!--h3>
+                                                        <a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a>
+                                                    </h3-->
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>ยุคสมัยเปลี่ยนแปลงไป เราได้รับการศึกษาในระบบมากขึ้น โอกาสมากขึ้น มีการเปลี่ยนจากทำเกษตรกรรมในรุ่นพ่อแม่ปู่ย่าตายาย หรือค้าขายที่บ้าน มาทำงานมีรายได้ในรูปของเงินเดือนเป็นจำนวนเงินแน่นอนทุกเดือน...</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3>
-                                                <a href="blog?id=<?= md5(1) ?>">ทำไมต้องวางแผนการเงิน</a>
-                                            </h3>
-                                            <!--h3>
-                                                <a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a>
-                                            </h3-->
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/financialSit.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=1&id=<?= md5(2) ?>">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a>
+                                                    </h3>
+                                                    <!--h3>
+                                                        <a href="financial-situation">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a>
+                                                    </h3-->
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>สถานะการเงินโดยทั่วไปมีอยู่ 6 สถานการณ์: สถานะพึ่งพิง, หนี้สินล้นพ้นตัว, ไม่มีหนี้หรือมีหนี้ที่จัดการได้ แต่ไม่มีเงินเก็บ, เงินเหลือมากแต่ไม่ได้จัดการ, การเงินมั่นคงปลอดภัย, อิสรภาพการเงิน...</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="tg-description">
-                                                <p>ยุคสมัยเปลี่ยนแปลงไป เราได้รับการศึกษาในระบบมากขึ้น โอกาสมากขึ้น มีการเปลี่ยนจากทำเกษตรกรรมในรุ่นพ่อแม่ปู่ย่าตายาย หรือค้าขายที่บ้าน มาทำงานมีรายได้ในรูปของเงินเดือนเป็นจำนวนเงินแน่นอนทุกเดือน...</p>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=1&id=<?= md5(3) ?>">สถานะการเงินมิติของอารมณ์ความรู้สึก</a>
+                                                    </h3>
+                                                    <!--h3>
+                                                        <a href="financial-status">สถานะการเงินมิติของอารมณ์ความรู้สึก</a>
+                                                    </h3-->
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>สถานะการเงินเป็นอย่างไร นอกจากความรู้การเงินแล้ว สิ่งที่มีอิทธิพลสูงกว่าคือ ความเชื่อทางสังคม วัฒนธรรม สภาพแวดล้อม การถูกเลี้ยงดู...</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/financialSit.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=1&id=<?= md5(4) ?>">ชะตาชีวิตลิขิตได้</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>ไม่ว่าสถานการณ์การเงินปัจจุบันจะเป็นอย่างไรก็ตามไม่มีผิดไม่มีถูก ที่ผ่านมาเป็นเพียงปรากฏการณ์ มาทำความรู้จักกับกลไกธรรมชาติที่มีในทุกคน...</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3>
-                                                <a href="blog?id=<?= md5(2) ?>">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a>
-                                            </h3>
-                                            <!--h3>
-                                                <a href="financial-situation">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a>
-                                            </h3-->
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=1&id=<?= md5(5) ?>">พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>หลังจากเราทราบแล้วว่าตนเองอยู่ในสถานการณ์การเงินแบบใด ต่อไปคือการเข้ากระบวนการวางแผนการเงินเพื่อไปสู่อิสรภาพการเงิน ในกระบวนการอาจจะจำเป็นต้องปรับสภาพคล่องให้เหมาะสม สร้างแผนสำรองเพื่อรองรับความไม่แน่นอน...</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="tg-description">
-                                                <p>สถานะการเงินโดยทั่วไปมีอยู่ 6 สถานการณ์: สถานะพึ่งพิง, หนี้สินล้นพ้นตัว, ไม่มีหนี้หรือมีหนี้ที่จัดการได้ แต่ไม่มีเงินเก็บ, เงินเหลือมากแต่ไม่ได้จัดการ, การเงินมั่นคงปลอดภัย, อิสรภาพการเงิน...</p>
+                                            <?php
+                                        } else if ($page == 2) {
+                                            ?>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=2&id=<?= md5(6) ?>">ภาพรวมกระบวนการวางแผนการเงิน</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>หลักการในกระบวนการวางแผนการเงิน ประกอบด้วย 3 เรื่องหลัก ๆ คือ รายได้ รายจ่าย และการลงทุน เมื่อทราบแล้วว่าเรามีสถานะการเงินแบบไหน เรามาเข้ากระบวนการที่เหตุ เริ่มจากการบริหารรายจ่ายปัจจุบัน บริหารให้มีเงินเหลือออม เป็นจุดเริ่มต้นในการสร้างความมั่งคั่งที่มั่นคง...</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/financialStatus.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=2&id=<?= md5(7) ?>">กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>หลายคนอาจจะยังไม่รู้ตัวว่ารายจ่ายเพิ่มตามรายได้  อาจจะรู้สึกชีวิตสะดวกสบายขึ้น หรือนับวันอึดอัดมากขึ้นเรื่อย ๆ ด้วยรู้สึกว่าภาระมากขึ้น อาจจะรู้สึกสงสัยทำไงที่จะควบคุมรายจ่ายเพื่อให้รายได้ที่เพิ่มขึ้นกลายเป็นเงินออมที่เพิ่มขึ้นเรื่อย ๆ
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3>
-                                                <a href="blog?id=<?= md5(3) ?>">สถานะการเงินมิติของอารมณ์ความรู้สึก</a>
-                                            </h3>
-                                            <!--h3>
-                                                <a href="financial-status">สถานะการเงินมิติของอารมณ์ความรู้สึก</a>
-                                            </h3-->
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>สถานะการเงินเป็นอย่างไร นอกจากความรู้การเงินแล้ว สิ่งที่มีอิทธิพลสูงกว่าคือ ความเชื่อทางสังคม วัฒนธรรม สภาพแวดล้อม การถูกเลี้ยงดู...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3>
-                                                <a href="blog?id=<?= md5(4) ?>">ชะตาชีวิตลิขิตได้</a>
-                                            </h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>ไม่ว่าสถานการณ์การเงินปัจจุบันจะเป็นอย่างไรก็ตามไม่มีผิดไม่มีถูก ที่ผ่านมาเป็นเพียงปรากฏการณ์ มาทำความรู้จักกับกลไกธรรมชาติที่มีในทุกคน...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3>
-                                                <a href="blog?id=<?= md5(5) ?>">พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน</a>
-                                            </h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>หลังจากเราทราบแล้วว่าตนเองอยู่ในสถานการณ์การเงินแบบใด ต่อไปคือการเข้ากระบวนการวางแผนการเงินเพื่อไปสู่อิสรภาพการเงิน ในกระบวนการอาจจะจำเป็นต้องปรับสภาพคล่องให้เหมาะสม สร้างแผนสำรองเพื่อรองรับความไม่แน่นอน...</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            <?php
+                                        } else if ($page == 3) {
+                                            
+                                        } else {
+                                            
+                                        }
+                                    }
+                                    ?>
+
                                     <!--************************************
                                             Pagination Start
                                     *************************************-->
                                     <ul class="tg-pagination">
-                                        <li class="tg-prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                        <li><a href="#">1</a></li>
-                                        <!--li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li-->
-                                        <li class="tg-next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                        <li class="tg-prev">
+                                            <?php
+                                            if ($page == 3) {
+                                                ?>
+                                                <a href="blog-list?page=2">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            } else if ($page == 2) {
+                                                ?>
+                                                <a href="blog-list?page=1">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            } else if ($page == 1) {
+                                                ?>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <a href="blog-list?page=1">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            }
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <a href="blog-list?page=1">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-list?page=2">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-list?page=3">3</a>
+                                        </li>
+                                        <li class="tg-next">
+                                            <?php
+                                            if ($page == 1) {
+                                                ?>
+                                                <a href="blog-list?page=2">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                                <?php
+                                            } else if ($page == 2) {
+                                                ?>
+                                                <a href="blog-list?page=3">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                                <?php
+                                            }
+                                            ?>
+
+                                        </li>
                                     </ul>
                                     <!--************************************
                                             Pagination End
