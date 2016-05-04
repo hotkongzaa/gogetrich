@@ -358,6 +358,87 @@ require '../model-db-connection/config.php';
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=2&id=<?= md5(8) ?>">Budgeting เสาเข็มแรก</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>การทำงบประมาณหรือ Budgeting ศัพท์ดูหรู ที่รู้จักในการทำงบประมาณรายจ่ายบริษัท ดูเป็นทางการทำให้หลายคนรู้สึกว่าไกลตัว การทำงบประมาณ เป็นกำหนดตัวเลขประมาณการที่คาดว่าจะเป็นไปได้ของรายได้ ยอดค่าใช้จ่ายแต่ละประเภท รวมถึงงบประมาณการออมด้วย...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=2&id=<?= md5(9) ?>">เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>ถ้าเราเพิ่งเริ่มวางแผนการเงิน และยังไม่มีการกันเงินสำรองฉุกเฉินเลย แนะนำให้ตั้งเป้าหมายเตรียมเงินสำรองฉุกเฉิน 6 เดือนของรายจ่ายประมาณการจากงบประมาณในหัวข้อที่แล้ว และเริ่มเปิดบัญชีเงินฝากเพื่อเตรียมเงินก้อนนี้ทันที...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=2&id=<?= md5(10) ?>">ความรู้พื้นฐานก่อนการวางแผนการเงิน</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>ความรู้พื้นฐานที่ใช้ในกระบวนการวางแผนการเงินจะเกี่ยวข้องกับการคำนวณดอกเบี้ย มูลค่าเงินตามเวลา...
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <?php
                                         } else if ($page == 3) {
                                             
