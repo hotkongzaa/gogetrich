@@ -154,8 +154,8 @@ require '../model-db-connection/config.php';
                                 <?php
                                 $page = (string) filter_input(INPUT_GET, 'rPage');
                                 ?>
-                                <a href="blog-list?page=<?= $page ?>" class="btn btn-default">
-                                    <i class="fa fa-backward"></i> Back
+                                <a href="blog-list?page=<?= $page ?>" class="btn btn-default btn-sm">
+                                    <i class="fa fa-backward"></i> Back to Blog's list
                                 </a>
                                 <br/><br/>
                             </div>
@@ -377,34 +377,34 @@ require '../model-db-connection/config.php';
                                                     <strong>กิจกรรมที่ต้องเข้ากระบวนการวางแผนการเงินของสถานะการเงินแต่ละแบบสรุปดังนี้</strong>
                                                 </p>
                                                 <p>
-                                                <table class="table table-condensed table-hover schedule_detail_table">
+                                                <table class="table table-condensed table-hover schedule_detail_table" width="100%">
                                                     <tbody>
-                                                        <tr style="background-color:#E7E7E7; ">
-                                                            <td width="60%">
-                                                                <p><strong>กระบวนการวางแผนการเงิน</strong></p>
+                                                        <tr>
+                                                            <td width="50%">
+                                                                <strong>กระบวนการวางแผนการเงิน</strong>
                                                             </td>
-                                                            <td>
-                                                                <p><strong>พึ่งพาผู้อื่น</strong></p>
+                                                            <td style="width:10%">
+                                                                <strong>พึ่งพาผู้อื่น</strong>
+                                                            </td style="width:10%">
+                                                            <td style="width:10%">
+                                                                <strong>มีหนี้ไม่มีเงินเก็บ</strong>
                                                             </td>
-                                                            <td>
-                                                                <p><strong>มีหนี้ไม่มีเงินเก็บ</strong></p>
+                                                            <td style="width:10%">
+                                                                <strong>ไม่มีหนี้ไม่มีเงินเก็บ</strong>
                                                             </td>
-                                                            <td>
-                                                                <p><strong>ไม่มีหนี้ไม่มีเงินเก็บ</strong></p>
+                                                            <td style="width:10%">
+                                                                <strong>ไม่มีหนี้เงินเหลือมาก</strong>
                                                             </td>
-                                                            <td width="150px">
-                                                                <p><strong>ไม่มีหนี้เงินเหลือมาก</strong></p>
+                                                            <td style="width:10%">
+                                                                <strong>การเงินปลอดภัย</strong>
                                                             </td>
-                                                            <td>
-                                                                <p><strong>การเงินปลอดภัย</strong></p>
-                                                            </td>
-                                                            <td>
-                                                                <p><strong>อิสรภาพการเงิน</strong></p>
+                                                            <td style="width:10%">
+                                                                <strong>อิสรภาพการเงิน</strong>
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>
-                                                                <p>ปรับโครงสร้างหนี้</p>
+                                                            <td style="text-align:left !important;">
+                                                                ปรับโครงสร้างหนี้
                                                             </td>
                                                             <td>
                                                                 x
@@ -426,8 +426,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>
-                                                                <p>บันทึกรายรับรายจ่าย</p>
+                                                            <td style="text-align:left !important;">
+                                                                บันทึกรายรับรายจ่าย
                                                             </td>
                                                             <td >
                                                                 x
@@ -446,8 +446,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td >
-                                                                <p>ปรับ/ตัดรายจ่าย</p>
+                                                            <td style="text-align:left !important;">
+                                                                ปรับ/ตัดรายจ่าย
                                                             </td>
                                                             <td >
                                                                 x
@@ -466,8 +466,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td >
-                                                                <p>แบ่งประเภทรายจ่ายและทำงบประมาณรายจ่าย</p>
+                                                            <td style="text-align:left !important;">
+                                                                แบ่งประเภทรายจ่ายและทำงบประมาณรายจ่าย
                                                             </td>
                                                             <td >
                                                                 x
@@ -486,29 +486,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td >
-                                                                <p>เตรียมเงินสำรองฉุกเฉิน</p>
-                                                            </td>
-                                                            <td >
-                                                                x
-                                                            </td>
-                                                            <td >
-                                                                x
-                                                            </td>
-                                                            <td >
-                                                                x
-                                                            </td>
-                                                            <td >
-                                                                x
-                                                            </td>
-                                                            <td >
-                                                            </td>
-                                                            <td >
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td >
-                                                                <p>วางแผนภาษี</p>
+                                                            <td style="text-align:left !important;">
+                                                                เตรียมเงินสำรองฉุกเฉิน
                                                             </td>
                                                             <td >
                                                                 x
@@ -528,8 +507,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td >
-                                                                <p>วางแผนประกันภัย</p>
+                                                            <td style="text-align:left !important;">
+                                                                วางแผนภาษี
                                                             </td>
                                                             <td >
                                                                 x
@@ -549,8 +528,29 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
+                                                            <td style="text-align:left !important;">
+                                                                วางแผนประกันภัย
+                                                            </td>
                                                             <td >
-                                                                <p>วางแผนซื้อบ้านของครอบครัว</p>
+                                                                x
+                                                            </td>
+                                                            <td >
+                                                                x
+                                                            </td>
+                                                            <td >
+                                                                x
+                                                            </td>
+                                                            <td >
+                                                                x
+                                                            </td>
+                                                            <td >
+                                                            </td>
+                                                            <td >
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                วางแผนซื้อบ้านของครอบครัว
                                                             </td>
                                                             <td >
                                                                 x
@@ -570,8 +570,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td>
-                                                                <p>วางแผนการศึกษาบุตร วางแผนเกษียณอายุ วางแผนดูแลผู้สูงอายุระยะยาว</p>
+                                                            <td style="text-align:left !important;">
+                                                                วางแผนการศึกษาบุตร วางแผนเกษียณอายุ วางแผนดูแลผู้สูงอายุระยะยาว
                                                             </td>
                                                             <td >
                                                                 x
@@ -593,8 +593,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td >
-                                                                <p>จัดพอร์ตลงทุนตามความเสี่ยงที่รับได้และเป้าหมายการเงิน</p>
+                                                            <td style="text-align:left !important;">
+                                                                จัดพอร์ตลงทุนตามความเสี่ยงที่รับได้และเป้าหมายการเงิน
                                                             </td>
                                                             <td >
                                                                 x
@@ -616,8 +616,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td >
-                                                                <p>วางแผนภาษีมรดก</p>
+                                                            <td style="text-align:left !important;">
+                                                                วางแผนภาษีมรดก
                                                             </td>
                                                             <td >
                                                                 x
@@ -639,8 +639,8 @@ require '../model-db-connection/config.php';
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td >
-                                                                <p>พัฒนาความสามารถในงานปัจจุบัน/ค้นหาอาชีพที่ 2 และการสร้างธุรกิจ</p>
+                                                            <td style="text-align:left !important;">
+                                                                พัฒนาความสามารถในงานปัจจุบัน/ค้นหาอาชีพที่ 2 และการสร้างธุรกิจ
                                                             </td>
                                                             <td >
                                                                 x
@@ -772,11 +772,376 @@ require '../model-db-connection/config.php';
                                     </article>
                                     <?php
                                 } else if ($_GET['id'] == md5(8)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>Budgeting เสาเข็มแรก</legend></p>
+                                                <p>
+                                                    &emsp;&emsp;&emsp;การทำงบประมาณหรือ Budgeting ศัพท์ดูหรู ที่รู้จักในการทำงบประมาณรายจ่ายบริษัท ดูเป็นทางการทำให้หลายคนรู้สึกว่าไกลตัว การทำงบประมาณ เป็นกำหนดตัวเลขประมาณการที่คาดว่าจะเป็นไปได้ของรายได้ ยอดค่าใช้จ่ายแต่ละประเภท รวมถึงงบประมาณการออมด้วย
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img src="assets/images/blog/blog_list_8_1.png" />
+                                                </p>
+                                                <p>
+                                                    <strong>ขั้นตอนทำงบประมาณ</strong><br/>
+                                                    1.	บันทึกงบประมาณรายได้ เป็นประมาณการรายได้ที่จะได้รับ<br/>
+                                                    2.	บันทึกงบประมาณรายจ่าย เป็นประมาณการรายจ่ายแต่ละหมวด แบ่งเป็น 3 กลุ่ม คือ ค่าใช้จ่ายคงที่ ค่าใช้จ่ายผันแปร และเงินออมตามเป้าหมาย<br/>
+                                                    3.	เทียบงบประมาณรายรับและรายจ่าย ถ้าติดลบ ขยับปรับเปลี่ยนที่เงินออมและค่าใช้จ่ายผันแปรจนกว่าจะไม่ติดลบ<br/>
+                                                    4.	รายได้รวมหักรายจ่ายคงที่ จึงจะนำเงินที่เหลือมาทำงบประมาณรายจ่ายผันแปรและเงินออม<br/>
+                                                    5.	รายจ่ายต่าง ๆ นอกจากแยกในการบันทึกงบประมาณแล้ว “ต้องแยกเงินจริง ๆ” ด้วย <br/>
+                                                    &emsp;&emsp;•จ่ายเดือนละครั้งแยกเข้าบัญชีธนาคาร<br/>
+                                                    &emsp;&emsp;•รายจ่ายที่จ่ายบ่อย เดือนละหลายครั้ง เช่น ค่าอาหาร ค่าเดินทาง ฯลฯ แยกเงินออกมาใส่กล่องหรือซอง <br/>
+                                                    6.	รายจ่ายที่จ่ายบ่อยให้บันทึกเทียบกับงบประมาณ ซึ่งจะทำให้เราแก้ปัญหาค่าใช้จ่ายเกินได้ตรงจุด<br/>
+                                                    7.	รายจ่ายที่จ่ายปีละครั้ง เช่น ค่าเบี้ยประกัน ค่าส่วนกลางหมู่บ้าน ฯลฯ นำค่าใช้จ่ายมาหาร 12 เสมือนจ่ายรายเดือน แต่ให้ออมใส่บัญชีธนาคาร*อีก 1 เล่ม จะไม่เป็นภาระเมื่อถึงงวดที่ต้องชำระ<br/>
+                                                </p>
+                                                <p>
+                                                    &emsp;&emsp;&emsp;ขั้นตอนข้างต้นในการทำงบประมาณรายจ่ายวิธีนี้เป็นวิธีการแบบง่าย ๆ นี้สามารถเริ่มต้นทำได้เลย พร้อม ๆ กับการบันทึกรายจ่าย  เมื่อเราเห็นค่าใช้จ่ายหมวดใดเกิน เดือนถัดไปแยกมาจดเป็นรายละเอียด จะเห็นรายการค่าใช้จ่ายที่เกินชัดเจนขึ้น
+                                                </p>
+                                                <p>
+                                                    &emsp;&emsp;&emsp;ช่วงแรกงบประมาณที่ใกล้เคียงกับการใช้จ่ายจริง ๆ มีการเปลี่ยนแปลงขยับขึ้นขยับลงได้ เนื่องจากระยะแรก ๆ ค่าใช้จ่ายบางรายการอาจจะถูกปรับเปลี่ยน ถ้าไม่เคยบันทึกรายจ่ายเลยใช้เวลาอย่างน้อย 12 เดือน งบประมาณจะชัดเจนขึ้น
+                                                </p>
+                                                <p >
+                                                    <strong style="color: #0e62c7">“การทำงบประมาณรายจ่ายจำเป็นอย่างยิ่ง สำหรับอาชีพที่มีรายได้ไม่สม่ำเสมอ มากบ้างน้อยบ้าง 
+                                                        การทำงบประมาณจะช่วยหยุดและป้องกันการเข้าสู่วงจรหนี้ครัวเรือนได้”</strong>
+                                                </p>
+                                                <p>
+                                                    &emsp;&emsp;&emsp;การทำงบประมาณรายจ่ายจำเป็นอย่างยิ่ง สำหรับอาชีพที่มีรายได้ไม่สม่ำเสมอ มากบ้างน้อยบ้าง จะช่วยหยุดและป้องกันการเข้าสู่วงจรหนี้ครัวเรือนได้ ถ้าไม่มีการทำงบประมาณกำกับการใช้จ่าย ในเดือนที่มีรายได้มากก็จะใช้มาก ในขณะที่เดือนที่มีรายได้น้อยรายได้ติดลบ จะต้องกู้หนี้ยืมสินมาใช้จ่าย
+                                                </p>
+                                                <p>
+                                                    &emsp;&emsp;&emsp;การมีงบประมาณรายจ่ายที่ชัดเจน ในเดือนที่มีรายได้มากกว่างบประมาณรายจ่ายมาก ๆ ให้เก็บเงินส่วนเกินสำรองไว้ในเดือนที่มีรายได้เข้ามาน้อยกว่ารายจ่าย
+                                                </p>
+                                                <p>
+                                                    &emsp;&emsp;&emsp;ทุกครั้งที่มีการเปลี่ยนแปลงในชีวิต เช่น แต่งงาน, มีลูกคนใหม่ ฯลฯ งบประมาณจะต้องปรับเปลี่ยนตามสถานการณ์ และแน่นอน เราจำเป็นต้องมีการบันทึกรายจ่ายละเอียดอีกครั้ง เพื่อให้โครงสร้างของงบประมาณรายจ่ายรองรับรูปแบบชีวิตที่เปลี่ยนแปลงไป<br/>
+                                                    *ปัจจุบันอัตราดอกเบี้ยเงินฝากธนาคารเพียง 0.5-1.5% และเสียภาษีหัก ณ ที่จ่าย 15% แนะนำให้สำรองเงินไว้ใน “กองทุนรวมตลาดเงิน” เป็นกองทุนรวมที่ลงทุนในตราสารหนี้ระยะสั้น ไม่เกิน 1 ปี เช่น ตั๋วเงินคลัง ได้ผลตอบแทนสุทธิเกือบ 2% ไม่เสียภาษี
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 } else if ($_GET['id'] == md5(9)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง</legend></p>
+                                                <p>
+                                                    &emsp;&emsp;&emsp;ถ้าเราเพิ่งเริ่มวางแผนการเงิน และยังไม่มีการกันเงินสำรองฉุกเฉินเลย แนะนำให้ตั้งเป้าหมายเตรียมเงินสำรองฉุกเฉิน 6 เดือนของรายจ่ายประมาณการจากงบประมาณในหัวข้อที่แล้ว และเริ่มเปิดบัญชีเงินฝากเพื่อเตรียมเงินก้อนนี้ทันที
+                                                </p>
+
+                                                <p>
+                                                    &emsp;&emsp;&emsp;หลายคนเห็นความจำเป็นของเงินสำรองฉุกเฉินแล้ว ก็จะมีคำถามต่อไปว่าแล้วอย่างเรา &ldquo;ต้องเตรียมเท่าไร&rdquo;, หรือค่าใช้จ่ายติดลบทุกเดือน อย่างนี้จะเอาเงินที่ไหนมาเตรียมเงินสำรองฉุกเฉิน</p>
+
+                                                <p>
+                                                    <strong>&ldquo;ค่าใช้จ่ายติดลบทุกเดือน จะเอาเงินที่ไหนมาเตรียมเงินสำรองฉุกเฉิน&rdquo;</strong>
+                                                </p>
+
+                                                <p>
+                                                    •  ควรเตรียมเงินสำรองฉุกเฉินเท่าไร?<br/>
+                                                    •  ควรเตรียมเงินสำรองฉุกเฉินอย่างไร?<br/>
+                                                </p>
+
+                                                <p>
+                                                    <strong><u>ควรเตรียมเงินสำรองฉุกเฉินเท่าไร</u><u>?</u></strong>
+                                                </p>
+
+                                                <p >การจะเตรียมเท่าไรนั้นสัมพันธ์กับอาชีพ ภาระความรับผิดชอบ และผู้ร่วมรับผิดชอบครอบครัว</p>
+
+                                                <table class="table table-condensed table-hover schedule_detail_table" style="width:70%">
+                                                    <tbody>
+                                                        <tr >
+                                                            <td>
+                                                                <strong>สถานการณ์</strong>
+                                                            </td>
+                                                            <td>
+                                                                <strong>จำนวนเท่าของค่าใช้จ่ายต่อเดือน</strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;เงินเดือนประจำคู่สมรส
+                                                            </td>
+                                                            <td>
+                                                                3 เดือน
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;เงินเดือนประจำรายได้คนเดียว
+                                                            </td>
+                                                            <td >
+                                                                6 เดือน
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;รายได้ค่านายหน้าอย่างเดียว
+                                                            </td>
+                                                            <td >
+                                                                6 เดือน
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;อาชีพที่หางานยาก เช่น ตำแหน่งงานที่มีรายได้สูงมาก
+                                                            </td>
+                                                            <td >
+                                                                12 เดือน
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;เปลี่ยนงานจากลูกจ้างเป็นเจ้าของกิจการ
+                                                            </td>
+                                                            <td >
+                                                                12 เดือน
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;อาชีพอิสระที่มีรายได้ไม่สม่ำเสมอ
+                                                            </td>
+                                                            <td >
+                                                                12 เดือน
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div style="clear:both;">&nbsp;</div>
+
+                                                <p >*เตรียมเงินสำรองฉุกเฉินจำนวนกี่เดือนนี้เป็นประมาณการ</p>
+
+                                                <p>
+                                                    <strong><u>ควรเตรียมเงินสำรองฉุกเฉินอย่างไร</u><u>?</u></strong>
+                                                </p>
+
+                                                <p>
+                                                    สรุปวิธีการเตรียมเงินฉุกเฉินได้ดังนี้<br/>
+                                                    •  เปิดบัญชีเงินฝากธนาคารเป็นบัญชีเงินสำรองฉุกเฉินวัตถุประสงค์เดียว*<br/>
+                                                    •  ทยอยเก็บสะสมทุกเดือนจนกว่าจะครบ<br/>
+                                                    •  บันทึกค่าใช้จ่ายแล้ว ลองสำรวจดูว่ามีค่าใช้จ่ายประเภท ไม่ซื้อชีวิตก็ยังคงดำเนินได้ปกติ ดูตัวอย่าง<br/>
+                                                </p>
+
+                                                <table class="table table-condensed table-hover schedule_detail_table" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>รายการค่าใช้จ่าย</strong>
+                                                            </th>
+                                                            <th>
+                                                                <strong>ราคา (บาท)</strong>
+                                                            </th>
+                                                            <th colspan="2">
+                                                                <strong>ความถี่</strong>
+                                                            </th>
+                                                            <th style="width: 10%">
+                                                                <strong>ค่าใช้จ่ายต่อเดือน</strong>
+                                                            </th>
+                                                            <th style="width: 30%">
+                                                                <strong>ของทดแทน/ตัดรายจ่าย</strong>
+                                                            </th>
+                                                            <th style="width:5%">
+                                                                <strong>ราคา(บาท)</strong>
+                                                            </th>
+                                                            <th style="width:10%">
+                                                                <strong>เงินเหลือ</strong>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;กาแฟสด
+                                                            </td>
+                                                            <td>
+                                                                60
+                                                            </td>
+                                                            <td >
+                                                                2
+                                                            </td>
+                                                            <td >
+                                                                ต่อวัน
+                                                            </td>
+                                                            <td >
+                                                                1,800
+                                                            </td>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;ซื้อกาแฟ Gold มาชงเอง
+                                                            </td>
+                                                            <td >
+                                                                20
+                                                            </td>
+                                                            <td >
+                                                                1,200
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;เสื้อผ้าตลาดนัด
+                                                            </td>
+                                                            <td >
+                                                                200
+                                                            </td>
+                                                            <td >
+                                                                1
+                                                            </td>
+                                                            <td >
+                                                                ต่อสัปดาห์
+                                                            </td>
+                                                            <td >
+                                                                800
+                                                            </td>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;เสื้อผ้าเยอะแล้ว (ไม่ซื้อ)
+                                                            </td>
+                                                            <td >
+                                                                &nbsp;
+                                                            </td>
+                                                            <td >
+                                                                800
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;ค่าทางด่วนไปกลับ
+                                                            </td>
+                                                            <td >
+                                                                60
+                                                            </td>
+                                                            <td>
+                                                                2
+                                                            </td>
+                                                            <td>
+                                                                ต่อวัน
+                                                            </td>
+                                                            <td >
+                                                                2,640
+                                                            </td>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;ใช้ทางด่วนขาไปขากลับหาเส้นทางใหม่ไกลขึ้น 10 กิโลเมตร
+                                                            </td>
+                                                            <td>
+                                                                85
+                                                            </td>
+                                                            <td>
+                                                                770
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;น้ำอัดลม
+                                                            </td>
+                                                            <td >
+                                                                14
+                                                            </td>
+                                                            <td >
+                                                                2
+                                                            </td>
+                                                            <td >
+                                                                ต่อวัน
+                                                            </td>
+                                                            <td >
+                                                                840
+                                                            </td>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;น้ำอัดลม 1 กระป๋อง
+                                                            </td>
+                                                            <td >
+                                                                14
+                                                            </td>
+                                                            <td >
+                                                                420
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;อาหารมือพิเศษ
+                                                            </td>
+                                                            <td >
+                                                                500
+                                                            </td>
+                                                            <td >
+                                                                4
+                                                            </td>
+                                                            <td >
+                                                                ต่อสัปดาห์
+                                                            </td>
+                                                            <td >
+                                                                496
+                                                            </td>
+                                                            <td style="text-align:left !important;">
+                                                                &nbsp;ลดเหลือ 2 ครั้งต่อเดือน
+                                                            </td>
+                                                            <td >
+                                                                &nbsp;
+                                                            </td>
+                                                            <td >
+                                                                1,000
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="4" style="text-align:left !important;">
+                                                                รวมค่าใช้จ่าย
+                                                            </td>
+                                                            <td >
+                                                                6,576
+                                                            </td>
+                                                            <td colspan="2" style="text-align:left !important;">
+                                                                รวมค่าใช้จ่ายที่ประหยัดได้
+                                                            </td>
+                                                            <td >
+                                                                4,190
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <p>ซื้อกาแฟทุกวันแก้วละ 60 บาท x 30 วัน = 1,800 บาท:เดือน x 12 เดือน =21,600 บาท:ปี</p>
+
+                                                <p>อาหารมื้อพิเศษครั้งละ 500 บาท สัปดาห์ละครั้ง x 4 ครั้ง =2,000 บาท:เดือน x 12 เดือน =24,000 บาท:ปี</p>
+
+                                                <p>ค่ากาแฟ ค่าอาหารมื้อพิเศษ ค่าเสื้อผ้า ค่าของจุกจิ๊กเวลาไปเดินตลาดนัด เช่น เสื้อผ้า ดูตัวอย่างตารางข้างบน เราสามารถลดค่าใช้จ่ายบางรายการได้ เช่น กาแฟแก้วละ 60 บาท เปลี่ยนเป็นซื้อมาชงเอง หรือทานกาแฟบริษัท, หรือหาเส้นทางเดินทางใหม่ที่ลดการจ่ายค่าทางด่วนหรือย่นระยะทางให้สั้นลง ฯลฯ ได้เงินออมเพิ่มขึ้นเดือนละ 4 พันกว่าบาท</p>
+
+                                                <p>&nbsp;อย่างไรก็ตาม, ถ้ารู้สึกว่าอึดอัดเกินไป ความสุขหายไป ยังไม่จำเป็นต้องตัดค่าใช้จ่ายส่วนนี้ออก แนะนำให้ตั้งเป็นงบประมาณสำหรับความสุข และใช้ให้หมดเป็นเดือน ๆ ไป ก็ยังมีความสุขได้ในงบประมาณที่กำหนด เรียกว่า &ldquo;มีความสุขแบบรู้ตัว&rdquo;</p>
+
+                                                <p>&nbsp;</p>
+
+                                                <p >*เราสามารถนำเงินส่วนหนึ่งมาซื้อกองทุนรวมตลาดเงินที่ได้ผลตอบแทนมากกว่าเปลี่ยนเป็นเงินสดพร้อมใช้ได้ในวันรุ่งขึ้น</p>
+
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 } else if ($_GET['id'] == md5(10)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>ความรู้พื้นฐานก่อนการวางแผนการเงิน</legend></p>                                                
+                                                <p>
+                                                    <strong>ความรู้พื้นฐานที่ใช้ในกระบวนการวางแผนการเงินจะเกี่ยวข้องกับการคำนวณดอกเบี้ย มูลค่าเงินตามเวลา</strong><br/>
+                                                    •	กฎ 72<br/>
+                                                    •	พลังดอกเบี้ยทบต้น<br/>
+                                                    •	เงินเฟ้อ และมูลค่าเงินตามเวลา<br/>
+                                                    •	ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้<br/>
+
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 } else if ($_GET['id'] == md5(11)) {
                                     
                                 } else if ($_GET['id'] == md5(12)) {
