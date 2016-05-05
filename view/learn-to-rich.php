@@ -258,7 +258,10 @@ $currentFile = basename(__FILE__, '.php');
                                                             <h2><a href="good-plan-good-health?fPage=<?= $currentFile ?>">สวยด้วยสุขภาพการเงินที่ดี</a></h2>
                                                         </div>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                            <p>&emsp;&emsp;&emsp;สวยหล่อด้วยสุขภาพการเงินที่ดี จากภายในสู่ภายนอก สุขภาพการเงินที่ดีสร้างความสงบสุขเติมเต็ม 
+                                                                เป็นพลังงานสงบที่ผู้คนรอบข้างสัมผัสได้</p>
+                                                            <p>&emsp;&emsp;&emsp;สุขภาพการเงินที่ดีเป็นอย่างไร? ไม่กังวลค่าใช้จ่ายที่เกิดขึ้นในทุกช่วงของชีวิต รายรับ - รายจ่ายปัจจุบันสมดุล 
+                                                                เตรียมพร้อมค่าใช้จ่ายอนาคตในสถานการณ์ปกติ และพร้อมในสถานการณ์ไม่ปกติ</p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="good-plan-good-health?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
@@ -289,7 +292,8 @@ $currentFile = basename(__FILE__, '.php');
                                                             <h2><a href="life-by-financial?fPage=<?= $currentFile ?>">จัดการชีวีด้วยงบการเงิน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                            <p>&emsp;&emsp;&emsp;จากการประเมินสุขภาพการเงิน เราจะพบต้นเหตุมาจากกการบริหารจัดการเงิน การขาดความรู้ความเข้าใจในการจัดการเงิน 
+                                                                ทำให้ค่าใช้จ่ายสูง มีเงินออมเหลือน้อย การบริหารจัดการเงินง่ายๆ เพื่อสุขภาพการเงินที่ดี</p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="life-by-financial?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
@@ -320,7 +324,8 @@ $currentFile = basename(__FILE__, '.php');
                                                             <h2><a href="perfect-life-with-retirement?fPage=<?= $currentFile ?>">เดินมั่นคงด้วยแผนเกษียณ</a></h2>
                                                         </div>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                            <p>&emsp;&emsp;&emsp;คนส่วนใหญ่อายุใกล้เกษียณจะเริ่มสนใจเตรียม อายุที่สนใจเตรียมเงินเกษียณอายุคือ คนอายุ 40-45 ปี ขึ้นไป 
+                                                                ทำให้เป็นภาระหนักในการเตรียมเงินเกษียณในเวลาทำงานที่เหลือสั้น ๆ</p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="perfect-life-with-retirement?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>

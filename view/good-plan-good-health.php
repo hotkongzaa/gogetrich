@@ -239,10 +239,10 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                                 <p style="text-align:center">
                                                     <img src="assets/images/learn-to-rich/beauty_and_health_1.jpg" alt="image description"/>
                                                 </p>
+<!--                                                <br />
                                                 <br />
                                                 <br />
-                                                <br />
-                                                <p>*ข้อมูลจาก: กรรมตามสมอง, ขุนเขา สินธุเสน เขจรบุตร</p>
+                                                <p>*ข้อมูลจาก: กรรมตามสมอง, ขุนเขา สินธุเสน เขจรบุตร</p>-->
                                             </div>
                                         </div>
                                     </div>
