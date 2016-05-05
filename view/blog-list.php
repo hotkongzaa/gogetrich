@@ -318,7 +318,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/life-destiny_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -345,7 +345,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/financial_freedom_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -375,7 +375,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/financial_planning_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -402,7 +402,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/7_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -429,7 +429,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/8_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -456,7 +456,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/9_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -483,7 +483,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/10_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -678,13 +678,13 @@ require '../model-db-connection/config.php';
                                             } else if ($page == 1) {
                                                 ?>
                                                 <a href="javascript:void(0)">
-                                                    <i class="fa "></i>
+                                                    <i class="fa fa-angle-left"></i>
                                                 </a>
                                                 <?php
                                             } else {
                                                 ?>
                                                 <a href="blog-list?page=1">
-                                                    <i class="fa"></i>
+                                                    <i class="fa fa-angle-left"></i>
                                                 </a>
                                                 <?php
                                             }

@@ -322,7 +322,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/life-destiny_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -359,7 +359,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/financial_freedom_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -676,7 +676,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/financial_planning_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -720,7 +720,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/7_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -775,7 +775,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/8_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -827,7 +827,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/9_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1124,7 +1124,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/10_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
