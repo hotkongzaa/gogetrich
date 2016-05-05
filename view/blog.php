@@ -155,7 +155,7 @@ require '../model-db-connection/config.php';
                                 $page = (string) filter_input(INPUT_GET, 'rPage');
                                 ?>
                                 <a href="blog-list?page=<?= $page ?>" class="btn btn-default btn-sm">
-                                    <i class="fa fa-backward"></i> Back to Blog's list
+                                    <i class="fa fa-backward"></i> กลับสู่ BLOG พารวย
                                 </a>
                                 <br/><br/>
                             </div>
@@ -1131,11 +1131,10 @@ require '../model-db-connection/config.php';
                                                 <p><legend>ความรู้พื้นฐานก่อนการวางแผนการเงิน</legend></p>                                                
                                                 <p>
                                                     <strong>ความรู้พื้นฐานที่ใช้ในกระบวนการวางแผนการเงินจะเกี่ยวข้องกับการคำนวณดอกเบี้ย มูลค่าเงินตามเวลา</strong><br/>
-                                                    •	กฎ 72<br/>
-                                                    •	พลังดอกเบี้ยทบต้น<br/>
-                                                    •	เงินเฟ้อ และมูลค่าเงินตามเวลา<br/>
-                                                    •	ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้<br/>
-
+                                                    •	<a href="blog?rPage=3&id=<?= md5(11) ?>">กฎ 72</a><br/>
+                                                    •	<a href="blog?rPage=3&id=<?= md5(12) ?>">พลังดอกเบี้ยทบต้น</a><br/>
+                                                    •	<a href="blog?rPage=3&id=<?= md5(13) ?>">เงินเฟ้อ และมูลค่าเงินตามเวลา</a><br/>
+                                                    •	<a href="blog?rPage=3&id=<?= md5(14) ?>">ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้</a><br/>
                                                 </p>
 
                                             </div>
@@ -1143,17 +1142,264 @@ require '../model-db-connection/config.php';
                                     </article>
                                     <?php
                                 } else if ($_GET['id'] == md5(11)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>กฎ 72 </legend></p>                                                
+                                                <p>การหาระยะเวลาที่เงินจะเติบโตเป็น 2 เท่า ในอัตราดอกเบี้ยที่กำหนด หรือคำนวณหาผลตอบแทนที่ต้องการเงินเติบโตเป็น 2 เท่าในระยะเวลาที่ต้องการ</p>
+
+                                                <p><u>สูตร</u>72/อัตราผลตอบแทนที่กำหนด</p>
+
+                                                <p>เช่น อัตราดอกเบี้ย 6% ต่อปี 72/6 = 12 ปี</p>
+
+                                                <p>หมายความว่า ถ้าเงินต้น 100,000 บาท ดอกเบี้ยทบต้น 6% ใช้เวลา 12 ปี จะกลายเป็นเงิน 200,000 บาท</p>
+
+                                                <p>เงินต้น 100,000 บาท ต้องการให้เงินเติบโต 200,000 บาทภายใน 10 ปี ต้องหาผลตอบแทนเฉลี่ยต่อปี 7.2%</p>
+
+                                                <table  class="table table-condensed table-hover schedule_detail_table" style="width:60%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th >
+                                                                อัตราผลตอบแทนทบต้น
+                                                            </th>
+                                                            <th>
+                                                                จำนวนปีเงินเพิ่มเป็น 2 เท่า
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                2%
+                                                            </td>
+                                                            <td >
+                                                                72/2=36 ปี                                                            
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td >
+                                                                4%
+                                                            </td>
+                                                            <td >
+                                                                72/4=18 ปี
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td >
+                                                                6%
+                                                            </td>
+                                                            <td >
+                                                                72/6=12 ปี
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td >
+                                                                8%
+                                                            </td>
+                                                            <td >
+                                                                72/8=9 ปี
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td >
+                                                                10%
+                                                            </td>
+                                                            <td >
+                                                                72/10=7.2 ปี
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td >
+                                                                12%
+                                                            </td>
+                                                            <td >
+                                                                72/12=6 ปี
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div style="clear:both;">&nbsp;</div>
+
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 } else if ($_GET['id'] == md5(12)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>พลังดอกเบี้ยทบต้น</legend></p>                                                
+                                                <p>
+                                                    <strong style="color: #0e62c7">“The most powerful force in the universe is compound interest.”
+                                                        พลังที่ทรงพลังมากที่สุดในจักรวาลคือพลังดอกเบี้ยทบต้น
+                                                        กล่าวโดย “อัลเบิร์ต ไอน์สไตน์”</strong>
+                                                </p>
+                                                <p>
+                                                    ดอกเบี้ยทบต้นคือ ดอกเบี้ยที่คิดจากเงินต้นบวกดอกเบี้ยและรวมดอกเบี้ยกับเงินต้นคำนวณในรอบถัดไปเรื่อย ๆ
+                                                </p>
+                                                <p>
+                                                    เงินต้น 1,000,000 บาท อัตราดอกเบี้ย 10% คำนวณเปรียบเทียบไม่ทบต้นและทบต้นเป็นระยะเวลา 20 ปี จำนวนเงินต่างกันมากกว่า 1 เท่า
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img src="assets/images/blog/blog_list_12_1.png" />
+                                                </p>
+                                                <p>
+                                                    เปรียบเทียบแล้วจะเห็นได้ชัดเจน การคำนวณดอกเบี้ยชั้นเดียวกับดอกเบี้ยทบต้นต่างกันมาก การออมได้อัตราดอกเบี้ยทบต้น จะช่วยผ่อนแรงการออมให้เราถึงเป้าหมายง่ายดายขึ้น
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 } else if ($_GET['id'] == md5(13)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>เงินเฟ้อ และมูลค่าเงินตามเวลา</legend></p>                                                
+                                                <p>
+                                                    เงินเฟ้อ คือ ใช้เงินเท่าเดิมซื้อของได้น้อยลง  หรือของเท่าเดิมต้องใช้เงินมากขึ้น ดูธรรมดาที่รู้กันอยู่แล้ว แต่ไม่ธรรมดาเมื่อเราต้องคำนวณคาดการณ์ในวันที่เราเกษียณในอีก 20 ปี 30 ปี ข้างหน้า ในการครองชีพด้วยค่าใช้จ่ายจำเป็นวันนี้กับวันที่เกษียณแตกต่างกันจนน่าตกใจ
+                                                </p>
+                                                <p>
+                                                    ลองมาดูสถิติจริงของเงินเฟ้อประเทศไทยย้อนหลังจากปีพ.ศ. 2558 30 ปี ปี พ.ศ. 2529-2558 แต่ละปีเงินเฟ้อไม่เท่ากัน ราคาสินค้าปีเริ่มต้น 100 บาท ถึงปีที่ 30 ราคาสินค้ากลายเป็น 270.79 บาท
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img src="assets/images/blog/blog_list_13_1.png" />
+                                                </p>
+                                                <p>
+                                                    ถ้าใช้สถิติอดีตย้อนหลัง 30 ปี วันนี้ค่าใช้จ่ายเดือนละ 10,000 บาท ต้องเตรียมเงิน 27,000 บาท ซื้อของในปริมาณเท่ากัน
+                                                </p>
+                                                <p>
+                                                    เงินเฟ้อไม่เท่ากันวิเคราะห์ยาก ค่าเฉลี่ยเงินเฟ้อเฉลี่ยเท่ากันทุกปี 3.8% สินค้าราคาเริ่มต้น 100 บาท คำนวณแบบเดียวกับดอกเบี้ยทบต้น 3.8% ได้ 270.79 บาท เท่ากัน
+                                                </p>
+                                                <p>
+                                                    ***  ค่าใช้จ่ายเดือนละ A บาท <br/>
+                                                    อัตราเงินเฟ้อ B %<br/>
+                                                    จำนวนปีก่อนเกษียณ C ปี<br/>
+                                                    ค่าใช้จ่ายปีที่เกษียณ A*(1+B/100)^C บาท<br/>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 } else if ($_GET['id'] == md5(14)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้</legend></p>                                                
+                                                <p>
+                                                    เงินกู้แบ่งเป็น 2 ประเภท คือ <br/>
+                                                    &nbsp;&nbsp;<strong style="color: #0e62c7">1. แบบมีทรัพย์สินเป็นหลักประกัน</strong> อัตราดอกเบี้ยต่ำกว่า เช่น สินเชื่อบ้าน สินเชื่อรถยนต์<br/>
+                                                    &nbsp;&nbsp;<strong style="color: #0e62c7">2. แบบไม่มีทรัพย์สินเป็นหลักประกัน</strong> มีอัตราดอกเบี้ยสูง และสูงมาก เช่น สินเชื่อบุคคล ดอกเบี้ยบัตรเครดิต เนื่องจากความเสี่ยงของผู้ให้กู้สูงกว่าแบบแรก<br/>
+
+                                                </p>
+
+                                                <p style="text-align: center">
+                                                    <img src="assets/images/blog/blog_list_14_1.png" />
+                                                </p>
+                                                <p>
+                                                    <strong style="color: #0e62c7">วิธีคำนวณดอกเบี้ยเงินกู้</strong><br/>
+                                                    วิธีคำนวณดอกเบี้ยเงินกู้มี 2 แบบ คือ<br/>
+                                                    &nbsp;&nbsp;1.	คิดดอกเบี้ยแบบลดต้นลดดอก  ได้แก่ ค่างวดผ่อนบ้าน ค่างวดกู้เอนกประสงค์ <br/>
+                                                    &nbsp;&nbsp;2.	คิดดอกเบี้ยแบบดอกเบี้ยคงที่ ได้แก่ ค่างวดผ่อนรถ หรือสินเชื่อบุคคลบางแบบ<br/>
+                                                    เปรียบเทียบเงินต้น อัตราดอกเบี้ย และระยะเวลาผ่อนชำระเท่ากัน การคิดดอกเบี้ยแบบคงที่จะเสียค่าใช้จ่ายดอกเบี้ยมากว่าแบบลดต้นลดดอก
+
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img src="assets/images/blog/blog_list_14_2.png" />
+                                                </p>
+                                                <p>
+                                                    เมื่อเข้าใจวิธีคิดดอกเบี้ยแล้วจะทราบว่าการโป๊ะค่าผ่อนรถไม่ทำให้ค่าใช้จ่ายลดลงแต่อย่างใด นอกจากจะไปเจรจาต่อรองขอลดดอกเบี้ย<br/>
+                                                    เราจะใช้ความรู้พื้นฐานทั้ง 3 อย่างนี้ในการบริหารโครงสร้างหนี้ โปรดติดตามตอนต่อไป
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 } else if ($_GET['id'] == md5(15)) {
-                                    
+                                    ?>
+                                    <article class="blog-post blog-post-detail tg-haslayout">
+                                        <figure>
+                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                        </figure>
+                                        <div class="tg-post-detail">
+                                            <div class="tg-description">
+                                                <p><legend>Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)</legend></p>                                                
+                                                <p>
+                                                    <strong>วัตถุประสงค์ของการบริหารโครงสร้างหนี้ คือ</strong> <br/>
+                                                    &nbsp;&nbsp;•	ปรับค่างวดผ่อนชำระไม่สูงเกินไป คือ ค่างวดทั้งหมดต่อเดือนไม่ควรเกิน 35-40% ของรายได้  ค่างวดผ่อนชำระสูงเกินอาจจะทำให้เกิดภาวะเป็นหนี้ซ้ำซ้อน มีเงินเหลือไม่เพียงพอกับการใช้จ่ายประจำวัน<br/>
+                                                    &nbsp;&nbsp;•	ลดความเครียด <br/>
+                                                    &nbsp;&nbsp;•	ประหยัดค่าใช้จ่ายที่เกี่ยวข้องทั้งหมดในโครงสร้างหนี้  ลดค่าใช้จ่ายได้ก็คือเงินออม<br/>
+                                                    &nbsp;&nbsp;•	กำจัดหนี้ให้หมดเร็วที่สุดหรืออย่างช้าต้องหมดภาระก่อนเกษียณอายุ<br/>
+                                                </p>
+                                                <p>
+                                                    <strong>ประเภทหนี้ในการวางแผนการเงินส่วนบุคคล มี 2 ประเภท คือ หนี้จดจำนอง และ หนี้ไม่จดจำนอง</strong><br/>
+                                                    &nbsp;&nbsp;1.	หนี้จดจำนอง  ประเภทสินเชื่อบ้าน ค่างวดผ่อนชำระของหนี้ประเภทนี้สูงสุดไม่เกิน 35-40% ของรายได้ (รวมหนี้ไม่จดจำนอง)<br/>
+                                                    &nbsp;&nbsp;2.	หนี้ไม่จดจำนอง สินเชื่อรถยนต์ หนี้บัตรเครดิต สินเชื่อบุคคล ค่างวดผ่อนชำระของหนี้ประเภทนี้สูงสุดไม่เกิน 20% ของรายได้<br/>
+                                                    &nbsp;&nbsp;&nbsp;เพดานค่างวดผ่อนชำระของหนี้ไม่จดจำนองทั้งหมดไม่เกิน 20% เนื่องจากอัตราดอกเบี้ยสูง และเป็นหนี้บริโภค คือ ทรัพย์สินประเภทเสื่อมค่า หรือใช้แล้วหมดไป<br/>
+                                                </p>
+                                                <p>
+                                                    &nbsp;&nbsp;&nbsp;หากผ่อนเกินจากเพดานที่แนะนำนี้อาจจะทำให้มีโอกาสเป็นหนี้เพิ่มขึ้น เนื่องจากรายได้ที่หักค่างวดผ่อนชำระแล้ว จะเหลือน้อยเกินไปสำหรับค่าใช้จ่ายอื่น ๆ ปัญหาจะเกิดเร็วขึ้นถ้าไม่มีเงินสำรองฉุกเฉิน เพื่อป้องกันการเป็นหนี้ ควรเตรียมการดังต่อไปนี้ คือ<br/>
+
+                                                    &nbsp;&nbsp;1.	<u>เตรียมเงินสำรองฉุกเฉิน 3-6 เท่าของค่าใช้จ่ายรายเดือน</u> (รวมค่างวดผ่อนชำระทั้งหมดด้วย) โดยอาจจะปรับค่างวดผ่อนชำระลดลง พร้อมกับลดค่าใช้จ่ายอื่น ๆ ที่ไม่จำเป็น <br/>
+                                                    &nbsp;&nbsp;2.	<u>ปรับค่างวดผ่อนชำระ</u> ไม่ให้อึดอัดเกินไป<br/>
+                                                    &nbsp;&nbsp;3.	<u>Refinance</u> ถ้าสามารถหาอัตราดอกเบี้ยได้ถูกกว่าเดิม 2% ลดภาระค่าใช้จ่ายดอกเบี้ย<br/>
+                                                    &nbsp;&nbsp;4.	<u>บัตรเครดิตจ่ายเต็มจำนวนทุกครั้ง</u> ถ้าผ่อนขั้นต่ำอยู่ ให้เคลียร์ออกทั้งหมด โดยกู้โปรแกรมที่มีอัตราดอกเบี้ยต่ำกว่า หรือยืมจากคนในครอบครัว แล้วตั้งใจผ่อนคืนแหล่งเงินยืมใหม่<br/>
+                                                    &nbsp;&nbsp;5.	<u>สินเชื่อบุคคล</u> ถ้ามีดูเงื่อนไขการเคลียร์ “มีค่าใช้จ่ายเพิ่มถ้าปิดก่อน” และต่อรองที่จะโป๊ะไม่ได้ ก็ตั้งหน้าตั้งต่อผ่อนไป และอย่างมีการกู้สินเชื่อครั้งต่อไป “เด็ดขาด”<br/>
+                                                    &nbsp;&nbsp;6.	<u>ทำงบประมาณ</u> เพื่อควบคุมรายจ่ายอย่างเข้มงวด<br/>
+                                                    &nbsp;&nbsp;7.	<u>หาช่องทางในการหารายได้เพิ่ม</u> อาจจะใช้ทักษะความชำนาญงานปัจจุบัน ทำงานนอกเวลาหลังเลิกงานหรือวันหยุด <br/>
+                                                </p>
+                                                <p>
+                                                    &nbsp;&nbsp;&nbsp;โดยสรุปคือ เตรียมเงินสำรองฉุกเฉิน ทำงบประมาณรายจ่าย และปิดหนี้ที่อัตราดอกเบี้ยสูง ได้แก่ บัตรเครดิต และสินเชื่อบุคคล ทั้งหมด หารายได้เพิ่มหากจำเป็น
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <?php
                                 }
-                                ?>                                
+                                ?>
+                                <div class="tags-social tg-haslayout">
+                                    <div class="tags pull-left">
+                                        <strong>tags:</strong>
+                                        <ul class="tg-tags">
+                                            <li><a href="#">Financial</a></li>
+                                            <li><a href="#">Financial Planning</a></li>
+                                            <li><a href="#">Go Get Rich</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="social pull-right">
+                                        <strong>share</strong>
+                                        <ul class="tg-social-icon">
+                                            <li class="facebook">
+                                                <a href="javascript:void(0)" onclick="postToFeed('', '', '')">
+                                                    <i class="fa fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li class="twitter">
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <!--                                            <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                                                        <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <!--************************************
                                             Sidebar Start
@@ -1258,7 +1504,48 @@ require '../model-db-connection/config.php';
                         errorHandler.show();
                     }
                 });
+                facebookSetup();
             });
+            function facebookSetup() {
+                window.fbAsyncInit = function () {
+                    FB.init({
+                        appId: '1039572559467696',
+                        xfbml: true,
+                        version: 'v2.6'
+                    });
+                };
+
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {
+                        return;
+                    }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            }
+            function postToFeed(name, caption, description) {
+
+                // calling the API ...
+                var obj = {
+                    method: 'feed',
+                    redirect_uri: 'http://gogetrich.net/view/blog-list?page=<?= $page ?>',
+                    link: 'https://developers.facebook.com/docs/reference/dialogs/',
+                    picture: 'http://fbrell.com/f8.jpg',
+                    name: 'Facebook Dialogs',
+                    caption: 'Reference Documentation',
+                    description: 'Using Dialogs to interact with users.'
+                };
+
+                function callback(response) {
+
+                    document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+                }
+
+                FB.ui(obj, callback);
+            }
             function logoutFromApplication() {
                 $.ajax({
                     url: "../model/com.gogetrich.function/Logout.php",

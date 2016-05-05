@@ -1,5 +1,15 @@
 <div class="tg-widget widget-recent-post">
     <div class="tg-widget-holder">
+        <h3>Fanpage</h3>
+        <ul style="padding: 10px 6px !important;">
+            <li >
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Frichplanning%2F%3Ffref%3Dts&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1039572559467696" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="tg-widget widget-recent-post">
+    <div class="tg-widget-holder">
         <h3>Recent Posts</h3>
         <ul>
             <li style="cursor: pointer" onclick="window.location.href = 'whyweplanning-blog'">

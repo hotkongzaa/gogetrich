@@ -147,7 +147,7 @@ require '../model-db-connection/config.php';
                                 <!--************************************
                                                 Blog List Section Start
                                 *************************************-->
-                                <div class="col-md-9 col-sm-8 col-xs-12">
+                                <div class="col-md-8 col-sm-8 col-xs-12">
                                     <div class="tg-theme-heading">
                                         <span>from our</span>
                                         <h2>Blog พารวย</h2>
@@ -441,7 +441,149 @@ require '../model-db-connection/config.php';
                                             </div>
                                             <?php
                                         } else if ($page == 3) {
-                                            
+                                            ?>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=3&id=<?= md5(11) ?>">กฎ 72 </a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>การหาระยะเวลาที่เงินจะเติบโตเป็น 2 เท่า ในอัตราดอกเบี้ยที่กำหนด หรือคำนวณหาผลตอบแทนที่ต้องการเงินเติบโตเป็น 2 เท่าในระยะเวลาที่ต้องการ...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=3&id=<?= md5(12) ?>">พลังดอกเบี้ยทบต้น</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>ดอกเบี้ยทบต้นคือ ดอกเบี้ยที่คิดจากเงินต้นบวกดอกเบี้ยและรวมดอกเบี้ยกับเงินต้นคำนวณในรอบถัดไปเรื่อย ๆ
+                                                            เงินต้น 1,000,000 บาท อัตราดอกเบี้ย 10% คำนวณเปรียบเทียบไม่ทบต้นและทบต้นเป็นระยะเวลา 20 ปี จำนวนเงินต่างกันมากกว่า 1 เท่า
+                                                            ...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=3&id=<?= md5(13) ?>">เงินเฟ้อ และมูลค่าเงินตามเวลา</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>เงินเฟ้อ คือ ใช้เงินเท่าเดิมซื้อของได้น้อยลง  หรือของเท่าเดิมต้องใช้เงินมากขึ้น ดูธรรมดาที่รู้กันอยู่แล้ว แต่ไม่ธรรมดาเมื่อเราต้องคำนวณคาดการณ์ในวันที่เราเกษียณในอีก 20 ปี 30 ปี ข้างหน้า ในการครองชีพด้วยค่าใช้จ่ายจำเป็นวันนี้กับวันที่เกษียณแตกต่างกันจนน่าตกใจ...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=3&id=<?= md5(14) ?>">ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>เงินกู้แบ่งเป็น 2 ประเภท คือ 
+                                                            1.	แบบมีทรัพย์สินเป็นหลักประกัน อัตราดอกเบี้ยต่ำกว่า เช่น สินเชื่อบ้าน สินเชื่อรถยนต์
+                                                            2.	แบบไม่มีทรัพย์สินเป็นหลักประกัน มีอัตราดอกเบี้ยสูง และสูงมาก เช่น สินเชื่อบุคคล ดอกเบี้ย...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tg-post">
+                                                <div class="tg-post-img">
+                                                    <figure>
+                                                        <a href="#">
+                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="tg-post-hover">
+                                                        <ul class="tg-post-hover-icons">
+                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="tg-post-content tg-border-topleft">
+                                                    <h3>
+                                                        <a href="blog?rPage=3&id=<?= md5(15) ?>">Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)</a>
+                                                    </h3>
+                                                    <div class="tg-post-meta">
+                                                        <span><a href="#">By Admin / </a></span>
+                                                        <span><a href="#">In Map</a></span>
+                                                    </div>
+                                                    <div class="tg-description">
+                                                        <p>เวัตถุประสงค์ของการบริหารโครงสร้างหนี้ คือ<br/>
+                                                            •	ปรับค่างวดผ่อนชำระไม่สูงเกินไป คือ ค่างวดทั้งหมดต่อเดือนไม่ควรเกิน 35-40% ของรายได้  ค่างวดผ่อนชำระสูงเกินอาจจะทำให้เกิดภาวะเป็นหนี้ซ้ำซ้อน มีเงินเหลือไม่เพียงพอกับการใช้จ่ายประจำวัน
+                                                            ...
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
                                         } else {
                                             
                                         }
@@ -469,13 +611,13 @@ require '../model-db-connection/config.php';
                                             } else if ($page == 1) {
                                                 ?>
                                                 <a href="javascript:void(0)">
-                                                    <i class="fa fa-angle-left"></i>
+                                                    <i class="fa "></i>
                                                 </a>
                                                 <?php
                                             } else {
                                                 ?>
                                                 <a href="blog-list?page=1">
-                                                    <i class="fa fa-angle-left"></i>
+                                                    <i class="fa"></i>
                                                 </a>
                                                 <?php
                                             }
@@ -507,7 +649,7 @@ require '../model-db-connection/config.php';
                                             } else {
                                                 ?>
                                                 <a href="javascript:void(0)">
-                                                    <i class="fa fa-angle-right"></i>
+                                                    <i class="fa "></i>
                                                 </a>
                                                 <?php
                                             }
@@ -525,7 +667,7 @@ require '../model-db-connection/config.php';
                                 <!--************************************
                                                 Sidebar Start
                                 *************************************-->
-                                <aside id="sidebar" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                                <aside id="sidebar" class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
                                     <div class="row">                                        
                                         <div class="col-md-12 col-xs-12">
                                             <?php include 'recent-post.php' ?>
