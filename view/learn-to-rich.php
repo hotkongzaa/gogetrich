@@ -225,7 +225,9 @@ $currentFile = basename(__FILE__, '.php');
                                                             <h2><a href="mind-and-brain-take-to-rich?fPage=<?= $currentFile ?>">จิตและสมองพารวย</a></h2>
                                                         </div>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                            <p>&emsp;&emsp;&emsp;การพัฒนาทักษะการเงินนอกจากมิติตัวเลขแล้วยังมีมิติของการรับรู้ ความเชื่อเกี่ยวกับเงิน ภาวะผู้นำและระดับของการให้ 
+                                                                การได้รับความรู้ควบคู่กันไปเพื่อปรับในระดับจิตใต้สำนึก จึงจะแก้ปัญหาได้อย่างแท้จริง การปลูกฝังการรับรู้การทำงานของเงิน 
+                                                                ต้องพัฒนาให้เกิดทักษะการเงินใหม่ จึงจะสามารถสร้างให้เกิดอิสรภาพการเงินได้ในระยะยาว</p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="mind-and-brain-take-to-rich?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
