@@ -161,7 +161,7 @@ require '../model-db-connection/config.php';
                             </div>
                         </div>
                         <div class="row">
-                            <div id="content" class="col-md-9 col-sm-8 col-xs-12">
+                            <div id="content" class="col-md-8 col-sm-8 col-xs-12">
                                 <?php
                                 if ($_GET['id'] == md5(1)) {
                                     ?>
@@ -1404,7 +1404,7 @@ require '../model-db-connection/config.php';
                             <!--************************************
                                             Sidebar Start
                             *************************************-->
-                            <aside id="sidebar" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                            <aside id="sidebar" class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
                                 <div class="row">
 
                                     <div class="col-md-12 col-xs-12">
@@ -1471,6 +1471,11 @@ require '../model-db-connection/config.php';
         <!--************************************
                         Popup End
         *************************************-->
+        <div class="scroll-top-wrapper ">
+            <span class="scroll-top-inner">
+                <i class="fa fa-2x fa-arrow-circle-up"></i>
+            </span>
+        </div>
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#login_menu').tooltipster({

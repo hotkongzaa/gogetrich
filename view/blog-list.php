@@ -152,8 +152,75 @@ require '../model-db-connection/config.php';
                                         <span>from our</span>
                                         <h2>Blog พารวย</h2>
                                     </div>
+
                                     <?php
                                     $page = (string) filter_input(INPUT_GET, 'page');
+                                    ?>
+                                    <ul class="tg-pagination" style="margin-bottom: 20px !important;">
+                                        <li class="tg-prev">
+                                            <?php
+                                            if ($page == 3) {
+                                                ?>
+                                                <a href="blog-list?page=2">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            } else if ($page == 2) {
+                                                ?>
+                                                <a href="blog-list?page=1">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            } else if ($page == 1) {
+                                                ?>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <a href="blog-list?page=1">
+                                                    <i class="fa fa-angle-left"></i>
+                                                </a>
+                                                <?php
+                                            }
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <a href="blog-list?page=1">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-list?page=2">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-list?page=3">3</a>
+                                        </li>
+                                        <li class="tg-next">
+                                            <?php
+                                            if ($page == 1) {
+                                                ?>
+                                                <a href="blog-list?page=2">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                                <?php
+                                            } else if ($page == 2) {
+                                                ?>
+                                                <a href="blog-list?page=3">
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <a href="javascript:void(0)">
+                                                    <i class="fa "></i>
+                                                </a>
+                                                <?php
+                                            }
+                                            ?>
+
+                                        </li>
+                                    </ul>
+                                    <?php
                                     if (!empty($page)) {
                                         if ($page == 1) {
                                             ?>
@@ -649,7 +716,7 @@ require '../model-db-connection/config.php';
                                             } else {
                                                 ?>
                                                 <a href="javascript:void(0)">
-                                                    <i class="fa "></i>
+                                                    <i class="fa fa-angle-right"></i>
                                                 </a>
                                                 <?php
                                             }

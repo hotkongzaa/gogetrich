@@ -148,8 +148,8 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 pull-left">
-                                <a href="<?= $fPage ?>" class="btn btn-default">
-                                    <i class="fa fa-backward"></i> Back
+                                <a href="<?= $fPage ?>" class="btn btn-default btn-sm">
+                                    <i class="fa fa-backward"></i> กลับสู่ เรียนรู้สู่ความรวย
                                 </a>
                                 <br/><br/>
                             </div>
