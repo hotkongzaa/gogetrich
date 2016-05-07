@@ -58,7 +58,7 @@
                                     <li>
                                         <span>Email:</span>
                                         <span>
-                                            <i><a href="mailto:pinhatai.d@setalk.net">pinhatai.d@setalk.net</a></i>
+                                            <i><a href="mailto:pinhatai.d@gogetrich.net">pinhatai.d@gogetrich.net</a></i>
                                         </span>
                                     </li>
                                 </ul>
