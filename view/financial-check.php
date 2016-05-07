@@ -161,7 +161,7 @@ require '../model-db-connection/config.php';
 
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
-                                        <img src="assets/images/ice_berg_image_v6_653x310.png" alt="สำรวจความพร้อมการเงิน">
+                                        <img src="assets/images/financial_planning_model.png" alt="สำรวจความพร้อมการเงิน">
                                         <div class="tg-img-hover">
                                             <div class="tg-displaytable">
                                                 <div class="tg-displaytablecell">

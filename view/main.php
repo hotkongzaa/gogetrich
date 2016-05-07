@@ -266,7 +266,7 @@ require '../model-db-connection/config.php';
                             <div class="col-sm-7 tg-displayinlineblock">
                                 <div class="tg-virtual-img tg-haslayout">
                                     <figure>
-                                        <img src="assets/images/ice_berg_image_v6_653x310.png" alt="image description">
+                                        <img src="assets/images/financial_planning_model.png" alt="image description">
                                     </figure>
                                 </div>
                             </div>

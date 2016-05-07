@@ -160,7 +160,7 @@ require '../model-db-connection/config.php';
                             <div id="content" class="col-md-9 col-sm-8 col-xs-12">
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
-                                        <img src="assets/images/ice_berg_image_v6_653x310.png" alt="image description">
+                                        <img src="assets/images/financial_planning_model.png" alt="image description">
                                         <div class="tg-img-hover">
                                             <div class="tg-displaytable">
                                                 <div class="tg-displaytablecell">
