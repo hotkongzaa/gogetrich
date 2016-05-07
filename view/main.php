@@ -197,7 +197,7 @@ require '../model-db-connection/config.php';
                                                         <span class="fa fa-graduation-cap"></span>
                                                         <h3>ล็อคเป้าหมายชีวิต</h3>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                            <p>ความรู้การเงินทำให้เรารู้วิธีสร้างเป้าหมายการเงิน เหมือนมีตะกร้าเงินหลาย ๆ ใบที่จะค่อยกักเก็บเงินให้คุณตามเป้าหมายการเงินที่สนับสนุนเป้าหมายชีวิตของคุณ</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -213,7 +213,7 @@ require '../model-db-connection/config.php';
                                                         <span class="flaticon-star182"></span>
                                                         <h3>จิตและสมองพารวย</h3>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                            <p>การพัฒนาทักษะการเงินนอกจากมิติตัวเลขแล้วยังมีมิติของการรับรู้ ความเชื่อเกี่ยวกับเงิน ภาวะผู้นำและระดับของการให้ การได้รับความรู้ควบคู่กันไป</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -229,7 +229,7 @@ require '../model-db-connection/config.php';
                                                         <span class="fa fa-heartbeat"></span>
                                                         <h3>สวยด้วยสุขภาพการเงินที่ดี</h3>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                            <p>สวยหล่อด้วยสุขภาพการเงินที่ดี จากภายในสู่ภายนอก สุขภาพการเงินที่ดีสร้างความสงบสุขเติมเต็ม เป็นพลังงานสงบที่ผู้คนรอบข้างสัมผัสได้</p>
                                                         </div>
                                                     </div>
                                                 </div>
