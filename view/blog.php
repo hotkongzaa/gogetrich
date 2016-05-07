@@ -1145,7 +1145,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/11_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1233,7 +1233,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/12_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1263,7 +1263,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/13_front.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1298,7 +1298,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/14_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1337,7 +1337,7 @@ require '../model-db-connection/config.php';
                                     ?>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/15_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">

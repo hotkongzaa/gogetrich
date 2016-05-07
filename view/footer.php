@@ -14,7 +14,7 @@
                             </div>
                             <strong class="logo">
                                 <a href="main">
-                                    <img src="assets/images/logo2.png" alt="constructioner">
+                                    <img src="assets/images/logo.png" alt="constructioner">
                                 </a>
                             </strong>
                             <div class="tg-description">
