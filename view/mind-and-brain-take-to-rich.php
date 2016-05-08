@@ -191,7 +191,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                                 ผ่อนคลาย...เสียงโทรศัพท์ที่หัวเตียงดังขึ้น คุณเดินไปหยิบขึ้นมาเห็นชื่อ “หัวหน้าของคุณ” คุณรู้สึกอย่างไร?</p>
                                             <p>&emsp;&emsp;&emsp;เขียนออกมาว่าคุณรู้สึกอย่างไร ภายใต้ความรู้สึกนั้น คุณคิดเกี่ยวกับหัวหน้าของคุณอย่างไร เขียนลงที่กระดาษ</p>
                                             <p style="text-align:center">
-                                                <img src="assets/images/learn-to-rich/mind_and_brain_1.jpg" alt="image description" />
+                                                <img src="assets/images/learn-to-rich/mind_and_brain_1.png" alt="image description" />
                                             </p>
                                             <p align="center">คุณเห็นแล้วใช่มั้ย ว่าก่อนที่จะเกิดความรู้สึกบางอย่าง มีความคิดเกิดขึ้นมาก่อน...นั้นแหละ ”เราคุยกับตัวเอง”</p>
                                             <p>จาก Secret of the Millionaire Mind โดย T. Harv Eker มีแนวความคิดที่น่าสนใจเก็บมาให้อ่านบางส่วน</p>

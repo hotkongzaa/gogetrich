@@ -255,7 +255,7 @@ $currentFile = basename(__FILE__, '.php');
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="good-plan-good-health?fPage=<?= $currentFile ?>">สวยด้วยสุขภาพการเงินที่ดี</a></h2>
+                                                            <h2><a href="good-plan-good-health?fPage=<?= $currentFile ?>">สวยหล่อด้วยสุขภาพการเงินที่ดี</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>&emsp;&emsp;&emsp;สวยหล่อด้วยสุขภาพการเงินที่ดี จากภายในสู่ภายนอก สุขภาพการเงินที่ดีสร้างความสงบสุขเติมเต็ม 
@@ -289,7 +289,7 @@ $currentFile = basename(__FILE__, '.php');
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="life-by-financial?fPage=<?= $currentFile ?>">จัดการชีวีด้วยงบการเงิน</a></h2>
+                                                            <h2><a href="life-by-financial?fPage=<?= $currentFile ?>">จัดการชีวีด้วยงบประมาณและเงินฉุกเฉิน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>&emsp;&emsp;&emsp;จากการประเมินสุขภาพการเงิน เราจะพบต้นเหตุมาจากกการบริหารจัดการเงิน การขาดความรู้ความเข้าใจในการจัดการเงิน 
@@ -321,7 +321,7 @@ $currentFile = basename(__FILE__, '.php');
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="perfect-life-with-retirement?fPage=<?= $currentFile ?>">เดินมั่นคงด้วยแผนเกษียณ</a></h2>
+                                                            <h2><a href="perfect-life-with-retirement?fPage=<?= $currentFile ?>">เติมความมั่นคงด้วยแผนเกษียณ</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>&emsp;&emsp;&emsp;คนส่วนใหญ่อายุใกล้เกษียณจะเริ่มสนใจเตรียม อายุที่สนใจเตรียมเงินเกษียณอายุคือ คนอายุ 40-45 ปี ขึ้นไป 

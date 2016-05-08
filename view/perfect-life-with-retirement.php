@@ -158,7 +158,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                             <div class="col-xs-12">
                                 <div class="tg-theme-heading">
                                     <span>LEARN TO RICH</span>
-                                    <h2>เดินมั่นคงด้วยแผนเกษียณ</h2>
+                                    <h2>เติมความมั่นคงด้วยแผนเกษียณ</h2>
                                 </div>
                             </div>
                             <div class="tg-aboutus-section">

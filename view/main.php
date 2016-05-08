@@ -227,7 +227,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-displaytable">
                                                     <div class="tg-displaytablecell">
                                                         <span class="fa fa-heartbeat"></span>
-                                                        <h3>สวยด้วยสุขภาพการเงินที่ดี</h3>
+                                                        <h3>สวยหล่อด้วยสุขภาพการเงินที่ดี</h3>
                                                         <div class="tg-description">
                                                             <p>สวยหล่อด้วยสุขภาพการเงินที่ดี จากภายในสู่ภายนอก สุขภาพการเงินที่ดีสร้างความสงบสุขเติมเต็ม เป็นพลังงานสงบที่ผู้คนรอบข้างสัมผัสได้</p>
                                                         </div>
@@ -273,7 +273,7 @@ require '../model-db-connection/config.php';
                             <div class="col-sm-5 tg-displayinlineblock">
                                 <div class="tg-virtuallybuild">
                                     <div class="tg-theme-heading">
-                                        <h2>Who are you? <span>คุณเป็นใคร ในภูเขาน้ำแข็งทางการเงิน</span></h2>
+                                        <h2>Who are you? <span>คุณเป็นใครใน Financial Spectrum Stages</span></h2>
                                     </div>
                                     <div class="tg-description">
                                         <p>คุณอยู่สถานการณ์ไหน การรู้สถานการณ์ของตัวเองจะช่วยให้การจัดการการเงินถูกทิศทาง รวมถึงการวางแผนการเงินเพื่อให้เกิดความชัดเจนเรื่องเงิน ตลอดทุกช่วงชีวิต เพื่อความสงบสุขทางใจ เพื่อสร้างความมั่นคงให้กับครอบครัว</p>
