@@ -157,7 +157,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                 <div class="col-md-8 col-sm-6 col-xs-6 width-480">
                                     <form class="cus_registration_form">
                                         <fieldset>
-                                            <legend>User Credential</legend>
+                                            <legend>ข้อมูลล็อกอิน</legend>
                                             <div class="form-group">
                                                 <label for="username">ชื่อผู้ใช้ (Username) *</label>
                                                 <input type="text" name="username" id="username" placeholder="Username" class="form-control">
@@ -176,7 +176,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             </div>
                                         </fieldset>
                                         <fieldset>
-                                            <legend>User Information</legend>
+                                            <legend>ข้อมูลส่วนตัว</legend>
                                             <div class="form-group">
                                                 <label for="fName">ชื่อ (First Name) *</label>
                                                 <input type="text" id="fName" name="fName" placeholder="First Name" class="form-control">
