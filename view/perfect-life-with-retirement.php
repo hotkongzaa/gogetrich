@@ -219,6 +219,52 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                             <p style="text-align:center">
                                                 <img src="assets/images/learn-to-rich/retirement_5.jpg" alt="image description"/>
                                             </p>
+                                            <p><strong>3. ได้รับเงินเกษียณก้อนโต ใช้หมดภายใน 5-10 ปี</strong></p>
+                                            <p>&emsp;&emsp;&emsp;Honey Moon Retirement คือ คนที่ได้รับเงินเกษียณ มักจะใช้เงินหมดภายใน 5-10 ปี เนื่องจากเคยรับเงินเดือน เช่น เดือนสุดท้ายก่อนเกษียณได้เงินเดือน 
+                                                100,000 บาท วันที่เกษียณได้รับเงินกองทุนสำรองเลี้ยงชีพ เงินชดเชยตามกฎหมายรวม ๆ อาจจะได้ถึง 10 ล้านบาท </p>
+                                            <p>&emsp;&emsp;&emsp;คนที่ไม่เคยเข้าใจการทำงานของเงิน เคยได้เงินเดือนที่หักกองทุนสำรองเลี้ยงชีพ หักภาษีไปแล้ว ได้เงินเดือนละหลักหมื่นหลักแสน วันที่เกษียณได้รับเงิน 10 ล้านบาท 
+                                                เหมือนคนถูกหวยเงินหมดภายในไม่เกิน 10 ปี เพราะไม่เข้าใจว่า 10 ล้านบาท คือค่าใช้จ่ายตลอดอายุขัย จึงใช้เงินไปท่องเที่ยวต่างประเทศ ลูกยืมไปลงทุนเพราะคิดว่าพ่อแม่เงินเยอะ 
+                                                ตนเองลงทุนเองบ้าง ญาติพี่น้องเพื่อนฝูงยืมไม่คืนบ้าง เงินจึงหมดก่อนอายุขัย</p>
+                                            <p><strong>4. ไม่เข้าใจการลงทุน กลัวเงินต้นหาย</strong></p>
+                                            <p>&emsp;&emsp;&emsp;การออมในระบบในกองทุนสำรองเลี้ยงชีพ เพราะผู้ออมกลัวเงินต้นหาย จึงมักจะเลือกพอร์ตกองทุนตลาดเงิน ได้ผลตอบแทนประมาณ 1-2% 
+                                                ในขณะที่เงินเฟ้อเฉลี่ย 4-5% ซึ่งทำให้เงินเติบโตไม่ทันเงินเฟ้อ หลายคนอาจจะเลือกที่จะเก็บไว้ในบัญชีเงินฝากธนาคาร ผลตอบแทนฝากประจำ 12 เดือน ปัจจุบันเหลือ 
+                                                1.5% เท่านั้น ไม่ทันเงินเฟ้อเช่นกัน</p>
+                                            <p><strong>5. ตกงานกะทันหัน ไม่มีเงินสำรองฉุกเฉิน</strong></p>
+                                            <p>&emsp;&emsp;&emsp;การตกงานกะทันหันโดยไม่มีเงินสำรองฉุกเฉิน ทำให้ต้องดึงเงินออมที่ออมไว้สำหรับเกษียณมาเป็นค่าใช้จ่ายแทนรายได้ที่หายไป</p>
+                                            <p><strong>6. เป็นหม้าย</strong></p>
+                                            <p>&emsp;&emsp;&emsp;บางคนพึ่งพาคู่สมรสที่แสนดี จนไม่ได้คิดพึ่งพาตนเอง โดยเฉพาะผู้หญิงที่ได้รับการดูแลจากสามีดี วันหนึ่งที่คู่สมรสเสียชีวิตก่อน โดยตนเองไม่เคยสนใจเรื่องเงินเลย 
+                                                กรอบคิดเรื่องเงินไม่เคยถูกฝึก อาจจะไม่สามารถดูแลเงินที่เหลืออยู่ให้ตนเองได้ถึงวันที่สิ้นสุดอายุขัย</p>
+                                            <p><strong>7. คิดว่าแก่แล้วตายเลย ไม่คิดว่าจะเจ็บป่วยเรื้อรัง</strong></p>
+                                            <p>&emsp;&emsp;&emsp;บางเข้าใจว่าแก่แล้วตายเลย ไม่คิดว่าจะเจ็บป่วยเรื้อรัง จึงไม่มีการเตรียมการค่าใช้จ่ายในการดูแลสุขภาพ เงินเกษียณจึงหมดก่อนหมดอายุขัย</p>
+                                            <p><strong>วิธีคำนวณค่าใช้จ่ายหลังเกษียณ - การคำนวณเงินเกษียณ ใช้ข้อมูลดังนี้</strong></p>
+                                            <ul>
+                                                <li>อายุปัจจุบัน</li>
+                                                <li>อายุเกษียณ (ทำงานปีสุดท้ายอายุเท่าไร)</li>
+                                                <li>อายุขัย (ดูอายุขัยปู่ย่าตายายเฉลี่ย และบวกเพิ่มไปอีก 5-10 ปี) </li>
+                                                <li>ค่าใช้จ่ายหลังเกษียณ เป็นมูลค่าตามค่าเงินปัจจุบัน หลังเกษียณใช้จ่ายอะไรบ้าง ค่าใช้รายการไหนไม่ใช้แล้ว </li>
+                                                <li>จำนวนปีก่อนเกษียณอายุ (ปัจจุบันถึงเกษียณมีเวลาเก็บเงินอีกกี่ปี)</li>
+                                                <li>จำนวนปีหลังเกษียณ (ปีที่เกษียณจนถึงอายุขัย ต้องเตรียมค่าใช้จ่ายกี่ปี)</li>
+                                                <li>ค่าเงินเฟ้อ เฉลี่ยต่อปี ตามตัวอย่างใช้ 4%</li>
+                                                <li>ดัชนีค่าเงินเฟ้อ ได้จากตาราง F1</li>
+                                            </ul><br />
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/retirement_6.jpg" alt="image description" style="width:530px;height:710px;"/>
+                                            </p>
+                                            <p>&emsp;&emsp;&emsp;ตารางหาดัชนีค่าเงินเฟ้อ (F1) วิธีใช้คือ เงินเฟ้อกี่เปอร์เซ็นต์ให้ดูที่หัวตาราง และจำนวนปีก่อนเกษียณ เช่น เงินเฟ้อเฉลี่ยปีละ 4% จากปัจจุบันถึงปีที่เกษียณคือ 20 ปี 
+                                                ดูหัวตารางช่อง 4% และดูคอลัมน์ซ้ายสุดตรงปีที่ 20 ดัชนีค่าเงินเฟ้อคือ 2.1911 (ที่มาของการคำนวณอยู่ด้านล่างของตาราง)</p>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/retirement_7.jpg" alt="image description" style="width:545px;height:755px;"/>
+                                            </p>
+                                            <p>&emsp;&emsp;&emsp;จากนั้นคำนวณค่าใช้จ่ายปีแรกที่เกษียณ นำค่าใช้จ่ายต่อเดือนที่ต้องการใช้หลังเกษียณ คูณ 12 ทำเป็นรายปี คูณดัชนีค่าเงินเฟ้อ</p>
+                                            <p>&emsp;&emsp;&emsp;ตัวอย่างเช่น ต้องการค่าใช้จ่ายเดือนละ 20,000 บาท ตามมูลค่าเงินปัจจุบัน คูณ 12 เป็นค่าใช้จ่ายต่อปี 240,000 บาท 
+                                                บวกเงินเฟ้อ 4% ไป 20 ปี เงิน 240,000 บาทในปัจจุบันจะกลายเป็น 525,864 บาท ถ้าต้องการเตรียมสำหรับหลังเกษียณ 25 ปี นำ 25 ปี คูณ 525,864 บาท 
+                                                ได้ประมาณ 15 ล้านบาท</p>
+                                            <p><strong>หาเงินเงินเกษียณที่เตรียมไว้แล้ว</strong></p>
+                                            <p>&emsp;&emsp;&emsp;แหล่งเงินได้หลังเกษียณสำหรับคนทำงานบริษัท จะเก็บในรูปของกองทุนสำรองเลี้ยงชีพ ประกันชีวิตสะสมทรัพย์ ประกันบำนาญ 
+                                                กองทุนรวมเพื่อการเลี้ยงชีพ (RMF) และแหล่งอื่น ๆ ที่ตั้งใจเก็บเป็นเงินเกษียณ รวบรวมและรวมเงินที่เตรียมไว้แล้ว</p>
+                                            <p><strong>เงินเกษียณเตรียมขาด/เกิน</strong></p>
+                                            <p>&emsp;&emsp;&emsp;เงินเกษียณที่ต้องการ หักด้วยจำนวนเงินที่เตรียมไว้แล้ว ขาดหรือเกินเท่าไร? ถ้ายังขาดอยู่ ก็มาทบทวนดูว่า 
+                                                การบริหารเงินสดมีเงินเหลือจากค่าใช้จ่าย วางแผนออมเพิ่ม ถ้าประหยัดแล้ว ลดค่าใช้จ่ายแล้ว ยังมีเงินเหลือไม่เพียงพอ แนะนำให้หารายได้เพิ่ม</p>
                                         </div>
                                     </div>
                                 </div>
@@ -241,80 +287,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                     <h2>Our Coach</h2>
                                 </div>
                             </div>
-                            <div class="tg-ourteam tg-haslayout">
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/wipa_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-modalbox">อ. วิภา เจริญกิจสุพัฒน์</span>
-                                            <span class="tg-member-postion">คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pop_our.png" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name" style="cursor: pointer;" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">อ. วิธิวัต โรจนตรีคูณ</span>
-                                            <span class="tg-member-postion">ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pinhathai_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. ปิ่นหทัย เดชสิงหรัตน์</span>
-                                            <span class="tg-member-postion">Designer at Example.com</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div-->
-                            </div>
+                            <?php include './mentor_part.php'; ?>
                         </div>
                     </div>
                 </section>
@@ -408,56 +381,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>MENTOR DETAIl</h2>
-                <form style="padding:20px" >
-                    <div style="overflow-x:hidden; max-height: 450px;">
-                        <div class="row">
-                            <div class="col-sm-4">                                        
-                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <br/>
-                                <fieldset>
-                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
-                                </fieldset>
-                            </div>
-                            <div class="col-sm-8">
-                                <fieldset>
-                                    <!--legend>ประวัติ และคุณวุฒิ​</legend>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</li-->
-                                    <legend>ประวัติการศึกษา</legend>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา</li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li></br>
-                                    <legend>ประวัติการเป็นวิทยากร</legend>
-                                    <li>วิทยากรรับเชิญ โครงการอบรม “บริการด้วยใจ นักขายมืออาชีพ” ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร จังหวัดสมุทรปราการ</li>
-                                    <li>วิทยากรรับเชิญ เสวนาเรื่อง “วางแผนการเงิน เรื่องที่ควรรู้ก่อนการซื้อบ้าน” ในมหกรรมบ้าน-คอนโดและสินเชื่อแห่งปี</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “Secret of Money Cat ความลับการจัดการเงินอย่างฉลาด เพื่ออิสรภาพทางการเงิน”</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “เคล็ดลับสร้างความมั่งคั่งอย่างยั่งยืน”</li>
-                                    <li>วิทยากรประจำโครงการ Pre-Career Financial Advisor เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรบรรยาย “วางแผนภาษีด้วยสินค้าประชีวิต” โครงการ Financial Advisor Standard เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรรับเชิญจากสำนักงานตัวแทนคุณชูลักษณ์ สมุทรปราการ หัวข้อ “Regular Activities for Fulltime Agents ทำตามหน้าที่ แล้วหน้าที่จะสอนให้เราทำ”</li></br>
-                                    <legend>ประวัติการทำงาน</legend>
-                                    <li>กรรมการผู้จัดการบริษัทฟินคีย์ แอ็ดไวเซอรี่ จำกัด</li>
-                                    <li>เป็นตัวแทนประกันชีวิตและผู้จัดการฝ่ายขายบริษัท เอไอเอ จำกัด ตั้งแต่ปีพ.ศ. 2546 ถึงปัจจุบัน</li>
-                                    <li>ทำงานด้านพัฒนา ติดตั้งและสนับสนุนระบบคอมพิวเตอร์ซอฟต์แวร์ พ.ศ. 2531-2548</li></br>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                </form>   
-            </div>
-        </div>
+        <?php include './mentor_dialog.php'; ?>
         <!--************************************
                         Popup End
         *************************************-->

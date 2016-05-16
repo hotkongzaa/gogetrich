@@ -153,6 +153,8 @@ require '../model-db-connection/config.php';
                             <div class="col-xs-12 pull-left">
                                 <?php
                                 $page = (string) filter_input(INPUT_GET, 'rPage');
+                                $configure = parse_ini_file("../model-db-connection/configuration.ini");
+                                $blogId = (string) filter_input(INPUT_GET, 'id');
                                 ?>
                                 <a href="blog-list?page=<?= $page ?>" class="btn btn-default btn-sm">
                                     <i class="fa fa-backward"></i> กลับสู่ BLOG พารวย
@@ -163,8 +165,31 @@ require '../model-db-connection/config.php';
                         <div class="row">
                             <div id="content" class="col-md-8 col-sm-8 col-xs-12">
                                 <?php
-                                if ($_GET['id'] == md5(1)) {
+                                if ($blogId == md5(1)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ทำไมต้องวางแผนการเงิน', 'whyplanning.jpg')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/whyplanning.jpg" alt="image description">                                        
@@ -192,9 +217,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ทำไมต้องวางแผนการเงิน', 'whyplanning.jpg')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(2)) {
+                                } else if ($blogId == md5(2)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ตรวจสอบสถานการณ์เงิน', 'financialSit.jpg')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/financialSit.jpg" alt="image description">
@@ -272,9 +343,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ตรวจสอบสถานการณ์เงิน', 'financialSit.jpg')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(3)) {
+                                } else if ($blogId == md5(3)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('สถานะการเงินมิติของอารมณ์ความรู้สึก', 'financialStatus.jpg')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/financialStatus.jpg" alt="image description">
@@ -317,9 +434,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('สถานะการเงินมิติของอารมณ์ความรู้สึก', 'financialStatus.jpg')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(4)) {
+                                } else if ($blogId == md5(4)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ชะตาชีวิตลิขิตได้', 'life-destiny_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/life-destiny_detail.png" alt="image description">
@@ -354,9 +517,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ชะตาชีวิตลิขิตได้', 'life-destiny_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(5)) {
+                                } else if ($blogId == md5(5)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน', 'financial_freedom_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/financial_freedom_detail.png" alt="image description">
@@ -671,9 +880,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน', 'financial_freedom_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(6)) {
+                                } else if ($blogId == md5(6)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ภาพรวมกระบวนการวางแผนการเงิน', 'financial_planning_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/financial_planning_detail.png" alt="image description">
@@ -715,9 +970,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ภาพรวมกระบวนการวางแผนการเงิน', 'financial_planning_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(7)) {
+                                } else if ($blogId == md5(7)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้', '7_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/7_detail.png" alt="image description">
@@ -770,9 +1071,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้', '7_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(8)) {
+                                } else if ($blogId == md5(8)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Budgeting เสาเข็มแรก', '8_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/8_detail.png" alt="image description">
@@ -822,9 +1169,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Budgeting เสาเข็มแรก', '8_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(9)) {
+                                } else if ($blogId == md5(9)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง', '9_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/9_detail.png" alt="image description">
@@ -1119,9 +1512,55 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง', '9_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(10)) {
+                                } else if ($blogId == md5(10)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ความรู้พื้นฐานก่อนการวางแผนการเงิน', '10_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
                                             <img src="assets/images/blog/10_detail.png" alt="image description">
@@ -1140,12 +1579,58 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ความรู้พื้นฐานก่อนการวางแผนการเงิน', '10_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(11)) {
+                                } else if ($blogId == md5(11)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กฎ 72', '11_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/11_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1228,12 +1713,58 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กฎ 72', '11_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(12)) {
+                                } else if ($blogId == md5(12)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พลังดอกเบี้ยทบต้น', '12_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/12_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1258,12 +1789,58 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พลังดอกเบี้ยทบต้น', '12_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(13)) {
+                                } else if ($blogId == md5(13)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินเฟ้อ และมูลค่าเงินตามเวลา', '13_front.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/13_front.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1281,24 +1858,64 @@ require '../model-db-connection/config.php';
                                                     ถ้าใช้สถิติอดีตย้อนหลัง 30 ปี วันนี้ค่าใช้จ่ายเดือนละ 10,000 บาท ต้องเตรียมเงิน 27,000 บาท ซื้อของในปริมาณเท่ากัน
                                                 </p>
                                                 <p>
-                                                    เงินเฟ้อไม่เท่ากันวิเคราะห์ยาก ค่าเฉลี่ยเงินเฟ้อเฉลี่ยเท่ากันทุกปี 3.8% สินค้าราคาเริ่มต้น 100 บาท คำนวณแบบเดียวกับดอกเบี้ยทบต้น 3.8% ได้ 270.79 บาท เท่ากัน
+                                                    เงินเฟ้อไม่เท่ากันวิเคราะห์ยาก ค่าเฉลี่ยเงินเฟ้อเฉลี่ยเท่ากันทุกปี 3.38% สินค้าราคาเริ่มต้น 100 บาท คำนวณแบบเดียวกับดอกเบี้ยทบต้น 3.38% ได้ 270.79 บาท เท่ากัน
                                                 </p>
-                                                <p>
-                                                    ***  ค่าใช้จ่ายเดือนละ A บาท <br/>
-                                                    อัตราเงินเฟ้อ B %<br/>
-                                                    จำนวนปีก่อนเกษียณ C ปี<br/>
-                                                    ค่าใช้จ่ายปีที่เกษียณ A*(1+B/100)^C บาท<br/>
-
-                                                </p>
+                                                
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินเฟ้อ และมูลค่าเงินตามเวลา', '13_front.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(14)) {
+                                } else if ($blogId == md5(14)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้', '14_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/14_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1332,12 +1949,58 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้', '14_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
-                                } else if ($_GET['id'] == md5(15)) {
+                                } else if ($blogId == md5(15)) {
                                     ?>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)', '15_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <article class="blog-post blog-post-detail tg-haslayout">
                                         <figure>
-                                            <img src="assets/images/blog/financialStatus.jpg" alt="image description">
+                                            <img src="assets/images/blog/15_detail.png" alt="image description">
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
@@ -1372,34 +2035,33 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </div>
                                     </article>
+                                    <div class="tags-social tg-haslayout">
+                                        <div class="tags pull-left">
+                                            <strong>tags:</strong>
+                                            <ul class="tg-tags">
+                                                <li><a href="#">Financial</a></li>
+                                                <li><a href="#">Financial Planning</a></li>
+                                                <li><a href="#">Go Get Rich</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="social pull-right">
+                                            <strong>share</strong>
+                                            <ul class="tg-social-icon">
+                                                <li class="facebook">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)', '15_detail.png')">
+                                                        <i class="fa fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="twitter">
+                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <?php
                                 }
                                 ?>
-                                <div class="tags-social tg-haslayout">
-                                    <div class="tags pull-left">
-                                        <strong>tags:</strong>
-                                        <ul class="tg-tags">
-                                            <li><a href="#">Financial</a></li>
-                                            <li><a href="#">Financial Planning</a></li>
-                                            <li><a href="#">Go Get Rich</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="social pull-right">
-                                        <strong>share</strong>
-                                        <ul class="tg-social-icon">
-                                            <li class="facebook">
-                                                <a href="javascript:void(0)" onclick="postToFeed('', '', '')">
-                                                    <i class="fa fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                            </li>
-                                            <!--                                            <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                                                        <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>-->
-                                        </ul>
-                                    </div>
-                                </div>
+
                             </div>
                             <!--************************************
                                             Sidebar Start
@@ -1531,94 +2193,93 @@ require '../model-db-connection/config.php';
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
             }
-            function postToFeed(name, caption, description) {
-
+            function postToFeed(name, blogImage) {
                 // calling the API ...
                 var obj = {
                     method: 'feed',
-                    redirect_uri: 'http://gogetrich.net/view/blog-list?page=<?= $page ?>',
-                    link: 'https://developers.facebook.com/docs/reference/dialogs/',
-                    picture: 'http://fbrell.com/f8.jpg',
-                    name: 'Facebook Dialogs',
-                    caption: 'Reference Documentation',
-                    description: 'Using Dialogs to interact with users.'
-                };
+                    redirect_uri: '<?= $configure['web.application.prefix'] ?>view/blog-list?page=<?= $page ?>',
+                                link: '<?= $configure['web.application.prefix'] ?>view/blog?rPage=<?= $page ?>&id=<?= $blogId ?>',
+                                            picture: '<?= $configure['web.application.prefix'] ?>view/assets/images/blog/' + blogImage,
+                                            name: name,
+                                            caption: 'Go Get Rich: BLOG พารวย',
+                                            description: name
+                                        };
 
-                function callback(response) {
+                                        function callback(response) {
 
-                    document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-                }
+                                            document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+                                        }
 
-                FB.ui(obj, callback);
-            }
-            function logoutFromApplication() {
-                $.ajax({
-                    url: "../model/com.gogetrich.function/Logout.php",
-                    success: function (data, textStatus, jqXHR) {
-                        if (data == 200) {
-                            window.location.href = "main";
-                        }
-                    }
-                });
-            }
-            function submitLogin(form) {
-                $.ajax({
-                    url: "../model/com.gogetrich.function/LoginSubmit.php",
-                    type: 'POST',
-                    data: {'username': $("#username").val(), 'password': $("#password").val()},
-                    success: function (data, textStatus, jqXHR) {
-                        var resData = data.split(":");
-                        if (resData[0] == 503) {
-                            setTimeout(function () {
-                                showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
-                            }, 100);
-                            $(form).trigger('reset');
-                        }
-                        if (resData[0] == 205) {
-                            setTimeout(function () {
-                                showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
-                            }, 100);
-                            $(form).trigger('reset');
-                        }
-                        if (resData[0] == 200) {
-                            window.location = 'trainingSchedule';
-                            $(form).trigger('reset');
-                        }
-                    }
-                });
-            }
-            var runSetDefaultValidation = function () {
-                $.validator.setDefaults({
-                    errorElement: "span", // contain the error msg in a small tag
-                    errorClass: 'help-block',
-                    errorPlacement: function (error, element) {// render error placement for each input type
-                        if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
-                            error.insertAfter($(element).closest('.form-group').children('div').children().last());
-                        } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
-                            error.appendTo($(element).closest('.form-group').children('div'));
-                        } else {
-                            error.insertAfter(element);
-                            // for other inputs, just perform default behavior
-                        }
-                    },
-                    ignore: ':hidden',
-                    success: function (label, element) {
-                        label.addClass('help-block valid');
-                        // mark the current input as valid and display OK icon
-                        $(element).closest('.form-group').removeClass('has-error');
-                    },
-                    highlight: function (element) {
-                        $(element).closest('.help-block').removeClass('valid');
-                        // display OK icon
-                        $(element).closest('.form-group').addClass('has-error');
-                        // add the Bootstrap error class to the control group
-                    },
-                    unhighlight: function (element) {// revert the change done by hightlight
-                        $(element).closest('.form-group').removeClass('has-error');
-                        // set error class to the control group
-                    }
-                });
-            };
+                                        FB.ui(obj, callback);
+                                    }
+                                    function logoutFromApplication() {
+                                        $.ajax({
+                                            url: "../model/com.gogetrich.function/Logout.php",
+                                            success: function (data, textStatus, jqXHR) {
+                                                if (data == 200) {
+                                                    window.location.href = "main";
+                                                }
+                                            }
+                                        });
+                                    }
+                                    function submitLogin(form) {
+                                        $.ajax({
+                                            url: "../model/com.gogetrich.function/LoginSubmit.php",
+                                            type: 'POST',
+                                            data: {'username': $("#username").val(), 'password': $("#password").val()},
+                                            success: function (data, textStatus, jqXHR) {
+                                                var resData = data.split(":");
+                                                if (resData[0] == 503) {
+                                                    setTimeout(function () {
+                                                        showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                                                    }, 100);
+                                                    $(form).trigger('reset');
+                                                }
+                                                if (resData[0] == 205) {
+                                                    setTimeout(function () {
+                                                        showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
+                                                    }, 100);
+                                                    $(form).trigger('reset');
+                                                }
+                                                if (resData[0] == 200) {
+                                                    window.location = 'trainingSchedule';
+                                                    $(form).trigger('reset');
+                                                }
+                                            }
+                                        });
+                                    }
+                                    var runSetDefaultValidation = function () {
+                                        $.validator.setDefaults({
+                                            errorElement: "span", // contain the error msg in a small tag
+                                            errorClass: 'help-block',
+                                            errorPlacement: function (error, element) {// render error placement for each input type
+                                                if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
+                                                    error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                                                } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
+                                                    error.appendTo($(element).closest('.form-group').children('div'));
+                                                } else {
+                                                    error.insertAfter(element);
+                                                    // for other inputs, just perform default behavior
+                                                }
+                                            },
+                                            ignore: ':hidden',
+                                            success: function (label, element) {
+                                                label.addClass('help-block valid');
+                                                // mark the current input as valid and display OK icon
+                                                $(element).closest('.form-group').removeClass('has-error');
+                                            },
+                                            highlight: function (element) {
+                                                $(element).closest('.help-block').removeClass('valid');
+                                                // display OK icon
+                                                $(element).closest('.form-group').addClass('has-error');
+                                                // add the Bootstrap error class to the control group
+                                            },
+                                            unhighlight: function (element) {// revert the change done by hightlight
+                                                $(element).closest('.form-group').removeClass('has-error');
+                                                // set error class to the control group
+                                            }
+                                        });
+                                    };
         </script>
     </body>
 </html>

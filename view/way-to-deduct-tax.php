@@ -148,8 +148,8 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 pull-left">
-                                <a href="<?= $fPage ?>" class="btn btn-default">
-                                    <i class="fa fa-backward"></i> Back
+                                <a href="<?= $fPage ?>" class="btn btn-default btn-sm">
+                                    <i class="fa fa-backward"></i> กลับสู่ เรียนรู้สู่ความรวย
                                 </a>
                                 <br/><br/>
                             </div>
@@ -168,11 +168,56 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="tg-aboutus">
                                         <div class="tg-description">
-                                            <p>Go Get Rich เกิดขึ้นมาจาก กลุ่มคนเล็กๆ ที่เห็นความสำคัญของ การจัดการและการวางแผนทางการเงิน เราเคยแอบบ่นกันเองว่า "นี่ถ้ามีความรู้เรื่องการจัดการ การวางแผนการเงิน และการลงทุน ตั้งแต่ตอนเรียนมหาวิทยาลัย หรือเมื่อตอนอายุยี่สิบ พวกเราคงรวย และได้เกษียณ ไม่ต้องทำงาน กันไปนานแล้ว"</p>
-                                            <p>แต่อย่างไรก็ตาม สิ่งที่เรามองว่า เป็น "โชคดี" ของชาตินี้ ก็คือ ถึงจะรู้ช้า แต่อย่างน้อย ก็ได้รู้ ถึงแม้ อายุของแต่ละคนในทีม จะมากๆกันแล้วก็ตาม (ไม่ต้องถามหรอกนะ ว่าตอนนี้ อายุกันเท่าไร ฮา)</p>
-                                            <p>ความรู้ ในการจัดการ วางแผนการเงิน และการลงทุน ที่พวกเรามี ไม่ได้ หมายความว่า พวกเรา เป็นเศรษฐีร้อยล้านพันล้าน แต่ ความรู้เหล่านี้ ได้ช่วยให้เรา "มีความสุข และได้ใช้ชีวิต โดยที่ไม่ต้องกังวลในเรื่องการเงิน" </p>
-                                            <p>ความมุ่งมั่นของทีม Go Get Rich คือ การเผยแพร่ ความรู้ บนพื้นฐานของการจัดการการเงิน ตามปิระมิดการเงิน โดยใช้เครื่องมืออันทรงประสิทธิภาพที่สุดของการจัดการทางการเงิน ซึ่งก็คือ "การวางแผนจัดการเงิน"</p>
-                                            <p><strong>มาร่วมกัน เรียนรู้ สร้าง วางแผนการเงิน และ ออกแบบการใช้ชีวิต ให้มีความสุขกันเถอะค่ะ !</strong></p>
+                                            <p>&emsp;&emsp;&emsp;ฐานภาษีคุณเท่าไร? ถ้าเงินได้สุทธิหลังหักเงินบริจาค อยู่ระหว่าง 1-2 ล้านบาท ฐานภาษีคุณคือ 25% ถ้าคุณใช้สิทธิ 100,000 บาท 
+                                                สามารถอุดรูรั่วภาษีได้ 25,000 บาทในแต่ละปี</p>
+                                            <p>&emsp;&emsp;&emsp;ถ้ายังต้องทำงานอีก 20 ปี เท่ากับเปลี่ยนภาษีมาเป็นเงินออมได้ถึง 500,000 บาท (25,000 x 20 ปี)</p>
+                                            <p>&emsp;&emsp;&emsp;ภาษีเงินได้บุคคลธรรมดามีทั้งหมด  8 ประเภท มีสิทธิหักค่าใช้จ่ายที่แตกต่างกันตามประเภทเงินได้ หลังจากหักค่าใช้จ่ายแล้ว สิทธิทางภาษีที่เหมือนกัน 
+                                                คือ สิทธิการลดหย่อนภาษี และหักเงินบริจาค มีโครงสร้างดังนี้</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-centered">
+                                    <div class="tg-aboutus">
+                                        <div class="tg-description">
+                                            <br />
+                                            <br />
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/deduct_tax2.jpg" alt="image description"/>
+                                            </p>
+                                            <p>&emsp;&emsp;&emsp;เงินได้บางประเภทได้สิทธิหักค่าใช้จ่ายมีเพดาน หักค่าใช้จ่ายเหมาจ่าย 40% ไม่เกิน 60,000 บาท 
+                                                ได้แก่ รายได้ประเภทเงินเดือน ค่าคอมมิชชั่น ฯลฯ</p>
+                                            <p>&emsp;&emsp;&emsp;เงินได้บางประเภทไม่ได้สิทธิหักค่าใช้จ่าย ได้แก่ เงินได้ประเภทที่ 4 เงินได้จากการลงทุน (ดอกเบี้ย เงินปันผล) 
+                                                และเงินได้ประเภทที่ 3 ค่าแห่งกู๊ดวิลล์ </p>
+                                            <p>&emsp;&emsp;&emsp;การใช้สิทธิลดหย่อนภาษีจึงเป็นการบริหารภาษีที่ช่วยให้เสียภาษีน้อยลง สามารถเลือกใช้สิทธิทางภาษีไปพร้อมกับวางแผนการเงินด้านอื่น ๆ 
+                                                ด้วย เช่น วางแผนเกษียณอายุ วางแผนคุ้มครองรายได้ครอบครัว ฯลฯ</p>
+                                            <p><strong>ค่าลดหย่อน แบ่งเป็น 4 กลุ่ม</strong></p>
+                                            <p>&emsp;&emsp;&emsp;1. ลดหย่อนบุคคล<br />
+                                                &emsp;&emsp;&emsp;2. ลดหย่อนเกี่ยวกับเงินสะสม<br />
+                                                &emsp;&emsp;&emsp;3. ลดหย่อนเบี้ยประกัน<br />
+                                                &emsp;&emsp;&emsp;4. ลดหย่อนเงินบริจาค<br />
+                                                &emsp;&emsp;&emsp;5. อื่น ๆ</p>
+                                            <p><strong>1. ลดหย่อนบุคคล</strong></p>
+                                            <p>&emsp;&emsp;&emsp;ลดหย่อนผู้เงินได้ คู่สมรส บุตร บิดา/มารดา และผู้พิการ</p>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/tax1.jpg" alt="image description"/>
+                                            </p>
+                                            <p><strong>2. ลดหย่อนเกี่ยวกับเงินสะสม</strong></p>
+                                            <p>&emsp;&emsp;&emsp;เงินสดสมภาคบังคับ เงินสะสมภาคสมัครใจโดยอาชีพ และเงินภาคสมัครใจ</p>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/tax2.jpg" alt="image description"/>
+                                            </p>
+                                            <p><strong>3. ลดหย่อนเบี้ยประกัน</strong></p>
+                                            <p>&emsp;&emsp;&emsp;เบี้ยประกันชีวิตผู้มีเงินได้ คู่สมรส และบิดามารดา</p>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/tax3.jpg" alt="image description"/>
+                                            </p>
+                                            <p><strong>4. ลดหย่อนเงินบริจาค</strong></p>
+                                            <p>&emsp;&emsp;&emsp;เงินบริจาคลดหย่อน 2 เท่า และเงินบริจาคลดหย่อนได้ 1 เท่า</p>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/tax4.jpg" alt="image description"/>
+                                            </p>
+                                            <p><strong>5. อื่น ๆ</strong></p>
+                                            <p>&emsp;&emsp;&emsp;ประกาศเป็นครั้ง ๆ เช่น บ้านหลังแรก, รถคันแรก, ค่าลดหย่อนเดินทางท่องเที่ยว, ค่าหนังสือ ฯลฯ</p>
                                         </div>
                                     </div>
                                 </div>
@@ -195,80 +240,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                     <h2>Our Coach</h2>
                                 </div>
                             </div>
-                            <div class="tg-ourteam tg-haslayout">
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/wipa_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-modalbox">อ. วิภา เจริญกิจสุพัฒน์</span>
-                                            <span class="tg-member-postion">คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pop_our.png" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name" style="cursor: pointer;" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">อ. วิธิวัต โรจนตรีคูณ</span>
-                                            <span class="tg-member-postion">ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pinhathai_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. ปิ่นหทัย เดชสิงหรัตน์</span>
-                                            <span class="tg-member-postion">Designer at Example.com</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div-->
-                            </div>
+                            <?php include './mentor_part.php'; ?>
                         </div>
                     </div>
                 </section>
@@ -362,56 +334,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>MENTOR DETAIl</h2>
-                <form style="padding:20px" >
-                    <div style="overflow-x:hidden; max-height: 450px;">
-                        <div class="row">
-                            <div class="col-sm-4">                                        
-                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <br/>
-                                <fieldset>
-                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
-                                </fieldset>
-                            </div>
-                            <div class="col-sm-8">
-                                <fieldset>
-                                    <!--legend>ประวัติ และคุณวุฒิ​</legend>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</li-->
-                                    <legend>ประวัติการศึกษา</legend>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา</li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li></br>
-                                    <legend>ประวัติการเป็นวิทยากร</legend>
-                                    <li>วิทยากรรับเชิญ โครงการอบรม “บริการด้วยใจ นักขายมืออาชีพ” ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร จังหวัดสมุทรปราการ</li>
-                                    <li>วิทยากรรับเชิญ เสวนาเรื่อง “วางแผนการเงิน เรื่องที่ควรรู้ก่อนการซื้อบ้าน” ในมหกรรมบ้าน-คอนโดและสินเชื่อแห่งปี</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “Secret of Money Cat ความลับการจัดการเงินอย่างฉลาด เพื่ออิสรภาพทางการเงิน”</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “เคล็ดลับสร้างความมั่งคั่งอย่างยั่งยืน”</li>
-                                    <li>วิทยากรประจำโครงการ Pre-Career Financial Advisor เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรบรรยาย “วางแผนภาษีด้วยสินค้าประชีวิต” โครงการ Financial Advisor Standard เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรรับเชิญจากสำนักงานตัวแทนคุณชูลักษณ์ สมุทรปราการ หัวข้อ “Regular Activities for Fulltime Agents ทำตามหน้าที่ แล้วหน้าที่จะสอนให้เราทำ”</li></br>
-                                    <legend>ประวัติการทำงาน</legend>
-                                    <li>กรรมการผู้จัดการบริษัทฟินคีย์ แอ็ดไวเซอรี่ จำกัด</li>
-                                    <li>เป็นตัวแทนประกันชีวิตและผู้จัดการฝ่ายขายบริษัท เอไอเอ จำกัด ตั้งแต่ปีพ.ศ. 2546 ถึงปัจจุบัน</li>
-                                    <li>ทำงานด้านพัฒนา ติดตั้งและสนับสนุนระบบคอมพิวเตอร์ซอฟต์แวร์ พ.ศ. 2531-2548</li></br>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                </form>   
-            </div>
-        </div>
+        <?php include './mentor_dialog.php'; ?>
         <!--************************************
                         Popup End
         *************************************-->

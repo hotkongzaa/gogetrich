@@ -255,7 +255,7 @@ $currentFile = basename(__FILE__, '.php');
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="good-plan-good-health?fPage=<?= $currentFile ?>">สวยด้วยสุขภาพการเงินที่ดี</a></h2>
+                                                            <h2><a href="good-plan-good-health?fPage=<?= $currentFile ?>">สวยหล่อด้วยสุขภาพการเงินที่ดี</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>&emsp;&emsp;&emsp;สวยหล่อด้วยสุขภาพการเงินที่ดี จากภายในสู่ภายนอก สุขภาพการเงินที่ดีสร้างความสงบสุขเติมเต็ม 
@@ -289,7 +289,7 @@ $currentFile = basename(__FILE__, '.php');
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
                                                             <!--span></span-->
-                                                            <h2><a href="life-by-financial?fPage=<?= $currentFile ?>">จัดการชีวีด้วยงบการเงิน</a></h2>
+                                                            <h2><a href="life-by-financial?fPage=<?= $currentFile ?>">จัดการชีวีด้วยงบประมาณและเงินฉุกเฉิน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>&emsp;&emsp;&emsp;จากการประเมินสุขภาพการเงิน เราจะพบต้นเหตุมาจากกการบริหารจัดการเงิน การขาดความรู้ความเข้าใจในการจัดการเงิน 
@@ -325,7 +325,7 @@ $currentFile = basename(__FILE__, '.php');
                                                         </div>
                                                         <div class="tg-description">
                                                             <p>&emsp;&emsp;&emsp;คนส่วนใหญ่อายุใกล้เกษียณจะเริ่มสนใจเตรียม อายุที่สนใจเตรียมเงินเกษียณอายุคือ คนอายุ 40-45 ปี ขึ้นไป 
-                                                                ทำให้เป็นภาระหนักในการเตรียมเงินเกษียณในเวลาทำงานที่เหลือสั้น ๆ</p>
+                                                                ทำให้เป็นภาระหนักในการเตรียมเงินเกษียณในเวลาทำงานที่เหลือสั้นๆ</p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="perfect-life-with-retirement?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
@@ -356,7 +356,9 @@ $currentFile = basename(__FILE__, '.php');
                                                             <h2><a href="way-to-deduct-tax?fPage=<?= $currentFile ?>">เรียนหนทางลดหย่อนภาษี</a></h2>
                                                         </div>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                            <p>&emsp;&emsp;&emsp;ฐานภาษีคุณเท่าไร? ถ้าเงินได้สุทธิหลังหักเงินบริจาค อยู่ระหว่าง 1-2 ล้านบาท ฐานภาษีคุณคือ 25% ถ้าคุณใช้สิทธิ 100,000 บาท 
+                                                                สามารถอุดรูรั่วภาษีได้ 25,000 บาทในแต่ละปี ถ้ายังต้องทำงานอีก 20 ปี เท่ากับเปลี่ยนภาษีมาเป็นเงินออมได้ถึง 500,000 บาท (25,000 x 20 ปี)
+                                                            </p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="way-to-deduct-tax?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>
@@ -364,7 +366,7 @@ $currentFile = basename(__FILE__, '.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="portfolio-item grid-item interior">
+<!--                                    <div class="portfolio-item grid-item interior">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
@@ -383,7 +385,7 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
-                                                            <!--span></span-->
+                                                            span></span
                                                             <h2><a href="property-investment?fPage=<?= $currentFile ?>">อสังหาดีๆมีให้ลงทุน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
@@ -394,8 +396,8 @@ $currentFile = basename(__FILE__, '.php');
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="portfolio-item grid-item interior">
+                                    </div>-->
+<!--                                    <div class="portfolio-item grid-item interior">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
@@ -414,7 +416,7 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
-                                                            <!--span></span-->
+                                                            span></span
                                                             <h2><a href="learn-to-invest?fPage=<?= $currentFile ?>">เล่นหุ้นต้องศึกษา</a></h2>
                                                         </div>
                                                         <div class="tg-description">
@@ -425,7 +427,7 @@ $currentFile = basename(__FILE__, '.php');
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <div class="portfolio-item grid-item interior">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
@@ -449,7 +451,9 @@ $currentFile = basename(__FILE__, '.php');
                                                             <h2><a href="money-freedom?fPage=<?= $currentFile ?>">อิสระทางการเงิน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                            <p>&emsp;&emsp;&emsp;คุณลองหลับตา...แล้วนึก...ตอนนี้คุณมีอิสรภาพการเงินแล้ว...อารมณ์ความสุขเล็ก ๆ สบายใจ สงบสุขเกิดขึ้นเลยใช่มั้ย?...</p>
+                                                            <p>&emsp;&emsp;&emsp;หลายคนอาจจะให้ความหมาย อิสรภาพการเงิน คือ “อยากซื้ออะไร ก็ซื้อได้หมดทุกอย่าง” แนวความคิดนี้จะทำให้คนจนไม่มีโอกาสพบหนทางอิสระ 
+                                                                หรือคนที่รวยมาก ๆ มีรายได้มาก ๆ จะไม่ถูกปลดปล่อยให้เป็นอิสระซักที</p>
                                                         </div>
                                                         <a class="tg-viewmore-btn" href="money-freedom?fPage=<?= $currentFile ?>">View More »</a>
                                                     </div>

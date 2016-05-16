@@ -158,7 +158,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                             <div class="col-xs-12">
                                 <div class="tg-theme-heading">
                                     <span>LEARN TO RICH</span>
-                                    <h2>สวยด้วยสุขภาพการเงินที่ดี</h2>
+                                    <h2>สวยหล่อด้วยสุขภาพการเงินที่ดี</h2>
                                 </div>
                             </div>
                             <div class="tg-aboutus-section">
@@ -172,80 +172,80 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                             <p>&emsp;&emsp;&emsp;สุขภาพการเงินที่ดีเป็นอย่างไร? ไม่กังวลค่าใช้จ่ายที่เกิดขึ้นในทุกช่วงของชีวิต รายรับรายจ่ายปัจจุบันสมดุล เตรียมพร้อมค่าใช้จ่ายอนาคตในสถานการณ์ปกติ และพร้อมในสถานการณ์ไม่ปกติ</p>
                                             <p>&emsp;&emsp;&emsp;การตรวจสุขภาพการเงินช่วยให้เราเห็นภาพการเงินของตนเองชัดเจน ว่าอยู่จุดไหนของสถานการณ์การเงิน</p>
                                             <p><strong>วิธีตรวจสุขภาพการเงินด้วยตนเองง่าย ๆ คือ</strong><br />
-                                            &emsp;&emsp;&emsp;1. ทรัพย์สินสุทธิคงเหลือเปรียบเทียบกับเกณฑ์<br />
-                                            &emsp;&emsp;&emsp;2. สำรวจพฤติกรรมการเงิน<br />
-                                            &emsp;&emsp;&emsp;3. ประเมินสถานการณ์ปัจจุบัน<br />
+                                                &emsp;&emsp;&emsp;1. ทรัพย์สินสุทธิคงเหลือเปรียบเทียบกับเกณฑ์<br />
+                                                &emsp;&emsp;&emsp;2. สำรวจพฤติกรรมการเงิน<br />
+                                                &emsp;&emsp;&emsp;3. ประเมินสถานการณ์ปัจจุบัน<br />
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-centered">
-                                        <div class="tg-aboutus">
-                                            <div class="tg-description">
-                                                </br>
-                                                <p><strong>1. ทรัพย์สินสุทธิคงเหลือเปรียบเทียบกับเกณฑ์</strong></p>
-                                                <p>&emsp;&emsp;&emsp;ทรัพย์สินสุทธิ = ทรัพย์สิน – หนี้สิน<br />
-                                                    &emsp;&emsp;&emsp;<u>ตัวอย่าง</u></p>
-                                                <p style="text-align:center">
-                                                    <img src="assets/images/learn-to-rich/beauty_and_health_4.jpg" alt="image description" style="width:550px;height:600px;"/>
-                                                </p>
-                                                <p>&emsp;&emsp;&emsp;<strong>เปรียบเทียบกับทรัพย์สินสุทธิกับเกณฑ์มาตรฐาน</strong><br />
-                                                    &emsp;&emsp;&emsp;เกณฑ์ทรัพย์สินสุทธิ  = รายได้ปีล่าสุด x จำนวนปีที่ทำงาน x 20%<br />
+                                    <div class="tg-aboutus">
+                                        <div class="tg-description">
+                                            </br>
+                                            <p><strong>1. ทรัพย์สินสุทธิคงเหลือเปรียบเทียบกับเกณฑ์</strong></p>
+                                            <p>&emsp;&emsp;&emsp;ทรัพย์สินสุทธิ = ทรัพย์สิน – หนี้สิน<br />
                                                 &emsp;&emsp;&emsp;<u>ตัวอย่าง</u></p>
-                                                <p style="text-align:center">
-                                                    <img src="assets/images/learn-to-rich/beauty_and_health_5.jpg" alt="image description" style="width:620px;height:140px;"/>
-                                                </p>
-                                                <p>&emsp;&emsp;&emsp;เกณฑ์ทรัพย์สินสุทธิ  = 720,000 บาท x 15 ปี x 20% = 2,160,000 บาท<br />
-                                                 &emsp;&emsp;&emsp;มีมูลค่าทรัพย์สินสุทธิจริง 1,950,000 บาท มูลค่าทรัพย์สินที่ควรจะมีคือ 2,160,000 บาท
-                                                </p>
-                                                <p><strong>2. สำรวจพฤติกรรมการเงิน</strong></p>
-                                                <p>&emsp;&emsp;&emsp;กระแสเงินสดสุทธิ = กระแสเงินสดรับ – กระแสเงินสดจ่าย<br />
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/beauty_and_health_4.jpg" alt="image description" style="width:550px;height:600px;"/>
+                                            </p>
+                                            <p>&emsp;&emsp;&emsp;<strong>เปรียบเทียบกับทรัพย์สินสุทธิกับเกณฑ์มาตรฐาน</strong><br />
+                                                &emsp;&emsp;&emsp;เกณฑ์ทรัพย์สินสุทธิ  = รายได้ปีล่าสุด x จำนวนปีที่ทำงาน x 20%<br />
+                                                &emsp;&emsp;&emsp;<u>ตัวอย่าง</u></p>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/beauty_and_health_5.jpg" alt="image description" style="width:620px;height:140px;"/>
+                                            </p>
+                                            <p>&emsp;&emsp;&emsp;เกณฑ์ทรัพย์สินสุทธิ  = 720,000 บาท x 15 ปี x 20% = 2,160,000 บาท<br />
+                                                &emsp;&emsp;&emsp;มีมูลค่าทรัพย์สินสุทธิจริง 1,950,000 บาท มูลค่าทรัพย์สินที่ควรจะมีคือ 2,160,000 บาท
+                                            </p>
+                                            <p><strong>2. สำรวจพฤติกรรมการเงิน</strong></p>
+                                            <p>&emsp;&emsp;&emsp;กระแสเงินสดสุทธิ = กระแสเงินสดรับ – กระแสเงินสดจ่าย<br />
                                                 &emsp;&emsp;&emsp;กระแสเงินสดรับ  = รายได้<br />
                                                 &emsp;&emsp;&emsp;กระแสเงินสดจ่าย = รายจ่าย<br />
                                                 &emsp;&emsp;&emsp;<u>ตัวอย่าง</u></p>
-                                                <p style="text-align:center">
-                                                    <img src="assets/images/learn-to-rich/beauty_and_health_6.jpg" alt="image description" style="width:560px;height:760px;"/>
-                                                </p>
-                                                <p>พฤติกรรมการเงินเป็นเหตุ ทรัพย์สินสุทธิเป็นผลลัพธ์</p>
-                                                <ul>
-                                                    <li>รายรับรายจ่ายสมดุลหรือไม่? กระแสเงินสดรับ – กระแสเงินสดจ่าย</li>
-                                                    <li>ค่าใช้จ่ายปัจจุบัน ไม่ควรเกิน 55% ของรายได้</li>
-                                                    <li>ค่างวดผ่อนทั้งหมดไม่เกิน 35% ของรายได้</li>
-                                                    <li>เงินออมมากกว่า 10% ของรายได้</li>
-                                                </ul>
-                                                <p style="text-align:center">
-                                                    <img src="assets/images/learn-to-rich/beauty_and_health_7.jpg" alt="image description" style="width:314px;height:214px;"/>
-                                                </p>
-                                                <ul>
-                                                    <li>รายรับรายจ่ายสมดุลหรือไม่? กระแสเงินสดรับ – กระแสเงินสดจ่าย มีเงินเหลือหรือติดลบ การใช้จ่ายเกินรายได้ </li>
-                                                    <li>ค่าใช้จ่ายปัจจุบัน ไม่ควรเกิน 55% ของรายได้ </li>
-                                                    <li>ค่างวดผ่อนทั้งหมดไม่เกิน 35% ของรายได้</li>
-                                                    <li>เงินออมมากกว่า 10% ของรายได้ </li>
-                                                </ul><br />
-                                                <p><strong>3. วิเคราะห์สถานะการเงิน</strong></p>
-                                                <p>ประเมินสถานการณ์การเงินปัจจุบัน:</p>
-                                                <ul>
-                                                    <li>ทรัพย์สินสุทธิมากกว่าเกณฑ์ เกณฑ์มาจากการออม 20% ตั้งแต่เริ่มต้นทำงาน</li>
-                                                    <li>กระแสเงินสดสุทธิ การมีรายรับรายจ่ายสมดุล</li>
-                                                    <li>สภาพคล่อง คือเงินออมสำรองฉุกเฉินกรณีมีรายจ่ายที่ไม่อยู่ในแผนการเงิน หรือกรณีตกงานกะทันหัน ควรสำรอง 6 เท่าของรายจ่าย</li>
-                                                    <li>ค่างวดผ่อนชำระทั้งหมด ไม่ควรเกิน 35% ของรายได้</li>
-                                                    <li>ค่างวดผ่อนชำระหนี้บริโภค ไม่ควรเกิน 20% ของรายได้ เนื่องจากเป็นหนี้ที่ทำให้ทรัพย์สินลดลง</li>
-                                                    <li>เงินออมควรมากกว่า 10% ของรายได้ เงินออมมีความสำคัญในการเตรียมเป็นค่าใช้จ่ายในอนาคต การออมน้อยเกินไป จะทำให้ค่าใช้จ่ายอนาคตที่ถึงเวลาต้องใช้ แต่เตรียมไม่พอเนื่องจากออมน้อยเกินไป เป็นสาเหตุให้เข้าสู่วงจรเป็นหนี้</li>
-                                                    <li>อิสรภาพการเงิน คือ การมีรายได้ที่เกิดจากทรัพย์สิน (ไม่ต้องใช้เวลาและความสามารถในการสร้างรายได้) เทียบเท่ากับรายจ่าย</li>
-                                                </ul><br />
-                                                <p style="text-align:center">
-                                                    <img src="assets/images/learn-to-rich/beauty_and_health_8.jpg" alt="image description" style="width:400px;height:600px;"/>
-                                                </p><br />
-                                                <p style="text-align:center">
-                                                    <img src="assets/images/learn-to-rich/beauty_and_health_1.jpg" alt="image description"/>
-                                                </p>
-<!--                                                <br />
-                                                <br />
-                                                <br />
-                                                <p>*ข้อมูลจาก: กรรมตามสมอง, ขุนเขา สินธุเสน เขจรบุตร</p>-->
-                                            </div>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/beauty_and_health_6.jpg" alt="image description" style="width:560px;height:760px;"/>
+                                            </p>
+                                            <p>พฤติกรรมการเงินเป็นเหตุ ทรัพย์สินสุทธิเป็นผลลัพธ์</p>
+                                            <ul>
+                                                <li>รายรับรายจ่ายสมดุลหรือไม่? กระแสเงินสดรับ – กระแสเงินสดจ่าย</li>
+                                                <li>ค่าใช้จ่ายปัจจุบัน ไม่ควรเกิน 55% ของรายได้</li>
+                                                <li>ค่างวดผ่อนทั้งหมดไม่เกิน 35% ของรายได้</li>
+                                                <li>เงินออมมากกว่า 10% ของรายได้</li>
+                                            </ul>
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/beauty_and_health_7.jpg" alt="image description" style="width:314px;height:214px;"/>
+                                            </p>
+                                            <ul>
+                                                <li>รายรับรายจ่ายสมดุลหรือไม่? กระแสเงินสดรับ – กระแสเงินสดจ่าย มีเงินเหลือหรือติดลบ การใช้จ่ายเกินรายได้ </li>
+                                                <li>ค่าใช้จ่ายปัจจุบัน ไม่ควรเกิน 55% ของรายได้ </li>
+                                                <li>ค่างวดผ่อนทั้งหมดไม่เกิน 35% ของรายได้</li>
+                                                <li>เงินออมมากกว่า 10% ของรายได้ </li>
+                                            </ul><br />
+                                            <p><strong>3. วิเคราะห์สถานะการเงิน</strong></p>
+                                            <p>ประเมินสถานการณ์การเงินปัจจุบัน:</p>
+                                            <ul>
+                                                <li>ทรัพย์สินสุทธิมากกว่าเกณฑ์ เกณฑ์มาจากการออม 20% ตั้งแต่เริ่มต้นทำงาน</li>
+                                                <li>กระแสเงินสดสุทธิ การมีรายรับรายจ่ายสมดุล</li>
+                                                <li>สภาพคล่อง คือเงินออมสำรองฉุกเฉินกรณีมีรายจ่ายที่ไม่อยู่ในแผนการเงิน หรือกรณีตกงานกะทันหัน ควรสำรอง 6 เท่าของรายจ่าย</li>
+                                                <li>ค่างวดผ่อนชำระทั้งหมด ไม่ควรเกิน 35% ของรายได้</li>
+                                                <li>ค่างวดผ่อนชำระหนี้บริโภค ไม่ควรเกิน 20% ของรายได้ เนื่องจากเป็นหนี้ที่ทำให้ทรัพย์สินลดลง</li>
+                                                <li>เงินออมควรมากกว่า 10% ของรายได้ เงินออมมีความสำคัญในการเตรียมเป็นค่าใช้จ่ายในอนาคต การออมน้อยเกินไป จะทำให้ค่าใช้จ่ายอนาคตที่ถึงเวลาต้องใช้ แต่เตรียมไม่พอเนื่องจากออมน้อยเกินไป เป็นสาเหตุให้เข้าสู่วงจรเป็นหนี้</li>
+                                                <li>อิสรภาพการเงิน คือ การมีรายได้ที่เกิดจากทรัพย์สิน (ไม่ต้องใช้เวลาและความสามารถในการสร้างรายได้) เทียบเท่ากับรายจ่าย</li>
+                                            </ul><br />
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/beauty_and_health_8.jpg" alt="image description" style="width:400px;height:600px;"/>
+                                            </p><br />
+                                            <p style="text-align:center">
+                                                <img src="assets/images/learn-to-rich/beauty_and_health_1.jpg" alt="image description"/>
+                                            </p>
+                                            <!--                                                <br />
+                                                                                            <br />
+                                                                                            <br />
+                                                                                            <p>*ข้อมูลจาก: กรรมตามสมอง, ขุนเขา สินธุเสน เขจรบุตร</p>-->
                                         </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -265,126 +265,14 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                     <h2>Our Coach</h2>
                                 </div>
                             </div>
-                            <div class="tg-ourteam tg-haslayout">
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/wipa_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-modalbox">อ. วิภา เจริญกิจสุพัฒน์</span>
-                                            <span class="tg-member-postion">คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pop_our.png" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name" style="cursor: pointer;" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">อ. วิธิวัต โรจนตรีคูณ</span>
-                                            <span class="tg-member-postion">ผู้เชี่ยวชาญด้านหุ้น และอสังหาริมทรัพย์</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--div class="col-md-3 col-sm-6 col-xs-6 width-480">
-                                    <div class="tg-teammember tg-haslayout">
-                                        <figure class="tg-member-img">
-                                            <a href="#"><img src="assets/images/pinhathai_resized.jpg" alt="member name"></a>
-                                            <div class="tg-member-hover">
-                                                <ul class="tg-member-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </figure>
-                                        <div class="tg-member-detail tg-haslayout">
-                                            <span class="tg-member-name">อ. ปิ่นหทัย เดชสิงหรัตน์</span>
-                                            <span class="tg-member-postion">Designer at Example.com</span>
-                                            <ul class="tg-social-icon">
-                                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div-->
-                            </div>
+                            <?php include './mentor_part.php'; ?>
                         </div>
                     </div>
                 </section>
                 <!--************************************
                                 Our Team End
                 *************************************-->
-                <!--************************************
-                                Testimonials Start
-                *************************************-->
-                <!--section class="tg-main-section tg-haslayout testimonial-image">
-                    <div class="container">
-                        <div class="row">
-                            <div class="tg-testimonials tg-haslayout">
-                                <div class="col-lg-10 col-md-7 col-sm-7">
-                                    <div id="tg-testi-slider" class="tg-testi-slider">
-                                        <div class="item">
-                                            <div class="tg-theme-heading">
-                                                <span>our coach</span>
-                                                <h2>วิภา เจริญกิจสุพัฒน์ <span>(อ. พี่เกียก)</span></h2>
-                                            </div>
-                                            <div class="tg-description">
-                                                <blockquote>
-                                                    <q>สามสิ่งสำคัญ ในความรู้ของการจัดการการเงิน ที่พี่อยากจะแชร์และแบ่งปันคนไทยทุกคน ได้แก่ การวางแผนงบการเงิน การอยู่อย่างพอเพียง และการใช้ชีวิตอย่างมีความสุข ...ซึ่งทุกคนทำได้  ขอเพียงรู้จักจัดการเงินอย่างฉลาด อิสระภาพทางการเงินและการใช้ชีวิต มันเป็นไปได้....และนี่แหละ คือ โชค ที่ทุกคนต้องการมี</q>
-                                                </blockquote>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="tg-theme-heading">
-                                                <span>our coach</span>
-                                                <h2>อ. ตู่ กามล</h2>
-                                            </div>
-                                            <div class="tg-description">
-                                                <blockquote>
-                                                    <q>คนเราทำงาน ก็เพื่อหาเงิน เพื่อความสุข หากมีปัญหาในทางการทำงานและการเงิน มันก็แค่สิ่งหนึ่งที่เกิดขึ้นในกระบวนการ การเปลี่ยนแปลง... ค่อยๆคิด ค่อยๆแก้ สิ่งสำคัญ คือ หากเราเข้าใจตนเอง เราจะสามารถนำศักยภาพ และดึงความสามารถที่มีอยู่ สร้างรายได้อย่างไม่มีข้อจำกัด ....ศักยภาพจากการเข้าใจตนเอง และความรู้อย่างถ่องแท้ในงานที่ทำ จะสร้างโชค ที่ไม่รู้จบ</q>
-                                                </blockquote>
-                                            </div>
-                                        </div>                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section-->
-                <!--************************************
-                                Testimonials End
-                *************************************-->                
+
             </main>
             <!--************************************
                             Main End
@@ -432,56 +320,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>MENTOR DETAIl</h2>
-                <form style="padding:20px" >
-                    <div style="overflow-x:hidden; max-height: 450px;">
-                        <div class="row">
-                            <div class="col-sm-4">                                        
-                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <br/>
-                                <fieldset>
-                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
-                                </fieldset>
-                            </div>
-                            <div class="col-sm-8">
-                                <fieldset>
-                                    <!--legend>ประวัติ และคุณวุฒิ​</legend>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา </li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</p>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีและอาชีวศึกษา</li-->
-                                    <legend>ประวัติการศึกษา</legend>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา</li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li></br>
-                                    <legend>ประวัติการเป็นวิทยากร</legend>
-                                    <li>วิทยากรรับเชิญ โครงการอบรม “บริการด้วยใจ นักขายมืออาชีพ” ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร จังหวัดสมุทรปราการ</li>
-                                    <li>วิทยากรรับเชิญ เสวนาเรื่อง “วางแผนการเงิน เรื่องที่ควรรู้ก่อนการซื้อบ้าน” ในมหกรรมบ้าน-คอนโดและสินเชื่อแห่งปี</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “Secret of Money Cat ความลับการจัดการเงินอย่างฉลาด เพื่ออิสรภาพทางการเงิน”</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “เคล็ดลับสร้างความมั่งคั่งอย่างยั่งยืน”</li>
-                                    <li>วิทยากรประจำโครงการ Pre-Career Financial Advisor เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรบรรยาย “วางแผนภาษีด้วยสินค้าประชีวิต” โครงการ Financial Advisor Standard เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรรับเชิญจากสำนักงานตัวแทนคุณชูลักษณ์ สมุทรปราการ หัวข้อ “Regular Activities for Fulltime Agents ทำตามหน้าที่ แล้วหน้าที่จะสอนให้เราทำ”</li></br>
-                                    <legend>ประวัติการทำงาน</legend>
-                                    <li>กรรมการผู้จัดการบริษัทฟินคีย์ แอ็ดไวเซอรี่ จำกัด</li>
-                                    <li>เป็นตัวแทนประกันชีวิตและผู้จัดการฝ่ายขายบริษัท เอไอเอ จำกัด ตั้งแต่ปีพ.ศ. 2546 ถึงปัจจุบัน</li>
-                                    <li>ทำงานด้านพัฒนา ติดตั้งและสนับสนุนระบบคอมพิวเตอร์ซอฟต์แวร์ พ.ศ. 2531-2548</li></br>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                </form>   
-            </div>
-        </div>
+        <?php include './mentor_dialog.php'; ?>
         <!--************************************
                         Popup End
         *************************************-->

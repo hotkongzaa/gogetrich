@@ -152,15 +152,15 @@ require '../model-db-connection/config.php';
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 pull-left">
-                                <a href="financial-check" class="btn btn-default"><i class="fa fa-backward"></i> Back</a>
+                                <a href="financial-check" class="btn btn-default btn-sm"><i class="fa fa-backward"></i> Back</a>
                                 <br/><br/>
                             </div>
                         </div>
                         <div class="row">
-                            <div id="content" class="col-md-9 col-sm-8 col-xs-12">
+                            <div id="content" class="col-md-8 col-sm-8 col-xs-12">
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
-                                        <img src="assets/images/ice_berg_image_v6_653x310.png" alt="image description">
+                                        <img src="assets/images/financial_planning_model.png" alt="image description">
                                         <div class="tg-img-hover">
                                             <div class="tg-displaytable">
                                                 <div class="tg-displaytablecell">
@@ -195,26 +195,9 @@ require '../model-db-connection/config.php';
                                 </article>
 
                             </div>
-                            <aside id="sidebar" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                            <aside id="sidebar" class="col-lg-4 col-md-3 col-sm-4 col-xs-12">
                                 <div class="row">
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="tg-widget widget-recent-post">
-                                            <div class="tg-widget-holder">
-                                                <h3>Recent Posts</h3>
-                                                <ul>
-                                                    <li>
-                                                        <p>ทำไมต้องวางแผนการเงิน</p>
-                                                        <time datetime="2008-02-14 20:00" class="tg-post-date">04 February 2015</time>
-                                                    </li>
-                                                    <li>
-                                                        <p>ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</p>
-                                                        <time datetime="2008-02-14 20:00" class="tg-post-date">04 February 2015</time>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    <?php include 'recent-post.php' ?>
                                 </div>
                             </aside>
 

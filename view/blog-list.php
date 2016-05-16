@@ -212,7 +212,7 @@ require '../model-db-connection/config.php';
                                             } else {
                                                 ?>
                                                 <a href="javascript:void(0)">
-                                                    <i class="fa "></i>
+                                                    <i class="fa fa-angle-right"></i>
                                                 </a>
                                                 <?php
                                             }
@@ -513,7 +513,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/11_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -540,7 +540,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/12_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -569,7 +569,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/13_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -596,7 +596,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/14_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">
@@ -625,7 +625,7 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-post-img">
                                                     <figure>
                                                         <a href="#">
-                                                            <img src="assets/images/blog/blog_piramid.jpg" alt="image description">
+                                                            <img src="assets/images/blog/15_front.png" alt="image description">
                                                         </a>
                                                     </figure>
                                                     <div class="tg-post-hover">

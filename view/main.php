@@ -197,7 +197,7 @@ require '../model-db-connection/config.php';
                                                         <span class="fa fa-graduation-cap"></span>
                                                         <h3>ล็อคเป้าหมายชีวิต</h3>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                            <p>ความรู้การเงินทำให้เรารู้วิธีสร้างเป้าหมายการเงิน เหมือนมีตะกร้าเงินหลาย ๆ ใบที่จะค่อยกักเก็บเงินให้คุณตามเป้าหมายการเงินที่สนับสนุนเป้าหมายชีวิตของคุณ</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -213,7 +213,7 @@ require '../model-db-connection/config.php';
                                                         <span class="flaticon-star182"></span>
                                                         <h3>จิตและสมองพารวย</h3>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                            <p>การพัฒนาทักษะการเงินนอกจากมิติตัวเลขแล้วยังมีมิติของการรับรู้ ความเชื่อเกี่ยวกับเงิน ภาวะผู้นำและระดับของการให้ การได้รับความรู้ควบคู่กันไป</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -227,9 +227,9 @@ require '../model-db-connection/config.php';
                                                 <div class="tg-displaytable">
                                                     <div class="tg-displaytablecell">
                                                         <span class="fa fa-heartbeat"></span>
-                                                        <h3>สวยด้วยสุขภาพการเงินที่ดี</h3>
+                                                        <h3>สวยหล่อด้วยสุขภาพการเงินที่ดี</h3>
                                                         <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh.</p>
+                                                            <p>สวยหล่อด้วยสุขภาพการเงินที่ดี จากภายในสู่ภายนอก สุขภาพการเงินที่ดีสร้างความสงบสุขเติมเต็ม เป็นพลังงานสงบที่ผู้คนรอบข้างสัมผัสได้</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -266,14 +266,14 @@ require '../model-db-connection/config.php';
                             <div class="col-sm-7 tg-displayinlineblock">
                                 <div class="tg-virtual-img tg-haslayout">
                                     <figure>
-                                        <img src="assets/images/ice_berg_image_v6_653x310.png" alt="image description">
+                                        <img src="assets/images/financial_planning_model.png" alt="image description">
                                     </figure>
                                 </div>
                             </div>
                             <div class="col-sm-5 tg-displayinlineblock">
                                 <div class="tg-virtuallybuild">
                                     <div class="tg-theme-heading">
-                                        <h2>Who are you? <span>คุณเป็นใคร ในภูเขาน้ำแข็งทางการเงิน</span></h2>
+                                        <h2>Who are you? <span>คุณเป็นใครใน Financial Spectrum Stages</span></h2>
                                     </div>
                                     <div class="tg-description">
                                         <p>คุณอยู่สถานการณ์ไหน การรู้สถานการณ์ของตัวเองจะช่วยให้การจัดการการเงินถูกทิศทาง รวมถึงการวางแผนการเงินเพื่อให้เกิดความชัดเจนเรื่องเงิน ตลอดทุกช่วงชีวิต เพื่อความสงบสุขทางใจ เพื่อสร้างความมั่นคงให้กับครอบครัว</p>
@@ -311,7 +311,7 @@ require '../model-db-connection/config.php';
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="portfolio-item-two">
                                                 <figure>
-                                                    <img src="assets/images//portfolio/pop_image.png" alt="อ. วิธิวัต โรจนตรีคูณ">
+                                                    <img src="assets/images//portfolio/golf_image.png" alt="อ. วิธิวัต โรจนตรีคูณ">
                                                 </figure>
                                             </div>
                                         </div>
@@ -321,36 +321,38 @@ require '../model-db-connection/config.php';
                                     <div class="portfolio masnory tg-haslayout">
                                         <ul id="gallery-cats" class="gallery-cats option-set haslayout">
                                             <li class="select"><a href="#" data-filter="*">All</a></li>
-                                            <li><a href="#" data-filter=".construction">พี่เลี้ยงการเงิน</a></li>
+                                            <li><a href="#" data-filter=".moneymentor">พี่เลี้ยงการเงิน</a></li>
                                         </ul>
                                         <div class="row">
                                             <div class="portfolio-content tg-haslayout portfolio-image grid" role="tablist">
-                                                <div role="presentation" class="active portfolio-item grid-item construction">
+                                                <div role="presentation" class="active portfolio-item grid-item moneymentor">
                                                     <div class="product-box">
                                                         <a href="#portfolio-item-one" aria-controls="portfolio-item-one" role="tab" data-toggle="tab">
-                                                            <figure><img src="assets/images/portfolio/wipa_thumbnail.png" alt="image description"></figure>
+                                                            <figure>
+                                                                <img src="assets/images/portfolio/wipa_thumbnail.png" alt="image description">
+                                                            </figure>
                                                             <div class="tg-img-hover">
                                                                 <div class="tg-displaytable">
-                                                                    <div class="tg-displaytablecell" data-toggle="modal" data-target=".mentor-modalbox">
-
+                                                                    <div class="tg-displaytablecell" data-toggle="modal" data-target=".mentor-p_kieak">
                                                                         <i class="fa fa-book"></i>
                                                                         <h4>อ. วิภา เจริญกิจสุพัฒน์</h4>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div role="presentation" class="portfolio-item grid-item construction">
+                                                <div role="presentation" class="portfolio-item grid-item moneymentor">
                                                     <div class="product-box">
                                                         <a href="#portfolio-item-two" aria-controls="portfolio-item-two" role="tab" data-toggle="tab">
-                                                            <figure><img src="assets/images/portfolio/pop_thumbnail.png" alt="image description"></figure>
+                                                            <figure>
+                                                                <img src="assets/images/portfolio/golf_thumbnail.png" alt="image description">
+                                                            </figure>
                                                             <div class="tg-img-hover">
                                                                 <div class="tg-displaytable">
-                                                                    <div class="tg-displaytablecell" onclick="window.open('http://www.vihoon.com/?pg=about', '_blank');">
+                                                                    <div class="tg-displaytablecell" data-toggle="modal" data-target=".mentor-p_golf">
                                                                         <i class="fa fa-book"></i>
-                                                                        <h4>อ. วิธิวัต โรจนตรีคูณ</h4>
+                                                                        <h4>อ. ณัฏฐพล พราหมณ์สำราญ</h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -372,129 +374,7 @@ require '../model-db-connection/config.php';
                 <!--************************************
                                 Latest Blog Start
                 *************************************-->
-                <section class="tg-main-section tg-haslayout bg-white">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="tg-theme-heading">
-                                    <span>from our</span>
-                                    <h2>Blog พารวย</h2>
-                                </div>
-                            </div>
-                            <div id="tg-posts-slider" class="tg-posts">
-                                <div class="item">
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/whyplanningMain.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a></h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>ยุคสมัยเปลี่ยนแปลงไป เราได้รับการศึกษาในระบบมากขึ้น โอกาสมากขึ้น มีการเปลี่ยนจากทำเกษตร...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/financialSitMain.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="financial-check-detail">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a></h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>สถานะการเงินโดยทั่วไปมีอยู่ 6 สถานการณ์: สถานะพึ่งพิง, หนี้สินล้นพ้นตัว, ไม่มีหนี้...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/financialStatusMain.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="financial-check">สถานะการเงินกับจิตใต้สำนึก</a></h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>ทฤษฎีภูเขาน้ำแข็งของซิกมันด์ ฟรอยด์ (Sigmund Freud) บิดาแห่งจิตวิทยาผู้ให้ความสนใจพฤติกรรม...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="tg-post">
-                                        <div class="tg-post-img">
-                                            <figure>
-                                                <a href="#">
-                                                    <img src="assets/images/blog/blog_piramidMain.jpg" alt="image description">
-                                                </a>
-                                            </figure>
-                                            <div class="tg-post-hover">
-                                                <ul class="tg-post-hover-icons">
-                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tg-post-content tg-border-topleft">
-                                            <h3><a href="financialpyramid-blog">ปิรามิดการเงิน</a></h3>
-                                            <div class="tg-post-meta">
-                                                <span><a href="#">By Admin / </a></span>
-                                                <span><a href="#">In Map</a></span>
-                                            </div>
-                                            <div class="tg-description">
-                                                <p>ขั้นตอนในกระบวนการวางแผนการเงินเป็นเรื่องง่าย ๆ ที่จะซับซ้อนมากหากอธิบายเป็นตัวหนังสือเป็นข้อ ๆ...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <?php include './blog-list_front.php'; ?>
                 <!--************************************
                                 Latest Blog End
                 *************************************-->
@@ -545,49 +425,8 @@ require '../model-db-connection/config.php';
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-
-        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>MENTOR DETAIl <span class="pull-right" style="cursor: pointer" onclick="$('.mentor-modalbox').modal('hide')">x</span></h2>
-                <form style="padding:20px" >
-                    <div>
-                        <div class="row">
-                            <div class="col-sm-4">                                        
-                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <br/><br/>
-                                <fieldset>
-                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
-                                </fieldset>
-                            </div>
-                            <div class="col-sm-8" style="overflow-x:hidden; max-height: 450px;">
-                                <fieldset>
-                                    <legend>ประวัติการศึกษา</legend>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา</li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li></br>
-                                    <legend>ประวัติการเป็นวิทยากร</legend>
-                                    <li>วิทยากรรับเชิญ โครงการอบรม “บริการด้วยใจ นักขายมืออาชีพ” ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร จังหวัดสมุทรปราการ</li>
-                                    <li>วิทยากรรับเชิญ เสวนาเรื่อง “วางแผนการเงิน เรื่องที่ควรรู้ก่อนการซื้อบ้าน” ในมหกรรมบ้าน-คอนโดและสินเชื่อแห่งปี</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “Secret of Money Cat ความลับการจัดการเงินอย่างฉลาด เพื่ออิสรภาพทางการเงิน”</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “เคล็ดลับสร้างความมั่งคั่งอย่างยั่งยืน”</li>
-                                    <li>วิทยากรประจำโครงการ Pre-Career Financial Advisor เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรบรรยาย “วางแผนภาษีด้วยสินค้าประชีวิต” โครงการ Financial Advisor Standard เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรรับเชิญจากสำนักงานตัวแทนคุณชูลักษณ์ สมุทรปราการ หัวข้อ “Regular Activities for Fulltime Agents ทำตามหน้าที่ แล้วหน้าที่จะสอนให้เราทำ”</li></br>
-                                    <legend>ประวัติการทำงาน</legend>
-                                    <li>กรรมการผู้จัดการบริษัทฟินคีย์ แอ็ดไวเซอรี่ จำกัด</li>
-                                    <li>เป็นตัวแทนประกันชีวิตและผู้จัดการฝ่ายขายบริษัท เอไอเอ จำกัด ตั้งแต่ปีพ.ศ. 2546 ถึงปัจจุบัน</li>
-                                    <li>ทำงานด้านพัฒนา ติดตั้งและสนับสนุนระบบคอมพิวเตอร์ซอฟต์แวร์ พ.ศ. 2531-2548</li></br>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                </form>   
-            </div>
-        </div>
+        <!--<Part of mentor Dialog>-->
+        <?php include './mentor_dialog.php'; ?>
         <!--************************************
                         Popup End
         *************************************-->
