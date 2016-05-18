@@ -597,7 +597,8 @@ body.home .affix .add-nav{ padding:17px 0 13px;}
     color:#272727;
 }
 #nav{
-    width:77%;
+    /*width:77%;*/
+    width:75%;
     float:left;
     text-transform:uppercase;
 }
@@ -1260,7 +1261,7 @@ ul.gallery-cats:after{
     top:50%;
     left:35%;
     box-shadow:none;
-    border-radius:10px;
+    /*border-radius:10px;*/
     background:#fff;
     margin:-215px 0 0 -190px;
 }

@@ -246,8 +246,12 @@ require '../model-db-connection/config.php';
                                                         <a href="whyweplanning-blog">ทำไมต้องวางแผนการเงิน</a>
                                                     </h3-->
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>ยุคสมัยเปลี่ยนแปลงไป เราได้รับการศึกษาในระบบมากขึ้น โอกาสมากขึ้น มีการเปลี่ยนจากทำเกษตรกรรมในรุ่นพ่อแม่ปู่ย่าตายาย หรือค้าขายที่บ้าน มาทำงานมีรายได้ในรูปของเงินเดือนเป็นจำนวนเงินแน่นอนทุกเดือน...</p>
@@ -276,8 +280,12 @@ require '../model-db-connection/config.php';
                                                         <a href="financial-situation">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a>
                                                     </h3-->
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>สถานะการเงินโดยทั่วไปมีอยู่ 6 สถานการณ์: สถานะพึ่งพิง, หนี้สินล้นพ้นตัว, ไม่มีหนี้หรือมีหนี้ที่จัดการได้ แต่ไม่มีเงินเก็บ, เงินเหลือมากแต่ไม่ได้จัดการ, การเงินมั่นคงปลอดภัย, อิสรภาพการเงิน...</p>
@@ -306,8 +314,12 @@ require '../model-db-connection/config.php';
                                                         <a href="financial-status">สถานะการเงินมิติของอารมณ์ความรู้สึก</a>
                                                     </h3-->
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>สถานะการเงินเป็นอย่างไร นอกจากความรู้การเงินแล้ว สิ่งที่มีอิทธิพลสูงกว่าคือ ความเชื่อทางสังคม วัฒนธรรม สภาพแวดล้อม การถูกเลี้ยงดู...</p>
@@ -333,8 +345,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=1&id=<?= md5(4) ?>">ชะตาชีวิตลิขิตได้</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>ไม่ว่าสถานการณ์การเงินปัจจุบันจะเป็นอย่างไรก็ตามไม่มีผิดไม่มีถูก ที่ผ่านมาเป็นเพียงปรากฏการณ์ มาทำความรู้จักกับกลไกธรรมชาติที่มีในทุกคน...</p>
@@ -360,8 +376,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=1&id=<?= md5(5) ?>">พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>หลังจากเราทราบแล้วว่าตนเองอยู่ในสถานการณ์การเงินแบบใด ต่อไปคือการเข้ากระบวนการวางแผนการเงินเพื่อไปสู่อิสรภาพการเงิน ในกระบวนการอาจจะจำเป็นต้องปรับสภาพคล่องให้เหมาะสม สร้างแผนสำรองเพื่อรองรับความไม่แน่นอน...</p>
@@ -390,8 +410,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=2&id=<?= md5(6) ?>">ภาพรวมกระบวนการวางแผนการเงิน</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>หลักการในกระบวนการวางแผนการเงิน ประกอบด้วย 3 เรื่องหลัก ๆ คือ รายได้ รายจ่าย และการลงทุน เมื่อทราบแล้วว่าเรามีสถานะการเงินแบบไหน เรามาเข้ากระบวนการที่เหตุ เริ่มจากการบริหารรายจ่ายปัจจุบัน บริหารให้มีเงินเหลือออม เป็นจุดเริ่มต้นในการสร้างความมั่งคั่งที่มั่นคง...</p>
@@ -417,8 +441,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=2&id=<?= md5(7) ?>">กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>หลายคนอาจจะยังไม่รู้ตัวว่ารายจ่ายเพิ่มตามรายได้  อาจจะรู้สึกชีวิตสะดวกสบายขึ้น หรือนับวันอึดอัดมากขึ้นเรื่อย ๆ ด้วยรู้สึกว่าภาระมากขึ้น อาจจะรู้สึกสงสัยทำไงที่จะควบคุมรายจ่ายเพื่อให้รายได้ที่เพิ่มขึ้นกลายเป็นเงินออมที่เพิ่มขึ้นเรื่อย ๆ
@@ -444,8 +472,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=2&id=<?= md5(8) ?>">Budgeting เสาเข็มแรก</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>การทำงบประมาณหรือ Budgeting ศัพท์ดูหรู ที่รู้จักในการทำงบประมาณรายจ่ายบริษัท ดูเป็นทางการทำให้หลายคนรู้สึกว่าไกลตัว การทำงบประมาณ เป็นกำหนดตัวเลขประมาณการที่คาดว่าจะเป็นไปได้ของรายได้ ยอดค่าใช้จ่ายแต่ละประเภท รวมถึงงบประมาณการออมด้วย...
@@ -471,8 +503,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=2&id=<?= md5(9) ?>">เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>ถ้าเราเพิ่งเริ่มวางแผนการเงิน และยังไม่มีการกันเงินสำรองฉุกเฉินเลย แนะนำให้ตั้งเป้าหมายเตรียมเงินสำรองฉุกเฉิน 6 เดือนของรายจ่ายประมาณการจากงบประมาณในหัวข้อที่แล้ว และเริ่มเปิดบัญชีเงินฝากเพื่อเตรียมเงินก้อนนี้ทันที...
@@ -498,8 +534,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=2&id=<?= md5(10) ?>">ความรู้พื้นฐานก่อนการวางแผนการเงิน</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>ความรู้พื้นฐานที่ใช้ในกระบวนการวางแผนการเงินจะเกี่ยวข้องกับการคำนวณดอกเบี้ย มูลค่าเงินตามเวลา...
@@ -528,8 +568,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=3&id=<?= md5(11) ?>">กฎ 72 </a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>การหาระยะเวลาที่เงินจะเติบโตเป็น 2 เท่า ในอัตราดอกเบี้ยที่กำหนด หรือคำนวณหาผลตอบแทนที่ต้องการเงินเติบโตเป็น 2 เท่าในระยะเวลาที่ต้องการ...
@@ -555,8 +599,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=3&id=<?= md5(12) ?>">พลังดอกเบี้ยทบต้น</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>ดอกเบี้ยทบต้นคือ ดอกเบี้ยที่คิดจากเงินต้นบวกดอกเบี้ยและรวมดอกเบี้ยกับเงินต้นคำนวณในรอบถัดไปเรื่อย ๆ
@@ -584,8 +632,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=3&id=<?= md5(13) ?>">เงินเฟ้อ และมูลค่าเงินตามเวลา</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>เงินเฟ้อ คือ ใช้เงินเท่าเดิมซื้อของได้น้อยลง  หรือของเท่าเดิมต้องใช้เงินมากขึ้น ดูธรรมดาที่รู้กันอยู่แล้ว แต่ไม่ธรรมดาเมื่อเราต้องคำนวณคาดการณ์ในวันที่เราเกษียณในอีก 20 ปี 30 ปี ข้างหน้า ในการครองชีพด้วยค่าใช้จ่ายจำเป็นวันนี้กับวันที่เกษียณแตกต่างกันจนน่าตกใจ...
@@ -611,8 +663,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=3&id=<?= md5(14) ?>">ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>เงินกู้แบ่งเป็น 2 ประเภท คือ 
@@ -640,8 +696,12 @@ require '../model-db-connection/config.php';
                                                         <a href="blog?rPage=3&id=<?= md5(15) ?>">Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)</a>
                                                     </h3>
                                                     <div class="tg-post-meta">
-                                                        <span><a href="#">By Admin / </a></span>
-                                                        <span><a href="#">In Map</a></span>
+                                                        <span>
+                                                            <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                        </span>
                                                     </div>
                                                     <div class="tg-description">
                                                         <p>เวัตถุประสงค์ของการบริหารโครงสร้างหนี้ คือ<br/>
@@ -795,13 +855,13 @@ require '../model-db-connection/config.php';
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-
+        <?php include './mentor_dialog.php'; ?>
         <!--************************************
                         Popup End
         *************************************-->
         <div class="scroll-top-wrapper ">
             <span class="scroll-top-inner">
-                <i class="fa fa-2x fa-arrow-circle-up"></i>
+                <i class="fa fa-2x fa-arrow-circle-up"></i> Scroll to top
             </span>
         </div>
         <script type="text/javascript">

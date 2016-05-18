@@ -171,16 +171,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ทำไมต้องวางแผนการเงิน', 'whyplanning.jpg')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ทำไมต้องวางแผนการเงิน', 'whyplanning.jpg', 'ใครเป็นแบบนี้บ้าง...เงินเดือนมากขึ้น ซื้อรถ ซื้อบ้าน ซื้อคอนโดฯ  การแข่งขันสูงขึ้น จึงต้องส่งให้ลูกเรียนในสถาบันการศึกษาที่ติดอันดับ วันหยุดพาลูกเรียนพิเศษ เรียนดนตรี ไม่มีเวลาอยู่บ้านทำอาหารเอง แต่ก็ยังใช้ชีวิตได้อย่างสะดวกสบาย โดยซื้ออาหารปรุงสำเร็จนอกบ้านเป็นหลัก รวมถีงฟาสต์ฟูดส์แบบฝรั่ง กินมากเกินไปน้ำหนักเกิน ก็ไปฟิตเนสออกกำลังกายให้รูปร่างได้สัดส่วน...')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -195,8 +203,10 @@ require '../model-db-connection/config.php';
                                             <img src="assets/images/blog/whyplanning.jpg" alt="image description">                                        
                                         </figure>
                                         <div class="tg-post-detail">
-                                            <div class="tg-description">
-                                                <p><legend>ทำไมต้องวางแผนการเงิน</legend></p>
+                                            <div class="tg-description">                                               
+                                                <p>
+                                                <legend>ทำไมต้องวางแผนการเงิน</legend>                                                
+                                                </p>                                                
                                                 <p>
                                                     &emsp;&emsp;&emsp;ใครเป็นแบบนี้บ้าง...เงินเดือนมากขึ้น ซื้อรถ ซื้อบ้าน ซื้อคอนโดฯ  การแข่งขันสูงขึ้น จึงต้องส่งให้ลูกเรียนในสถาบันการศึกษาที่ติดอันดับ วันหยุดพาลูกเรียนพิเศษ เรียนดนตรี ไม่มีเวลาอยู่บ้านทำอาหารเอง แต่ก็ยังใช้ชีวิตได้อย่างสะดวกสบาย โดยซื้ออาหารปรุงสำเร็จนอกบ้านเป็นหลัก รวมถีงฟาสต์ฟูดส์แบบฝรั่ง กินมากเกินไปน้ำหนักเกิน ก็ไปฟิตเนสออกกำลังกายให้รูปร่างได้สัดส่วน
                                                 </p>
@@ -214,6 +224,14 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     เราลองมาตรวจสอบความพร้อมการเงินจาก <a href="financial-check">“แบบสำรวจความพร้อมการเงิน”</a> จะช่วยให้เห็นตัวเองชัดขึ้นว่า มีความกังวลเกี่ยวกับเรื่องใดบ้าง
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -221,16 +239,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ทำไมต้องวางแผนการเงิน', 'whyplanning.jpg')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ทำไมต้องวางแผนการเงิน', 'whyplanning.jpg', 'ใครเป็นแบบนี้บ้าง...เงินเดือนมากขึ้น ซื้อรถ ซื้อบ้าน ซื้อคอนโดฯ  การแข่งขันสูงขึ้น จึงต้องส่งให้ลูกเรียนในสถาบันการศึกษาที่ติดอันดับ วันหยุดพาลูกเรียนพิเศษ เรียนดนตรี ไม่มีเวลาอยู่บ้านทำอาหารเอง แต่ก็ยังใช้ชีวิตได้อย่างสะดวกสบาย โดยซื้ออาหารปรุงสำเร็จนอกบ้านเป็นหลัก รวมถีงฟาสต์ฟูดส์แบบฝรั่ง กินมากเกินไปน้ำหนักเกิน ก็ไปฟิตเนสออกกำลังกายให้รูปร่างได้สัดส่วน...')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -247,16 +273,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ตรวจสอบสถานการณ์เงิน', 'financialSit.jpg')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ตรวจสอบสถานการณ์เงิน', 'financialSit.jpg', 'สถานะการเงินที่มีโอกาสประสบปัญหาการเงินหรือกำลังมีปัญหา ซึ่งจะพบคนรอบ ๆ ตัวเรามี 4 สถานการณ์ ได้แก่ พึ่งพาการเงินผู้อื่น, มีหนี้ ไม่มีเงินเก็บ, ไม่มีหนี้แต่ไม่มีเงินเก็บ, ไม่มีหนี้มีเงินแหลือมาก')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -347,16 +381,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ตรวจสอบสถานการณ์เงิน', 'financialSit.jpg')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ตรวจสอบสถานการณ์เงิน', 'financialSit.jpg', 'สถานะการเงินที่มีโอกาสประสบปัญหาการเงินหรือกำลังมีปัญหา ซึ่งจะพบคนรอบ ๆ ตัวเรามี 4 สถานการณ์ ได้แก่ พึ่งพาการเงินผู้อื่น, มีหนี้ ไม่มีเงินเก็บ, ไม่มีหนี้แต่ไม่มีเงินเก็บ, ไม่มีหนี้มีเงินแหลือมาก')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -373,16 +415,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('สถานะการเงินมิติของอารมณ์ความรู้สึก', 'financialStatus.jpg')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('สถานะการเงินมิติของอารมณ์ความรู้สึก', 'financialStatus.jpg', 'สถานะการเงินเป็นอย่างไร นอกจากความรู้การเงินแล้ว สิ่งที่มีอิทธิพลสูงกว่าคือ ความเชื่อทางสังคม วัฒนธรรม สภาพแวดล้อม การถูกเลี้ยงดู และประสบการณ์ สร้างกรอบความคิดและทัศนคติเกี่ยวกับเงิน')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -438,16 +488,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('สถานะการเงินมิติของอารมณ์ความรู้สึก', 'financialStatus.jpg')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('สถานะการเงินมิติของอารมณ์ความรู้สึก', 'financialStatus.jpg', 'สถานะการเงินเป็นอย่างไร นอกจากความรู้การเงินแล้ว สิ่งที่มีอิทธิพลสูงกว่าคือ ความเชื่อทางสังคม วัฒนธรรม สภาพแวดล้อม การถูกเลี้ยงดู และประสบการณ์ สร้างกรอบความคิดและทัศนคติเกี่ยวกับเงิน')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -464,16 +522,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ชะตาชีวิตลิขิตได้', 'life-destiny_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ชะตาชีวิตลิขิตได้', 'life-destiny_detail.png', 'ไม่ว่าสถานการณ์การเงินปัจจุบันจะเป็นอย่างไรก็ตามไม่มีผิดไม่มีถูก ที่ผ่านมาเป็นเพียงปรากฏการณ์ มาทำความรู้จักกับกลไกธรรมชาติที่มีในทุกคน')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -521,16 +587,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ชะตาชีวิตลิขิตได้', 'life-destiny_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ชะตาชีวิตลิขิตได้', 'life-destiny_detail.png', 'ไม่ว่าสถานการณ์การเงินปัจจุบันจะเป็นอย่างไรก็ตามไม่มีผิดไม่มีถูก ที่ผ่านมาเป็นเพียงปรากฏการณ์ มาทำความรู้จักกับกลไกธรรมชาติที่มีในทุกคน')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -547,16 +621,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน', 'financial_freedom_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน', 'financial_freedom_detail.png', 'หลังจากเราทราบแล้วว่าตนเองอยู่ในสถานการณ์การเงินแบบใด ต่อไปคือการเข้ากระบวนการวางแผนการเงินเพื่อไปสู่อิสรภาพการเงิน ในกระบวนการอาจจะจำเป็นต้องปรับสภาพคล่องให้เหมาะสม สร้างแผนสำรองเพื่อรองรับความไม่แน่นอน มีการปรับหรือตัดค่าใช้จ่ายผันแปร และบางครั้งอาจจะจำเป็นต้องปรับค่าใช้จ่ายคงที่ให้ลดลง หากจำเป็น')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -884,16 +966,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน', 'financial_freedom_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน', 'financial_freedom_detail.png', 'หลังจากเราทราบแล้วว่าตนเองอยู่ในสถานการณ์การเงินแบบใด ต่อไปคือการเข้ากระบวนการวางแผนการเงินเพื่อไปสู่อิสรภาพการเงิน ในกระบวนการอาจจะจำเป็นต้องปรับสภาพคล่องให้เหมาะสม สร้างแผนสำรองเพื่อรองรับความไม่แน่นอน มีการปรับหรือตัดค่าใช้จ่ายผันแปร และบางครั้งอาจจะจำเป็นต้องปรับค่าใช้จ่ายคงที่ให้ลดลง หากจำเป็น')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -910,16 +1000,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ภาพรวมกระบวนการวางแผนการเงิน', 'financial_planning_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ภาพรวมกระบวนการวางแผนการเงิน', 'financial_planning_detail.png', 'หลักการในกระบวนการวางแผนการเงิน ประกอบด้วย 3 เรื่องหลัก ๆ คือ รายได้ รายจ่าย และการลงทุน เมื่อทราบแล้วว่าเรามีสถานะการเงินแบบไหน เรามาเข้ากระบวนการที่เหตุ เริ่มจากการบริหารรายจ่ายปัจจุบัน บริหารให้มีเงินเหลือออม เป็นจุดเริ่มต้นในการสร้างความมั่งคั่งที่มั่นคง')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -974,16 +1072,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ภาพรวมกระบวนการวางแผนการเงิน', 'financial_planning_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ภาพรวมกระบวนการวางแผนการเงิน', 'financial_planning_detail.png', 'หลักการในกระบวนการวางแผนการเงิน ประกอบด้วย 3 เรื่องหลัก ๆ คือ รายได้ รายจ่าย และการลงทุน เมื่อทราบแล้วว่าเรามีสถานะการเงินแบบไหน เรามาเข้ากระบวนการที่เหตุ เริ่มจากการบริหารรายจ่ายปัจจุบัน บริหารให้มีเงินเหลือออม เป็นจุดเริ่มต้นในการสร้างความมั่งคั่งที่มั่นคง')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1000,16 +1106,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้', '7_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้', '7_detail.png', 'หลายคนอาจจะยังไม่รู้ตัวว่ารายจ่ายเพิ่มตามรายได้  อาจจะรู้สึกชีวิตสะดวกสบายขึ้น หรือนับวันอึดอัดมากขึ้นเรื่อย ๆ ด้วยรู้สึกว่าภาระมากขึ้น อาจจะรู้สึกสงสัยทำไงที่จะควบคุมรายจ่ายเพื่อให้รายได้ที่เพิ่มขึ้นกลายเป็นเงินออมที่เพิ่มขึ้นเรื่อย ๆ')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1075,16 +1189,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้', '7_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กระบวนการวางแผนการเงินมีกลไกคุมรายจ่ายกันยังไง...ไม่ให้เพิ่มตามรายได้', '7_detail.png', 'หลายคนอาจจะยังไม่รู้ตัวว่ารายจ่ายเพิ่มตามรายได้  อาจจะรู้สึกชีวิตสะดวกสบายขึ้น หรือนับวันอึดอัดมากขึ้นเรื่อย ๆ ด้วยรู้สึกว่าภาระมากขึ้น อาจจะรู้สึกสงสัยทำไงที่จะควบคุมรายจ่ายเพื่อให้รายได้ที่เพิ่มขึ้นกลายเป็นเงินออมที่เพิ่มขึ้นเรื่อย ๆ')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1101,16 +1223,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('Budgeting เสาเข็มแรก', '8_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Budgeting เสาเข็มแรก', '8_detail.png', 'การทำงบประมาณหรือ Budgeting ศัพท์ดูหรู ที่รู้จักในการทำงบประมาณรายจ่ายบริษัท ดูเป็นทางการทำให้หลายคนรู้สึกว่าไกลตัว การทำงบประมาณ เป็นกำหนดตัวเลขประมาณการที่คาดว่าจะเป็นไปได้ของรายได้ ยอดค่าใช้จ่ายแต่ละประเภท รวมถึงงบประมาณการออมด้วย')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1173,16 +1303,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('Budgeting เสาเข็มแรก', '8_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Budgeting เสาเข็มแรก', '8_detail.png', 'การทำงบประมาณหรือ Budgeting ศัพท์ดูหรู ที่รู้จักในการทำงบประมาณรายจ่ายบริษัท ดูเป็นทางการทำให้หลายคนรู้สึกว่าไกลตัว การทำงบประมาณ เป็นกำหนดตัวเลขประมาณการที่คาดว่าจะเป็นไปได้ของรายได้ ยอดค่าใช้จ่ายแต่ละประเภท รวมถึงงบประมาณการออมด้วย')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1199,16 +1337,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง', '9_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง', '9_detail.png', 'ถ้าเราเพิ่งเริ่มวางแผนการเงิน และยังไม่มีการกันเงินสำรองฉุกเฉินเลย แนะนำให้ตั้งเป้าหมายเตรียมเงินสำรองฉุกเฉิน 6 เดือนของรายจ่ายประมาณการจากงบประมาณในหัวข้อที่แล้ว')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1516,16 +1662,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง', '9_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินสำรองฉุกเฉิน (Emergency Cash) เสาเข็มที่สอง', '9_detail.png', 'ถ้าเราเพิ่งเริ่มวางแผนการเงิน และยังไม่มีการกันเงินสำรองฉุกเฉินเลย แนะนำให้ตั้งเป้าหมายเตรียมเงินสำรองฉุกเฉิน 6 เดือนของรายจ่ายประมาณการจากงบประมาณในหัวข้อที่แล้ว')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1542,16 +1696,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ความรู้พื้นฐานก่อนการวางแผนการเงิน', '10_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ความรู้พื้นฐานก่อนการวางแผนการเงิน', '10_detail.png', 'ความรู้พื้นฐานที่ใช้ในกระบวนการวางแผนการเงินจะเกี่ยวข้องกับการคำนวณดอกเบี้ย มูลค่าเงินตามเวลา')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1583,16 +1745,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ความรู้พื้นฐานก่อนการวางแผนการเงิน', '10_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ความรู้พื้นฐานก่อนการวางแผนการเงิน', '10_detail.png', 'ความรู้พื้นฐานที่ใช้ในกระบวนการวางแผนการเงินจะเกี่ยวข้องกับการคำนวณดอกเบี้ย มูลค่าเงินตามเวลา')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1609,16 +1779,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('กฎ 72', '11_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กฎ 72', '11_detail.png', 'การหาระยะเวลาที่เงินจะเติบโตเป็น 2 เท่า ในอัตราดอกเบี้ยที่กำหนด หรือคำนวณหาผลตอบแทนที่ต้องการเงินเติบโตเป็น 2 เท่าในระยะเวลาที่ต้องการ')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1717,16 +1895,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('กฎ 72', '11_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('กฎ 72', '11_detail.png', 'การหาระยะเวลาที่เงินจะเติบโตเป็น 2 เท่า ในอัตราดอกเบี้ยที่กำหนด หรือคำนวณหาผลตอบแทนที่ต้องการเงินเติบโตเป็น 2 เท่าในระยะเวลาที่ต้องการ')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1743,16 +1929,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('พลังดอกเบี้ยทบต้น', '12_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พลังดอกเบี้ยทบต้น', '12_detail.png', 'The most powerful force in the universe is compound interest.')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1793,16 +1987,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('พลังดอกเบี้ยทบต้น', '12_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('พลังดอกเบี้ยทบต้น', '12_detail.png', 'The most powerful force in the universe is compound interest.')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1819,16 +2021,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินเฟ้อ และมูลค่าเงินตามเวลา', '13_front.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินเฟ้อ และมูลค่าเงินตามเวลา', '13_front.png', ' เงินเฟ้อ คือ ใช้เงินเท่าเดิมซื้อของได้น้อยลง  หรือของเท่าเดิมต้องใช้เงินมากขึ้น ดูธรรมดาที่รู้กันอยู่แล้ว แต่ไม่ธรรมดาเมื่อเราต้องคำนวณคาดการณ์ในวันที่เราเกษียณในอีก 20 ปี 30 ปี ข้างหน้า')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1860,7 +2070,7 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     เงินเฟ้อไม่เท่ากันวิเคราะห์ยาก ค่าเฉลี่ยเงินเฟ้อเฉลี่ยเท่ากันทุกปี 3.38% สินค้าราคาเริ่มต้น 100 บาท คำนวณแบบเดียวกับดอกเบี้ยทบต้น 3.38% ได้ 270.79 บาท เท่ากัน
                                                 </p>
-                                                
+
                                             </div>
                                         </div>
                                     </article>
@@ -1868,16 +2078,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินเฟ้อ และมูลค่าเงินตามเวลา', '13_front.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('เงินเฟ้อ และมูลค่าเงินตามเวลา', '13_front.png', ' เงินเฟ้อ คือ ใช้เงินเท่าเดิมซื้อของได้น้อยลง  หรือของเท่าเดิมต้องใช้เงินมากขึ้น ดูธรรมดาที่รู้กันอยู่แล้ว แต่ไม่ธรรมดาเมื่อเราต้องคำนวณคาดการณ์ในวันที่เราเกษียณในอีก 20 ปี 30 ปี ข้างหน้า')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1894,16 +2112,26 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <ul class="tg-tags">                                                
+                                                    <li><a href="#">wipa</a></li>
+                                                    <li><a href="#">charoenkijsupat</a></li>
+                                                    <li><a href="#">financial</a></li>
+                                                    <li><a href="#">financialplanning</a></li>
+                                                    <li><a href="#">cfp</a></li>
+                                                    <li><a href="#">fchfp</a></li>
+                                                    <li><a href="#">rfc</a></li>
+                                                    <li><a href="#">gogetrich</a></li>
+                                                    <li><a href="#">rich</a></li>
+                                                    <li><a href="#">money</a></li>
+                                                    <li><a href="#">moneycate</a></li>
+                                                </ul>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้', '14_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้', '14_detail.png', 'เงินกู้แบ่งเป็น 2 ประเภท คือ แบบมีทรัพย์สินเป็นหลักประกัน และ แบบไม่มีทรัพย์สินเป็นหลักประกัน')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1952,17 +2180,25 @@ require '../model-db-connection/config.php';
                                     <div class="tags-social tg-haslayout">
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
-                                            <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                            <ul class="tg-tags">                                                
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้', '14_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้', '14_detail.png', 'เงินกู้แบ่งเป็น 2 ประเภท คือ แบบมีทรัพย์สินเป็นหลักประกัน และ แบบไม่มีทรัพย์สินเป็นหลักประกัน')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -1979,16 +2215,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)', '15_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)', '15_detail.png', 'ระเภทหนี้ในการวางแผนการเงินส่วนบุคคล มี 2 ประเภท คือ หนี้จดจำนอง และ หนี้ไม่จดจำนอง')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -2022,12 +2266,12 @@ require '../model-db-connection/config.php';
                                                     &nbsp;&nbsp;&nbsp;หากผ่อนเกินจากเพดานที่แนะนำนี้อาจจะทำให้มีโอกาสเป็นหนี้เพิ่มขึ้น เนื่องจากรายได้ที่หักค่างวดผ่อนชำระแล้ว จะเหลือน้อยเกินไปสำหรับค่าใช้จ่ายอื่น ๆ ปัญหาจะเกิดเร็วขึ้นถ้าไม่มีเงินสำรองฉุกเฉิน เพื่อป้องกันการเป็นหนี้ ควรเตรียมการดังต่อไปนี้ คือ<br/>
 
                                                     &nbsp;&nbsp;1.	<u>เตรียมเงินสำรองฉุกเฉิน 3-6 เท่าของค่าใช้จ่ายรายเดือน</u> (รวมค่างวดผ่อนชำระทั้งหมดด้วย) โดยอาจจะปรับค่างวดผ่อนชำระลดลง พร้อมกับลดค่าใช้จ่ายอื่น ๆ ที่ไม่จำเป็น <br/>
-                                                    &nbsp;&nbsp;2.	<u>ปรับค่างวดผ่อนชำระ</u> ไม่ให้อึดอัดเกินไป<br/>
-                                                    &nbsp;&nbsp;3.	<u>Refinance</u> ถ้าสามารถหาอัตราดอกเบี้ยได้ถูกกว่าเดิม 2% ลดภาระค่าใช้จ่ายดอกเบี้ย<br/>
-                                                    &nbsp;&nbsp;4.	<u>บัตรเครดิตจ่ายเต็มจำนวนทุกครั้ง</u> ถ้าผ่อนขั้นต่ำอยู่ ให้เคลียร์ออกทั้งหมด โดยกู้โปรแกรมที่มีอัตราดอกเบี้ยต่ำกว่า หรือยืมจากคนในครอบครัว แล้วตั้งใจผ่อนคืนแหล่งเงินยืมใหม่<br/>
-                                                    &nbsp;&nbsp;5.	<u>สินเชื่อบุคคล</u> ถ้ามีดูเงื่อนไขการเคลียร์ “มีค่าใช้จ่ายเพิ่มถ้าปิดก่อน” และต่อรองที่จะโป๊ะไม่ได้ ก็ตั้งหน้าตั้งต่อผ่อนไป และอย่างมีการกู้สินเชื่อครั้งต่อไป “เด็ดขาด”<br/>
-                                                    &nbsp;&nbsp;6.	<u>ทำงบประมาณ</u> เพื่อควบคุมรายจ่ายอย่างเข้มงวด<br/>
-                                                    &nbsp;&nbsp;7.	<u>หาช่องทางในการหารายได้เพิ่ม</u> อาจจะใช้ทักษะความชำนาญงานปัจจุบัน ทำงานนอกเวลาหลังเลิกงานหรือวันหยุด <br/>
+                                                &nbsp;&nbsp;2.	<u>ปรับค่างวดผ่อนชำระ</u> ไม่ให้อึดอัดเกินไป<br/>
+                                                &nbsp;&nbsp;3.	<u>Refinance</u> ถ้าสามารถหาอัตราดอกเบี้ยได้ถูกกว่าเดิม 2% ลดภาระค่าใช้จ่ายดอกเบี้ย<br/>
+                                                &nbsp;&nbsp;4.	<u>บัตรเครดิตจ่ายเต็มจำนวนทุกครั้ง</u> ถ้าผ่อนขั้นต่ำอยู่ ให้เคลียร์ออกทั้งหมด โดยกู้โปรแกรมที่มีอัตราดอกเบี้ยต่ำกว่า หรือยืมจากคนในครอบครัว แล้วตั้งใจผ่อนคืนแหล่งเงินยืมใหม่<br/>
+                                                &nbsp;&nbsp;5.	<u>สินเชื่อบุคคล</u> ถ้ามีดูเงื่อนไขการเคลียร์ “มีค่าใช้จ่ายเพิ่มถ้าปิดก่อน” และต่อรองที่จะโป๊ะไม่ได้ ก็ตั้งหน้าตั้งต่อผ่อนไป และอย่างมีการกู้สินเชื่อครั้งต่อไป “เด็ดขาด”<br/>
+                                                &nbsp;&nbsp;6.	<u>ทำงบประมาณ</u> เพื่อควบคุมรายจ่ายอย่างเข้มงวด<br/>
+                                                &nbsp;&nbsp;7.	<u>หาช่องทางในการหารายได้เพิ่ม</u> อาจจะใช้ทักษะความชำนาญงานปัจจุบัน ทำงานนอกเวลาหลังเลิกงานหรือวันหยุด <br/>
                                                 </p>
                                                 <p>
                                                     &nbsp;&nbsp;&nbsp;โดยสรุปคือ เตรียมเงินสำรองฉุกเฉิน ทำงบประมาณรายจ่าย และปิดหนี้ที่อัตราดอกเบี้ยสูง ได้แก่ บัตรเครดิต และสินเชื่อบุคคล ทั้งหมด หารายได้เพิ่มหากจำเป็น
@@ -2039,16 +2283,24 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">Financial</a></li>
-                                                <li><a href="#">Financial Planning</a></li>
-                                                <li><a href="#">Go Get Rich</a></li>
+                                                <li><a href="#">wipa</a></li>
+                                                <li><a href="#">charoenkijsupat</a></li>
+                                                <li><a href="#">financial</a></li>
+                                                <li><a href="#">financialplanning</a></li>
+                                                <li><a href="#">cfp</a></li>
+                                                <li><a href="#">fchfp</a></li>
+                                                <li><a href="#">rfc</a></li>
+                                                <li><a href="#">gogetrich</a></li>
+                                                <li><a href="#">rich</a></li>
+                                                <li><a href="#">money</a></li>
+                                                <li><a href="#">moneycate</a></li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
                                             <strong>share</strong>
                                             <ul class="tg-social-icon">
                                                 <li class="facebook">
-                                                    <a href="javascript:void(0)" onclick="postToFeed('Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)', '15_detail.png')">
+                                                    <a href="javascript:void(0)" onclick="postToFeed('Debt Management (การบริหารโครงสร้างหนี้) เสาเข็มที่สาม (ตอนที่ 1)', '15_detail.png', 'ระเภทหนี้ในการวางแผนการเงินส่วนบุคคล มี 2 ประเภท คือ หนี้จดจำนอง และ หนี้ไม่จดจำนอง')">
                                                         <i class="fa fa-facebook-f"></i>
                                                     </a>
                                                 </li>
@@ -2193,7 +2445,7 @@ require '../model-db-connection/config.php';
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));
             }
-            function postToFeed(name, blogImage) {
+            function postToFeed(name, blogImage, fbDescription) {
                 // calling the API ...
                 var obj = {
                     method: 'feed',
@@ -2202,7 +2454,7 @@ require '../model-db-connection/config.php';
                                             picture: '<?= $configure['web.application.prefix'] ?>view/assets/images/blog/' + blogImage,
                                             name: name,
                                             caption: 'Go Get Rich: BLOG พารวย',
-                                            description: name
+                                            description: fbDescription
                                         };
 
                                         function callback(response) {
@@ -2281,5 +2533,6 @@ require '../model-db-connection/config.php';
                                         });
                                     };
         </script>
+        <?php include './mentor_dialog.php'; ?>
     </body>
 </html>

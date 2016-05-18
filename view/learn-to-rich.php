@@ -366,7 +366,7 @@ $currentFile = basename(__FILE__, '.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="portfolio-item grid-item interior">
+<!--                                    <div class="portfolio-item grid-item interior">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
@@ -385,7 +385,7 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
-                                                            <!--span></span-->
+                                                            span></span
                                                             <h2><a href="property-investment?fPage=<?= $currentFile ?>">อสังหาดีๆมีให้ลงทุน</a></h2>
                                                         </div>
                                                         <div class="tg-description">
@@ -396,8 +396,8 @@ $currentFile = basename(__FILE__, '.php');
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="portfolio-item grid-item interior">
+                                    </div>-->
+<!--                                    <div class="portfolio-item grid-item interior">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
@@ -416,7 +416,7 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
                                                         <div class="tg-theme-heading">
-                                                            <!--span></span-->
+                                                            span></span
                                                             <h2><a href="learn-to-invest?fPage=<?= $currentFile ?>">เล่นหุ้นต้องศึกษา</a></h2>
                                                         </div>
                                                         <div class="tg-description">
@@ -427,7 +427,7 @@ $currentFile = basename(__FILE__, '.php');
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <div class="portfolio-item grid-item interior">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
