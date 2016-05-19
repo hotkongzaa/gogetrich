@@ -82,14 +82,32 @@ require '../model-db-connection/config.php';
                         if (empty($_SESSION['usernameFrontEnd'])) {
                             ?>
                             <ul class="add-nav">
-                                <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
-                                <li><a href="registration">Register</a></li>
+                                <li>
+                                    <a data-toggle="modal" data-target=".login-modalbox" href="#">
+                                        <i class="fa fa-sign-in"></i> เข้าสู่ระบบ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         } else {
                             ?>
                             <ul class="add-nav">
-                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong></li>
+                                <li class="dropdown-toggle" >
+                                    ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="javascript:void(0)" onclick="logoutFromApplication()">
+                                                <i class="fa fa-sign-out"></i> ออกจากระบบ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
                             </ul>
                             <?php
                         }
@@ -106,30 +124,27 @@ require '../model-db-connection/config.php';
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul>
                                     <li>
-                                        <a href="main">Home</a>
+                                        <a href="main">หน้าหลัก</a>
                                     </li>
                                     <li>
-                                        <a href="aboutus">About</a>
+                                        <a href="aboutus">เราคือใคร</a>
                                     </li>
                                     <li>
-                                        <a href="trainingSchedule">Training/Seminar</a>
+                                        <a href="trainingSchedule">คอร์สเรียน/ตารางเรียน</a>
                                         <ul>
                                             <li>
-                                                <a href="trainingSchedule">Training Category</a>
+                                                <a href="trainingSchedule">ประเภทของคอร์สเรียน</a>
                                             </li>
                                             <li>
-                                                <a href="speaker-list">Speaker</a>
+                                                <a href="speaker-list">อาจารย์/ผู้สอน</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <!--li>
-                                        <a href="#">Register</a>
-                                    </li-->
                                     <li class="current-menu-item">
-                                        <a href="blog-list?page=1">Blog</a>
+                                        <a href="blog-list?page=1">บทความ</a>
                                     </li>                             
                                     <li>
-                                        <a href="contactus">Contact us</a>
+                                        <a href="contactus">ติดต่อเรา</a>
                                     </li> 
                                 </ul>
                             </div>
@@ -2266,12 +2281,12 @@ require '../model-db-connection/config.php';
                                                     &nbsp;&nbsp;&nbsp;หากผ่อนเกินจากเพดานที่แนะนำนี้อาจจะทำให้มีโอกาสเป็นหนี้เพิ่มขึ้น เนื่องจากรายได้ที่หักค่างวดผ่อนชำระแล้ว จะเหลือน้อยเกินไปสำหรับค่าใช้จ่ายอื่น ๆ ปัญหาจะเกิดเร็วขึ้นถ้าไม่มีเงินสำรองฉุกเฉิน เพื่อป้องกันการเป็นหนี้ ควรเตรียมการดังต่อไปนี้ คือ<br/>
 
                                                     &nbsp;&nbsp;1.	<u>เตรียมเงินสำรองฉุกเฉิน 3-6 เท่าของค่าใช้จ่ายรายเดือน</u> (รวมค่างวดผ่อนชำระทั้งหมดด้วย) โดยอาจจะปรับค่างวดผ่อนชำระลดลง พร้อมกับลดค่าใช้จ่ายอื่น ๆ ที่ไม่จำเป็น <br/>
-                                                &nbsp;&nbsp;2.	<u>ปรับค่างวดผ่อนชำระ</u> ไม่ให้อึดอัดเกินไป<br/>
-                                                &nbsp;&nbsp;3.	<u>Refinance</u> ถ้าสามารถหาอัตราดอกเบี้ยได้ถูกกว่าเดิม 2% ลดภาระค่าใช้จ่ายดอกเบี้ย<br/>
-                                                &nbsp;&nbsp;4.	<u>บัตรเครดิตจ่ายเต็มจำนวนทุกครั้ง</u> ถ้าผ่อนขั้นต่ำอยู่ ให้เคลียร์ออกทั้งหมด โดยกู้โปรแกรมที่มีอัตราดอกเบี้ยต่ำกว่า หรือยืมจากคนในครอบครัว แล้วตั้งใจผ่อนคืนแหล่งเงินยืมใหม่<br/>
-                                                &nbsp;&nbsp;5.	<u>สินเชื่อบุคคล</u> ถ้ามีดูเงื่อนไขการเคลียร์ “มีค่าใช้จ่ายเพิ่มถ้าปิดก่อน” และต่อรองที่จะโป๊ะไม่ได้ ก็ตั้งหน้าตั้งต่อผ่อนไป และอย่างมีการกู้สินเชื่อครั้งต่อไป “เด็ดขาด”<br/>
-                                                &nbsp;&nbsp;6.	<u>ทำงบประมาณ</u> เพื่อควบคุมรายจ่ายอย่างเข้มงวด<br/>
-                                                &nbsp;&nbsp;7.	<u>หาช่องทางในการหารายได้เพิ่ม</u> อาจจะใช้ทักษะความชำนาญงานปัจจุบัน ทำงานนอกเวลาหลังเลิกงานหรือวันหยุด <br/>
+                                                    &nbsp;&nbsp;2.	<u>ปรับค่างวดผ่อนชำระ</u> ไม่ให้อึดอัดเกินไป<br/>
+                                                    &nbsp;&nbsp;3.	<u>Refinance</u> ถ้าสามารถหาอัตราดอกเบี้ยได้ถูกกว่าเดิม 2% ลดภาระค่าใช้จ่ายดอกเบี้ย<br/>
+                                                    &nbsp;&nbsp;4.	<u>บัตรเครดิตจ่ายเต็มจำนวนทุกครั้ง</u> ถ้าผ่อนขั้นต่ำอยู่ ให้เคลียร์ออกทั้งหมด โดยกู้โปรแกรมที่มีอัตราดอกเบี้ยต่ำกว่า หรือยืมจากคนในครอบครัว แล้วตั้งใจผ่อนคืนแหล่งเงินยืมใหม่<br/>
+                                                    &nbsp;&nbsp;5.	<u>สินเชื่อบุคคล</u> ถ้ามีดูเงื่อนไขการเคลียร์ “มีค่าใช้จ่ายเพิ่มถ้าปิดก่อน” และต่อรองที่จะโป๊ะไม่ได้ ก็ตั้งหน้าตั้งต่อผ่อนไป และอย่างมีการกู้สินเชื่อครั้งต่อไป “เด็ดขาด”<br/>
+                                                    &nbsp;&nbsp;6.	<u>ทำงบประมาณ</u> เพื่อควบคุมรายจ่ายอย่างเข้มงวด<br/>
+                                                    &nbsp;&nbsp;7.	<u>หาช่องทางในการหารายได้เพิ่ม</u> อาจจะใช้ทักษะความชำนาญงานปัจจุบัน ทำงานนอกเวลาหลังเลิกงานหรือวันหยุด <br/>
                                                 </p>
                                                 <p>
                                                     &nbsp;&nbsp;&nbsp;โดยสรุปคือ เตรียมเงินสำรองฉุกเฉิน ทำงบประมาณรายจ่าย และปิดหนี้ที่อัตราดอกเบี้ยสูง ได้แก่ บัตรเครดิต และสินเชื่อบุคคล ทั้งหมด หารายได้เพิ่มหากจำเป็น

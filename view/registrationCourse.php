@@ -294,7 +294,7 @@ if (!empty($uId)) {
                                                     <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
                                                     <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
                                                     <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
-                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)* ระบบไม่รองรับการใช้งาน hotmail และ Yahoo</label> 
+                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)* ระบบไม่รองรับการใช้งาน hotmail</label> 
                                                     <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
                                                     <!--<div id="addMoreRegister"></div>-->
 
