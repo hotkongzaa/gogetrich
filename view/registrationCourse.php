@@ -19,10 +19,6 @@ if (mysql_num_rows($res) <= 0) {
 }
 
 $uId = (string) filter_input(INPUT_GET, 'uId');
-$step = (string) filter_input(INPUT_GET, 'step');
-if (empty($step)) {
-    $step = 1;
-}
 $uFirstName = "";
 $uLastName = "";
 $uPhonNumber = "";
@@ -55,7 +51,6 @@ if (!empty($uId)) {
         <?php include './assets/css_incl.php'; ?>
         <?php include './assets/javascript_incl.php'; ?>
         <script src="assets/js/CourseRegis.js"></script>
-        <script src="assets/js/register_wizard.js"></script>
 
     </head>
     <body>
@@ -118,32 +113,14 @@ if (!empty($uId)) {
                         if (empty($_SESSION['usernameFrontEnd'])) {
                             ?>
                             <ul class="add-nav">
-                                <li>
-                                    <a data-toggle="modal" data-target=".login-modalbox" href="#">
-                                        <i class="fa fa-sign-in"></i> เข้าสู่ระบบ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="registration">
-                                        <i class="fa fa-university"></i> สมัครสมาชิก
-                                    </a>
-                                </li>
+                                <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
+                                <li><a href="registration">Register</a></li>
                             </ul>
                             <?php
                         } else {
                             ?>
                             <ul class="add-nav">
-                                <li class="dropdown-toggle" >
-                                    ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="javascript:void(0)" onclick="logoutFromApplication()">
-                                                <i class="fa fa-sign-out"></i> ออกจากระบบ
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
+                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong></li>
                             </ul>
                             <?php
                         }
@@ -161,27 +138,27 @@ if (!empty($uId)) {
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul>
                                     <li>
-                                        <a href="main">หน้าหลัก</a>
+                                        <a href="main">Home</a>
                                     </li>
                                     <li>
-                                        <a href="aboutus">เราคือใคร</a>
+                                        <a href="aboutus">About</a>
                                     </li>
                                     <li class="current-menu-item">
-                                        <a href="trainingSchedule">คอร์สเรียน/ตารางเรียน</a>
+                                        <a href="trainingSchedule">Training/Seminar</a>
                                         <ul>
                                             <li >
-                                                <a href="trainingSchedule">ประเภทของคอร์สเรียน</a>
+                                                <a href="trainingSchedule">Training Category</a>
                                             </li>
                                             <li>
-                                                <a href="speaker-list">อาจารย์/ผู้สอน</a>
+                                                <a href="speaker-list">Speaker</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="blog-list?page=1">บทความ</a>
+                                        <a href="blog-list?page=1">Blog</a>
                                     </li>       
                                     <li>
-                                        <a href="contactus">ติดต่อเรา</a>
+                                        <a href="contactus">Contact us</a>
                                     </li> 
                                 </ul>
                             </div>
@@ -203,7 +180,7 @@ if (!empty($uId)) {
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 pull-left">
-                                <a href="<?= $fPage ?>" class="btn btn-default btn-sm" style="width:100px;">
+                                <a href="<?= $fPage ?>" class="btn btn-default" style="width:100px;">
                                     <i class="fa fa-backward"></i> Back
                                 </a>
                                 <br/><br/>
@@ -215,28 +192,37 @@ if (!empty($uId)) {
                                     <h2>Registration Course Form</h2>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row">                                
+                                <div class="col-md-10 col-sm-10 col-xs-10 width-480">
+                                    <form style="padding:20px" id="registerSeminar">
+                                        <div>
+                                            <div class="form-group">
+                                                <strong style="font-size: 18px;">ชื่อคอร์ส: </strong><br/> 
+                                                <span style="font-size: 16px;"><?= $rowHeader['HEADER_NAME'] ?></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <strong style="font-size: 18px;">เลือกเวลาเรียน *</strong>
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <?php
+                                                $sqlGetSchedule = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME "
+                                                        . "WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "' "
+                                                        . "ORDER BY EVENT_CREATED_DATE_TIME ASC";
+                                                $resGetSchedule = mysql_query($sqlGetSchedule);
+                                                if (mysql_num_rows($resGetSchedule) == 1) {
+                                                    $rowGetSChedule = mysql_fetch_assoc($resGetSchedule);
+                                                    $firstDateTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME']);
+                                                    $startDate = $firstDateTime[0];
+                                                    $startTime = $firstDateTime[1];
 
-                                    <form id="courseRegistered" class="stepy-wizzard form-horizontal">
-                                        <fieldset title="รายละเอียดหลักสูตร" style="background-color: #ffffff">
-                                            <legend class="hide">Course detail</legend>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="form-group">
-                                                    <strong style="font-size: 18px;">ชื่อคอร์ส: </strong><br/> 
-                                                    <span style="font-size: 16px;"><?= $rowHeader['HEADER_NAME'] ?></span>
-                                                </div>
-                                                <div class="form-group">
-                                                    <strong style="font-size: 18px;">เลือกเวลาเรียน *</strong>
-
+                                                    $secondDateTime = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME']);
+                                                    $endDate = $secondDateTime[0];
+                                                    $endTime = $secondDateTime[1];
+                                                    ?>
+                                                    <br/>
+                                                    <input type="radio" name="courseScheduleSelect" checked value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
                                                     <?php
-                                                    $sqlGetSchedule = "SELECT * FROM GTRICH_COURSE_EVENT_DATE_TIME "
-                                                            . "WHERE REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "' "
-                                                            . "ORDER BY EVENT_CREATED_DATE_TIME ASC";
-                                                    $resGetSchedule = mysql_query($sqlGetSchedule);
-                                                    if (mysql_num_rows($resGetSchedule) == 1) {
-                                                        $rowGetSChedule = mysql_fetch_assoc($resGetSchedule);
+                                                } else {
+                                                    while ($rowGetSChedule = mysql_fetch_array($resGetSchedule)) {
                                                         $firstDateTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME']);
                                                         $startDate = $firstDateTime[0];
                                                         $startTime = $firstDateTime[1];
@@ -246,136 +232,93 @@ if (!empty($uId)) {
                                                         $endTime = $secondDateTime[1];
                                                         ?>
                                                         <br/>
-                                                        <input type="radio" name="courseScheduleSelect" checked value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
-                                                        <?php
-                                                    } else {
-                                                        while ($rowGetSChedule = mysql_fetch_array($resGetSchedule)) {
-                                                            $firstDateTime = explode(" ", $rowGetSChedule['START_EVENT_DATE_TIME']);
-                                                            $startDate = $firstDateTime[0];
-                                                            $startTime = $firstDateTime[1];
-
-                                                            $secondDateTime = explode(" ", $rowGetSChedule['END_EVENT_DATE_TIME']);
-                                                            $endDate = $secondDateTime[0];
-                                                            $endTime = $secondDateTime[1];
-                                                            ?>
-                                                            <br/>
-                                                            <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
-                                                            <?php
-                                                        }
-                                                    }
-                                                    ?>
-                                                </div>
-                                                <div class="form-group">
-                                                    <strong style="font-size: 18px;">ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
-                                                    <br/>                                                            
-                                                    <input type="radio" name="paymentTerm" value="2" checked/> 
-                                                    โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
-                                                </div>
-                                                <div class="form-group">
-                                                    <strong style="font-size: 18px;">คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
-                                                    <?php
-                                                    $sqlGetPromotion = "SELECT * FROM GTRICH_COURSE_PROMOTION WHERE REF_COURSE_HEADER_ID = '" . $cId . "'";
-                                                    $resGetPromotion = mysql_query($sqlGetPromotion);
-                                                    while ($rowGetPromotion = mysql_fetch_array($resGetPromotion)) {
-                                                        ?>
-                                                        <br/>
-                                                        <input type="checkbox" name="seminarDiscount" value="<?= $rowGetPromotion['PRO_NAME'] ?>"> <?= $rowGetPromotion['PRO_NAME'] ?>
+                                                        <input type="radio" name="courseScheduleSelect" value="<?= $rowGetSChedule['EVENT_ID'] ?>"/> <span>เริ่ม วันที่ <?= $startDate ?> เวลา <?= $startTime ?>น. ถึง วันที่ <?= $endDate ?> เวลา <?= $endTime ?>น.</span>
                                                         <?php
                                                     }
-                                                    ?>
-                                                </div>     
-                                                <div class="divider-form form-group"></div>
+                                                }
+                                                ?>
                                             </div>
-                                        </fieldset>
-                                        <fieldset title="ประเภทการลงทะเบียน" style="background-color: #ffffff">
-                                            <legend class="hide">Registration type</legend>
-                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Username</label>
-                                                    <input type="text" class="form-control" id="usernameForm" name="usernameForm" placeholder="Username">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputPassword1">Password</label>
-                                                    <input type="password" class="form-control" id="passwordForm" name="passwordForm" placeholder="Password">
-                                                </div>
-                                                <div class="form-group">
-                                                    <a href="javascript:void(0)" class="btn btn-default btn-md">
-                                                        เข้าสู่ระบบ
-                                                    </a>
-                                                </div>
-                                                <div class="form-group">
-                                                    ลงทะเบียนแบบไม่ใช่สมาชิก 
-                                                    <a href="registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>&step=3">
-                                                        Registered as Guest
-                                                    </a>
-                                                </div>
-
+                                            <div class="form-group">
+                                                <strong style="font-size: 18px;">ลงทะเบียน*&nbsp;&nbsp;</strong>
+                                                <br/>
                                             </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="divider-form form-group"></div>
+                                            <div class="form-group">
+                                                <div id="loadMoreUser" style="margin-top: 10px;"></div>
                                             </div>
-                                        </fieldset>
-                                        <fieldset title="แบบฟอร์มการลงทะเบียน" style="background-color: #ffffff">
-                                            <legend class="hide">Registration Form</legend>
+                                            <div class="form-group">
+                                                <span id="hideRegisterForm" style="cursor: pointer;margin-bottom: 10px;">
+                                                    <span class="fa fa-plus-square"></span> ฟอร์มการลงทะเบียน
+                                                </span>
 
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">                                                
-                                                <div class="form-group">
-                                                    <div id="loadMoreUser" style="margin-top: 10px;"></div>
-                                                </div>
-                                                <div class="form-group">                                                    
-                                                    <label class="pull-right" id="addMoreRegisLab" style="cursor: pointer; margin-right: 20px;">
-                                                        <span class="fa fa-user-plus"></span> เพิ่มผู้สมัคร
-                                                    </label>
-                                                </div>
-                                                <div class="form-group" id="regisMoreThan1User">                  
-                                                    <label for="moreUser_1">ชื่อ (First Name)*</label> 
-                                                    <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uFirstName ?>"/>
-                                                    <label for="moreUser_1">สกุล (Last Name)*</label> 
-                                                    <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
-                                                    <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
-                                                    <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
-                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)*</label> 
-                                                    <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
-                                                    <!--<div id="addMoreRegister"></div>-->
-
+                                                <label for="signInAsMemeber" class="pull-right" style="cursor: pointer;"  id="regisAsMember">
+                                                    <span class="fa fa-user"></span> ลงทะเบียนสมาชิก
+                                                </label>
+                                                <label class="pull-right" id="addMoreRegisLab" style="cursor: pointer; margin-right: 20px;" onclick="$('#regisMoreThan1User').show();
+                                                        $('#addMoreRegisLab').toggle();">
+                                                    <span class="fa fa-user-plus"></span> เพิ่มผู้สมัคร
+                                                </label>
+                                            </div>
+                                            <div class="form-group" id="regisMoreThan1User" style="border:1px solid #BDBDBD; padding: 15px;">                  
+                                                <label for="moreUser_1">ชื่อ (First Name)*</label> 
+                                                <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uFirstName ?>"/>
+                                                <label for="moreUser_1">สกุล (Last Name)*</label> 
+                                                <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
+                                                <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
+                                                <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
+                                                <label for="moreUserEmail_1" >อีเมล์ (Email)*</label> 
+                                                <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
+                                                <!--<div id="addMoreRegister"></div>-->
+                                                <div class="form-group">                                                
                                                     <label>ที่อยู่ (เพื่อออกใบเสร็จรับเงิน)</label>&nbsp; 
                                                     <input type="checkbox" id="isSameAddress" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
-
-                                                    <div id="divForAddressContact">
-                                                        <textarea name="addressForContact" id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAContact ?></textarea>
-                                                    </div>
-                                                    <div >
-                                                        <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-                                                        <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAReceipt ?></textarea>
-                                                    </div>
-                                                    <br/>
-                                                    <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>', '<?= $cId ?>')">
-                                                        <span class="fa fa-plus"></span> สมัคร
-                                                    </a>
-                                                    <a href="#" class="btn btn-default" onclick="resetForm()">
-                                                        <span class="fa fa-eraser"></span> รีเซ็ตฟอร์ม
-                                                    </a>
                                                 </div>
-                                                <div class="divider-form form-group"></div>
-                                            </div>
-                                        </fieldset>     
-                                        <fieldset title="ยืนยันการลงทะเบียน" style="background-color: #ffffff">
-                                            <legend class="hide">Confirm Registration</legend>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="form-group" style="padding: 10px;">
-                                                    <strong style="font-size: 18px;">ยืนยันการลงทะเบียน *</strong>
-                                                    <br/>
-                                                    <input type="checkbox" name="confirmRegister" id="confirmRegister">  <?= $iniConfiguration['confirmation.text'] ?>
+                                                <div class="form-group" id="divForAddressContact">
+                                                    <textarea name="addressForContact" id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAContact ?></textarea>
                                                 </div>
-                                                <a id="registerCourseBtn" href="javascript:void(0)" class="btn btn-default btn-lg">
-                                                    <i class="fa fa-hand-peace-o" aria-hidden="true"></i> ยืนยันการลงทะเบียน <i class="fa fa-flag-o" aria-hidden="true"></i>
+                                                <div class="form-group">
+                                                    <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
+                                                    <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAReceipt ?></textarea>
+                                                </div>
+                                                <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>', '<?= $cId ?>')">
+                                                    <span class="fa fa-plus"></span> เพิ่มผู้สมัคร
                                                 </a>
-                                                <div class="divider-form form-group"></div>
-                                            </div> 
+                                                <a href="#" class="btn btn-default" onclick="resetForm()">
+                                                    <span class="fa fa-eraser"></span> รีเซ็ตฟอร์ม
+                                                </a>
 
-                                        </fieldset>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <strong style="font-size: 18px;">ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
+                                                <br/>                                                            
+                                                <input type="radio" name="paymentTerm" value="2" checked/> 
+                                                โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
+                                            </div>
+                                            <div class="form-group">
+                                                <strong style="font-size: 18px;">คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
+                                                <?php
+                                                $sqlGetPromotion = "SELECT * FROM GTRICH_COURSE_PROMOTION WHERE REF_COURSE_HEADER_ID = '" . $cId . "'";
+                                                $resGetPromotion = mysql_query($sqlGetPromotion);
+                                                while ($rowGetPromotion = mysql_fetch_array($resGetPromotion)) {
+                                                    ?>
+                                                    <br/>
+                                                    <input type="checkbox" name="seminarDiscount" value="<?= $rowGetPromotion['PRO_NAME'] ?>"> <?= $rowGetPromotion['PRO_NAME'] ?>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </div>                       
+                                            <div class="form-group">
+                                                <strong style="font-size: 18px;">ยืนยันการลงทะเบียน *</strong>
+                                                <br/>
+                                                <input type="checkbox" name="confirmRegister" id="confirmRegister">  <?= $iniConfiguration['confirmation.text'] ?>
+                                            </div>
+                                        </div>
+                                        <button class="tg-theme-btn tg-theme-btn-lg" type="button" id="registerCourseBtn">
+                                            <span class="fa fa-edit"></span> ลงทะเบียนสัมมนา
+                                        </button>
                                     </form>
-                                </div>      
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -438,10 +381,6 @@ if (!empty($uId)) {
         </div>
     </body>
     <style type="text/css">
-        .divider-form {
-            border: 1px solid #EBEFF1;
-            margin: 15px -40px 10px;
-        }
         .linkHover:hover{
             color:#ffcc33;
             cursor: pointer;
@@ -456,12 +395,8 @@ if (!empty($uId)) {
 
             if ("<?= $uId ?>" != "") {
                 $("#regisMoreThan1User").show();
-            }            
-            
-            //* wizard with validation
-            wizard.validation(<?= $step ?>, '<?= $cId ?>', '<?= $fPage ?>');
-            //* add step numbers to titles
-            wizard.steps_nb();
+            }
+
 
             //Load table if found user regis (In case of refresh page)
             $.ajax({
