@@ -11,6 +11,8 @@ require '../../model-db-connection/config.php';
 unset($_SESSION['expireFrontEnd']);
 unset($_SESSION['usernameFrontEnd']);
 unset($_SESSION['userIdFrontEnd']);
+unset($_SESSION['cusEmail']);
+unset($_SESSION['cusDetail']);
 
 //unset tmp table when logout
 if (isset($_SESSION['MORE_TEMP_REGIST'])) {

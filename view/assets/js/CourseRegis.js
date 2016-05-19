@@ -42,6 +42,11 @@ function addMoreRegister(headerId, courseId) {
         $('html,body').animate({
             scrollTop: $("#phone_number_1").offset().top
         });
+    } else if (validateIsHotmail(email)) {
+        showWarningNotficationDialog("ระบบไม่รองรับการใช้งาน Email (hotmail) นี้");
+        $('html,body').animate({
+            scrollTop: $("#phone_number_1").offset().top
+        });
     } else {
         $.ajax({
             url: "../model/com.gogetrich.function/verifyUserExistingIntmpTbleByEmail.php?email=" + email,
@@ -96,6 +101,10 @@ function addMoreRegister(headerId, courseId) {
             }
         });
     }
+}
+function validateIsHotmail($email) {
+    console.log($email);
+    return $email.indexOf('@hotmail') != -1
 }
 function validateEmail($email) {
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -174,6 +183,10 @@ var runSetDefaultValidation = function () {
         }
     });
 }
+function toggleRegistrationForm() {
+    $("#addMoreRegisLab").hide();
+    $("#regisMoreThan1User").show();
+}
 function logoutFromApplication() {
     $.ajax({
         url: "../model/com.gogetrich.function/Logout.php",
@@ -232,7 +245,7 @@ function resetForm() {
     $("#isSameAddress").prop("checked", false);
     $("#addressForReceipt").removeClass("blockTextArea");
 
-    $('html,body').animate({
-        scrollTop: $("#loadMoreUser").offset().top
-    });
+//    $('html,body').animate({
+//        scrollTop: $("#loadMoreUser").offset().top
+//    });
 }

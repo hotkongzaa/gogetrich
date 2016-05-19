@@ -19,13 +19,7 @@ if (mysql_num_rows($res) <= 0) {
 }
 
 $uId = (string) filter_input(INPUT_GET, 'uId');
-$step = (string) filter_input(INPUT_GET, 'step');
-if (empty($step)) {
-    $step = 1;
-}
-if (!is_numeric($step)) {
-    $step = 1;
-}
+
 $uFirstName = "";
 $uLastName = "";
 $uPhonNumber = "";
@@ -117,41 +111,7 @@ if (!empty($uId)) {
                 <div class="container">
                     <?php include './logo_include.php'; ?>
                     <div class="navigation-area">
-                        <?php
-                        if (empty($_SESSION['usernameFrontEnd'])) {
-                            ?>
-                            <ul class="add-nav">
-                                <li>
-                                    <a data-toggle="modal" data-target=".login-modalbox" href="#">
-                                        <i class="fa fa-sign-in"></i> เข้าสู่ระบบ
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="registration">
-                                        <i class="fa fa-university"></i> สมัครสมาชิก
-                                    </a>
-                                </li>
-                            </ul>
-                            <?php
-                        } else {
-                            ?>
-                            <ul class="add-nav">
-                                <li class="dropdown-toggle" >
-                                    ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="javascript:void(0)" onclick="logoutFromApplication()">
-                                                <i class="fa fa-sign-out"></i> ออกจากระบบ
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                            <?php
-                        }
-                        ?>
-
+                        <div id="loadLoginState"></div>
                         <nav id="nav">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -294,22 +254,19 @@ if (!empty($uId)) {
                                             <legend class="hide">Registration type</legend>
                                             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                                                 <div class="form-group">
+                                                    <h3>ลงทะเบียนแบบสมาชิก</h3>
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="exampleInputEmail1">Username</label>
-                                                    <input type="text" class="form-control" id="usernameForm" name="usernameForm" placeholder="Username">
+                                                    <input type="text" class="form-control" id="loginName" name="loginName" placeholder="Username">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Password</label>
-                                                    <input type="password" class="form-control" id="passwordForm" name="passwordForm" placeholder="Password">
+                                                    <input type="password" class="form-control" id="loginPassword" name="loginPassword" placeholder="Password">
                                                 </div>
                                                 <div class="form-group">
-                                                    <a href="javascript:void(0)" class="btn btn-default btn-md">
+                                                    <a href="javascript:void(0)" id="loginAsMember" class="btn btn-default btn-md">
                                                         เข้าสู่ระบบ
-                                                    </a>
-                                                </div>
-                                                <div class="form-group">
-                                                    ลงทะเบียนแบบไม่ใช่สมาชิก 
-                                                    <a href="registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>&step=3">
-                                                        Registered as Guest
                                                     </a>
                                                 </div>
 
@@ -326,7 +283,7 @@ if (!empty($uId)) {
                                                     <div id="loadMoreUser" style="margin-top: 10px;"></div>
                                                 </div>
                                                 <div class="form-group">                                                    
-                                                    <label class="pull-right" id="addMoreRegisLab" style="cursor: pointer; margin-right: 20px;">
+                                                    <label class="pull-right" id="addMoreRegisLab" onclick="toggleRegistrationForm()" style="cursor: pointer; margin-right: 20px;">
                                                         <span class="fa fa-user-plus"></span> เพิ่มผู้สมัคร
                                                     </label>
                                                 </div>
@@ -337,7 +294,7 @@ if (!empty($uId)) {
                                                     <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
                                                     <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
                                                     <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
-                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)*</label> 
+                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)* ระบบไม่รองรับการใช้งาน hotmail และ Yahoo</label> 
                                                     <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
                                                     <!--<div id="addMoreRegister"></div>-->
 
@@ -345,11 +302,15 @@ if (!empty($uId)) {
                                                     <input type="checkbox" id="isSameAddress" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
 
                                                     <div id="divForAddressContact">
-                                                        <textarea name="addressForContact" id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAContact ?></textarea>
+                                                        <textarea id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;">
+                                                            <?= $uAContact ?>
+                                                        </textarea>
                                                     </div>
                                                     <div >
                                                         <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-                                                        <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;"><?= $uAReceipt ?></textarea>
+                                                        <textarea id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;">
+                                                            <?= $uAReceipt ?>
+                                                        </textarea>
                                                     </div>
                                                     <br/>
                                                     <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>', '<?= $cId ?>')">
@@ -456,13 +417,13 @@ if (!empty($uId)) {
     <script>
         var state = 1;
         $(document).ready(function () {
-
+            $("#loadLoginState").load("loginState.php");
             if ("<?= $uId ?>" != "") {
                 $("#regisMoreThan1User").show();
             }
 
             //* wizard with validation
-            wizard.validation(<?= $step ?>, '<?= $cId ?>', '<?= $fPage ?>');
+            wizard.validation();
             //* add step numbers to titles
             wizard.steps_nb();
 
@@ -614,7 +575,6 @@ if (!empty($uId)) {
                 } else if (loginPassword == "") {
                     showWarningNotficationDialog("กรุณาระบุ รหัสผ่าน");
                 } else {
-                    var formEle = $("#loginForGetRes").serialize();
                     $.ajax({
                         url: "../model/com.gogetrich.function/LoginSubmit.php",
                         data: {'username': loginName, 'password': loginPassword},
@@ -644,14 +604,24 @@ if (!empty($uId)) {
                                                 url: "moreUserTbl.php?courseId=<?= $cId ?>",
                                                 type: 'POST',
                                                 success: function (data, textStatus, jqXHR) {
-                                                    window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>';
+//                                                    window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>';
+                                                    $('#courseRegistered').stepy('step', 3);
+                                                    $("#loadMoreUser").html(data);
                                                 }
                                             });
                                             $("#regisMoreThan1User").toggle();
                                             $("#addMoreRegisLab").toggle();
                                             $("#login-modal").modal('toggle');
+
+                                            $("#loadLoginState").load("loginState.php");
                                         } else {
-                                            window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>&uId=' + resData[1].split("||")[6];
+//                                            window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>&uId=' + resData[1].split("||")[6];
+
+                                            $("#loadLoginState").load("loginState.php");
+                                            $("#regisMoreThan1User").show();
+                                            $("#addMoreRegisLab").hide();
+                                            $('#courseRegistered').stepy('step', 3);
+
                                             var fName = resData[1].split("||")[0];
                                             var lName = resData[1].split("||")[1];
                                             var phone = resData[1].split("||")[2];
@@ -735,43 +705,43 @@ if (!empty($uId)) {
             });
         }
     </script>
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Begin # DIV Form -->
-                <fieldset>
-                    <form id="loginForGetRes">
-                        <div class="row" style="margin-top: 20px;">
-                            <div class="col-sm-12 col-md-10  col-md-offset-1 ">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="glyphicon glyphicon-user"></i>
-                                        </span> 
-                                        <input class="form-control" placeholder="ชื่อผู้ใช้" id="loginName" type="text" autofocus>
+    <!--    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                     Begin # DIV Form 
+                    <fieldset>
+                        <form id="loginForGetRes">
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-user"></i>
+                                            </span> 
+                                            <input class="form-control" placeholder="ชื่อผู้ใช้" id="loginName" type="text" autofocus>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="glyphicon glyphicon-lock"></i>
-                                        </span>
-                                        <input class="form-control" placeholder="รหัสผ่าน" id="loginPassword" type="password" value="">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-lock"></i>
+                                            </span>
+                                            <input class="form-control" placeholder="รหัสผ่าน" id="loginPassword" type="password" value="">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group pull-right">
-                                    <input type="button" class="btn btn-default" id="loginAsMember" value="เข้าสู่ระบบ">
-                                    <input type="button" class="btn btn-default" onclick="$('#login-modal').modal('toggle');
-                                            $('#loginForGetRes').trigger('reset');" value="ยกเลิก">
+                                    <div class="form-group pull-right">
+                                        <input type="button" class="btn btn-default" id="loginAsMember" value="เข้าสู่ระบบ">
+                                        <input type="button" class="btn btn-default" onclick="$('#login-modal').modal('toggle');
+                                                $('#loginForGetRes').trigger('reset');" value="ยกเลิก">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                </fieldset>
-                <!-- End # DIV Form -->
-
+                        </form>
+                    </fieldset>
+                     End # DIV Form 
+    
+                </div>
             </div>
-        </div>
-    </div>
+        </div>-->
 
 </html>
