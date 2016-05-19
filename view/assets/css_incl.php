@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="assets/css/alertify.bootstrap.css">
 <link rel="stylesheet" href="assets/css/jquery.modal.css">
 <link rel="stylesheet" href="assets/css/unite-gallery.css">
+<link rel="stylesheet" href="assets/css/jquery.stepy.css" />
 
 <style type="text/css">
     .pointer{
