@@ -8,7 +8,13 @@
                         <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
                         <br/><br/>
                         <fieldset>
-                            <legend style="text-align: center;border-bottom: 0px !important;">อ.วิภา เจริญกิจสุพัฒน์</legend>
+                            <legend style="text-align: center;border-bottom: 0px !important;">
+                                อ.วิภา เจริญกิจสุพัฒน์<br/>
+                                <span style="font-size: 12px; ">
+                                    CFP<sup>®</sup>, RFC, FChFP, MSIT
+                                </span>
+                            </legend>
+
                         </fieldset>
                     </div>
                     <div class="col-sm-8" style="overflow-x:hidden; max-height: 450px;">
@@ -16,7 +22,7 @@
                             <legend>ประวัติการศึกษา</legend>
                             <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
                             <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
-                            <li>Certified Financial Planner TM,  CFP® คุณวุฒิวิชาชีพนักวางแผนการเงิน จากสมาคมนักวานแผนการเงินไทย</li>
+                            <li>Certified Financial Planner TM,  CFP<sup>®</sup> คุณวุฒิวิชาชีพนักวางแผนการเงิน จากสมาคมนักวานแผนการเงินไทย</li>
                             <li>Fellow Chartered Financial Practitioner,  FChFP คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>                                                                        
                             <li>Registered Financial Consultants, RFC วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา</li>
                             <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
