@@ -6,9 +6,11 @@
         <group/>
 =======
         <group>
-            <file>file:/C:/xampp/htdocs/gogetrich/view/assets/css/jquery.stepy.css</file>
-            <file>file:/C:/xampp/htdocs/gogetrich/view/assets/js/register_wizard.js</file>
-            <file>file:/C:/xampp/htdocs/gogetrich/view/registrationCourse.php</file>
+            <file>file:/C:/xampp/htdocs/gogetrich/view/blog.php</file>
+            <file>file:/C:/xampp/htdocs/gogetrich/view/blog-list.php</file>
+            <file>file:/C:/xampp/htdocs/gogetrich/view/main.php</file>
+            <file>file:/C:/xampp/htdocs/gogetrich/view/assets/js/main.js</file>
+            <file>file:/C:/xampp/htdocs/gogetrich/view/assets/javascript_incl.php</file>
             <file>file:/C:/xampp/htdocs/gogetrich/view/assets/css_incl.php</file>
         </group>
 >>>>>>> origin/master
