@@ -23,6 +23,9 @@ $step = (string) filter_input(INPUT_GET, 'step');
 if (empty($step)) {
     $step = 1;
 }
+if (!is_numeric($step)) {
+    $step = 1;
+}
 $uFirstName = "";
 $uLastName = "";
 $uPhonNumber = "";
@@ -456,8 +459,8 @@ if (!empty($uId)) {
 
             if ("<?= $uId ?>" != "") {
                 $("#regisMoreThan1User").show();
-            }            
-            
+            }
+
             //* wizard with validation
             wizard.validation(<?= $step ?>, '<?= $cId ?>', '<?= $fPage ?>');
             //* add step numbers to titles
