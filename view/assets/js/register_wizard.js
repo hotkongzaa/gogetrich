@@ -12,7 +12,7 @@ wizard = {
             backLabel: '<a href="javascript:void(0)" class="btn btn-default btn-sm"><i class="fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>',
             block: true,
             errorImage: true,
-            titleClick: true,
+            titleClick: false,
             validate: true,
             finishButton: false,
             next: function (step) {

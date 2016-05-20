@@ -188,7 +188,9 @@ if (!empty($uId)) {
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <strong style="font-size: 18px;">ชื่อคอร์ส: </strong><br/> 
-                                                    <span style="font-size: 16px;"><?= $rowHeader['HEADER_NAME'] ?></span>
+                                                    <span style="font-size: 18px; cursor: pointer" data-toggle="modal" data-target=".courseDetailDialog">
+                                                        <?= $rowHeader['HEADER_NAME'] ?>
+                                                    </span>
                                                 </div>
                                                 <div class="form-group">
                                                     <strong style="font-size: 18px;">เลือกเวลาเรียน *</strong>
@@ -232,7 +234,7 @@ if (!empty($uId)) {
                                                     <strong style="font-size: 18px;">ช่องทางการจ่ายที่เลือก (Payment method) *</strong>
                                                     <br/>                                                            
                                                     <input type="radio" name="paymentTerm" value="2" checked/> 
-                                                    โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ pinhatai.d@gmail.com)
+                                                    โอนเงินเข้าบัญชี (ชื่อบัญชี "บจ. เอสอี ทอล์ค" ธนาคารกรุงเทพ เลขที่บัญชี 021-7-08688-3, กรุณาส่งสำเนาหลักฐานการโอนเงินมาที่ info@gogetrich.net)
                                                 </div>
                                                 <div class="form-group">
                                                     <strong style="font-size: 18px;">คลิกแสดงสิทธิ์เพื่อรับส่วนลด</strong>
@@ -294,7 +296,7 @@ if (!empty($uId)) {
                                                     <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
                                                     <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
                                                     <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
-                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)* ระบบไม่รองรับการใช้งาน hotmail</label> 
+                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)* ขออภัย กรุณาสมัครสมาชิกด้วย Email ที่ไม่ใช่ hotmail</label> 
                                                     <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
                                                     <!--<div id="addMoreRegister"></div>-->
 
@@ -392,6 +394,52 @@ if (!empty($uId)) {
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
+
+        <div class="modal fade courseDetailDialog" tabindex="-1" role="dialog">
+            <div class="tg-signup-modalbox" style="margin: -288px 0 0 -308px !important;">
+                <h2>
+                    COURSE DETAIl <span class="pull-right" style="cursor: pointer" onclick="$('.courseDetailDialog').modal('hide')">x</span>
+                </h2>
+                <div class="span12" style="overflow-x:hidden; max-height: 450px; padding: 20px;">
+                    <fieldset>                        
+
+                        <?php
+                        $sqlGetCourseDetailByHeaderID = "SELECT * FROM GTRICH_COURSE_DETAIL GCD"
+                                . " LEFT JOIN GTRICH_DESCRIPTION_HEADER GDH ON GCD.DESC_HEADER_ID = GDH.DESC_HEADER_ID "
+                                . " WHERE 1=1"
+                                . " AND GCD.REF_COURSE_HEADER_ID = '" . $rowHeader['HEADER_ID'] . "'"
+                                . " ORDER BY DETAIL_ORDER ASC";
+                        $resGetCourseDetailByHeaderID = mysql_query($sqlGetCourseDetailByHeaderID);
+                        while ($rowGetCourseDetailByHeaderID = mysql_fetch_array($resGetCourseDetailByHeaderID)) {
+                            if (!empty($rowGetCourseDetailByHeaderID['DETAIL_LAT'])) {
+                                $showInMap = trim(preg_replace('/\s+/', ' ', $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION']));
+                                ?>
+                                <legend>
+                                    <?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?>
+                                </legend>
+                                <div class="form-group">
+                                    <?= $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION'] ?>
+                                </div>
+                                <?php
+                            } else {
+                                ?>
+                                <legend>
+                                    <?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?>
+                                </legend>
+                                <div class="form-group">
+                                    <?= $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION'] ?>
+                                </div>
+
+                                <?php
+                            }
+                        }
+                        ?>
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+
         <!--************************************
                         Popup End
         *************************************-->
