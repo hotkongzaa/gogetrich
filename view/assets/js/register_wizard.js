@@ -26,10 +26,10 @@ wizard = {
                         var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
                         var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
                         if (typeof (timeSchedule) == "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน (Step 1)");
+                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
                             $('#courseRegistered').stepy('destroy');
                         } else if (typeof (paymentTerm) == "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน (Step 1)");
+                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน");
                             $('#courseRegistered').stepy('destroy');
                         } else {
                             $.ajax({
@@ -95,10 +95,10 @@ wizard = {
                         var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
                         var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
                         if (typeof (timeSchedule) == "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน (Step 1)");
+                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
                             $('#courseRegistered').stepy('destroy');
                         } else if (typeof (paymentTerm) == "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน (Step 1)");
+                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน");
                             $('#courseRegistered').stepy('destroy');
                         }
                         break;
@@ -106,10 +106,10 @@ wizard = {
                         var timeSchedule = $('input:radio[name=courseScheduleSelect]').filter(":checked").val();
                         var paymentTerm = $('input:radio[name=paymentTerm]').filter(":checked").val();
                         if (typeof (timeSchedule) == "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน (Step 1)");
+                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
                             $('#courseRegistered').stepy('destroy');
                         } else if (typeof (paymentTerm) == "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน (Step 1)");
+                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน");
                             $('#courseRegistered').stepy('destroy');
                         } else {
                             $.ajax({
@@ -117,7 +117,7 @@ wizard = {
                                 type: 'POST',
                                 success: function (data, textStatus, jqXHR) {
                                     if (data <= 0) {
-                                        showWarningNotficationDialog("กรุณากรอกข้อมูลการลงทะเบียน (Step 3)");
+                                        showWarningNotficationDialog("กรุณากรอกข้อมูลการลงทะเบียน");
                                         $('#courseRegistered').stepy('step', 3);
                                     } else {
 

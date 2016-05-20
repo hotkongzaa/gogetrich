@@ -74,11 +74,11 @@
             <div class="tg-footer-bar">
                 <nav class="footer-nav">
                     <ul>
-                        <li><a href="main">Home</a></li>
-                        <li><a href="aboutus">About</a></li>
-                        <li><a href="trainingSchedule">Training/seminar</a></li>
-                        <li><a href="registration">Register</a></li>
-                        <li><a href="blog-list">Blog</a></li>
+                        <li><a href="main">หน้าหลัก</a></li>
+                        <li><a href="aboutus">เราคือใคร</a></li>
+                        <li><a href="trainingSchedule">คอร์สเรียน/ตารางเรียน</a></li>
+                        <li><a href="registration">สมัครสมาชิก</a></li>
+                        <li><a href="blog-list">บทความ</a></li>
                     </ul>
                 </nav>
                 <span class="copyright">&copy; 2015 by www.gogetrich.net. Developed by SE Talk Co.,Ltd. </span>
