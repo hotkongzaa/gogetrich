@@ -328,11 +328,11 @@ require '../model-db-connection/config.php';
                                                 <p style="text-align: center">
                                                     <img src="assets/images/blog/blog_list_2_1.png"/>
                                                 </p>
-                                                <p style="text-align: center;color: blue">
-                                                    ตอนนี้ลองตอบตัวเองดูว่า<br/>
-                                                    “เรานั้น...อยู่ในสถานะการเงินไหนใน 4 สถานการณ์”
-
-                                                </p>
+                                                <p style="text-align: center">
+                                                    ตอนนี้ลองตอบตัวเองดูว่า<br/></p>
+                                                <blockquote>
+                                                    <q>“เรานั้น...อยู่ในสถานะการเงินไหนใน 4 สถานการณ์”</q>
+                                                </blockquote>
                                                 <p>
                                                     <strong>ลองถามตัวเองว่าตอนนี้เราอยู่ในสถานการณ์การเงินไหนใน 4 สถานการณ์</strong></br>
                                                     1. พึ่งพาการเงินผู้อื่น (Dependence)<br/>
@@ -389,6 +389,14 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     &emsp;&emsp;&emsp;ฉะนั้นสถานการณ์การเงินเป็นอย่างไรเกี่ยวข้องกับเงินมิติตัวเลขและอารมณ์ความรู้สึก ซึ่งเราจำเป็นต้องทำความเข้าใจประกอบกัน เพื่อวางรากฐานะการเงินที่มั่นคง
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -496,6 +504,14 @@ require '../model-db-connection/config.php';
                                                     ความเชื่อ ความรู้สึกข้างต้น กำหนดพฤติกรรมบางอย่างที่สร้างผลลัพธ์ให้เราเห็นในตอนนี้
                                                 </p>
 
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -595,6 +611,14 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     *สนใจค้นคว้าเพิ่มเติมได้จากหนังสือ “กรรม ตาม สมอง” ของขุนเขา สินธุเสน เขจรบุตร, ถอดรหัสลับสมองเงินล้าน (Secrets of the Millionaire Mind) ของ T-Harv Eker
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -974,6 +998,14 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     *เงินสภาพคล่อง คือ เงินที่พร้อมใช้ มักออมในบัญชีเงินฝากธนาคาร หรือกองทุนรวมตลาดเงิน ผลตอบแทนเฉลี่ย 0.5-1.8% ต่อปี ในขณะที่เงินเฟ้อเฉลี่ย 3-5%
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -1067,19 +1099,29 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     1.	เส้นแนวโน้มรายจ่าย  จากด้านซ้ายจะเห็นว่าเส้นสีแดงกับสีน้ำเงินซ้อน ๆ กันอยู่ แสดงให้เห็นว่าคนส่วนใหญ่ รายได้เพิ่มขึ้นรายจ่ายเพิ่มขึ้นตามกัน เป็นต้นเหตุที่ทำให้ไม่มีเงินเหลือให้ออม เมื่อผ่านกระบวนการวางแผนการเงินจะมีกลไกที่ช่วยดูแลเส้นรายจ่ายให้ควบคุมได้ ไม่ให้เพิ่มตามรายได้ ซึ่งจะกล่าวรายละเอียดในตอนต่อไป
                                                 </p>
-                                                <p>
-                                                    <strong>“คนส่วนใหญ่ รายได้เพิ่มขึ้นรายจ่ายเพิ่มขึ้นตามกัน
-                                                        เป็นต้นเหตุทีทำให้ไม่มีเงินเหลือให้ออม
-                                                        เมื่อมีการผ่านกระบวนการวางแผนการเงิน
-                                                        จะมีกลไกที่ช่วยดูแลเส้นรายจ่ายให้ควบคุมได้”</strong>
+                                                <blockquote>
+                                                    <q>
+                                                        <strong>“คนส่วนใหญ่ รายได้เพิ่มขึ้นรายจ่ายเพิ่มขึ้นตามกัน
+                                                            เป็นต้นเหตุทีทำให้ไม่มีเงินเหลือให้ออม
+                                                            เมื่อมีการผ่านกระบวนการวางแผนการเงิน
+                                                            จะมีกลไกที่ช่วยดูแลเส้นรายจ่ายให้ควบคุมได้”</strong>
 
-                                                </p>
+                                                    </q>
+                                                </blockquote>
                                                 <p>
                                                     2.	เส้นแนวโน้มรายได้  การทำงานเกิดความชำนาญ มีประสบการณ์ รวมทั้งภาวะเงินเฟ้อค่าครองชีพที่สูงขึ้น เส้นรายได้จะเพิ่มขึ้น ถึงจุดหนึ่งหลายคนรายได้ลดลงช่วงปลาย และทุกคนเส้นรายได้จะหยุดเมื่อเกษียณอายุ
                                                 </p>
                                                 <p>
                                                     3.	เส้นแนวโน้มลงทุน  ช่วงเริ่มต้นของการลงทุนอาจจะมีติดลบบ้าง เงินจะเติบโตขึ้นในระยะยาว ในภาพแสดงให้เห็นว่าเราวางแผนการออมการลงทุนไปถึงจุดหนึ่ง จะมีผลตอบแทนจ่ายออกมาจากเงินลงทุน เทียบเท่ากับรายจ่ายเมื่อไร แปลว่า รายได้เกิดจากทรัพย์สินโดยไม่ต้องใช้ตัวเองทำงาน แตะจุดเปลี่ยนสภาพ เกิด “อิสรภาพการเงิน”
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -1184,19 +1226,29 @@ require '../model-db-connection/config.php';
                                                     •	การบริหารความเสี่ยง (Risk Management)  บางเหตุการณ์ เช่น จำเป็นต้องมีการผ่าตัดใหญ่ค่าใช้จ่ายหลายแสนบาท  การดึงเงินสำรองฉุกเฉินมาใช้อาจจะไม่พอ หรือทำให้บัญชีเงินสำรองฉุกเฉินเงินหมดไปเลย  การเตรียมเบี้ยประกันในงบประมาณที่เหมาะสม จะช่วยให้เราไม่ต้องรับผิดชอบค่ารักษาพยาบาลก้อนใหญ่ ช่วยปกป้องเงินสำรองฉุกเฉินและแผนการออมอื่น ๆ ไม่ให้เสียหายได้ และที่สำคัญป้องกันการเข้าสู่วงจรหนี้
 
                                                 </p>
-                                                <p>
-                                                    <strong style="color: #0e62c7">“การเตรียมเบี้ยประกันในงบประมาณที่เหมาะสม 
-                                                        จะช่วยให้เราไม่ต้องรับผิดชอบค่ารักษาพยาบาลก้อนใหญ่ 
-                                                        ช่วยปกป้องเงินสำรองฉุกเฉินและแผนการออมอื่น ๆ ไม่ให้เสียหายได้ 
-                                                        และที่สำคัญที่สุด คือ ป้องกันการเข้าสู่วงจรหนี้”</strong>
+                                                <blockquote>
+                                                    <q>
+                                                        <strong style="color: #0e62c7">“การเตรียมเบี้ยประกันในงบประมาณที่เหมาะสม 
+                                                            จะช่วยให้เราไม่ต้องรับผิดชอบค่ารักษาพยาบาลก้อนใหญ่ 
+                                                            ช่วยปกป้องเงินสำรองฉุกเฉินและแผนการออมอื่น ๆ ไม่ให้เสียหายได้ 
+                                                            และที่สำคัญที่สุด คือ ป้องกันการเข้าสู่วงจรหนี้”</strong>
 
-                                                </p>
+                                                    </q>
+                                                </blockquote>
                                                 <p>
                                                     •	การบริหารโครงสร้างหนี้ (Debt Management) การปรับโครงสร้างหนี้ จะช่วยลดความเครียด ลดภาระการจ่ายดอกเบี้ย ลดระยะเวลาการผ่อนชำระได้ ป้องกันการเกิดรายจ่ายเกินรายได้เรื้อรังจากภาระหนี้สินซ้ำซ้อน 
                                                 </p>
                                                 <p>
                                                     กลไกทั้ง 4 ประการเป็นกระบวนการวางแผนการเงินที่สำคัญเหมือนการตอกเสาเข็มก่อนการสร้างบ้าน หากฐานไม่มีเสาเข็ม หรือวางเสาเข็มไม่ครบตามตำแหน่งสำคัญ บ้านอาจจะทรุดหรือพังได้ เช่นเดียวกันกับเป้าหมายการเงิน ถ้าเสาเข็มการวางพื้นฐาน 4 กลไกนี้ไม่พร้อม ยากที่ไปถึงฝั่งฝันเป้าหมายการเงินที่มั่นคงได้
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -1296,10 +1348,12 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     &emsp;&emsp;&emsp;ช่วงแรกงบประมาณที่ใกล้เคียงกับการใช้จ่ายจริง ๆ มีการเปลี่ยนแปลงขยับขึ้นขยับลงได้ เนื่องจากระยะแรก ๆ ค่าใช้จ่ายบางรายการอาจจะถูกปรับเปลี่ยน ถ้าไม่เคยบันทึกรายจ่ายเลยใช้เวลาอย่างน้อย 12 เดือน งบประมาณจะชัดเจนขึ้น
                                                 </p>
-                                                <p >
-                                                    <strong style="color: #0e62c7">“การทำงบประมาณรายจ่ายจำเป็นอย่างยิ่ง สำหรับอาชีพที่มีรายได้ไม่สม่ำเสมอ มากบ้างน้อยบ้าง 
-                                                        การทำงบประมาณจะช่วยหยุดและป้องกันการเข้าสู่วงจรหนี้ครัวเรือนได้”</strong>
-                                                </p>
+                                                <blockquote>
+                                                    <q>
+                                                        <strong style="color: #0e62c7">“การทำงบประมาณรายจ่ายจำเป็นอย่างยิ่ง สำหรับอาชีพที่มีรายได้ไม่สม่ำเสมอ มากบ้างน้อยบ้าง 
+                                                            การทำงบประมาณจะช่วยหยุดและป้องกันการเข้าสู่วงจรหนี้ครัวเรือนได้”</strong>
+                                                    </q>
+                                                </blockquote>
                                                 <p>
                                                     &emsp;&emsp;&emsp;การทำงบประมาณรายจ่ายจำเป็นอย่างยิ่ง สำหรับอาชีพที่มีรายได้ไม่สม่ำเสมอ มากบ้างน้อยบ้าง จะช่วยหยุดและป้องกันการเข้าสู่วงจรหนี้ครัวเรือนได้ ถ้าไม่มีการทำงบประมาณกำกับการใช้จ่าย ในเดือนที่มีรายได้มากก็จะใช้มาก ในขณะที่เดือนที่มีรายได้น้อยรายได้ติดลบ จะต้องกู้หนี้ยืมสินมาใช้จ่าย
                                                 </p>
@@ -1311,6 +1365,14 @@ require '../model-db-connection/config.php';
                                                     *ปัจจุบันอัตราดอกเบี้ยเงินฝากธนาคารเพียง 0.5-1.5% และเสียภาษีหัก ณ ที่จ่าย 15% แนะนำให้สำรองเงินไว้ใน “กองทุนรวมตลาดเงิน” เป็นกองทุนรวมที่ลงทุนในตราสารหนี้ระยะสั้น ไม่เกิน 1 ปี เช่น ตั๋วเงินคลัง ได้ผลตอบแทนสุทธิเกือบ 2% ไม่เสียภาษี
 
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -1393,9 +1455,11 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     &emsp;&emsp;&emsp;หลายคนเห็นความจำเป็นของเงินสำรองฉุกเฉินแล้ว ก็จะมีคำถามต่อไปว่าแล้วอย่างเรา &ldquo;ต้องเตรียมเท่าไร&rdquo;, หรือค่าใช้จ่ายติดลบทุกเดือน อย่างนี้จะเอาเงินที่ไหนมาเตรียมเงินสำรองฉุกเฉิน</p>
 
-                                                <p>
-                                                    <strong>&ldquo;ค่าใช้จ่ายติดลบทุกเดือน จะเอาเงินที่ไหนมาเตรียมเงินสำรองฉุกเฉิน&rdquo;</strong>
-                                                </p>
+                                                <blockquote>
+                                                    <q>
+                                                        <strong>&ldquo;ค่าใช้จ่ายติดลบทุกเดือน จะเอาเงินที่ไหนมาเตรียมเงินสำรองฉุกเฉิน&rdquo;</strong>
+                                                    </q>
+                                                </blockquote>
 
                                                 <p>
                                                     •  ควรเตรียมเงินสำรองฉุกเฉินเท่าไร?<br/>
@@ -1670,6 +1734,14 @@ require '../model-db-connection/config.php';
 
                                                 <p >*เราสามารถนำเงินส่วนหนึ่งมาซื้อกองทุนรวมตลาดเงินที่ได้ผลตอบแทนมากกว่าเปลี่ยนเป็นเงินสดพร้อมใช้ได้ในวันรุ่งขึ้น</p>
 
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -1753,6 +1825,14 @@ require '../model-db-connection/config.php';
                                                     •	<a href="blog?rPage=3&id=<?= md5(14) ?>">ประเภทเงินกู้ และวิธีคำนวณดอกเบี้ยเงินกู้</a><br/>
                                                 </p>
 
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -1903,6 +1983,14 @@ require '../model-db-connection/config.php';
 
                                                 <div style="clear:both;">&nbsp;</div>
 
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -1977,12 +2065,14 @@ require '../model-db-connection/config.php';
                                         </figure>
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
-                                                <p><legend>พลังดอกเบี้ยทบต้น</legend></p>                                                
-                                                <p>
+                                                <p><legend>พลังดอกเบี้ยทบต้น</legend></p> 
+                                            <blockquote>
+                                                <q>
                                                     <strong style="color: #0e62c7">“The most powerful force in the universe is compound interest.”
                                                         พลังที่ทรงพลังมากที่สุดในจักรวาลคือพลังดอกเบี้ยทบต้น
                                                         กล่าวโดย “อัลเบิร์ต ไอน์สไตน์”</strong>
-                                                </p>
+                                                </q>
+                                            </blockquote>
                                                 <p>
                                                     ดอกเบี้ยทบต้นคือ ดอกเบี้ยที่คิดจากเงินต้นบวกดอกเบี้ยและรวมดอกเบี้ยกับเงินต้นคำนวณในรอบถัดไปเรื่อย ๆ
                                                 </p>
@@ -1995,6 +2085,14 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     เปรียบเทียบแล้วจะเห็นได้ชัดเจน การคำนวณดอกเบี้ยชั้นเดียวกับดอกเบี้ยทบต้นต่างกันมาก การออมได้อัตราดอกเบี้ยทบต้น จะช่วยผ่อนแรงการออมให้เราถึงเป้าหมายง่ายดายขึ้น
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -2086,6 +2184,14 @@ require '../model-db-connection/config.php';
                                                     เงินเฟ้อไม่เท่ากันวิเคราะห์ยาก ค่าเฉลี่ยเงินเฟ้อเฉลี่ยเท่ากันทุกปี 3.38% สินค้าราคาเริ่มต้น 100 บาท คำนวณแบบเดียวกับดอกเบี้ยทบต้น 3.38% ได้ 270.79 บาท เท่ากัน
                                                 </p>
 
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -2189,6 +2295,14 @@ require '../model-db-connection/config.php';
                                                     เราจะใช้ความรู้พื้นฐานทั้ง 3 อย่างนี้ในการบริหารโครงสร้างหนี้ โปรดติดตามตอนต่อไป
 
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
@@ -2291,6 +2405,14 @@ require '../model-db-connection/config.php';
                                                 <p>
                                                     &nbsp;&nbsp;&nbsp;โดยสรุปคือ เตรียมเงินสำรองฉุกเฉิน ทำงบประมาณรายจ่าย และปิดหนี้ที่อัตราดอกเบี้ยสูง ได้แก่ บัตรเครดิต และสินเชื่อบุคคล ทั้งหมด หารายได้เพิ่มหากจำเป็น
                                                 </p>
+                                            </div><br/>
+                                            <div class="tg-post-meta">
+                                                <span>
+                                                    <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
+                                                </span>
+                                                <span>
+                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                </span>
                                             </div>
                                         </div>
                                     </article>
