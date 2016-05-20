@@ -189,7 +189,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                 <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" class="form-control">
                                             </div>
                                             <div class="form-group">
-                                                <label for="email">อีเมล์ (Email) *</label>
+                                                <label for="email">อีเมล์ (Email) * กรุณาสมัครสมาชิกด้วย Email ที่ไม่ใช่ hotmail</label>
                                                 <input type="email" id="email" name="email" placeholder="Email Address" class="form-control">
                                             </div>
                                         </fieldset>
@@ -393,6 +393,10 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 }
             });
         });
+        function validateIsHotmail($email) {
+            console.log($email);
+            return $email.indexOf('@hotmail') != -1
+        }
         function logoutFromApplication() {
             $.ajax({
                 url: "../model/com.gogetrich.function/Logout.php",

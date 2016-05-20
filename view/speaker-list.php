@@ -167,7 +167,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
-                                                        <figure><img src="assets/images/portfolio/img-10.jpg" alt="image description"></figure>
+                                                        <figure><img src="assets/images/coach.jpg" alt="image description"></figure>
                                                         <div class="tg-img-hover">
                                                             <ul class="tg-member-hover-icons">
                                                                 <li><a href="#"><i class="flaticon-plus79"></i></a></li>
