@@ -144,7 +144,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         <a href="blog-list?page=1">บทความ</a>
                                     </li>             
                                     <li>
-                                        <a href="contactus">ติดต่อเราห</a>
+                                        <a href="contactus">ติดต่อเรา</a>
                                     </li> 
                                 </ul>
                             </div>
