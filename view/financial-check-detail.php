@@ -179,17 +179,17 @@ require '../model-db-connection/config.php';
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
                                         <img src="assets/images/financial_planning_model.png" alt="image description">
-                                        <div class="tg-img-hover">
+<!--                                        <div class="tg-img-hover">
                                             <div class="tg-displaytable">
                                                 <div class="tg-displaytablecell">
                                                     <h2>ตรวจสอบสถานการณ์เงิน</h2>
                                                     <ul class="tg-metadata">
                                                         <li class="author"><a href="#">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></li>
-                                                        <!--li class="catagory"><a href="#">In Photography</a></li-->
+                                                        li class="catagory"><a href="#">In Photography</a></li
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </figure>
                                     <div class="tg-post-detail">
                                         <div class="tg-description">

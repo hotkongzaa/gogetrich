@@ -3,12 +3,12 @@
         <div class="tg-teammember tg-haslayout">
             <figure class="tg-member-img">
                 <a href="#"><img src="assets/images/portfolio/wipa_image_resized.png" alt="member name"></a>
-                <div class="tg-member-hover">
+<!--                <div class="tg-member-hover">
                     <ul class="tg-member-hover-icons">
                         <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                         <li><a href="#"><i class="flaticon-share55"></i></a></li>
                     </ul>
-                </div>
+                </div>-->
             </figure>
             <div class="tg-member-detail tg-haslayout">
                 <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-p_kieak">อ. วิภา เจริญกิจสุพัฒน์</span>
@@ -29,12 +29,12 @@
                 <a href="#">
                     <img src="assets/images/portfolio/golf_image_resized.png" alt="member name">
                 </a>
-                <div class="tg-member-hover">
+<!--                <div class="tg-member-hover">
                     <ul class="tg-member-hover-icons">
                         <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                         <li><a href="#"><i class="flaticon-share55"></i></a></li>
                     </ul>
-                </div>
+                </div>-->
             </figure>
             <div class="tg-member-detail tg-haslayout">
                 <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-p_golf">อ. ณัฏฐพล พราหมณ์สำราญ</span>

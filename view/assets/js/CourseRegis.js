@@ -43,7 +43,7 @@ function addMoreRegister(headerId, courseId) {
             scrollTop: $("#phone_number_1").offset().top
         });
     } else if (validateIsHotmail(email)) {
-        showWarningNotficationDialog("ระบบไม่รองรับการใช้งาน Email (hotmail) นี้");
+        showWarningNotficationDialog("กรุณาสมัครสมาชิกด้วย Email ที่ไม่ใช่ hotmail");
         $('html,body').animate({
             scrollTop: $("#phone_number_1").offset().top
         });

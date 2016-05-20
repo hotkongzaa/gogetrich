@@ -370,7 +370,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                     errorHandler.hide();
                     var email = $("#email").val();
                     if (validateIsHotmail(email)) {
-                        showWarningNotficationDialog("ขออภัย กรุณาสมัครสมาชิกด้วย Email ที่ไม่ใช่ hotmail");
+                        showWarningNotficationDialog("กรุณาสมัครสมาชิกด้วย Email ที่ไม่ใช่ hotmail");
                     } else {
                         submitCustomer(form);
                     }

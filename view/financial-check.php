@@ -180,17 +180,17 @@ require '../model-db-connection/config.php';
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
                                         <img src="assets/images/financial_planning_model.png" alt="สำรวจความพร้อมการเงิน">
-                                        <div class="tg-img-hover">
+<!--                                        <div class="tg-img-hover">
                                             <div class="tg-displaytable">
                                                 <div class="tg-displaytablecell">
                                                     <h2>สำรวจความพร้อมการเงิน</h2>
                                                     <ul class="tg-metadata">
                                                         <li class="author"><a href="#">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></li>
-                                                        <!--li class="catagory"><a href="#"></a></li-->
+                                                        li class="catagory"><a href="#"></a></li
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>-->
                                     </figure>
                                     <div class="tg-post-detail">
                                         <div class="tg-description">
