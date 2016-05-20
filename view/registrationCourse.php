@@ -396,7 +396,7 @@ if (!empty($uId)) {
         </div>
 
         <div class="modal fade courseDetailDialog" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox" style="margin: -288px 0 0 -308px !important;">
+            <div class="tg-signup-modalbox">
                 <h2>
                     COURSE DETAIl <span class="pull-right" style="cursor: pointer" onclick="$('.courseDetailDialog').modal('hide')">x</span>
                 </h2>

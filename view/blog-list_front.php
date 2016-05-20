@@ -16,12 +16,12 @@
                                     <img src="assets/images/blog/whyplanningMain.jpg" alt="image description">
                                 </a>
                             </figure>
-                            <div class="tg-post-hover">
+<!--                            <div class="tg-post-hover">
                                 <ul class="tg-post-hover-icons">
                                     <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                     <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="tg-post-content tg-border-topleft">
                             <h3><a href="blog?rPage=1&id=<?= md5(1) ?>">ทำไมต้องวางแผนการเงิน</a></h3>
@@ -43,12 +43,12 @@
                                     <img src="assets/images/blog/financialSitMain.jpg" alt="image description">
                                 </a>
                             </figure>
-                            <div class="tg-post-hover">
+<!--                            <div class="tg-post-hover">
                                 <ul class="tg-post-hover-icons">
                                     <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                     <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="tg-post-content tg-border-topleft">
                             <h3><a href="blog?rPage=1&id=<?= md5(2) ?>">ตรวจสอบสถานการณ์เงิน ของเราอยู่สถานการณ์ไหน</a></h3>
@@ -70,12 +70,12 @@
                                     <img src="assets/images/blog/financialStatusMain.jpg" alt="image description">
                                 </a>
                             </figure>
-                            <div class="tg-post-hover">
+<!--                            <div class="tg-post-hover">
                                 <ul class="tg-post-hover-icons">
                                     <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                     <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="tg-post-content tg-border-topleft">
                             <h3><a href="blog?rPage=1&id=<?= md5(3) ?>">สถานะการเงินมิติของอารมณ์ความรู้สึก</a></h3>
@@ -97,12 +97,12 @@
                                     <img src="assets/images/blog/life-destiny_detail.png" alt="image description">
                                 </a>
                             </figure>
-                            <div class="tg-post-hover">
+<!--                            <div class="tg-post-hover">
                                 <ul class="tg-post-hover-icons">
                                     <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                     <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="tg-post-content tg-border-topleft">
                             <h3><a href="blog?rPage=1&id=<?= md5(4) ?>">ชะตาชีวิตลิขิตได้</a></h3>
@@ -124,12 +124,12 @@
                                     <img src="assets/images/blog/financial_freedom_detail.png" alt="image description">
                                 </a>
                             </figure>
-                            <div class="tg-post-hover">
+<!--                            <div class="tg-post-hover">
                                 <ul class="tg-post-hover-icons">
                                     <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                     <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="tg-post-content tg-border-topleft">
                             <h3><a href="blog?rPage=1&id=<?= md5(5) ?>">พัฒนาทักษะการเงินอย่างไรเพื่อไปสู่อิสรภาพการเงิน</a></h3>

@@ -249,12 +249,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/whyplanning.jpg" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -283,12 +283,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/financialSit.jpg" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -317,12 +317,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/financialStatus.jpg" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -351,12 +351,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/life-destiny_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -382,12 +382,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/financial_freedom_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -416,12 +416,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/financial_planning_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -447,12 +447,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/7_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -478,12 +478,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/8_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -509,12 +509,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/9_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -540,12 +540,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/10_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -574,12 +574,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/11_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -605,12 +605,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/12_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -638,12 +638,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/13_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -669,12 +669,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/14_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -702,12 +702,12 @@ require '../model-db-connection/config.php';
                                                             <img src="assets/images/blog/15_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-                                                    <div class="tg-post-hover">
+<!--                                                    <div class="tg-post-hover">
                                                         <ul class="tg-post-hover-icons">
                                                             <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                             <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                         </ul>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>

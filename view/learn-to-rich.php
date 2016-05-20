@@ -76,14 +76,32 @@ $currentFile = basename(__FILE__, '.php');
                         if (empty($_SESSION['usernameFrontEnd'])) {
                             ?>
                             <ul class="add-nav">
-                                <li><a data-toggle="modal" data-target=".login-modalbox" href="#">Login</a></li>
-                                <li><a href="registration">Register</a></li>
+                                <li>
+                                    <a data-toggle="modal" data-target=".login-modalbox" href="#">
+                                        <i class="fa fa-sign-in"></i> เข้าสู่ระบบ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         } else {
                             ?>
                             <ul class="add-nav">
-                                <li>Welcome <strong id="login_menu" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong></li>
+                                <li class="dropdown-toggle" >
+                                    ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="javascript:void(0)" onclick="logoutFromApplication()">
+                                                <i class="fa fa-sign-out"></i> ออกจากระบบ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
                             </ul>
                             <?php
                         }
@@ -100,27 +118,27 @@ $currentFile = basename(__FILE__, '.php');
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul>
                                     <li>
-                                        <a href="main">Home</a>
+                                        <a href="main">หน้าหลัก</a>
                                     </li>
                                     <li>
-                                        <a href="aboutus">About</a>
+                                        <a href="aboutus">เราคือใคร</a>
                                     </li>
                                     <li>
-                                        <a href="trainingSchedule">Training/Seminar</a>
+                                        <a href="trainingSchedule">คอร์สเรียน/ตารางเรียน</a>
                                         <ul>
-                                            <li class="current-menu-item">
-                                                <a href="trainingSchedule">Training Category</a>
+                                            <li >
+                                                <a href="trainingSchedule">ประเภทของคอร์สเรียน</a>
                                             </li>
                                             <li>
-                                                <a href="speaker-list">Speaker</a>
+                                                <a href="speaker-list">อาจารย์/ผู้สอน</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="blog-list?page=1">Blog</a>
-                                    </li>      
+                                        <a href="blog-list?page=1">บทความ</a>
+                                    </li>       
                                     <li>
-                                        <a href="contactus">Contact us</a>
+                                        <a href="contactus">ติดต่อเรา</a>
                                     </li> 
                                 </ul>
                             </div>
@@ -165,7 +183,7 @@ $currentFile = basename(__FILE__, '.php');
                                     </ul>
                                 </div>
                             </div-->
-                            
+
                             <div class="portfolio masnory tg-haslayout">
                                 <div class="portfolio-content tg-haslayout list" role="tablist">
                                     <div class="portfolio-item grid-item dentist">
@@ -174,12 +192,12 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/learn-to-rich/learn-to-rich-1.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -208,12 +226,12 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/learn-to-rich/learn-to-rich-2.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -241,12 +259,12 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/learn-to-rich/learn-to-rich-3.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -275,12 +293,12 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/learn-to-rich/learn-to-rich-4.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -307,12 +325,12 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/learn-to-rich/learn-to-rich-5.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -339,12 +357,12 @@ $currentFile = basename(__FILE__, '.php');
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/learn-to-rich/learn-to-rich-6.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -366,80 +384,80 @@ $currentFile = basename(__FILE__, '.php');
                                             </div>
                                         </div>
                                     </div>
-<!--                                    <div class="portfolio-item grid-item interior">
-                                        <div class="product-box">
-                                            <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
-                                                <div class="row">
-                                                    <div class="tg-portfolio-img">
-                                                        <figure><img src="assets/images/learn-to-rich/learn-to-rich-7.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                                <div class="row">
-                                                    <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
-                                                        <div class="tg-theme-heading">
-                                                            span></span
-                                                            <h2><a href="property-investment?fPage=<?= $currentFile ?>">อสังหาดีๆมีให้ลงทุน</a></h2>
-                                                        </div>
-                                                        <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
-                                                        </div>
-                                                        <a class="tg-viewmore-btn" href="property-investment?fPage=<?= $currentFile ?>">View More »</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
-<!--                                    <div class="portfolio-item grid-item interior">
-                                        <div class="product-box">
-                                            <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
-                                                <div class="row">
-                                                    <div class="tg-portfolio-img">
-                                                        <figure><img src="assets/images/learn-to-rich/learn-to-rich-8.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                                <div class="row">
-                                                    <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
-                                                        <div class="tg-theme-heading">
-                                                            span></span
-                                                            <h2><a href="learn-to-invest?fPage=<?= $currentFile ?>">เล่นหุ้นต้องศึกษา</a></h2>
-                                                        </div>
-                                                        <div class="tg-description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
-                                                        </div>
-                                                        <a class="tg-viewmore-btn" href="learn-to-invest?fPage=<?= $currentFile ?>">View More »</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>-->
+                                    <!--                                    <div class="portfolio-item grid-item interior">
+                                                                            <div class="product-box">
+                                                                                <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
+                                                                                    <div class="row">
+                                                                                        <div class="tg-portfolio-img">
+                                                                                            <figure><img src="assets/images/learn-to-rich/learn-to-rich-7.jpg" alt="image description"></figure>
+                                                                                            <div class="tg-img-hover">
+                                                                                                <ul class="tg-member-hover-icons">
+                                                                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                                    <div class="row">
+                                                                                        <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
+                                                                                            <div class="tg-theme-heading">
+                                                                                                span></span
+                                                                                                <h2><a href="property-investment?fPage=<?= $currentFile ?>">อสังหาดีๆมีให้ลงทุน</a></h2>
+                                                                                            </div>
+                                                                                            <div class="tg-description">
+                                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                                                            </div>
+                                                                                            <a class="tg-viewmore-btn" href="property-investment?fPage=<?= $currentFile ?>">View More »</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>-->
+                                    <!--                                    <div class="portfolio-item grid-item interior">
+                                                                            <div class="product-box">
+                                                                                <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
+                                                                                    <div class="row">
+                                                                                        <div class="tg-portfolio-img">
+                                                                                            <figure><img src="assets/images/learn-to-rich/learn-to-rich-8.jpg" alt="image description"></figure>
+                                                                                            <div class="tg-img-hover">
+                                                                                                <ul class="tg-member-hover-icons">
+                                                                                                    <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                    <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                                    <div class="row">
+                                                                                        <div class="tg-border-topleft tg-portfolio-content" style="height:321px !important;">
+                                                                                            <div class="tg-theme-heading">
+                                                                                                span></span
+                                                                                                <h2><a href="learn-to-invest?fPage=<?= $currentFile ?>">เล่นหุ้นต้องศึกษา</a></h2>
+                                                                                            </div>
+                                                                                            <div class="tg-description">
+                                                                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                                                                                            </div>
+                                                                                            <a class="tg-viewmore-btn" href="learn-to-invest?fPage=<?= $currentFile ?>">View More »</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>-->
                                     <div class="portfolio-item grid-item interior">
                                         <div class="product-box">
                                             <div class="col-md-6 col-sm-12 col-xs-12 pull-right">
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/learn-to-rich/learn-to-rich-9.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
