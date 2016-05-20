@@ -421,7 +421,7 @@ if (!empty($uId)) {
                                     <?= $rowGetCourseDetailByHeaderID['DETAIL_DESCRIPTION'] ?>
                                 </div>
                                 <?php
-                            } else {
+                            } else if ($rowGetCourseDetailByHeaderID['REF_GALLERY_ID'] != "true") {
                                 ?>
                                 <legend>
                                     <?= $rowGetCourseDetailByHeaderID['DESC_HEADER_NAME'] ?>
