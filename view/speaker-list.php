@@ -186,26 +186,28 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/coach.jpg" alt="image description"></figure>
-                                                        <div class="tg-img-hover">
+<!--                                                        <div class="tg-img-hover">
                                                             <ul class="tg-member-hover-icons">
                                                                 <li><a href="#"><i class="flaticon-plus79"></i></a></li>
                                                                 <li><a href="#"><i class="flaticon-share55"></i></a></li>
                                                             </ul>
-                                                        </div>
+                                                        </div>-->
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12" >
                                                 <div class="row">
-                                                    <div class="tg-border-topleft tg-portfolio-content">
+                                                    <div class="tg-border-topleft tg-portfolio-content" style="height:321px">
                                                         <div class="tg-theme-heading">
                                                             <span>นักวางแผนการเงิน</span>
                                                             <h2><a href="#" data-toggle="modal" data-target=".mentor-p_kieak">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></h2>
                                                         </div>
                                                         <div class="tg-description" style="height: 150px!important;">
-                                                            <p>"สามสิ่งสำคัญ ในความรู้ของการจัดการการเงิน ที่พี่อยากจะแชร์และแบ่งปันคนไทยทุกคน ได้แก่ การวางแผนงบการเงิน การอยู่อย่างพอเพียง และการใช้ชีวิตอย่างมีความสุข ...ซึ่งทุกคนทำได้  ขอเพียงรู้จักจัดการเงินอย่างฉลาด อิสระภาพทางการเงินและการใช้ชีวิต มันเป็นไปได้....และนี่แหละ คือ โชค ที่ทุกคนต้องการมี"</p>
+                                                            <p>"สิ่งที่สำคัญในความรู้การจัดการการเงิน ที่อยากจะแบ่งปันคนไทยทุกคนเกี่ยวกับกระบวนการวางแผนการเงินเพื่อใช้ชีวิตอย่างมีอิสรภาพการเงินได้อย่างแท้จริง 
+                                                                เกิดความมั่นคงปลอดภัย เกิดความสงบสุขในใจได้ ด้วยการสร้างทักษะการเงิน 3 ด้านให้เกิดขึ้นกับตัวเองและคนรอบตัว คือ 
+                                                                ทักษะการใช้จ่าย ทักษะการสร้างรายได้ และทักษะการลงทุนให้บรรลุตามเป้าหมายการเงิน"</p>
                                                         </div>
-                                                        <a class="tg-viewmore-btn" href="#" data-toggle="modal" data-target=".mentor-modalbox">View More »</a>
+<!--                                                        <a class="tg-viewmore-btn" href="#" data-toggle="modal" data-target=".mentor-modalbox">View More »</a>-->
                                                     </div>
                                                 </div>
                                             </div>
