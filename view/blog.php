@@ -58,10 +58,10 @@ require '../model-db-connection/config.php';
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>blog detail</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="#">Home</a></li>
-                                        <li class="active">blog detail</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="javascript:void(0)">Home</a></li>
+                                                                            <li class="active">blog detail</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@ require '../model-db-connection/config.php';
                             ?>
                             <ul class="add-nav">
                                 <li>
-                                    <a data-toggle="modal" data-target=".login-modalbox" href="#">
+                                    <a data-toggle="modal" data-target=".login-modalbox" href="javascript:void(0)">
                                         <i class="fa fa-sign-in"></i> เข้าสู่ระบบ
                                     </a>
                                 </li>
@@ -186,17 +186,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -208,7 +230,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -245,7 +267,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -254,17 +276,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -276,7 +320,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -288,17 +332,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -310,7 +376,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -395,7 +461,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -404,17 +470,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -426,7 +514,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -438,17 +526,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -460,7 +570,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -510,7 +620,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -519,17 +629,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -541,7 +673,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -553,17 +685,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -575,7 +729,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -617,7 +771,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -626,17 +780,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -648,7 +824,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -660,17 +836,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -682,7 +880,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1004,7 +1202,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1013,17 +1211,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1035,7 +1255,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1047,17 +1267,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1069,7 +1311,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1120,7 +1362,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1129,17 +1371,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1151,7 +1415,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1163,17 +1427,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1185,7 +1471,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1247,7 +1533,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1256,17 +1542,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1278,7 +1586,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1290,17 +1598,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1312,7 +1642,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1371,7 +1701,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1380,17 +1710,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1402,7 +1754,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1414,17 +1766,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1436,7 +1810,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1740,7 +2114,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1749,17 +2123,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1771,7 +2167,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1783,17 +2179,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1805,7 +2223,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1831,7 +2249,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1840,17 +2258,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1862,7 +2302,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1874,17 +2314,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -1896,7 +2358,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1989,7 +2451,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -1998,17 +2460,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2020,7 +2504,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2032,17 +2516,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2054,7 +2560,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2066,13 +2572,13 @@ require '../model-db-connection/config.php';
                                         <div class="tg-post-detail">
                                             <div class="tg-description">
                                                 <p><legend>พลังดอกเบี้ยทบต้น</legend></p> 
-                                            <blockquote>
-                                                <q>
-                                                    <strong style="color: #0e62c7">“The most powerful force in the universe is compound interest.”
-                                                        พลังที่ทรงพลังมากที่สุดในจักรวาลคือพลังดอกเบี้ยทบต้น
-                                                        กล่าวโดย “อัลเบิร์ต ไอน์สไตน์”</strong>
-                                                </q>
-                                            </blockquote>
+                                                <blockquote>
+                                                    <q>
+                                                        <strong style="color: #0e62c7">“The most powerful force in the universe is compound interest.”
+                                                            พลังที่ทรงพลังมากที่สุดในจักรวาลคือพลังดอกเบี้ยทบต้น
+                                                            กล่าวโดย “อัลเบิร์ต ไอน์สไตน์”</strong>
+                                                    </q>
+                                                </blockquote>
                                                 <p>
                                                     ดอกเบี้ยทบต้นคือ ดอกเบี้ยที่คิดจากเงินต้นบวกดอกเบี้ยและรวมดอกเบี้ยกับเงินต้นคำนวณในรอบถัดไปเรื่อย ๆ
                                                 </p>
@@ -2091,7 +2597,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -2100,17 +2606,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2122,7 +2650,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2134,17 +2662,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2156,7 +2706,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2190,7 +2740,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -2199,17 +2749,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2221,7 +2793,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2234,17 +2806,39 @@ require '../model-db-connection/config.php';
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
                                                 <ul class="tg-tags">                                                
-                                                    <li><a href="#">wipa</a></li>
-                                                    <li><a href="#">charoenkijsupat</a></li>
-                                                    <li><a href="#">financial</a></li>
-                                                    <li><a href="#">financialplanning</a></li>
-                                                    <li><a href="#">cfp</a></li>
-                                                    <li><a href="#">fchfp</a></li>
-                                                    <li><a href="#">rfc</a></li>
-                                                    <li><a href="#">gogetrich</a></li>
-                                                    <li><a href="#">rich</a></li>
-                                                    <li><a href="#">money</a></li>
-                                                    <li><a href="#">moneycate</a></li>
+                                                    <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                                 </ul>
                                             </ul>
                                         </div>
@@ -2257,7 +2851,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2301,7 +2895,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -2310,17 +2904,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">                                                
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2332,7 +2948,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2344,17 +2960,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2366,7 +3004,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2395,12 +3033,12 @@ require '../model-db-connection/config.php';
                                                     &nbsp;&nbsp;&nbsp;หากผ่อนเกินจากเพดานที่แนะนำนี้อาจจะทำให้มีโอกาสเป็นหนี้เพิ่มขึ้น เนื่องจากรายได้ที่หักค่างวดผ่อนชำระแล้ว จะเหลือน้อยเกินไปสำหรับค่าใช้จ่ายอื่น ๆ ปัญหาจะเกิดเร็วขึ้นถ้าไม่มีเงินสำรองฉุกเฉิน เพื่อป้องกันการเป็นหนี้ ควรเตรียมการดังต่อไปนี้ คือ<br/>
 
                                                     &nbsp;&nbsp;1.	<u>เตรียมเงินสำรองฉุกเฉิน 3-6 เท่าของค่าใช้จ่ายรายเดือน</u> (รวมค่างวดผ่อนชำระทั้งหมดด้วย) โดยอาจจะปรับค่างวดผ่อนชำระลดลง พร้อมกับลดค่าใช้จ่ายอื่น ๆ ที่ไม่จำเป็น <br/>
-                                                    &nbsp;&nbsp;2.	<u>ปรับค่างวดผ่อนชำระ</u> ไม่ให้อึดอัดเกินไป<br/>
-                                                    &nbsp;&nbsp;3.	<u>Refinance</u> ถ้าสามารถหาอัตราดอกเบี้ยได้ถูกกว่าเดิม 2% ลดภาระค่าใช้จ่ายดอกเบี้ย<br/>
-                                                    &nbsp;&nbsp;4.	<u>บัตรเครดิตจ่ายเต็มจำนวนทุกครั้ง</u> ถ้าผ่อนขั้นต่ำอยู่ ให้เคลียร์ออกทั้งหมด โดยกู้โปรแกรมที่มีอัตราดอกเบี้ยต่ำกว่า หรือยืมจากคนในครอบครัว แล้วตั้งใจผ่อนคืนแหล่งเงินยืมใหม่<br/>
-                                                    &nbsp;&nbsp;5.	<u>สินเชื่อบุคคล</u> ถ้ามีดูเงื่อนไขการเคลียร์ “มีค่าใช้จ่ายเพิ่มถ้าปิดก่อน” และต่อรองที่จะโป๊ะไม่ได้ ก็ตั้งหน้าตั้งต่อผ่อนไป และอย่างมีการกู้สินเชื่อครั้งต่อไป “เด็ดขาด”<br/>
-                                                    &nbsp;&nbsp;6.	<u>ทำงบประมาณ</u> เพื่อควบคุมรายจ่ายอย่างเข้มงวด<br/>
-                                                    &nbsp;&nbsp;7.	<u>หาช่องทางในการหารายได้เพิ่ม</u> อาจจะใช้ทักษะความชำนาญงานปัจจุบัน ทำงานนอกเวลาหลังเลิกงานหรือวันหยุด <br/>
+                                                &nbsp;&nbsp;2.	<u>ปรับค่างวดผ่อนชำระ</u> ไม่ให้อึดอัดเกินไป<br/>
+                                                &nbsp;&nbsp;3.	<u>Refinance</u> ถ้าสามารถหาอัตราดอกเบี้ยได้ถูกกว่าเดิม 2% ลดภาระค่าใช้จ่ายดอกเบี้ย<br/>
+                                                &nbsp;&nbsp;4.	<u>บัตรเครดิตจ่ายเต็มจำนวนทุกครั้ง</u> ถ้าผ่อนขั้นต่ำอยู่ ให้เคลียร์ออกทั้งหมด โดยกู้โปรแกรมที่มีอัตราดอกเบี้ยต่ำกว่า หรือยืมจากคนในครอบครัว แล้วตั้งใจผ่อนคืนแหล่งเงินยืมใหม่<br/>
+                                                &nbsp;&nbsp;5.	<u>สินเชื่อบุคคล</u> ถ้ามีดูเงื่อนไขการเคลียร์ “มีค่าใช้จ่ายเพิ่มถ้าปิดก่อน” และต่อรองที่จะโป๊ะไม่ได้ ก็ตั้งหน้าตั้งต่อผ่อนไป และอย่างมีการกู้สินเชื่อครั้งต่อไป “เด็ดขาด”<br/>
+                                                &nbsp;&nbsp;6.	<u>ทำงบประมาณ</u> เพื่อควบคุมรายจ่ายอย่างเข้มงวด<br/>
+                                                &nbsp;&nbsp;7.	<u>หาช่องทางในการหารายได้เพิ่ม</u> อาจจะใช้ทักษะความชำนาญงานปัจจุบัน ทำงานนอกเวลาหลังเลิกงานหรือวันหยุด <br/>
                                                 </p>
                                                 <p>
                                                     &nbsp;&nbsp;&nbsp;โดยสรุปคือ เตรียมเงินสำรองฉุกเฉิน ทำงบประมาณรายจ่าย และปิดหนี้ที่อัตราดอกเบี้ยสูง ได้แก่ บัตรเครดิต และสินเชื่อบุคคล ทั้งหมด หารายได้เพิ่มหากจำเป็น
@@ -2411,7 +3049,7 @@ require '../model-db-connection/config.php';
                                                     <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                 </span>
                                                 <span>
-                                                    <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                    <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                 </span>
                                             </div>
                                         </div>
@@ -2420,17 +3058,39 @@ require '../model-db-connection/config.php';
                                         <div class="tags pull-left">
                                             <strong>tags:</strong>
                                             <ul class="tg-tags">
-                                                <li><a href="#">wipa</a></li>
-                                                <li><a href="#">charoenkijsupat</a></li>
-                                                <li><a href="#">financial</a></li>
-                                                <li><a href="#">financialplanning</a></li>
-                                                <li><a href="#">cfp</a></li>
-                                                <li><a href="#">fchfp</a></li>
-                                                <li><a href="#">rfc</a></li>
-                                                <li><a href="#">gogetrich</a></li>
-                                                <li><a href="#">rich</a></li>
-                                                <li><a href="#">money</a></li>
-                                                <li><a href="#">moneycate</a></li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                </li>
+                                                <li>                                                   
+                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                </li>
+                                                <li>
+                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="social pull-right">
@@ -2442,7 +3102,7 @@ require '../model-db-connection/config.php';
                                                     </a>
                                                 </li>
                                                 <li class="twitter">
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -2508,7 +3168,7 @@ require '../model-db-connection/config.php';
                                 <input type="checkbox">
                                 <em>Remember Me</em>
                             </label>
-                            <a class="forgetpassword" href="#">
+                            <a class="forgetpassword" href="javascript:void(0)">
                                 <em>Forgot Password</em>
                                 <i class="fa fa-question-circle"></i>
                             </a>
@@ -2528,28 +3188,26 @@ require '../model-db-connection/config.php';
             </span>
         </div>
         <script type="text/javascript">
-            $(document).ready(function () {
-                $('#login_menu').tooltipster({
-                    contentAsHTML: true,
-                    content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
-                    touchDevices: true,
-                    position: "bottom",
+                $(document).ready(function () {
+            $('#login_menu').tooltipster({
+                contentAsHTML: true,
+                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
+                    touchDevices: true,                     position: "bottom",
                     interactive: true,
                     autoClose: true,
                     trigger: "click",
                     minWidth: 150,
                     arrow: false
                 });
-                runSetDefaultValidation();
-                var form = $('.login-form');
+                    runSetDefaultValidation();
+                    var form = $('.login-form');
                 var errorHandler = $('.errorHandler', form);
                 form.validate({
-                    rules: {
-                        username: {
-                            required: true
-                        },
-                        password: {
-                            required: true
+            rules: {
+                username: {                             required: true
+                },
+                    password: {
+                    required: true
                         }
                     },
                     submitHandler: function (form) {
@@ -2560,98 +3218,98 @@ require '../model-db-connection/config.php';
                         errorHandler.show();
                     }
                 });
-                facebookSetup();
+                    facebookSetup();
             });
             function facebookSetup() {
-                window.fbAsyncInit = function () {
-                    FB.init({
-                        appId: '1039572559467696',
+                    window.fbAsyncInit = function () {
+                FB.init({
+                appId: '1039572559467696',
                         xfbml: true,
-                        version: 'v2.6'
+                    version: 'v2.6'
                     });
                 };
 
                 (function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) {
-                        return;
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+            return;
                     }
-                    js = d.createElement(s);
-                    js.id = id;
+            js = d.createElement(s);
+                js.id = id;
                     js.src = "//connect.facebook.net/en_US/sdk.js";
                     fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
+                    }(document, 'script', 'facebook-jssdk'));
             }
-            function postToFeed(name, blogImage, fbDescription) {
-                // calling the API ...
+                        function postToFeed(name, blogImage, fbDescription) {
+                            // calling the API ...
                 var obj = {
                     method: 'feed',
-                    redirect_uri: '<?= $configure['web.application.prefix'] ?>view/blog-list?page=<?= $page ?>',
+                        redirect_uri: '<?= $configure['web.application.prefix'] ?>view/blog-list?page=<?= $page ?>',
                                 link: '<?= $configure['web.application.prefix'] ?>view/blog?rPage=<?= $page ?>&id=<?= $blogId ?>',
-                                            picture: '<?= $configure['web.application.prefix'] ?>view/assets/images/blog/' + blogImage,
-                                            name: name,
-                                            caption: 'Go Get Rich: BLOG พารวย',
-                                            description: fbDescription
+                                        picture: '<?= $configure['web.application.prefix'] ?>view/assets/images/blog/' + blogImage,
+                                                    name: name,
+                                                    caption: 'Go Get Rich: BLOG พารวย',
+                                                    description: fbDescription
                                         };
 
-                                        function callback(response) {
+                                                        function callback(response) {
 
-                                            document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-                                        }
+                                                        document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+                                                            }
 
-                                        FB.ui(obj, callback);
+                                                                FB.ui(obj, callback);
                                     }
-                                    function logoutFromApplication() {
-                                        $.ajax({
-                                            url: "../model/com.gogetrich.function/Logout.php",
-                                            success: function (data, textStatus, jqXHR) {
-                                                if (data == 200) {
-                                                    window.location.href = "main";
+                                                            function logoutFromApplication() {
+                                                            $.ajax({
+                                                        url: "../model/com.gogetrich.function/Logout.php",
+                                                        success: function (data, textStatus, jqXHR) {
+                                                            if (data == 200) {
+                                                                window.location.href = "main";
                                                 }
                                             }
-                                        });
-                                    }
-                                    function submitLogin(form) {
-                                        $.ajax({
-                                            url: "../model/com.gogetrich.function/LoginSubmit.php",
+                                                            });
+                                                            }
+                                                        function submitLogin(form) {
+                                                        $.ajax({
+                                                            url: "../model/com.gogetrich.function/LoginSubmit.php",
                                             type: 'POST',
-                                            data: {'username': $("#username").val(), 'password': $("#password").val()},
-                                            success: function (data, textStatus, jqXHR) {
-                                                var resData = data.split(":");
+                                                        data: {'username': $("#username").val(), 'password': $("#password").val()},
+                                                success: function (data, textStatus, jqXHR) {
+                                            var resData = data.split(":");
                                                 if (resData[0] == 503) {
                                                     setTimeout(function () {
-                                                        showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                                                    showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
                                                     }, 100);
                                                     $(form).trigger('reset');
-                                                }
+                                                        }
                                                 if (resData[0] == 205) {
                                                     setTimeout(function () {
                                                         showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
                                                     }, 100);
                                                     $(form).trigger('reset');
+                                                            }
+                                                        if (resData[0] == 200) {
+                                                            window.location = 'trainingSchedule';
+                                                            $(form).trigger('reset');
                                                 }
-                                                if (resData[0] == 200) {
-                                                    window.location = 'trainingSchedule';
-                                                    $(form).trigger('reset');
-                                                }
-                                            }
-                                        });
-                                    }
-                                    var runSetDefaultValidation = function () {
-                                        $.validator.setDefaults({
-                                            errorElement: "span", // contain the error msg in a small tag
-                                            errorClass: 'help-block',
-                                            errorPlacement: function (error, element) {// render error placement for each input type
-                                                if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
-                                                    error.insertAfter($(element).closest('.form-group').children('div').children().last());
-                                                } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
+                                                        }
+                                                    });
+                                                    }
+                                                    var runSetDefaultValidation = function () {
+                                                        $.validator.setDefaults({
+                                                        errorElement: "span", // contain the error msg in a small tag
+                                                        errorClass: 'help-block',
+                                                    errorPlacement: function (error, element) {// render error placement for each input type
+                                                        if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
+                                                        error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                                                    } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
                                                     error.appendTo($(element).closest('.form-group').children('div'));
-                                                } else {
+                                                        } else {
                                                     error.insertAfter(element);
                                                     // for other inputs, just perform default behavior
                                                 }
                                             },
-                                            ignore: ':hidden',
+                                    ignore: ':hidden',
                                             success: function (label, element) {
                                                 label.addClass('help-block valid');
                                                 // mark the current input as valid and display OK icon

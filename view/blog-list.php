@@ -7,6 +7,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
     }
 }
 require '../model-db-connection/config.php';
+$tag = (string) filter_input(INPUT_GET, 'tag');
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -57,10 +58,10 @@ require '../model-db-connection/config.php';
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>blog list</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="#">Home</a></li>
-                                        <li class="active">blog list</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="javascript:void(0)">Home</a></li>
+                                                                            <li class="active">blog list</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -82,7 +83,7 @@ require '../model-db-connection/config.php';
                             ?>
                             <ul class="add-nav">
                                 <li>
-                                    <a data-toggle="modal" data-target=".login-modalbox" href="#">
+                                    <a data-toggle="modal" data-target=".login-modalbox" href="javascript:void(0)">
                                         <i class="fa fa-sign-in"></i> เข้าสู่ระบบ
                                     </a>
                                 </li>
@@ -169,6 +170,14 @@ require '../model-db-connection/config.php';
                                     <div class="tg-theme-heading">
                                         <span>from our</span>
                                         <h2>Blog พารวย</h2>
+                                        <?php
+                                        if (!empty($tag)) {
+                                            ?>
+                                            <strong>TAG:</strong> <?= $tag ?>
+                                            <?php
+                                        }
+                                        ?>
+
                                     </div>
 
                                     <?php
@@ -245,16 +254,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/whyplanning.jpg" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -268,7 +277,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -279,16 +288,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/financialSit.jpg" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -302,7 +311,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -313,16 +322,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/financialStatus.jpg" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -336,7 +345,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -347,16 +356,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/life-destiny_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -367,7 +376,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -378,16 +387,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/financial_freedom_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -398,7 +407,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -412,16 +421,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/financial_planning_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -432,7 +441,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -443,16 +452,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/7_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -463,7 +472,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -474,16 +483,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/8_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -494,7 +503,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -505,16 +514,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/9_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -525,7 +534,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -536,16 +545,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/10_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -556,7 +565,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -570,16 +579,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/11_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -590,7 +599,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -601,16 +610,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/12_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -621,7 +630,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -634,16 +643,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/13_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -654,7 +663,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -665,16 +674,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/14_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -685,7 +694,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -698,16 +707,16 @@ require '../model-db-connection/config.php';
                                             <div class="tg-post">
                                                 <div class="tg-post-img">
                                                     <figure>
-                                                        <a href="#">
+                                                        <a href="javascript:void(0)">
                                                             <img src="assets/images/blog/15_front.png" alt="image description">
                                                         </a>
                                                     </figure>
-<!--                                                    <div class="tg-post-hover">
-                                                        <ul class="tg-post-hover-icons">
-                                                            <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                            <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                        </ul>
-                                                    </div>-->
+                                                    <!--                                                    <div class="tg-post-hover">
+                                                                                                            <ul class="tg-post-hover-icons">
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                <li><a href="javascript:void(0)"><i class="flaticon-share55"></i></a></li>
+                                                                                                            </ul>
+                                                                                                        </div>-->
                                                 </div>
                                                 <div class="tg-post-content tg-border-topleft">
                                                     <h3>
@@ -718,7 +727,7 @@ require '../model-db-connection/config.php';
                                                             <a href="javascript:void(0)" data-toggle="modal" data-target=".mentor-p_kieak">โดย อ.วิภา เจริญกิจสุพัฒน์ / </a>
                                                         </span>
                                                         <span>
-                                                            <a href="#">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
+                                                            <a href="javascript:void(0)">CFP<sup>®</sup>, RFC, FChFP, MSIT</a>
                                                         </span>
                                                     </div>
                                                     <div class="tg-description">
@@ -862,7 +871,7 @@ require '../model-db-connection/config.php';
                                 <input type="checkbox">
                                 <em>Remember Me</em>
                             </label>
-                            <a class="forgetpassword" href="#">
+                            <a class="forgetpassword" href="javascript:void(0)">
                                 <em>Forgot Password</em>
                                 <i class="fa fa-question-circle"></i>
                             </a>
