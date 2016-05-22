@@ -58,10 +58,10 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>LEARN TO RICH</h1>
-                                    <ol class="tg-breadcrumb">
+<!--                                    <ol class="tg-breadcrumb">
                                         <li><a href="main">Home</a></li>
                                         <li class="active">LEARN TO RICH</li>
-                                    </ol>
+                                    </ol>-->
                                 </div>
                             </div>
                         </div>

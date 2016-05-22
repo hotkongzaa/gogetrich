@@ -59,10 +59,10 @@ require '../model-db-connection/config.php';
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>แบบสำรวจความพร้อมการเงิน</h1>
-                                    <ol class="tg-breadcrumb">
+<!--                                    <ol class="tg-breadcrumb">
                                         <li><a href="#">Home</a></li>
                                         <li class="active">แบบสำรวจความพร้อมการเงิน</li>
-                                    </ol>
+                                    </ol>-->
                                 </div>
                             </div>
                         </div>

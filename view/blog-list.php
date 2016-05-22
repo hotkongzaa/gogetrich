@@ -57,10 +57,10 @@ require '../model-db-connection/config.php';
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>blog list</h1>
-                                    <ol class="tg-breadcrumb">
+<!--                                    <ol class="tg-breadcrumb">
                                         <li><a href="#">Home</a></li>
                                         <li class="active">blog list</li>
-                                    </ol>
+                                    </ol>-->
                                 </div>
                             </div>
                         </div>

@@ -63,10 +63,10 @@ $currentFile = basename(__FILE__, '.php');
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>Training / SEMINAR</h1>
-                                    <ol class="tg-breadcrumb">
+<!--                                    <ol class="tg-breadcrumb">
                                         <li><a href="main">Home</a></li>
                                         <li class="active">Training / Seminar</li>
-                                    </ol>
+                                    </ol>-->
                                 </div>
                             </div>
                         </div>
