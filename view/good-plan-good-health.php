@@ -254,9 +254,9 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                             <p style="text-align:center">
                                                 <img src="assets/images/learn-to-rich/beauty_and_health_8.jpg" alt="image description" style="width:400px;height:600px;"/>
                                             </p><br />
-                                            <p style="text-align:center">
+<!--                                            <p style="text-align:center">
                                                 <img src="assets/images/learn-to-rich/beauty_and_health_1.jpg" alt="image description"/>
-                                            </p>
+                                            </p>-->
                                             <!--                                                <br />
                                                                                             <br />
                                                                                             <br />
