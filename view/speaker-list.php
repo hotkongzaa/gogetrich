@@ -200,7 +200,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                     <div class="tg-border-topleft tg-portfolio-content">
                                                         <div class="tg-theme-heading">
                                                             <span>นักวางแผนการเงิน</span>
-                                                            <h2><a href="#" data-toggle="modal" data-target=".mentor-modalbox">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></h2>
+                                                            <h2><a href="#" data-toggle="modal" data-target=".mentor-p_kieak">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></h2>
                                                         </div>
                                                         <div class="tg-description" style="height: 150px!important;">
                                                             <p>"สามสิ่งสำคัญ ในความรู้ของการจัดการการเงิน ที่พี่อยากจะแชร์และแบ่งปันคนไทยทุกคน ได้แก่ การวางแผนงบการเงิน การอยู่อย่างพอเพียง และการใช้ชีวิตอย่างมีความสุข ...ซึ่งทุกคนทำได้  ขอเพียงรู้จักจัดการเงินอย่างฉลาด อิสระภาพทางการเงินและการใช้ชีวิต มันเป็นไปได้....และนี่แหละ คือ โชค ที่ทุกคนต้องการมี"</p>
@@ -223,26 +223,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 <!--************************************
                                 Brands Start
                 *************************************-->
-                <!--div class="tg-main-section tg-haslayout">
-                    <div class="container">
-                        <div class="row">
-                            <div class="tg-brands tg-haslayout">
-                                <div class="col-sm-3 col-xs-3 width-360">
-                                    <figure><a href="#"><img src="assets/images/brand-01.png" alt="brand name"></a></figure>
-                                </div>
-                                <div class="col-sm-3 col-xs-3 width-360">
-                                    <figure><a href="#"><img src="assets/images/brand-02.png" alt="brand name"></a></figure>
-                                </div>
-                                <div class="col-sm-3 col-xs-3 width-360">
-                                    <figure><a href="#"><img src="assets/images/brand-03.png" alt="brand name"></a></figure>
-                                </div>
-                                <div class="col-sm-3 col-xs-3 width-360">
-                                    <figure><a href="#"><img src="assets/images/brand-04.png" alt="brand name"></a></figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div-->
+                <?php include './mentor_dialog.php';?>
                 <!--************************************
                                 Brands End
                 *************************************-->
@@ -367,49 +348,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
 
             </div>
         </div>
-        <div class="modal fade mentor-modalbox" tabindex="-1" role="dialog">
-            <div class="tg-signup-modalbox">
-                <h2>MENTOR DETAIl <span class="pull-right" style="cursor: pointer" onclick="$('.mentor-modalbox').modal('hide')">x</span></h2>
-                <form style="padding:20px" >
-                    <div>
-                        <div class="row">
-                            <div class="col-sm-4">                                        
-                                <img src="assets/images/portfolio/wipa_image.png" alt="อ. วิภา เจริญกิจสุพัฒน์">
-                                <br/><br/>
-                                <fieldset>
-                                    <legend style="text-align: center;">อ.วิภา เจริญกิจสุพัฒน์</legend>
-                                </fieldset>
-                            </div>
-                            <div class="col-sm-8" style="overflow-x:hidden; max-height: 450px;">
-                                <fieldset>
-
-                                    <legend>ประวัติการศึกษา</legend>
-                                    <li>ปริญญาโท วิทยาศาสตร์มหาบัณฑิต (สาขาเทคโนโลยีสารสนเทศ) มหาวิทยาลัยเกษตรศาสตร์</li>
-                                    <li>ปริญญาตรี บริหารธุรกิจบัณฑิต (สาขาระบบสารสนเทศ) เกียรตินิยมอันดับ 1 สถาบันเทคโนโลยีราชมงคล</li>
-                                    <li>AFPTTM – Associate Financial Planner Thailand คุณวุฒิวิชาชีพที่ปรึกษาการเงิน จากสมาคมนักวางแผนการเงินไทย</li>
-                                    <li>FChFP – Fellow Chartered Financial Practitioner คุณวุฒิทางวิชาชีพสำหรับมืออาชีพ ด้านบริการทางการเงิน จากสมาคมตัวแทนประกันชีวิตและที่ปรึกษาการเงิน</li>
-                                    <li>RFC - Registered Financial Consultants วุฒิบัตรที่ปรึกษาการเงิน จากสถาบัน IARFC สมาคมที่ปรึกษาการเงินนานาชาติ ประเทศสหรัฐอเมริกา</li>
-                                    <li>ใบอนุญาตผู้แนะนำการลงทุนด้านหลักทรัพย์ สำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต)</li>
-                                    <li>ใบอนุญาตตัวแทนประกันชีวิต สำนักงานคณะกรรมการกำกับและส่งเสริมการประกอบธุรกิจประกันภัย (คปภ.)</li></br>
-                                    <legend>ประวัติการเป็นวิทยากร</legend>
-                                    <li>วิทยากรรับเชิญ โครงการอบรม “บริการด้วยใจ นักขายมืออาชีพ” ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร จังหวัดสมุทรปราการ</li>
-                                    <li>วิทยากรรับเชิญ เสวนาเรื่อง “วางแผนการเงิน เรื่องที่ควรรู้ก่อนการซื้อบ้าน” ในมหกรรมบ้าน-คอนโดและสินเชื่อแห่งปี</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “Secret of Money Cat ความลับการจัดการเงินอย่างฉลาด เพื่ออิสรภาพทางการเงิน”</li>
-                                    <li>วิทยากร สัมมนาเชิงปฏิบัติการ “เคล็ดลับสร้างความมั่งคั่งอย่างยั่งยืน”</li>
-                                    <li>วิทยากรประจำโครงการ Pre-Career Financial Advisor เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรบรรยาย “วางแผนภาษีด้วยสินค้าประชีวิต” โครงการ Financial Advisor Standard เครือนำทอง บริษัท เอไอเอ จำกัด</li>
-                                    <li>วิทยากรรับเชิญจากสำนักงานตัวแทนคุณชูลักษณ์ สมุทรปราการ หัวข้อ “Regular Activities for Fulltime Agents ทำตามหน้าที่ แล้วหน้าที่จะสอนให้เราทำ”</li></br>
-                                    <legend>ประวัติการทำงาน</legend>
-                                    <li>กรรมการผู้จัดการบริษัทฟินคีย์ แอ็ดไวเซอรี่ จำกัด</li>
-                                    <li>เป็นตัวแทนประกันชีวิตและผู้จัดการฝ่ายขายบริษัท เอไอเอ จำกัด ตั้งแต่ปีพ.ศ. 2546 ถึงปัจจุบัน</li>
-                                    <li>ทำงานด้านพัฒนา ติดตั้งและสนับสนุนระบบคอมพิวเตอร์ซอฟต์แวร์ พ.ศ. 2531-2548</li></br>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </div>
-                </form> 
-            </div>
-        </div>
+        
         <div class="scroll-top-wrapper ">
             <span class="scroll-top-inner">
                 <i class="fa fa-2x fa-arrow-circle-up"></i>
