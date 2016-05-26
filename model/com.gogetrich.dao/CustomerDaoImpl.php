@@ -133,4 +133,17 @@ class CustomerDaoImpl implements CustomerDao {
         }
     }
 
+    public function resetPassword($password, $cusId) {
+        $sqlReset = "UPDATE RICH_CUSTOMER SET CUS_PASSWORD='" . $password . "',FORCE_CHANGE='true' WHERE CUS_ID='" . $cusId . "'";
+        mysql_query("SET character_set_results=utf8");
+        mysql_query("SET character_set_client=utf8");
+        mysql_query("SET character_set_connection=utf8");
+        $query = mysql_query($sqlReset);
+        if ($query) {
+            return 200;
+        } else {
+            return mysql_error();
+        }
+    }
+
 }

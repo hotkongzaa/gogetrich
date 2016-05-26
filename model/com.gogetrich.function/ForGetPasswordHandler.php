@@ -26,20 +26,34 @@ if ($customerService->getCustomerByEmail($emailOrUsernam) != 404) {
     $cusUsername = $obj->{'CUS_USERNAME'};
     $cusEmail = $obj->{'CUS_EMAIL'};
     $cusName = $obj->{'CUS_FIRST_NAME'} . " " . $obj->{'CUS_LAST_NAME'};
-    $emailContent = new EmailContent();
-    $emailBody = $emailContent->getForgetPasswordTemplate($cusUsername, $cusEmail, $iniConfiguration['guest.password.default'], $iniConfiguration['web.application.prefix'], $cusName);
-    $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $cusEmail, $iniConfiguration['email.subject.customer.forget.password'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
-    echo $sendingEmail->sendingEmail();
+    //Start update password
+    $updateResult = $customerService->resetPassword(md5($iniConfiguration['guest.password.default']), $obj->{'CUS_ID'});
+    if ($updateResult == 200) {
+        //Sending email to customer
+        $emailContent = new EmailContent();
+        $emailBody = $emailContent->getForgetPasswordTemplate($cusUsername, $cusEmail, $iniConfiguration['guest.password.default'], $iniConfiguration['web.application.prefix'], $cusName);
+        $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $cusEmail, $iniConfiguration['email.subject.customer.forget.password'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+        echo $sendingEmail->sendingEmail();
+    } else {
+        echo $updateResult;
+    }
 } else if ($customerService->getCustomerByUsername($emailOrUsernam) != 404) {
     $jsonObj = $customerService->getCustomerByUsername($emailOrUsernam);
     $obj = json_decode($jsonObj);
     $cusUsername = $obj->{'CUS_USERNAME'};
     $cusEmail = $obj->{'CUS_EMAIL'};
     $cusName = $obj->{'CUS_FIRST_NAME'} . " " . $obj->{'CUS_LAST_NAME'};
-    $emailContent = new EmailContent();
-    $emailBody = $emailContent->getForgetPasswordTemplate($cusUsername, $cusEmail, $iniConfiguration['guest.password.default'], $iniConfiguration['web.application.prefix'], $cusName);
-    $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $cusEmail, $iniConfiguration['email.subject.customer.forget.password'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
-    echo $sendingEmail->sendingEmail();
+    //Start update password
+    $updateResult = $customerService->resetPassword(md5($iniConfiguration['guest.password.default']), $obj->{'CUS_ID'});
+    if ($updateResult == 200) {
+        //Sending email to customer
+        $emailContent = new EmailContent();
+        $emailBody = $emailContent->getForgetPasswordTemplate($cusUsername, $cusEmail, $iniConfiguration['guest.password.default'], $iniConfiguration['web.application.prefix'], $cusName);
+        $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $cusEmail, $iniConfiguration['email.subject.customer.forget.password'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
+        echo $sendingEmail->sendingEmail();
+    } else {
+        echo $updateResult;
+    }
 } else {
     echo 'ชื่อผู้ใช้(Username) หรือ อีเมล(Email) ไม่ถูกต้อง';
 }

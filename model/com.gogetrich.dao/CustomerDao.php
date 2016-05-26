@@ -31,4 +31,6 @@ interface CustomerDao {
     public function getCustomerByEmail($email);
 
     public function getCustomerByUsername($username);
+
+    public function resetPassword($password, $cusId);
 }

@@ -61,4 +61,8 @@ class CustomerService {
         return $this->dispatcher->getCustomerByUsername($username);
     }
 
+    public function resetPassword($password, $cusId) {
+        return $this->dispatcher->resetPassword($password, $cusId);
+    }
+
 }
