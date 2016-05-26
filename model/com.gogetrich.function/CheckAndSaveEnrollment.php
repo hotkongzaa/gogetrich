@@ -92,7 +92,7 @@ if (!isset($_SESSION['MORE_TEMP_REGIST'])) {
                             $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
 
                             $emailContent = new EmailContent();
-                            $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate);
+                            $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate, $iniConfiguration['web.application.prefix']);
                             $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $richUserDetail['CUS_EMAIL'], $iniConfiguration['email.subject.customer.enrollment.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                             $sendingEmail->sendingEmail();
                         }
@@ -121,7 +121,7 @@ if (!isset($_SESSION['MORE_TEMP_REGIST'])) {
                             $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
 
                             $emailContent = new EmailContent();
-                            $emailBody = $emailContent->getOfficialEmailEnrollment($richUserDetail['CUS_FIRST_NAME'] . " " . $richUserDetail['CUS_LAST_NAME'], $richUserDetail['CUS_EMAIL'], $richUserDetail['CUS_PHONE_NUMBER'], $rowGetMore['CONTACT_ADDR'], $rowGetMore['RECEIPT_ADDR'], $courseName, $courseDate);
+                            $emailBody = $emailContent->getOfficialEmailEnrollment($richUserDetail['CUS_FIRST_NAME'] . " " . $richUserDetail['CUS_LAST_NAME'], $richUserDetail['CUS_EMAIL'], $richUserDetail['CUS_PHONE_NUMBER'], $rowGetMore['CONTACT_ADDR'], $rowGetMore['RECEIPT_ADDR'], $courseName, $courseDate, $iniConfiguration['web.application.prefix']);
                             $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $iniConfiguration['email.official'], $iniConfiguration['email.subject.official.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                             $sendingEmail->sendingEmail();
                         }
@@ -165,7 +165,7 @@ if (!isset($_SESSION['MORE_TEMP_REGIST'])) {
                     if ($iniConfiguration['email.sending.to.customer'] == true) {
                         $resetUrl = $iniConfiguration['web.application.prefix'] . "view/forceChangePassword?cusID=" . $cusID;
                         $emailContent = new EmailContent();
-                        $emailBody = $emailContent->getCustomerEmailRegister($resetUrl, $email, $iniConfiguration['guest.password.default']);
+                        $emailBody = $emailContent->getCustomerEmailRegister($resetUrl, $email, $iniConfiguration['guest.password.default'], $iniConfiguration['web.application.prefix']);
                         $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $email, $iniConfiguration['email.subject.customer.register.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                         $sendingEmail->sendingEmail();
                     }
@@ -215,7 +215,7 @@ if (!isset($_SESSION['MORE_TEMP_REGIST'])) {
                             $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
 
                             $emailContent = new EmailContent();
-                            $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate);
+                            $emailBody = $emailContent->getCustomerEmailEnrollment($courseNameAndSubCourseName, $linkToCourse, $courseName, $courseDate, $iniConfiguration['web.application.prefix']);
                             $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $email, $iniConfiguration['email.subject.customer.enrollment.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                             $sendingEmail->sendingEmail();
                         }
@@ -244,7 +244,7 @@ if (!isset($_SESSION['MORE_TEMP_REGIST'])) {
                             $courseDate = '<span>เริ่ม วันที่ ' . $startDate . ' เวลา ' . $startTime . 'น. ถึง วันที่ ' . $endDate . ' เวลา ' . $endTime . 'น.</span>';
 
                             $emailContent = new EmailContent();
-                            $emailBody = $emailContent->getOfficialEmailEnrollment($fName . " " . $lName, $email, $phone, $rowGetMore['CONTACT_ADDR'], $rowGetMore['RECEIPT_ADDR'], $courseName, $courseDate);
+                            $emailBody = $emailContent->getOfficialEmailEnrollment($fName . " " . $lName, $email, $phone, $rowGetMore['CONTACT_ADDR'], $rowGetMore['RECEIPT_ADDR'], $courseName, $courseDate, $iniConfiguration['web.application.prefix']);
                             $sendingEmail = new SendingEmail($iniConfiguration['email.host'], $iniConfiguration['email.username'], $iniConfiguration['email.password'], $iniConfiguration['email.official'], $iniConfiguration['email.subject.official.prefix'], $emailBody, $iniConfiguration['email.username'], $iniConfiguration['email.name']);
                             $sendingEmail->sendingEmail();
                         }

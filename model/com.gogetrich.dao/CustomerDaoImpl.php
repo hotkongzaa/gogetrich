@@ -60,7 +60,7 @@ class CustomerDaoImpl implements CustomerDao {
     }
 
     public function getCustomerByUsername($username) {
-        $sqlGetCus = "SELECT * FROM RICH_CUSTOMER WHERE CUS_USERNAME='" . $username . "'";
+        $sqlGetCus = "SELECT * FROM RICH_CUSTOMER WHERE CUS_USERNAME LIKE BINARY '" . $username . "'";
         $res = mysql_query($sqlGetCus);
         if (mysql_num_rows($res) == 1) {
             $row = mysql_fetch_assoc($res);
@@ -106,7 +106,7 @@ class CustomerDaoImpl implements CustomerDao {
     }
 
     public function verfiUsernameAndPassword($username, $password) {
-        $sqlVerifyUser = "SELECT * FROM RICH_CUSTOMER WHERE CUS_USERNAME LIKE '" . $username . "' AND CUS_PASSWORD LIKE '" . $password . "'";
+        $sqlVerifyUser = "SELECT * FROM RICH_CUSTOMER WHERE BINARY CUS_USERNAME LIKE BINARY '" . $username . "' AND CUS_PASSWORD LIKE BINARY '" . $password . "'";
         $query = mysql_query($sqlVerifyUser);
         if (mysql_num_rows($query) >= 1) {
             $row = mysql_fetch_assoc($query);

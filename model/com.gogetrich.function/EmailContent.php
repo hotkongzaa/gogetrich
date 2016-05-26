@@ -821,7 +821,7 @@ class EmailContent {
                                                                 <img src="' . $urlGlobalPath . '/view/assets/images/logo.png"/>
                                                             </td>
                                                             <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
-                                                                <span class="template-label">Go Get Rich</span>
+                                                                <span class="template-label"></span>
                                                             </td>
                                                             <td class="expander"></td>
                                                         </tr>
@@ -936,7 +936,7 @@ class EmailContent {
 </html>';
     }
 
-    public function getCustomerEmailEnrollment($courseNameAndSub, $linkTOCOurse, $courseName, $dateTime) {
+    public function getCustomerEmailEnrollment($courseNameAndSub, $linkTOCOurse, $courseName, $dateTime, $webPath) {
         return '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>    
@@ -1061,7 +1061,7 @@ class EmailContent {
                                                                     <td width="140" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
-                                                                                <!--img src="img/logos.jpg" alt="" border="0" width="140" height="50" style="display:block; border:none; outline:none; text-decoration:none;"-->
+                                                                                <img src="' . $webPath . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">
                                                                             </a>
                                                                         </div>
                                                                     </td>
@@ -1360,7 +1360,7 @@ class EmailContent {
                                                                     <td width="43" height="43" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="https://www.facebook.com/richplanning">
-                                                                                <img src="img/facebook.png" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none;"/> 
+                                                                                <img src="' . $webPath . '/view/assets/images/facebook_logo.png" alt="" border="0" width="150" height="50" style="display:block; border:none; outline:none; text-decoration:none;"/> 
                                                                             </a>
                                                                             <span style="cursor: pointer;font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098;">
                                                                                 https://www.facebook.com/richplanning
@@ -1396,7 +1396,7 @@ class EmailContent {
 </html>';
     }
 
-    public function getOfficialEmailEnrollment($cusName, $cusEmail, $cusPhone, $cusContactAddr, $cusContactReceipt, $courseName, $dateTime) {
+    public function getOfficialEmailEnrollment($cusName, $cusEmail, $cusPhone, $cusContactAddr, $cusContactReceipt, $courseName, $dateTime, $webPath) {
         return '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -1521,7 +1521,7 @@ class EmailContent {
                                                                     <td width="140" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
-                                                                                <!--img src="img/logos.jpg" alt="" border="0" width="140" height="50" style="display:block; border:none; outline:none; text-decoration:none;"-->
+                                                                                <img src="' . $webPath . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">
                                                                             </a>
                                                                         </div>
                                                                     </td>
@@ -1781,7 +1781,7 @@ class EmailContent {
                                                                     <td width="43" height="43" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="https://www.facebook.com/richplanning">
-                                                                                <img src="img/facebook.png" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none;"/> 
+                                                                                <img src="' . $webPath . '/view/assets/images/facebook_logo.png" alt="" border="0" width="150" height="50" style="display:block; border:none; outline:none; text-decoration:none;"/> 
                                                                             </a>
                                                                             <span style="cursor: pointer;font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098;">
                                                                                 https://www.facebook.com/richplanning
@@ -1817,7 +1817,7 @@ class EmailContent {
 </html>';
     }
 
-    public function getCustomerEmailRegister($resetUrl, $username, $password) {
+    public function getCustomerEmailRegister($resetUrl, $username, $password, $webPath) {
         return '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -1942,7 +1942,7 @@ class EmailContent {
                                                                     <td width="140" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
-                                                                                <!--img src="img/logos.jpg" alt="" border="0" width="140" height="50" style="display:block; border:none; outline:none; text-decoration:none;"-->
+                                                                                <img src="' . $webPath . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">
                                                                             </a>
                                                                         </div>
                                                                     </td>
@@ -2232,7 +2232,7 @@ class EmailContent {
                                                                     <td width="43" height="43" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="https://www.facebook.com/richplanning">
-                                                                                <img src="img/facebook.png" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none;"/> 
+                                                                                <img src="' . $webPath . '/view/assets/images/facebook_logo.png" alt="" border="0" width="150" height="50" style="display:block; border:none; outline:none; text-decoration:none;"/> 
                                                                             </a>
                                                                             <span style="cursor: pointer;font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098;">
                                                                                 https://www.facebook.com/richplanning
@@ -2393,7 +2393,7 @@ class EmailContent {
                                                                     <td width="140" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
-                                                                                <!--img src="img/logos.jpg" alt="" border="0" width="140" height="50" style="display:block; border:none; outline:none; text-decoration:none;"-->
+                                                                                <img src="' . $linkUrl . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">
                                                                             </a>
                                                                         </div>
                                                                     </td>
@@ -2673,7 +2673,7 @@ class EmailContent {
                                                                     <td width="43" height="43" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="https://www.facebook.com/richplanning">
-                                                                                <img src="img/facebook.png" alt="" border="0" width="30" height="30" style="display:block; border:none; outline:none; text-decoration:none;"/> 
+                                                                                <img src="' . $linkUrl . '/view/assets/images/facebook_logo.png" alt="" border="0" width="150" height="50" style="display:block; border:none; outline:none; text-decoration:none;"/> 
                                                                             </a>
                                                                             <span style="cursor: pointer;font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098;">
                                                                                 https://www.facebook.com/richplanning
