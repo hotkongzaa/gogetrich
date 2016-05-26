@@ -58,17 +58,26 @@ function addMoreRegister(headerId, courseId) {
                 $(".preloader").fadeOut("slow");
                 if (isDuplicate == 409) {
                     showWarningNotficationDialog("อีเมลนี้ได้ถูกใช้ในการลงทะเบียนเรียบร้อยแล้ว");
+                } else if (isDuplicate == 505) {
+                    showSuccessNotficationDialog("เกิดข้อผิดพลาดระหว่างการทำงาน<br/>กรุณากดลงทะเบียนใหม่อีกครั้งค่ะ", "scheduleDetail?cname=" + courseId)
                 } else {
                     $.ajax({
-//                        url: "../model/com.gogetrich.function/verifyEmailEnrollment.php?email=" + email + "&courseID=<?= $rowHeader['HEADER_ID'] ?>",
                         url: "../model/com.gogetrich.function/verifyEmailEnrollment.php?email=" + email + "&courseID=" + headerId,
                         type: 'POST',
+                        beforeSend: function (xhr) {
+                            $(".preloader").show();
+                        },
                         success: function (dataCheckRegistered, textStatus, jqXHR) {
+                            $(".preloader").fadeOut("slow");
                             if (dataCheckRegistered == 200) {
                                 $.ajax({
                                     url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?isSameAddress=" + isSameAddress + "&fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=false&addressForReceipt=" + addressForReceipt + "&addressForContact=" + addressForContact,
                                     type: 'POST',
+                                    beforeSend: function (xhr) {
+                                        $(".preloader").show();
+                                    },
                                     success: function (data, textStatus, jqXHR) {
+                                        $(".preloader").fadeOut("slow");
                                         if (data == 200) {
                                             $("#loadMoreUser").load("moreUserTbl.php?courseId=" + courseId, function () {
                                                 $('html,body').animate({

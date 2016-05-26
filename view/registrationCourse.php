@@ -536,52 +536,58 @@ if (!empty($uId)) {
                     url: "../model/com.gogetrich.function/checkIsRegisterIncaseRegisterCourse.php",
                     type: 'POST',
                     success: function (data, textStatus, jqXHR) {
-                        if (typeof (timeSchedule) === "undefined" && data <= 0 && typeof (paymentTerm) === "undefined" && !$("#confirmRegister").is(":checked")) {
-                            showWarningNotficationDialog("<ul><li>กรุณาเลือกเวลาเรียน</li><li>กรุณากรอกข้อมูลการลงทะเบียน</li><li>กรุณาเลือกช่องทางการจ่ายเงิน</li><li>กรุณายืนยันการลงทะเบียน</li></ul>");
-                            $('html,body').animate({
-                                scrollTop: $("#registerSeminar").offset().top
-                            });
-                        } else if (typeof (timeSchedule) === "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
-                            $('html,body').animate({
-                                scrollTop: $("#registerSeminar").offset().top
-                            });
-                        } else if (data <= 0) {
-                            blinkDiv($("#loadMoreUser"));
-                            showWarningNotficationDialog("กรุณากรอกข้อมูลการลงทะเบียน");
-                            $('html,body').animate({
-                                scrollTop: $("#registerSeminar").offset().top
-                            });
-                        } else if (typeof (paymentTerm) === "undefined") {
-                            showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน");
-                            $('html,body').animate({
-                                scrollTop: $("#regisMoreThan1User").offset().top
-                            });
-                        } else if (!$("#confirmRegister").is(":checked")) {
-                            showWarningNotficationDialog("กรุณายืนยันการลงทะเบียน");
+                        if (data == 505) {
+                            showSuccessNotficationDialog("เกิดข้อผิดพลาดระหว่างการทำงาน<br/>กรุณากดลงทะเบียนใหม่อีกครั้งค่ะ", "scheduleDetail?cname=<?= $cId ?>");
                         } else {
-                            $.ajax({
-                                url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
-                                type: 'POST',
-                                data: {'courseID': '<?= $cId ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount, 'timeSchedule': timeSchedule},
-                                beforeSend: function (xhr) {
-                                    $(".preloader").show();
-                                },
-                                success: function (data, textStatus, jqXHR) {
-                                    $(".preloader").fadeOut("slow");
-                                    if (data == 200) {
-                                        $.ajax({
-                                            url: "../model/com.gogetrich.function/getEventDt.php?id=" + timeSchedule,
-                                            type: 'POST',
-                                            success: function (eventDt, textStatus, jqXHR) {
-                                                showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/>ท่านจะได้รับข้อมูลรายละเอียดของหลักสูตรที่ท่านได้ลงทะเบียนไว้ทางอีเมล<br/>ขอบคุณค่ะ", "<?= $fPage ?>");
-                                            }
-                                        });
-                                    } else {
-                                        showWarningNotficationDialog(data);
+                            if (typeof (timeSchedule) === "undefined" && data <= 0 && typeof (paymentTerm) === "undefined" && !$("#confirmRegister").is(":checked")) {
+                                showWarningNotficationDialog("<ul><li>กรุณาเลือกเวลาเรียน</li><li>กรุณากรอกข้อมูลการลงทะเบียน</li><li>กรุณาเลือกช่องทางการจ่ายเงิน</li><li>กรุณายืนยันการลงทะเบียน</li></ul>");
+                                $('html,body').animate({
+                                    scrollTop: $("#registerSeminar").offset().top
+                                });
+                            } else if (typeof (timeSchedule) === "undefined") {
+                                showWarningNotficationDialog("กรุณาเลือกเวลาเรียน");
+                                $('html,body').animate({
+                                    scrollTop: $("#registerSeminar").offset().top
+                                });
+                            } else if (data <= 0) {
+                                blinkDiv($("#loadMoreUser"));
+                                showWarningNotficationDialog("กรุณากรอกข้อมูลการลงทะเบียน");
+                                $('html,body').animate({
+                                    scrollTop: $("#registerSeminar").offset().top
+                                });
+                            } else if (typeof (paymentTerm) === "undefined") {
+                                showWarningNotficationDialog("กรุณาเลือกช่องทางการจ่ายเงิน");
+                                $('html,body').animate({
+                                    scrollTop: $("#regisMoreThan1User").offset().top
+                                });
+                            } else if (!$("#confirmRegister").is(":checked")) {
+                                showWarningNotficationDialog("กรุณายืนยันการลงทะเบียน");
+                            } else {
+                                $.ajax({
+                                    url: "../model/com.gogetrich.function/CheckAndSaveEnrollment.php",
+                                    type: 'POST',
+                                    data: {'courseID': '<?= $cId ?>', 'paymentTerm': paymentTerm, 'seminarDiscount': seminarDiscount, 'timeSchedule': timeSchedule},
+                                    beforeSend: function (xhr) {
+                                        $(".preloader").show();
+                                    },
+                                    success: function (data, textStatus, jqXHR) {
+                                        $(".preloader").fadeOut("slow");
+                                        if (data == 200) {
+                                            $.ajax({
+                                                url: "../model/com.gogetrich.function/getEventDt.php?id=" + timeSchedule,
+                                                type: 'POST',
+                                                success: function (eventDt, textStatus, jqXHR) {
+                                                    showSuccessNotficationDialog("<strong>ท่านลงทะเบียนสำเร็จแล้ว</strong><br/><strong>หลักสูตร:</strong> <?= $rowHeader['HEADER_NAME'] ?><br/><strong>ในวันที่:</strong> " + eventDt + "<br/>ท่านจะได้รับข้อมูลรายละเอียดของหลักสูตรที่ท่านได้ลงทะเบียนไว้ทางอีเมล<br/>ขอบคุณค่ะ", "<?= $fPage ?>");
+                                                }
+                                            });
+                                        } else if (data == 505) {
+                                            showSuccessNotficationDialog("เกิดข้อผิดพลาดระหว่างการทำงาน<br/>กรุณากดลงทะเบียนใหม่อีกครั้งค่ะ", "scheduleDetail?cname=<?= $cId ?>");
+                                        } else {
+                                            showWarningNotficationDialog(data);
+                                        }
                                     }
-                                }
-                            });
+                                });
+                            }
                         }
                     }
                 });
