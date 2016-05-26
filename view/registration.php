@@ -57,10 +57,10 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>Registration</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="main">Home</a></li>
-                                        <li class="active">Registration</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="main">Home</a></li>
+                                                                            <li class="active">Registration</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -95,6 +95,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -106,7 +111,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }
@@ -216,14 +225,6 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                 <label for="address">ที่อยู่ (เพื่อการติดต่อ) (Contact address) *</label>
                                                 <textarea id="address" name="address" cols="20" style="height: 150px;"></textarea>
                                             </div>
-                                            <!--div class="form-group">                                                
-                                                <label for="isSameAddress">ที่อยู่ (เพื่อออกใบเสร็จรับเงิน) (Address in receipt)</label><br/><br/>  
-                                                <input type="checkbox" id="isSameAddress" value="true" name="isSameAddress" >  เช่นเดียวกับที่อยู่เพื่อการติดต่อ
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-                                                <textarea name="addressForReceipt" id="addressForReceipt" cols="20" style="height: 150px;"></textarea>
-                                            </div-->
                                             <div class="form-group">
                                                 <label for="phone">หมายเลขโทรศัพท์ เพื่อการติดต่อ (Phone number) *</label>
                                                 <input type="text" id="phone" name="phone" placeholder="Phone number" class="form-control">
@@ -446,9 +447,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 url: "../model/com.gogetrich.function/SaveRegistration.php?" + fromObj,
                 type: 'POST',
                 beforeSend: function (xhr) {
+                    $(".preloader").show();
                     $("#submitAccount").prop('disabled', true);
                 },
                 success: function (data, textStatus, jqXHR) {
+                    $(".preloader").fadeOut("slow");
                     if (data == 200) {
                         $.ajax({
                             url: "../model/com.gogetrich.function/LoginSubmit.php",
@@ -456,20 +459,14 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             data: {'username': $("#username").val(), 'password': $("#password").val()},
                             success: function (data, textStatus, jqXHR) {
                                 if (data == 503) {
-                                    $(".notification-modalBox").modal("show");
-                                    $(".notification_detail").html("Username/password is invalid");
+                                    showWarningNotficationDialog("Username/password is invalid");
                                 } else {
-                                    $(".notification-modalBox").modal("show");
-                                    $(".notification_detail").html("ท่านได้สมัครสมาชิกสำเร็จแล้ว<br/> ยินดีต้อนรับท่านเข้าสู่ Go Get Rich");
-                                    setTimeout(function () {
-                                        window.location = 'trainingSchedule';
-                                    }, 1500);
+                                    showSuccessNotficationDialog("ท่านได้สมัครสมาชิกสำเร็จแล้ว<br/> ยินดีต้อนรับท่านเข้าสู่ Go Get Rich", "trainingSchedule")
                                 }
                             }
                         });
                     } else {
-                        $(".notification-modalBox").modal("show");
-                        $(".notification_detail").html(data);
+                        showWarningNotficationDialog(data);
                     }
                     $("#submitAccount").prop('disabled', false);
                 }

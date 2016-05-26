@@ -59,10 +59,10 @@ require '../model-db-connection/config.php';
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>blog detail</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="#">Home</a></li>
-                                        <li class="active">blog detail</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="#">Home</a></li>
+                                                                            <li class="active">blog detail</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -97,6 +97,11 @@ require '../model-db-connection/config.php';
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -108,7 +113,11 @@ require '../model-db-connection/config.php';
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }
@@ -179,17 +188,17 @@ require '../model-db-connection/config.php';
                                 <article class="blog-post blog-post-detail tg-haslayout">
                                     <figure>
                                         <img src="assets/images/financial_planning_model.png" alt="image description">
-<!--                                        <div class="tg-img-hover">
-                                            <div class="tg-displaytable">
-                                                <div class="tg-displaytablecell">
-                                                    <h2>ตรวจสอบสถานการณ์เงิน</h2>
-                                                    <ul class="tg-metadata">
-                                                        <li class="author"><a href="#">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></li>
-                                                        li class="catagory"><a href="#">In Photography</a></li
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>-->
+                                        <!--                                        <div class="tg-img-hover">
+                                                                                    <div class="tg-displaytable">
+                                                                                        <div class="tg-displaytablecell">
+                                                                                            <h2>ตรวจสอบสถานการณ์เงิน</h2>
+                                                                                            <ul class="tg-metadata">
+                                                                                                <li class="author"><a href="#">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></li>
+                                                                                                li class="catagory"><a href="#">In Photography</a></li
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>-->
                                     </figure>
                                     <div class="tg-post-detail">
                                         <div class="tg-description">

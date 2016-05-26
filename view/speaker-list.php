@@ -57,10 +57,10 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>OUR MENTOR</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="#">Home</a></li>
-                                        <li class="active">OUR MENTOR</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="#">Home</a></li>
+                                                                            <li class="active">OUR MENTOR</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -95,6 +95,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -106,7 +111,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }
@@ -186,12 +195,12 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/coach.jpg" alt="image description"></figure>
-<!--                                                        <div class="tg-img-hover">
-                                                            <ul class="tg-member-hover-icons">
-                                                                <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                            </ul>
-                                                        </div>-->
+                                                        <!--                                                        <div class="tg-img-hover">
+                                                                                                                    <ul class="tg-member-hover-icons">
+                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
+                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
+                                                                                                                    </ul>
+                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -207,7 +216,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                                 เกิดความมั่นคงปลอดภัย เกิดความสงบสุขในใจได้ ด้วยการสร้างทักษะการเงิน 3 ด้านให้เกิดขึ้นกับตัวเองและคนรอบตัว คือ 
                                                                 ทักษะการใช้จ่าย ทักษะการสร้างรายได้ และทักษะการลงทุนให้บรรลุตามเป้าหมายการเงิน"</p>
                                                         </div>
-<!--                                                        <a class="tg-viewmore-btn" href="#" data-toggle="modal" data-target=".mentor-modalbox">View More »</a>-->
+                                                        <!--                                                        <a class="tg-viewmore-btn" href="#" data-toggle="modal" data-target=".mentor-modalbox">View More »</a>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -225,7 +234,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 <!--************************************
                                 Brands Start
                 *************************************-->
-                <?php include './mentor_dialog.php';?>
+                <?php include './mentor_dialog.php'; ?>
                 <!--************************************
                                 Brands End
                 *************************************-->
@@ -350,7 +359,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
 
             </div>
         </div>
-        
+
         <div class="scroll-top-wrapper ">
             <span class="scroll-top-inner">
                 <i class="fa fa-2x fa-arrow-circle-up"></i>

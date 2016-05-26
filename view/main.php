@@ -73,6 +73,11 @@ require '../model-db-connection/config.php';
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -84,7 +89,11 @@ require '../model-db-connection/config.php';
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }

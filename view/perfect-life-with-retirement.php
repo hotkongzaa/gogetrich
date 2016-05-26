@@ -58,10 +58,10 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>LEARN TO RICH</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="main">Home</a></li>
-                                        <li class="active">LEARN TO RICH</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="main">Home</a></li>
+                                                                            <li class="active">LEARN TO RICH</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -96,6 +96,11 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -107,7 +112,11 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }
@@ -211,7 +220,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                                             <p>&emsp;&emsp;&emsp;มาดูเงินเกษียณที่ต้องเตรียม คำนวณจากความต้องการค่าใช้จ่ายต่อเดือน โดยใช้ค่าเงินปัจจุบัน 
                                                 คำนวณบวกค่าเงินเฟ้อที่ 4% ใช้เงินเกษียณตอนอายุ 60 – 80 ปี ผลตอบแทนหลังเกษียณ 5%</p>
                                             <p>&emsp;&emsp;&emsp;<u>ตัวอย่าง</u> ถ้าปัจจุบันอายุ 30 ปี ต้องการค่าใช้จ่ายเดือนละ 20,000 บาท (ค่าเงินวันนี้) วันที่อายุ 60 ปี 
-                                                ต้องมี “เงินเกษียณ 14,738,186 บาท” เป็นค่าใช้จ่ายเท่ากับค่าเงินปัจจุบันเดือนละ 20,000 บาท ตั้งแต่อายุ 60-80 ปี </p>
+                                            ต้องมี “เงินเกษียณ 14,738,186 บาท” เป็นค่าใช้จ่ายเท่ากับค่าเงินปัจจุบันเดือนละ 20,000 บาท ตั้งแต่อายุ 60-80 ปี </p>
                                             <p style="text-align:center">
                                                 <img src="assets/images/learn-to-rich/retirement_3.jpg" alt="image description"/>
                                             </p>

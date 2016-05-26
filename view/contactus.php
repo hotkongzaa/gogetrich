@@ -57,10 +57,10 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>Contact Us</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="main">Home</a></li>
-                                        <li class="active">Contact Us</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="main">Home</a></li>
+                                                                            <li class="active">Contact Us</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -95,6 +95,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -106,7 +111,11 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }

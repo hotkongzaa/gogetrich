@@ -96,6 +96,11 @@ require '../model-db-connection/config.php';
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -107,7 +112,11 @@ require '../model-db-connection/config.php';
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }
@@ -2807,38 +2816,38 @@ require '../model-db-connection/config.php';
                                             <ul class="tg-tags">
                                                 <ul class="tg-tags">                                                
                                                     <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
-                                                </li>
-                                                <li>                                                   
-                                                    <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
-                                                </li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=wipa">wipa</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=charoenkijsupat">charoenkijsupat</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=financial">financial</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=financialplanning">financialplanning</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=cfp">cfp</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=fchfp">fchfp</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=rfc">rfc</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=gogetrich">gogetrich</a>
+                                                    </li>
+                                                    <li>                                                   
+                                                        <a href="blog-list?page=<?= $page ?>&tag=rich">rich</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=money">money</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog-list?page=<?= $page ?>&tag=moneycate">moneycate</a>
+                                                    </li>
                                                 </ul>
                                             </ul>
                                         </div>
@@ -3188,26 +3197,26 @@ require '../model-db-connection/config.php';
             </span>
         </div>
         <script type="text/javascript">
-                $(document).ready(function () {
-            $('#login_menu').tooltipster({
-                contentAsHTML: true,
-                content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
-                    touchDevices: true,                     position: "bottom",
+            $(document).ready(function () {
+                $('#login_menu').tooltipster({
+                    contentAsHTML: true,
+                    content: $('<ul><li class="linkHover" onclick="logoutFromApplication()" style="list-style: none; margin-left: 10px"><div class="form-group"><i class="fa fa-group"></i> Logout</div></li></ul>'),
+                    touchDevices: true, position: "bottom",
                     interactive: true,
                     autoClose: true,
                     trigger: "click",
                     minWidth: 150,
                     arrow: false
                 });
-                    runSetDefaultValidation();
-                    var form = $('.login-form');
+                runSetDefaultValidation();
+                var form = $('.login-form');
                 var errorHandler = $('.errorHandler', form);
                 form.validate({
-            rules: {
-                username: {                             required: true
-                },
-                    password: {
-                    required: true
+                    rules: {
+                        username: {required: true
+                        },
+                        password: {
+                            required: true
                         }
                     },
                     submitHandler: function (form) {
@@ -3218,98 +3227,98 @@ require '../model-db-connection/config.php';
                         errorHandler.show();
                     }
                 });
-                    facebookSetup();
+                facebookSetup();
             });
             function facebookSetup() {
-                    window.fbAsyncInit = function () {
-                FB.init({
-                appId: '1039572559467696',
+                window.fbAsyncInit = function () {
+                    FB.init({
+                        appId: '1039572559467696',
                         xfbml: true,
-                    version: 'v2.6'
+                        version: 'v2.6'
                     });
                 };
 
                 (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {
-            return;
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {
+                        return;
                     }
-            js = d.createElement(s);
-                js.id = id;
+                    js = d.createElement(s);
+                    js.id = id;
                     js.src = "//connect.facebook.net/en_US/sdk.js";
                     fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));
+                }(document, 'script', 'facebook-jssdk'));
             }
-                        function postToFeed(name, blogImage, fbDescription) {
-                            // calling the API ...
+            function postToFeed(name, blogImage, fbDescription) {
+                // calling the API ...
                 var obj = {
                     method: 'feed',
-                        redirect_uri: '<?= $configure['web.application.prefix'] ?>view/blog-list?page=<?= $page ?>',
+                    redirect_uri: '<?= $configure['web.application.prefix'] ?>view/blog-list?page=<?= $page ?>',
                                 link: '<?= $configure['web.application.prefix'] ?>view/blog?rPage=<?= $page ?>&id=<?= $blogId ?>',
-                                        picture: '<?= $configure['web.application.prefix'] ?>view/assets/images/blog/' + blogImage,
-                                                    name: name,
-                                                    caption: 'Go Get Rich: BLOG พารวย',
-                                                    description: fbDescription
+                                            picture: '<?= $configure['web.application.prefix'] ?>view/assets/images/blog/' + blogImage,
+                                            name: name,
+                                            caption: 'Go Get Rich: BLOG พารวย',
+                                            description: fbDescription
                                         };
 
-                                                        function callback(response) {
+                                        function callback(response) {
 
-                                                        document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-                                                            }
+                                            document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
+                                        }
 
-                                                                FB.ui(obj, callback);
+                                        FB.ui(obj, callback);
                                     }
-                                                            function logoutFromApplication() {
-                                                            $.ajax({
-                                                        url: "../model/com.gogetrich.function/Logout.php",
-                                                        success: function (data, textStatus, jqXHR) {
-                                                            if (data == 200) {
-                                                                window.location.href = "main";
+                                    function logoutFromApplication() {
+                                        $.ajax({
+                                            url: "../model/com.gogetrich.function/Logout.php",
+                                            success: function (data, textStatus, jqXHR) {
+                                                if (data == 200) {
+                                                    window.location.href = "main";
                                                 }
                                             }
-                                                            });
-                                                            }
-                                                        function submitLogin(form) {
-                                                        $.ajax({
-                                                            url: "../model/com.gogetrich.function/LoginSubmit.php",
+                                        });
+                                    }
+                                    function submitLogin(form) {
+                                        $.ajax({
+                                            url: "../model/com.gogetrich.function/LoginSubmit.php",
                                             type: 'POST',
-                                                        data: {'username': $("#username").val(), 'password': $("#password").val()},
-                                                success: function (data, textStatus, jqXHR) {
-                                            var resData = data.split(":");
+                                            data: {'username': $("#username").val(), 'password': $("#password").val()},
+                                            success: function (data, textStatus, jqXHR) {
+                                                var resData = data.split(":");
                                                 if (resData[0] == 503) {
                                                     setTimeout(function () {
-                                                    showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
+                                                        showWarningNotficationDialog("ชื่อผู้ใช้ หรือ รหัสผ่านไม่ถูกต้อง");
                                                     }, 100);
                                                     $(form).trigger('reset');
-                                                        }
+                                                }
                                                 if (resData[0] == 205) {
                                                     setTimeout(function () {
                                                         showSuccessNotficationDialog("กรุณาเปลี่ยนรหัสผ่าน", "forceChangePassword.php?cusID=" + resData[1]);
                                                     }, 100);
                                                     $(form).trigger('reset');
-                                                            }
-                                                        if (resData[0] == 200) {
-                                                            window.location = 'trainingSchedule';
-                                                            $(form).trigger('reset');
                                                 }
-                                                        }
-                                                    });
-                                                    }
-                                                    var runSetDefaultValidation = function () {
-                                                        $.validator.setDefaults({
-                                                        errorElement: "span", // contain the error msg in a small tag
-                                                        errorClass: 'help-block',
-                                                    errorPlacement: function (error, element) {// render error placement for each input type
-                                                        if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
-                                                        error.insertAfter($(element).closest('.form-group').children('div').children().last());
-                                                    } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
+                                                if (resData[0] == 200) {
+                                                    window.location = 'trainingSchedule';
+                                                    $(form).trigger('reset');
+                                                }
+                                            }
+                                        });
+                                    }
+                                    var runSetDefaultValidation = function () {
+                                        $.validator.setDefaults({
+                                            errorElement: "span", // contain the error msg in a small tag
+                                            errorClass: 'help-block',
+                                            errorPlacement: function (error, element) {// render error placement for each input type
+                                                if (element.attr("type") == "radio" || element.attr("type") == "checkbox") {// for chosen elements, need to insert the error after the chosen container
+                                                    error.insertAfter($(element).closest('.form-group').children('div').children().last());
+                                                } else if (element.attr("name") == "card_expiry_mm" || element.attr("name") == "card_expiry_yyyy") {
                                                     error.appendTo($(element).closest('.form-group').children('div'));
-                                                        } else {
+                                                } else {
                                                     error.insertAfter(element);
                                                     // for other inputs, just perform default behavior
                                                 }
                                             },
-                                    ignore: ':hidden',
+                                            ignore: ':hidden',
                                             success: function (label, element) {
                                                 label.addClass('help-block valid');
                                                 // mark the current input as valid and display OK icon

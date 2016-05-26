@@ -1,4 +1,5 @@
 <?php
+session_start();
 $currentFile = basename(__FILE__, '.php');
 ?>
 <!doctype html>
@@ -52,10 +53,10 @@ $currentFile = basename(__FILE__, '.php');
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>LEARN TO RICH</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="#">Home</a></li>
-                                        <li class="active">LEARN TO RICH</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="#">Home</a></li>
+                                                                            <li class="active">LEARN TO RICH</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -90,6 +91,11 @@ $currentFile = basename(__FILE__, '.php');
                             <?php
                         } else {
                             ?>
+                            <style>
+                                #nav{
+                                    width: 68% !important;
+                                }
+                            </style>
                             <ul class="add-nav">
                                 <li class="dropdown-toggle" >
                                     ยินดีต้อนรับ <strong data-toggle="dropdown" aria-haspopup="true" style="cursor: pointer"><?= $_SESSION['usernameFrontEnd'] ?></strong>
@@ -101,7 +107,11 @@ $currentFile = basename(__FILE__, '.php');
                                         </li>
                                     </ul>
                                 </li>
-
+                                <li>
+                                    <a href="registration">
+                                        <i class="fa fa-university"></i> สมัครสมาชิก
+                                    </a>
+                                </li>
                             </ul>
                             <?php
                         }

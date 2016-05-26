@@ -36,16 +36,15 @@ $customerVO->setCusFirstName($fName);
 $customerVO->setCusLastName($lName);
 $customerVO->setCusGender($gender);
 $customerVO->setCusContactAddr($address);
-
 $customerVO->setPhoneNumber($phone);
 $customerVO->setCusFacebookAddr($facebookAdr);
 $customerVO->setForceChange("false");
 
-if ($customerService->duplicationUsername($_GET['username']) && $customerService->duplicationEmail($_GET['email'])) {
+if ($customerService->duplicationUsername($username) && $customerService->duplicationEmail($email)) {
     echo "Your username and email have been used";
-} else if ($customerService->duplicationUsername($_GET['username'])) {
+} else if ($customerService->duplicationUsername($username)) {
     echo "This username have been used";
-} else if ($customerService->duplicationEmail($_GET['email'])) {
+} else if ($customerService->duplicationEmail($email)) {
     echo "This email have been used";
 } else {
     $saveResult = $customerService->saveCustomer($customerVO);

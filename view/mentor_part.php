@@ -1,13 +1,13 @@
 <div class="tg-ourteam tg-haslayout">
     <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-        <div class="tg-teammember tg-haslayout">
+        <div class="tg-teammember tg-haslayout" style="cursor: pointer" data-toggle="modal" data-target=".mentor-p_kieak">
             <figure class="tg-member-img">
                 <a href="javascript:void(0)">
                     <img src="assets/images/portfolio/wipa_image_resized.png" alt="member name">
                 </a>
             </figure>
             <div class="tg-member-detail tg-haslayout">
-                <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-p_kieak">
+                <span class="tg-member-name">
                     อ. วิภา เจริญกิจสุพัฒน์
 <!--                    <span style="font-size: 12px;">
                         CFP<sup>®</sup>, RFC, FChFP, MSIT
@@ -27,14 +27,14 @@
         </div>
     </div>
     <div class="col-md-3 col-sm-6 col-xs-6 width-480">
-        <div class="tg-teammember tg-haslayout">
+        <div class="tg-teammember tg-haslayout" style="cursor: pointer" data-toggle="modal" data-target=".mentor-p_golf">
             <figure class="tg-member-img">
                 <a href="javascript:void(0)">
                     <img src="assets/images/portfolio/golf_image_resized.png" alt="member name">
                 </a>
             </figure>
             <div class="tg-member-detail tg-haslayout">
-                <span class="tg-member-name" style="cursor: pointer" data-toggle="modal" data-target=".mentor-p_golf">
+                <span class="tg-member-name">
                     อ. ณัฏฐพล พราหมณ์สำราญ
                 </span>
                 <span class="tg-member-postion">ผู้เชี่ยวชาญด้านการวางแผนการเงิน</span>
