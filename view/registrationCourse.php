@@ -91,10 +91,10 @@ if (!empty($uId)) {
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
                                     <h1>Registration</h1>
-<!--                                    <ol class="tg-breadcrumb">
-                                        <li><a href="main">Home</a></li>
-                                        <li class="active">Registration</li>
-                                    </ol>-->
+                                    <!--                                    <ol class="tg-breadcrumb">
+                                                                            <li><a href="main">Home</a></li>
+                                                                            <li class="active">Registration</li>
+                                                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -267,9 +267,13 @@ if (!empty($uId)) {
                                                     <input type="password" class="form-control" id="loginPassword" name="loginPassword" placeholder="Password">
                                                 </div>
                                                 <div class="form-group">
+
                                                     <a href="javascript:void(0)" id="loginAsMember" class="btn btn-default btn-md">
                                                         เข้าสู่ระบบ
                                                     </a>
+                                                    <span>
+                                                        <a href="forgetPassword">ลืมรหัสผ่าน</a>
+                                                    </span>
                                                 </div>
 
                                             </div>
@@ -383,7 +387,7 @@ if (!empty($uId)) {
                                 <input type="checkbox">
                                 <em>Remember Me</em>
                             </label>
-                            <a class="forgetpassword" href="#">
+                            <a class="forgetpassword" href="forgetPassword">
                                 <em>Forgot Password</em>
                                 <i class="fa fa-question-circle"></i>
                             </a>

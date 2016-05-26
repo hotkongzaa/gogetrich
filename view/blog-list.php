@@ -880,7 +880,7 @@ $tag = (string) filter_input(INPUT_GET, 'tag');
                                 <input type="checkbox">
                                 <em>Remember Me</em>
                             </label>
-                            <a class="forgetpassword" href="javascript:void(0)">
+                            <a class="forgetpassword" href="forgetPassword">
                                 <em>Forgot Password</em>
                                 <i class="fa fa-question-circle"></i>
                             </a>

@@ -273,7 +273,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                 <input type="checkbox">
                                 <em>Remember Me</em>
                             </label>
-                            <a class="forgetpassword" href="#">
+                            <a class="forgetpassword" href="forgetPassword">
                                 <em>Forgot Password</em>
                                 <i class="fa fa-question-circle"></i>
                             </a>

@@ -48,6 +48,28 @@ class CustomerDaoImpl implements CustomerDao {
         
     }
 
+    public function getCustomerByEmail($email) {
+        $sqlGetCus = "SELECT * FROM RICH_CUSTOMER WHERE CUS_EMAIL='" . $email . "'";
+        $res = mysql_query($sqlGetCus);
+        if (mysql_num_rows($res) == 1) {
+            $row = mysql_fetch_assoc($res);
+            return json_encode($row);
+        } else {
+            return 404;
+        }
+    }
+
+    public function getCustomerByUsername($username) {
+        $sqlGetCus = "SELECT * FROM RICH_CUSTOMER WHERE CUS_USERNAME='" . $username . "'";
+        $res = mysql_query($sqlGetCus);
+        if (mysql_num_rows($res) == 1) {
+            $row = mysql_fetch_assoc($res);
+            return json_encode($row);
+        } else {
+            return 404;
+        }
+    }
+
     public function saveCustomer(\CustomerVO $customerVO) {
         $sqlSaveCus = "INSERT INTO RICH_CUSTOMER (CUS_ID,CUS_USERNAME,CUS_PASSWORD,CUS_EMAIL,CUS_FIRST_NAME,CUS_LAST_NAME,CUS_GENDER,CUS_CONTACT_ADDRESS,CUS_RECEIPT_ADDRESS,CUS_PHONE_NUMBER,CUS_FACEBOOK_ADDRESS,CREATED_DATE_TIME,FORCE_CHANGE) "
                 . "VALUES "

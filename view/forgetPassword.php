@@ -6,6 +6,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
         session_destroy();
     }
 }
+require '../model-db-connection/config.php';
 ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -50,16 +51,16 @@ if (isset($_SESSION['expireFrontEnd'])) {
             <!--************************************
                             Banner Start
             *************************************-->
-            <div class="tg-banner tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/about_banner_1920x250.jpg">
+            <div class="tg-banner tg-haslayout parallax-window" data-appear-top-offset="600" data-parallax="scroll" data-image-src="assets/images/register_banner.jpg">
                 <div class="tg-banner-holder">
                     <div class="container">
                         <div class="tg-displaytable">
                             <div class="tg-displaytablecell">
                                 <div class="banner-content tg-haslayout">
-                                    <h1>About</h1>
+                                    <h1>Force Change Password</h1>
                                     <!--                                    <ol class="tg-breadcrumb">
                                                                             <li><a href="main">Home</a></li>
-                                                                            <li class="active">about</li>
+                                                                            <li class="active">Force Change Password</li>
                                                                         </ol>-->
                                 </div>
                             </div>
@@ -120,6 +121,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                             <?php
                         }
                         ?>
+
                         <nav id="nav">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -134,7 +136,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                     <li>
                                         <a href="main">หน้าหลัก</a>
                                     </li>
-                                    <li class="current-menu-item">
+                                    <li>
                                         <a href="aboutus">เราคือใคร</a>
                                     </li>
                                     <li>
@@ -150,7 +152,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                     </li>
                                     <li>
                                         <a href="blog-list?page=1">บทความ</a>
-                                    </li>      
+                                    </li>    
                                     <li>
                                         <a href="contactus">ติดต่อเรา</a>
                                     </li> 
@@ -172,54 +174,34 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 *************************************-->
                 <section class="tg-main-section tg-haslayout">
                     <div class="container">
-                        <div class="row">
+                        <div class="row">    
                             <div class="col-xs-12">
                                 <div class="tg-theme-heading">
-                                    <span>WE ARE GO GET RICH</span>
-                                    <h2>ABOUT</h2>
+                                    <h2>ลืมรหัสผ่าน</h2>
                                 </div>
                             </div>
-                            <div class="tg-aboutus-section">
-                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <figure class="tg-about-img"><img src="assets/images/cat_resized.jpg" alt="image description"></figure>
+                            <h2></h2>
+                            <div class="row">                                
+                                <div class="col-md-8 col-sm-6 col-xs-6 width-480">
+                                    <form class="cus_registration_form">
+                                        <fieldset>
+                                            <legend>ข้อมูลล็อกอิน</legend>
+                                            <div class="form-group">
+                                                <input type="text" name="forgetCredential" id="forgetCredential" placeholder="ชื่อผู้ใช้ (Username) หรือ อีเมลล์ (Email)" class="form-control">
+                                            </div>
+                                        </fieldset>
+
+                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit" id="submitAccount">Forget password</button>
+                                    </form>
                                 </div>
-                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <div class="tg-aboutus">
-                                        <div class="tg-description">
-                                            <p>Go Get Rich เกิดขึ้นมาจาก กลุ่มคนเล็กๆ ที่เห็นความสำคัญของ การจัดการและการวางแผนทางการเงิน เราเคยแอบบ่นกันเองว่า "นี่ถ้ามีความรู้เรื่องการจัดการ การวางแผนการเงิน และการลงทุน ตั้งแต่ตอนเรียนมหาวิทยาลัย หรือเมื่อตอนอายุยี่สิบ พวกเราคงรวย และได้เกษียณ ไม่ต้องทำงาน กันไปนานแล้ว"</p>
-                                            <p>แต่อย่างไรก็ตาม สิ่งที่เรามองว่า เป็น "โชคดี" ของชาตินี้ ก็คือ ถึงจะรู้ช้า แต่อย่างน้อย ก็ได้รู้ ถึงแม้ อายุของแต่ละคนในทีม จะมากๆกันแล้วก็ตาม (ไม่ต้องถามหรอกนะ ว่าตอนนี้ อายุกันเท่าไร ฮา)</p>
-                                            <p>ความรู้ ในการจัดการ วางแผนการเงิน และการลงทุน ที่พวกเรามี ไม่ได้ หมายความว่า พวกเรา เป็นเศรษฐีร้อยล้านพันล้าน แต่ ความรู้เหล่านี้ ได้ช่วยให้เรา "มีความสุข และได้ใช้ชีวิต โดยที่ไม่ต้องกังวลในเรื่องการเงิน" </p>
-                                            <p>ความมุ่งมั่นของทีม Go Get Rich คือ การเผยแพร่ ความรู้ บนพื้นฐานของการจัดการการเงิน ตามปิระมิดการเงิน โดยใช้เครื่องมืออันทรงประสิทธิภาพที่สุดของการจัดการทางการเงิน ซึ่งก็คือ "การวางแผนจัดการเงิน"</p>
-                                            <p><strong>มาร่วมกัน เรียนรู้ สร้าง วางแผนการเงิน และ ออกแบบการใช้ชีวิต ให้มีความสุขกันเถอะค่ะ !</strong></p>
-                                        </div>
-                                    </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4 width-480">
+                                    <br/>
+                                    <img src="assets/images/registerform_v2_370x247.jpg"/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!--************************************
-                                About Section End
-                *************************************-->
-                <!--************************************
-                                Our Team Start
-                *************************************-->
-                <section class="tg-main-section tg-haslayout tg-skillreview-bg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="tg-theme-heading">
-                                    <span>We are Go Get Rich</span>
-                                    <h2>Our Coach</h2>
-                                </div>
-                            </div>
-                            <?php include './mentor_part.php'; ?>
-                        </div>
-                    </div>
-                </section>
-                <!--************************************
-                                Our Team End
-                *************************************-->
 
             </main>
             <!--************************************
@@ -239,18 +221,27 @@ if (isset($_SESSION['expireFrontEnd'])) {
         <!--************************************
                         Popup Start
         *************************************-->
+        <div class="modal fade notification-modalBox" tabindex="-1" role="dialog">
+            <div class="tg-login-modalbox">
+                <h2>System notification <span class="pull-right" style="cursor: pointer" onclick="$('.notification-modalBox').modal('hide')">x</span></h2></h2>
+                <div class="alert alert-error">
+                    <a class="close" data-dismiss="alert"></a>
+                    <span class="notification_detail"></span>
+                </div>
+            </div>
+        </div>
         <div class="modal fade login-modalbox" tabindex="-1" role="dialog">
             <div class="tg-login-modalbox">
-                <h2>LOGIN FORM</h2>
+                <h2>LOGIN FORM <span class="pull-right" style="cursor: pointer" onclick="$('.login-modalbox').modal('hide')">x</span></h2>
                 <form class="login-form">
                     <fieldset>
                         <div class="form-group">
                             <i class="fa fa-group"></i>
-                            <input type="text" id="username" name="username" placeholder="User name" class="form-control">
+                            <input type="text" id="usernameLogin" name="usernameLogin" placeholder="User name" class="form-control">
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="password" id="password" name="password"  placeholder="Password" class="form-control">
+                            <input type="password" id="passwordLogin" name="passwordLogin"  placeholder="Password" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>
@@ -262,15 +253,12 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                 <i class="fa fa-question-circle"></i>
                             </a>
                         </div>
-                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">login</button>
+                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit">Login</button>
                     </fieldset>
                 </form>
                 <p>Not a Member? <a href="registration">Create an Account</a></p>
             </div>
         </div>
-
-        <!--Mentor Dialogs-->
-        <?php include './mentor_dialog.php'; ?>
         <!--************************************
                         Popup End
         *************************************-->
@@ -299,16 +287,31 @@ if (isset($_SESSION['expireFrontEnd'])) {
                 minWidth: 150,
                 arrow: false
             });
-
             runSetDefaultValidation();
+            var formRegis = $('.cus_registration_form');
+            var errorHandler = $('.errorHandler', formRegis);
+            formRegis.validate({
+                rules: {
+                    forgetCredential: {
+                        required: true
+                    }
+                },
+                submitHandler: function (form) {
+                    errorHandler.hide();
+                    submitCustomer(form);
+                },
+                invalidHandler: function (event, validator) {//display error alert on form submit
+                    errorHandler.show();
+                }
+            });
             var form = $('.login-form');
             var errorHandler = $('.errorHandler', form);
             form.validate({
                 rules: {
-                    username: {
+                    usernameLogin: {
                         required: true
                     },
-                    password: {
+                    passwordLogin: {
                         required: true
                     }
                 },
@@ -335,7 +338,7 @@ if (isset($_SESSION['expireFrontEnd'])) {
             $.ajax({
                 url: "../model/com.gogetrich.function/LoginSubmit.php",
                 type: 'POST',
-                data: {'username': $("#username").val(), 'password': $("#password").val()},
+                data: {'username': $("#usernameLogin").val(), 'password': $("#passwordLogin").val()},
                 success: function (data, textStatus, jqXHR) {
                     var resData = data.split(":");
                     if (resData[0] == 503) {
@@ -353,6 +356,25 @@ if (isset($_SESSION['expireFrontEnd'])) {
                     if (resData[0] == 200) {
                         window.location = 'trainingSchedule';
                         $(form).trigger('reset');
+                    }
+                }
+            });
+        }
+        function submitCustomer(form) {
+            var usernameOrEmail = $("#forgetCredential").val();
+            $.ajax({
+                url: "../model/com.gogetrich.function/ForGetPasswordHandler.php",
+                type: 'POST',
+                data: {'usernameOrEmail': usernameOrEmail},
+                beforeSend: function (xhr) {
+                    $(".preloader").show();
+                },
+                success: function (data, textStatus, jqXHR) {
+                    $(".preloader").fadeOut("slow");
+                    if (data == 200) {
+                        showSuccessNotficationDialog("รหัสผ่านใหม่ได้ถูกส่งไปยัง Email ที่ท่านใช้สมัครเรียบร้อยแล้ว<br/>ขอบคุณค่ะ", "main");
+                    } else {
+                        showWarningNotficationDialog(data);
                     }
                 }
             });

@@ -53,4 +53,12 @@ class CustomerService {
         return $this->dispatcher->duplicationEmail($email);
     }
 
+    public function getCustomerByEmail($email) {
+        return $this->dispatcher->getCustomerByEmail($email);
+    }
+
+    public function getCustomerByUsername($username) {
+        return $this->dispatcher->getCustomerByUsername($username);
+    }
+
 }

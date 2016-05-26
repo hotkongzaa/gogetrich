@@ -27,4 +27,8 @@ interface CustomerDao {
     public function verfiUsernameAndPassword($username, $password);
 
     public function duplicationEmail($email);
+
+    public function getCustomerByEmail($email);
+
+    public function getCustomerByUsername($username);
 }
