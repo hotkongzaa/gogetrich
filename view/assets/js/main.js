@@ -313,6 +313,22 @@ function showLoginAsMemberDialog(courseId) {
         size: 'normal', //Modal Size (normal | large | small)
         callback: function (result) {
             if (result != "") {
+
+                /**
+                 * Start check this member is registered or not
+                 */
+//                $.ajax({
+//                    url: "../model/com.gogetrich.function/",
+//                    type: 'POST',
+//                    beforeSend: function (xhr) {
+//                        $(".preloader").show();
+//                    },
+//                    success: function (isRegisteredCourse, textStatus, jqXHR) {
+//                        $(".preloader").fadeOut("slow");
+//                        if (isRegisteredCourse == 200) {
+                /**
+                 * if course is not registered
+                 */
                 $.ajax({
                     url: "../model/com.gogetrich.function/LoginAsMemberHandler.php",
                     type: 'POST',
@@ -344,6 +360,14 @@ function showLoginAsMemberDialog(courseId) {
 
                     }
                 });
+//                        } else {
+//                            /**
+//                             * if course is registered
+//                             */
+//                        }
+//                    }
+//                });
+
             } else {
                 showWarningNotficationDialog("กรุณาระบุ ชื่อผู้ใช้(Username) หรือ อีเมล(Email) ");
             }

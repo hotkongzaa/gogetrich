@@ -195,12 +195,6 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                 <div class="row">
                                                     <div class="tg-portfolio-img">
                                                         <figure><img src="assets/images/coach.jpg" alt="image description"></figure>
-                                                        <!--                                                        <div class="tg-img-hover">
-                                                                                                                    <ul class="tg-member-hover-icons">
-                                                                                                                        <li><a href="#"><i class="flaticon-plus79"></i></a></li>
-                                                                                                                        <li><a href="#"><i class="flaticon-share55"></i></a></li>
-                                                                                                                    </ul>
-                                                                                                                </div>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -209,7 +203,10 @@ if (isset($_SESSION['expireFrontEnd'])) {
                                                     <div class="tg-border-topleft tg-portfolio-content" style="height:321px">
                                                         <div class="tg-theme-heading">
                                                             <span>นักวางแผนการเงิน</span>
-                                                            <h2><a href="#" data-toggle="modal" data-target=".mentor-p_kieak">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a></h2>
+                                                            <h2>
+                                                                <a href="#" data-toggle="modal" data-target=".mentor-p_kieak">อ. วิภา เจริญกิจสุพัฒน์ (พี่เกียก)</a> และ <br/>
+                                                                <a href="#" data-toggle="modal" data-target=".mentor-p_golf">อ.ณัฏฐพล พราหมณ์สำราญ (พี่กอล์ฟ)</a>
+                                                            </h2>
                                                         </div>
                                                         <div class="tg-description" style="height: 150px!important;">
                                                             <p>"สิ่งที่สำคัญในความรู้การจัดการการเงิน ที่อยากจะแบ่งปันคนไทยทุกคนเกี่ยวกับกระบวนการวางแผนการเงินเพื่อใช้ชีวิตอย่างมีอิสรภาพการเงินได้อย่างแท้จริง 
