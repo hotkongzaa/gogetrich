@@ -271,7 +271,7 @@ if (!empty($uId)) {
                                                     <a href="javascript:void(0)" id="loginAsMember" class="btn btn-default btn-md">
                                                         เข้าสู่ระบบ
                                                     </a>
-                                                    <span>
+                                                    <span class="btn btn-default btn-md">
                                                         <a href="forgetPassword">ลืมรหัสผ่าน</a>
                                                     </span>
                                                 </div>
@@ -297,7 +297,7 @@ if (!empty($uId)) {
                                                 <div class="form-group" id="regisMoreThan1User">                                                                      
 
                                                     <div class="col-lg-7 inner-addon left-addon">
-                                                        <label style="cursor: pointer;" onclick="showLoginAsMemberDialog()">
+                                                        <label style="cursor: pointer;" onclick="showLoginAsMemberDialog('<?= $cId ?>')">
                                                             <span class="fa fa-user-plus"></span> เพิ่มผู้สมัครแบบสมาชิก                                                        
                                                         </label>
                                                     </div>

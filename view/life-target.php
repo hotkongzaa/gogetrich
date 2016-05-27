@@ -98,7 +98,7 @@ $fPage = (string) filter_input(INPUT_GET, 'fPage');
                             ?>
                             <style>
                                 #nav{
-                                    width: 68% !important;
+                                    width: 60% !important;
                                 }
                             </style>
                             <ul class="add-nav">

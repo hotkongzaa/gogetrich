@@ -306,7 +306,7 @@ function showWarningNotficationDialog(informTxt) {
         autoclose: false //Auto Close Modal Box?});
     });
 }
-function showLoginAsMemberDialog() {
+function showLoginAsMemberDialog(courseId) {
     modal({type: 'prompt', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
         //title: 'ข้อความเตือน', //Modal Title
         text: 'กรุณาระบุชื่อผู้ใช้ (Username) หรือ อีเมลล์ (Email)', //Modal HTML Content
