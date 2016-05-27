@@ -55,7 +55,7 @@ function addMoreRegister(headerId, courseId) {
                 $(".preloader").show();
             },
             success: function (isDuplicate, textStatus, jqXHR) {
-                $(".preloader").fadeOut("slow");
+//                $(".preloader").fadeOut("slow");
                 if (isDuplicate == 409) {
                     showWarningNotficationDialog("อีเมลนี้ได้ถูกใช้ในการลงทะเบียนเรียบร้อยแล้ว");
                 } else if (isDuplicate == 505) {
@@ -68,7 +68,7 @@ function addMoreRegister(headerId, courseId) {
                             $(".preloader").show();
                         },
                         success: function (dataCheckRegistered, textStatus, jqXHR) {
-                            $(".preloader").fadeOut("slow");
+//                            $(".preloader").fadeOut("slow");
                             if (dataCheckRegistered == 200) {
                                 $.ajax({
                                     url: "../model/com.gogetrich.function/SaveAdditionalUserToTmp.php?isSameAddress=" + isSameAddress + "&fName=" + firtName + "&lName=" + lastName + "&email=" + email + "&phone=" + phone + "&isOwner=false&addressForReceipt=" + addressForReceipt + "&addressForContact=" + addressForContact,
@@ -210,7 +210,11 @@ function deleteMoreUserTmp(tmpID, courseId) {
     $.ajax({
         url: "../model/com.gogetrich.function/deleteTmpAddMoreUser.php?tmpID=" + tmpID,
         type: 'POST',
+        beforeSend: function (xhr) {
+            $(".preloader").show();
+        },
         success: function (data2, textStatus, jqXHR) {
+            $(".preloader").fadeOut("slow");
             if (data2 == 200) {
                 $.ajax({
                     url: "../model/com.gogetrich.function/checkIsRegister.php",
