@@ -191,7 +191,7 @@ require '../model-db-connection/config.php';
                                             </div>
                                         </fieldset>
 
-                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit" id="submitAccount">Forget password</button>
+                                        <button class="tg-theme-btn tg-theme-btn-lg" type="submit" id="submitAccount">Forgot password</button>
                                     </form>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 width-480">
