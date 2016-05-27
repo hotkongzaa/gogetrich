@@ -6,7 +6,7 @@
 
 
 wizard = {
-    validation: function () {
+    validation: function (courseId) {
         $('#courseRegistered').stepy({
             nextLabel: '<a href="javascript:void(0)" class="btn btn-default btn-sm">ต่อไป <i class="fa fa-chevron-right" aria-hidden="true"></i></a>',
             backLabel: '<a href="javascript:void(0)" class="btn btn-default btn-sm"><i class="fa fa-chevron-left" aria-hidden="true"></i> ย้อนกลับ</a>',
@@ -50,7 +50,12 @@ wizard = {
                                             success: function (isDuplicate, textStatus, jqXHR) {
                                                 $(".preloader").fadeOut("slow");
                                                 if (isDuplicate == 409) {
+                                                    //Assign if there are user exist in temp table
                                                     $('#courseRegistered').stepy('step', 3);
+                                                    resetForm();
+
+                                                } else if (isDuplicate == 505) {
+                                                    showSuccessNotficationDialog("เกิดข้อผิดพลาดระหว่างการทำงาน<br/>กรุณากดลงทะเบียนใหม่อีกครั้งค่ะ", "scheduleDetail?cname=" + courseId);
                                                 } else {
                                                     //GO to step 3 with fill data
                                                     $.ajax({

@@ -6,9 +6,9 @@ require '../model-db-connection/config.php';
     <thead>
         <tr>                                                              
             <th>No.</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
+            <th>ชื่อ-นามสกุล</th>
+            <th>เบอร์โทรศัพท์</th>
+            <th>อีเมล์</th>
             <th></th>
         </tr>
     </thead>

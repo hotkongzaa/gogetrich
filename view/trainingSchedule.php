@@ -103,7 +103,7 @@ $currentFile = basename(__FILE__, '.php');
                             ?>
                             <style>
                                 #nav{
-                                    width: 68% !important;
+                                    width: 60% !important;
                                 }
                             </style>
                             <ul class="add-nav">

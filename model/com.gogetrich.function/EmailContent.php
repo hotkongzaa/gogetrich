@@ -1055,10 +1055,10 @@ class EmailContent {
                                                 <tr>
                                                     <td>
                                                         <!-- logo -->
-                                                        <table bgcolor="#282828" width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                        <table bgcolor="#282828" width="200" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
                                                             <tbody>
                                                                 <tr>
-                                                                    <td width="140" height="50" align="center">
+                                                                    <td width="200" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
                                                                                 <img src="' . $webPath . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">
@@ -1515,10 +1515,10 @@ class EmailContent {
                                                 <tr>
                                                     <td>
                                                         <!-- logo -->
-                                                        <table bgcolor="#282828" width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                        <table bgcolor="#282828" width="200" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
                                                             <tbody>
                                                                 <tr>
-                                                                    <td width="140" height="50" align="center">
+                                                                    <td width="200" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
                                                                                 <img src="' . $webPath . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">
@@ -1936,10 +1936,10 @@ class EmailContent {
                                                 <tr>
                                                     <td>
                                                         <!-- logo -->
-                                                        <table bgcolor="#282828" width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                        <table bgcolor="#282828" width="200" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
                                                             <tbody>
                                                                 <tr>
-                                                                    <td width="140" height="50" align="center">
+                                                                    <td width="200" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
                                                                                 <img src="' . $webPath . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">
@@ -2387,10 +2387,10 @@ class EmailContent {
                                                 <tr>
                                                     <td>
                                                         <!-- logo -->
-                                                        <table bgcolor="#282828" width="140" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                                        <table bgcolor="#282828" width="200" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
                                                             <tbody>
                                                                 <tr>
-                                                                    <td width="140" height="50" align="center">
+                                                                    <td width="200" height="50" align="center">
                                                                         <div class="imgpop">
                                                                             <a target="_blank" href="http://www.gogetrich.net">
                                                                                 <img src="' . $linkUrl . '/view/assets/images/logo.png" alt="" border="0" width="170" height="60" style="display:block; border:none; outline:none; text-decoration:none;">

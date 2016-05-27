@@ -293,38 +293,48 @@ if (!empty($uId)) {
                                                         <span class="fa fa-user-plus"></span> เพิ่มผู้สมัคร
                                                     </label>
                                                 </div>
-                                                <div class="form-group" id="regisMoreThan1User">                  
-                                                    <label for="moreUser_1">ชื่อ (First Name)*</label> 
-                                                    <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uFirstName ?>"/>
-                                                    <label for="moreUser_1">สกุล (Last Name)*</label> 
-                                                    <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
-                                                    <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
-                                                    <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
-                                                    <label for="moreUserEmail_1" >อีเมล์ (Email)* กรุณาสมัครสมาชิกด้วย Email ที่ไม่ใช่ hotmail</label> 
-                                                    <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
-                                                    <!--<div id="addMoreRegister"></div>-->
 
-                                                    <label>ที่อยู่ (เพื่อออกใบเสร็จรับเงิน)</label>&nbsp; 
-                                                    <input type="checkbox" id="isSameAddress" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
+                                                <div class="form-group" id="regisMoreThan1User">                                                                      
 
-                                                    <div id="divForAddressContact">
-                                                        <textarea id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;">
-                                                            <?= $uAContact ?>
-                                                        </textarea>
+                                                    <div class="col-lg-7 inner-addon left-addon">
+                                                        <label style="cursor: pointer;" onclick="showLoginAsMemberDialog()">
+                                                            <span class="fa fa-user-plus"></span> เพิ่มผู้สมัครแบบสมาชิก                                                        
+                                                        </label>
                                                     </div>
-                                                    <div >
-                                                        <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
-                                                        <textarea id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;">
-                                                            <?= $uAReceipt ?>
-                                                        </textarea>
+                                                    <div class="col-lg-12" style="margin-top: 10px;">
+                                                        <label for="moreUser_1">ชื่อ (First Name)*</label> 
+                                                        <input type="text" id="moreFirstName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uFirstName ?>"/>
+                                                        <label for="moreUser_1">สกุล (Last Name)*</label> 
+                                                        <input type="text" id="moreLastName_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uLastName ?>"/>
+                                                        <label for="phone_number_1" >เบอร์โทรศัพท์ (Phone number)*</label> 
+                                                        <input type="text" id="phone_number_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uPhonNumber ?>"/>
+                                                        <label for="moreUserEmail_1" >อีเมล์ (Email)* กรุณาสมัครสมาชิกด้วย Email ที่ไม่ใช่ hotmail</label> 
+                                                        <input type="text" id="moreUserEmail_1" style="padding: 4px 6px 4px 20px !important;" value="<?= $uEmail ?>"/><br/><br/>
+                                                        <!--<div id="addMoreRegister"></div>-->
+
+                                                        <label>ที่อยู่ (เพื่อออกใบเสร็จรับเงิน)</label>&nbsp; 
+                                                        <input type="checkbox" id="isSameAddress" name="isSameAddress" >  เช่นเดียวกับที่อยู่ของสมาชิก
+
+                                                        <div id="divForAddressContact">
+                                                            <textarea id="addressForContact" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;">
+                                                                <?= $uAContact ?>
+                                                            </textarea>
+                                                        </div>
+                                                        <div >
+                                                            <label for="addressForReceipt">หากใช้ที่อยู่ที่แตกต่าง กรุณากรอกข้อมูล</label>
+                                                            <textarea id="addressForReceipt" cols="20" style="height: 150px; padding: 4px 6px 4px 20px !important;">
+                                                                <?= $uAReceipt ?>
+                                                            </textarea>
+                                                        </div>
+                                                        <br/>
+                                                        <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>', '<?= $cId ?>')">
+                                                            <span class="fa fa-plus"></span> สมัคร
+                                                        </a>
+                                                        <a href="#" class="btn btn-default" onclick="resetForm()">
+                                                            <span class="fa fa-eraser"></span> รีเซ็ตฟอร์ม
+                                                        </a>
                                                     </div>
-                                                    <br/>
-                                                    <a href="#" class="btn btn-default" onclick="addMoreRegister('<?= $rowHeader['HEADER_ID'] ?>', '<?= $cId ?>')">
-                                                        <span class="fa fa-plus"></span> สมัคร
-                                                    </a>
-                                                    <a href="#" class="btn btn-default" onclick="resetForm()">
-                                                        <span class="fa fa-eraser"></span> รีเซ็ตฟอร์ม
-                                                    </a>
+
                                                 </div>
                                                 <div class="divider-form form-group"></div>
                                             </div>
@@ -338,7 +348,7 @@ if (!empty($uId)) {
                                                     <input type="checkbox" name="confirmRegister" id="confirmRegister">  <?= $iniConfiguration['confirmation.text'] ?>
                                                 </div>
                                                 <a id="registerCourseBtn" href="javascript:void(0)" class="btn btn-default btn-lg">
-                                                    <i class="fa fa-hand-peace-o" aria-hidden="true"></i> ยืนยันการลงทะเบียน <i class="fa fa-flag-o" aria-hidden="true"></i>
+                                                    <i class="fa fa-hand-peace-o" aria-hidden="true"></i> ยืนยันการลงทะเบียน
                                                 </a>
                                                 <div class="divider-form form-group"></div>
                                             </div> 
@@ -475,7 +485,7 @@ if (!empty($uId)) {
             }
 
             //* wizard with validation
-            wizard.validation();
+            wizard.validation('<?= $cId ?>');
             //* add step numbers to titles
             wizard.steps_nb();
 
@@ -662,7 +672,7 @@ if (!empty($uId)) {
                                                 url: "moreUserTbl.php?courseId=<?= $cId ?>",
                                                 type: 'POST',
                                                 success: function (data, textStatus, jqXHR) {
-//                                                    window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>';
+
                                                     $('#courseRegistered').stepy('step', 3);
                                                     $("#loadMoreUser").html(data);
                                                 }
@@ -673,7 +683,6 @@ if (!empty($uId)) {
 
                                             $("#loadLoginState").load("loginState.php");
                                         } else {
-//                                            window.location = 'registrationCourse?cId=<?= $cId ?>&fPage=<?= $fPage ?>&uId=' + resData[1].split("||")[6];
 
                                             $("#loadLoginState").load("loginState.php");
                                             $("#regisMoreThan1User").show();
@@ -763,43 +772,25 @@ if (!empty($uId)) {
             });
         }
     </script>
-    <!--    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                     Begin # DIV Form 
-                    <fieldset>
-                        <form id="loginForGetRes">
-                            <div class="row" style="margin-top: 20px;">
-                                <div class="col-sm-12 col-md-10  col-md-offset-1 ">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="glyphicon glyphicon-user"></i>
-                                            </span> 
-                                            <input class="form-control" placeholder="ชื่อผู้ใช้" id="loginName" type="text" autofocus>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">
-                                                <i class="glyphicon glyphicon-lock"></i>
-                                            </span>
-                                            <input class="form-control" placeholder="รหัสผ่าน" id="loginPassword" type="password" value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group pull-right">
-                                        <input type="button" class="btn btn-default" id="loginAsMember" value="เข้าสู่ระบบ">
-                                        <input type="button" class="btn btn-default" onclick="$('#login-modal').modal('toggle');
-                                                $('#loginForGetRes').trigger('reset');" value="ยกเลิก">
-                                    </div>
-                                </div>
+    <div id="loginAsModal" style="display: none;">
+
+        <fieldset>
+            <form id="loginForGetRes">
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-lock"></i>
+                                </span> 
+                                <input type="text" style="padding: 4px 6px 4px 20px !important;" name="userOrPassCredential" id="userOrPassCredential" placeholder="ชื่อผู้ใช้ (Username) หรือ อีเมลล์ (Email)" class="form-control">                                
                             </div>
-                        </form>
-                    </fieldset>
-                     End # DIV Form 
-    
+                        </div>
+                        <span id="notification_txt_forinvalid" style="color: #ff484b">This is test</span>
+                    </div>
                 </div>
-            </div>
-        </div>-->
+            </form>
+        </fieldset>
+    </div>
 
 </html>

@@ -220,6 +220,7 @@ function deleteMoreUserTmp(tmpID, courseId) {
                     },
                     success: function (data, textStatus, jqXHR) {
                         $(".preloader").fadeOut("slow");
+                        resetForm();
                         if (data > 0) {
                             $("#loadMoreUser").load("moreUserTbl.php?courseId=" + courseId);
                             $('html,body').animate({
@@ -254,7 +255,4 @@ function resetForm() {
     $("#isSameAddress").prop("checked", false);
     $("#addressForReceipt").removeClass("blockTextArea");
 
-//    $('html,body').animate({
-//        scrollTop: $("#loadMoreUser").offset().top
-//    });
 }

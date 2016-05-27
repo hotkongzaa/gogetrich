@@ -32,10 +32,8 @@ $(document).ready(function (e) {
                 $('.scroll-top-wrapper').removeClass('show');
             }
         });
-
         $('.scroll-top-wrapper').on('click', scrollToTop);
     });
-
     /* -------------------------------------
      HOME SLIDER
      -------------------------------------- */
@@ -290,8 +288,6 @@ $(document).ready(function (e) {
 //    $("#menu-wrapper").niceScroll({cursorcolor:"#ffcc33"});
 
 });
-
-
 function showWarningNotficationDialog(informTxt) {
     modal({type: 'warning', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
         //title: 'ข้อความเตือน', //Modal Title
@@ -306,6 +302,52 @@ function showWarningNotficationDialog(informTxt) {
                     return true;
                 }
             }],
+        center: true, //Center Modal Box?
+        autoclose: false //Auto Close Modal Box?});
+    });
+}
+function showLoginAsMemberDialog() {
+    modal({type: 'prompt', //Type of Modal Box (alert | confirm | prompt | success | warning | error | info | inverted | primary)
+        //title: 'ข้อความเตือน', //Modal Title
+        text: 'กรุณาระบุชื่อผู้ใช้ (Username) หรือ อีเมลล์ (Email)', //Modal HTML Content
+        size: 'normal', //Modal Size (normal | large | small)
+        callback: function (result) {
+            if (result != "") {
+                $.ajax({
+                    url: "../model/com.gogetrich.function/LoginAsMemberHandler.php",
+                    type: 'POST',
+                    data: {'result': result},
+                    beforeSend: function (xhr) {
+                        $(".preloadere").show();
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        $(".preloader").fadeOut("slow");
+                        var resData = data.split(":");
+                        if (resData[0] != 200) {
+                            showWarningNotficationDialog(data);
+                        } else {
+                            var fName = resData[1].split("||")[0];
+                            var lName = resData[1].split("||")[1];
+                            var phone = resData[1].split("||")[2];
+                            var email = resData[1].split("||")[3];
+                            var contactAddr = resData[1].split("||")[4];
+                            var receiptAddr = resData[1].split("||")[5];
+                            $("#moreFirstName_1").val(fName);
+                            $("#moreLastName_1").val(lName);
+                            $("#phone_number_1").val(phone);
+                            $("#addressForContact").val(contactAddr);
+                            $("#moreUserEmail_1").val(email);
+                            $("#addressForReceipt").val(receiptAddr);
+                            $("#login-modal").modal('toggle');
+                            $("#loginForGetRes").trigger('reset');
+                        }
+
+                    }
+                });
+            } else {
+                showWarningNotficationDialog("กรุณาระบุ ชื่อผู้ใช้(Username) หรือ อีเมล(Email) ");
+            }
+        },
         center: true, //Center Modal Box?
         autoclose: false //Auto Close Modal Box?});
     });
