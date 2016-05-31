@@ -58,7 +58,10 @@
                                     <li>
                                         <span>Email:</span>
                                         <span>
-                                            <i><a href="mailto:info@gogetrich.net">info@gogetrich.net</a></i>
+                                            <i>
+                                                <a href="mailto:pinhatai.d@gmail.com">pinhatai.d@gmail.com</a>
+                                                <!--<a href="mailto:info@gogetrich.net">info@gogetrich.net</a>-->
+                                            </i>
                                         </span>
                                     </li>
                                 </ul>
